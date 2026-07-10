@@ -1,0 +1,102 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Parish Care</p>
+    <h1>Meal Support Ministry</h1>
+    <p class="page-intro">
+      Helping our parish family with meals and practical care during illness, grief, childbirth, recovery, or a heavy season.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="source-note">
+    <strong>Privacy note:</strong> Requests are reviewed before anything is shared. Please do not include detailed medical information in the form.
+  </div>
+
+  <div class="section-heading">
+    <p class="eyebrow">How We Help</p>
+    <h2>A simple meal can be a real act of love.</h2>
+    <p>
+      Our Meal Support Ministry helps coordinate meals, freezer meals, grocery drop-offs,
+      delivery cards, and other practical help when there is a need.
+    </p>
+  </div>
+
+  <div class="three-column meal-support-grid">
+    <article class="card meal-action-card">
+      <p class="eyebrow">Need Help?</p>
+      <h2>Request Support</h2>
+      <p>
+        Use this if you or your household could use meals or practical support during a difficult season.
+      </p>
+      <a class="button button-primary" href="{{ site.Data.forms.meal_support.request_link }}">Request Support</a>
+    </article>
+
+    <article class="card meal-action-card">
+      <p class="eyebrow">Know Someone?</p>
+      <h2>Nominate Someone</h2>
+      <p>
+        Use this if you know a parishioner or family who may need help. We will contact them before sharing anything.
+      </p>
+      <a class="button button-secondary" href="{{ site.Data.forms.meal_support.nominate_link }}">Nominate Someone</a>
+    </article>
+
+    <article class="card meal-action-card">
+      <p class="eyebrow">Want to Help?</p>
+      <h2>Volunteer</h2>
+      <p>
+        Sign up to bring meals, provide freezer meals, send delivery, help with errands, or pray for families in need.
+      </p>
+      <a class="button button-secondary" href="{{ site.Data.forms.meal_support.volunteer_link }}">Volunteer to Help</a>
+    </article>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">What to Expect</p>
+    <h2>How the process works</h2>
+  </div>
+
+  <div class="process-list">
+    <article class="process-step">
+      <strong>1</strong>
+      <div>
+        <h3>Submit a request or nomination</h3>
+        <p>A parish representative reviews the information first.</p>
+      </div>
+    </article>
+
+    <article class="process-step">
+      <strong>2</strong>
+      <div>
+        <h3>We confirm consent</h3>
+        <p>We contact the person or family before sharing the need with volunteers.</p>
+      </div>
+    </article>
+
+    <article class="process-step">
+      <strong>3</strong>
+      <div>
+        <h3>Support is coordinated privately</h3>
+        <p>Approved volunteers receive only the details needed to help.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Important</p>
+    <h2>Urgent or Sacramental Needs</h2>
+    <p>
+      This form is for practical care and meal support. If the need is urgent or sacramental,
+      please contact the parish office directly.
+    </p>
+    <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}

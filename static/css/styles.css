@@ -1274,3 +1274,78 @@ img {
     width: fit-content;
   }
 }
+
+/* Meal Support Ministry */
+.meal-support-grid {
+  align-items: stretch;
+}
+
+.meal-action-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+}
+
+.meal-action-card:nth-child(1) {
+  border-top: 10px solid var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 42%);
+}
+
+.meal-action-card:nth-child(2) {
+  border-top: 10px solid var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 42%);
+}
+
+.meal-action-card:nth-child(3) {
+  border-top: 10px solid var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 42%);
+}
+
+.meal-action-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.process-list {
+  max-width: 900px;
+  display: grid;
+  gap: 1rem;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-left: 10px solid var(--gold);
+  border-radius: 0.85rem;
+  padding: 1rem;
+}
+
+.process-step > strong {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.process-step h3 {
+  margin: 0 0 0.25rem;
+  color: var(--navy);
+}
+
+.process-step p {
+  margin: 0;
+}
+
+@media (max-width: 759px) {
+  .meal-action-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}
