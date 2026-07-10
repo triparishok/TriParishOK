@@ -1787,3 +1787,372 @@ img {
     text-align: center;
   }
 }
+
+/* Giving page */
+.giving-feature-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+}
+
+.giving-feature-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.giving-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.giving-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid var(--gold);
+}
+
+.giving-card:nth-child(3n + 1) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.giving-card:nth-child(3n + 2) {
+  border-left-color: var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.giving-card:nth-child(3n + 3) {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.giving-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.giving-note-card {
+  min-height: auto;
+}
+
+.giving-note-card .button {
+  margin-top: 1rem;
+}
+
+@media (min-width: 760px) {
+  .giving-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .giving-feature-card {
+    min-height: auto;
+  }
+
+  .giving-feature-card .button,
+  .giving-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Fix bottom note cards: let text use the available card width */
+.before-you-go-card p {
+  max-width: none;
+}
+
+.before-you-go-card h2 {
+  max-width: none;
+}
+
+/* Parish history */
+.established-chip {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: var(--parish-tint);
+  border: 1px solid var(--parish-color);
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.parish-mos .established-chip {
+  background: var(--gold-tint);
+  border-color: var(--gold);
+}
+
+.parish-history {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.parish-history h2 {
+  margin-top: 0;
+}
+
+.history-source-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Parish history */
+.established-chip {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: var(--parish-tint);
+  border: 1px solid var(--parish-color);
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.parish-mos .established-chip {
+  background: var(--gold-tint);
+  border-color: var(--gold);
+}
+
+.parish-history {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.parish-history h2 {
+  margin-top: 0;
+}
+
+.history-source-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Restore parish detail Mass/prayer schedule formatting */
+.parish-detail-card .simple-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.parish-detail-card .simple-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: var(--parish-tint);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--parish-color);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.9rem;
+}
+
+.parish-detail-card.parish-mos .simple-list-row {
+  background: var(--gold-tint);
+  border-left-color: var(--gold);
+}
+
+.parish-detail-card .simple-list-row strong {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.parish-detail-card .simple-list-row span {
+  color: var(--navy);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* Keep parish detail buttons from floating awkwardly */
+.parish-detail-card > .button {
+  margin-top: 0.25rem;
+  width: fit-content;
+}
+
+@media (max-width: 759px) {
+  .parish-detail-card .simple-list-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .parish-detail-card .simple-list-row span {
+    white-space: normal;
+  }
+
+  .parish-detail-card > .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Parish photos */
+.parish-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.95rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.25rem;
+  background: var(--ivory);
+}
+
+.parish-detail-card.parish-st-ann .parish-photo {
+  border-left: 8px solid var(--maroon);
+}
+
+.parish-detail-card.parish-olph .parish-photo {
+  border-left: 8px solid var(--navy);
+}
+
+.parish-detail-card.parish-mos .parish-photo {
+  border-left: 8px solid var(--gold);
+}
+
+/* Parish photos */
+.parish-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.95rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.25rem;
+  background: var(--ivory);
+}
+
+.parish-detail-card.parish-st-ann .parish-photo {
+  border-left: 8px solid var(--maroon);
+}
+
+.parish-detail-card.parish-olph .parish-photo {
+  border-left: 8px solid var(--navy);
+}
+
+.parish-detail-card.parish-mos .parish-photo {
+  border-left: 8px solid var(--gold);
+}
+
+/* Our Parishes overview photos */
+.parish-card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.95rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.1rem;
+  background: var(--ivory);
+}
+
+.parish-page-card.parish-st-ann .parish-card-photo {
+  border-left: 8px solid var(--maroon);
+}
+
+.parish-page-card.parish-olph .parish-card-photo {
+  border-left: 8px solid var(--navy);
+}
+
+.parish-page-card.parish-mos .parish-card-photo {
+  border-left: 8px solid var(--gold);
+}
+
+/* Compact Our Parishes overview */
+.parish-overview-section {
+  padding-top: 2rem;
+}
+
+.parish-page-grid-compact {
+  display: grid;
+  gap: 1rem;
+}
+
+.parish-page-card-compact {
+  padding: 0;
+  overflow: hidden;
+  min-height: auto;
+}
+
+.parish-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.parish-card-photo-compact {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 145px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  background: var(--ivory);
+}
+
+.parish-page-card-compact h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.parish-page-card-compact .eyebrow {
+  margin: 0;
+}
+
+.parish-page-card-compact .established-chip {
+  margin: 0;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.parish-page-card-compact .parish-address-box {
+  margin: 0;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.parish-page-card-compact .card-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.parish-page-card-compact .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 900px) {
+  .parish-page-grid-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 760px) and (max-width: 899px) {
+  .parish-page-grid-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .parish-card-photo-compact {
+    max-height: 180px;
+  }
+}

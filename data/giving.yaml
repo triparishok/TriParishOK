@@ -1,0 +1,25 @@
+intro:
+  title: "Online Giving"
+  summary: "Thank you for supporting the mission and daily life of our tri-parish Catholic community."
+
+online:
+  provider: "Tithe.ly"
+  giving_url: "#"
+  note: "The official online giving link will be added after parish office approval."
+
+ways:
+  - title: "Give Online"
+    eyebrow: "Online Giving"
+    summary: "Use the parish’s approved online giving provider to make a secure gift when the official link is available."
+    action_text: "Give Online"
+    action_url: "#"
+
+  - title: "Give at Mass"
+    eyebrow: "Offertory"
+    summary: "Offerings may be placed in the collection during Mass."
+
+  - title: "Contact the Office"
+    eyebrow: "Questions"
+    summary: "For questions about giving, envelopes, parish records, or donations, please contact the parish office."
+    action_text: "Contact the Office"
+    action_url: "/contact/"

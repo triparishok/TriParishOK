@@ -5,31 +5,38 @@
     <p class="eyebrow">Our Parishes</p>
     <h1>Three parishes. One Catholic community.</h1>
     <p class="page-intro">
-      St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows each have their own local community life.
-      Together, we share one Catholic mission.
+      St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows serve Catholics across Elgin, Sterling, Apache, and the surrounding area.
     </p>
   </div>
 </section>
 
-<section class="section">
-  <div class="parish-cards">
+<section class="section parish-overview-section">
+  <div class="parish-page-grid parish-page-grid-compact">
     {{ range site.Data.locations }}
-    <article class="card parish-page-card {{ .parish_class }}">
-      <div class="image-placeholder">{{ .name }} photo</div>
-      <p class="eyebrow">{{ .city }}</p>
-      <h2>{{ .name }}</h2>
-      <p>{{ .summary }}</p>
+      <article class="card parish-page-card parish-page-card-compact {{ .parish_class }}">
+        {{ if .image }}
+          <img class="parish-card-photo parish-card-photo-compact" src="{{ .image }}" alt="{{ .image_alt }}">
+        {{ end }}
 
-      <div class="parish-address-box">
-        <strong>Address</strong>
-        <span>{{ .address }}<br>{{ .address_line_2 }}</span>
-      </div>
+        <div class="parish-card-content">
+          <p class="eyebrow">{{ .city }}</p>
+          <h2>{{ .name }}</h2>
 
-      <div class="card-actions">
-        <a class="button button-primary" href="/our-parishes/{{ .slug }}/">Explore {{ .short_name }}</a>
-        <a class="button button-secondary" href="{{ .map_url }}">Get Directions</a>
-      </div>
-    </article>
+          {{ with .established }}
+            <p class="established-chip">Established {{ . }}</p>
+          {{ end }}
+
+          <div class="parish-address-box">
+            <strong>{{ .address }}</strong>
+            <p>{{ .address_line_2 }}</p>
+          </div>
+
+          <div class="card-actions">
+            <a class="button button-primary" href="/our-parishes/{{ .slug }}/">View Parish</a>
+            <a class="button button-secondary" href="{{ .map_url }}" target="_blank" rel="noopener noreferrer">Directions</a>
+          </div>
+        </div>
+      </article>
     {{ end }}
   </div>
 </section>

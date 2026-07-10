@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Stewardship</p>
+    <h1>{{ site.Data.giving.intro.title }}</h1>
+    <p class="page-intro">
+      {{ site.Data.giving.intro.summary }}
+    </p>
+  </div>
+</section>
+
+<section class="section two-column">
+  <article class="card giving-feature-card">
+    <p class="eyebrow">{{ site.Data.giving.online.provider }}</p>
+    <h2>Support the parish online.</h2>
+    <p>
+      Online giving helps support parish worship, ministries, maintenance, faith formation,
+      outreach, and the ordinary needs of parish life.
+    </p>
+    <p>{{ site.Data.giving.online.note }}</p>
+    <a class="button button-primary" href="{{ site.Data.giving.online.giving_url }}">
+      Give Online
+    </a>
+  </article>
+
+  <article class="card giving-feature-card">
+    <p class="eyebrow">Stewardship</p>
+    <h2>Giving is part of parish life.</h2>
+    <p>
+      Catholic stewardship is a response of gratitude to God. We give back from what He has given us,
+      supporting the work of the Church and the needs of our parish family.
+    </p>
+    <a class="button button-secondary" href="/contact/">Questions? Contact Us</a>
+  </article>
+</section>
+
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Ways to Give</p>
+    <h2>Choose the giving option that fits your situation</h2>
+  </div>
+
+  <div class="giving-grid">
+    {{ range site.Data.giving.ways }}
+      <article class="card giving-card">
+        <p class="eyebrow">{{ .eyebrow }}</p>
+        <h2>{{ .title }}</h2>
+        <p>{{ .summary }}</p>
+        {{ if .action_text }}
+          <a class="button button-secondary" href="{{ .action_url }}">{{ .action_text }}</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card giving-note-card">
+    <p class="eyebrow">Important</p>
+    <h2>Use only the official parish giving link.</h2>
+    <p>
+      For safety, parishioners should use only the giving link provided on this website,
+      in the bulletin, or directly by the parish office.
+    </p>
+    <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}
