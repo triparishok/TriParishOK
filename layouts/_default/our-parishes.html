@@ -12,7 +12,7 @@
 
 <section class="section parish-overview-section">
   <div class="parish-page-grid parish-page-grid-compact">
-    {{ range site.Data.locations }}
+    {{ range hugo.Data.locations }}
       <article class="card parish-page-card parish-page-card-compact {{ .parish_class }}">
         {{ if .image }}
           <img class="parish-card-photo parish-card-photo-compact" src="{{ .image }}" alt="{{ .image_alt }}">

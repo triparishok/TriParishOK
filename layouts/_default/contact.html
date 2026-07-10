@@ -19,23 +19,23 @@
     <div class="contact-list">
       <p>
         <strong>Phone</strong>
-        <a href="tel:{{ site.Data.contact.office.phone }}">{{ site.Data.contact.office.phone }}</a>
+        <a href="tel:{{ hugo.Data.contact.office.phone }}">{{ hugo.Data.contact.office.phone }}</a>
       </p>
 
       <p>
         <strong>Email</strong>
-        <a href="mailto:{{ site.Data.contact.office.email }}">{{ site.Data.contact.office.email }}</a>
+        <a href="mailto:{{ hugo.Data.contact.office.email }}">{{ hugo.Data.contact.office.email }}</a>
       </p>
 
       <p>
         <strong>Office Hours</strong>
-        <span>{{ site.Data.contact.office.office_hours }}</span>
+        <span>{{ hugo.Data.contact.office.office_hours }}</span>
       </p>
 
       <p>
         <strong>Mailing Address</strong>
         <span>
-          {{ range site.Data.contact.office.mailing_address }}
+          {{ range hugo.Data.contact.office.mailing_address }}
             {{ . }}<br>
           {{ end }}
         </span>
@@ -49,20 +49,20 @@
 
     <div class="contact-list">
       <p>
-        <strong>{{ site.Data.contact.pastor.name }}</strong>
-        <span>{{ site.Data.contact.pastor.title }}</span>
-        <a href="mailto:{{ site.Data.contact.pastor.email }}">{{ site.Data.contact.pastor.email }}</a>
+        <strong>{{ hugo.Data.contact.pastor.name }}</strong>
+        <span>{{ hugo.Data.contact.pastor.title }}</span>
+        <a href="mailto:{{ hugo.Data.contact.pastor.email }}">{{ hugo.Data.contact.pastor.email }}</a>
       </p>
 
       <p>
-        <strong>{{ site.Data.contact.deacon.name }}</strong>
-        <span>{{ site.Data.contact.deacon.title }}</span>
-        <a href="mailto:{{ site.Data.contact.deacon.email }}">{{ site.Data.contact.deacon.email }}</a>
+        <strong>{{ hugo.Data.contact.deacon.name }}</strong>
+        <span>{{ hugo.Data.contact.deacon.title }}</span>
+        <a href="mailto:{{ hugo.Data.contact.deacon.email }}">{{ hugo.Data.contact.deacon.email }}</a>
       </p>
 
       <p>
-        <strong>{{ site.Data.contact.secretary.name }}</strong>
-        <span>{{ site.Data.contact.secretary.title }}</span>
+        <strong>{{ hugo.Data.contact.secretary.name }}</strong>
+        <span>{{ hugo.Data.contact.secretary.title }}</span>
       </p>
     </div>
   </article>
@@ -72,11 +72,11 @@
   <article class="card">
     <p class="eyebrow">Bulletin</p>
     <h2>Submit a Bulletin Item</h2>
-    <p>{{ site.Data.contact.office.bulletin_deadline }}</p>
+    <p>{{ hugo.Data.contact.office.bulletin_deadline }}</p>
     <p>
       Bulletin items should be sent to the parish office for review before publication.
     </p>
-    <a class="button button-primary" href="mailto:{{ site.Data.contact.office.email }}">Email the Parish Office</a>
+    <a class="button button-primary" href="mailto:{{ hugo.Data.contact.office.email }}">Email the Parish Office</a>
   </article>
 
   <article class="card before-you-go-card">
@@ -86,7 +86,7 @@
       Emergency sacramental contact guidance should be approved by Father D. before it is posted online.
       For now, please contact the parish office.
     </p>
-    <a class="button button-secondary" href="tel:{{ site.Data.contact.office.phone }}">Call the Parish Office</a>
+    <a class="button button-secondary" href="tel:{{ hugo.Data.contact.office.phone }}">Call the Parish Office</a>
   </article>
 </section>
 

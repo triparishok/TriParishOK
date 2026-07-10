@@ -62,7 +62,7 @@
   </div>
 
   <div class="visit-location-grid">
-    {{ range where site.Data.schedule.mass "section" "weekend" }}
+    {{ range where hugo.Data.schedule.mass "section" "weekend" }}
       <article class="visit-location-card {{ .parish_class }}">
         <div>
           <p class="visit-day">{{ .day }}</p>

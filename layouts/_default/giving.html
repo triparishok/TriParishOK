@@ -3,23 +3,23 @@
 <section class="page-header">
   <div>
     <p class="eyebrow">Stewardship</p>
-    <h1>{{ site.Data.giving.intro.title }}</h1>
+    <h1>{{ hugo.Data.giving.intro.title }}</h1>
     <p class="page-intro">
-      {{ site.Data.giving.intro.summary }}
+      {{ hugo.Data.giving.intro.summary }}
     </p>
   </div>
 </section>
 
 <section class="section two-column">
   <article class="card giving-feature-card">
-    <p class="eyebrow">{{ site.Data.giving.online.provider }}</p>
+    <p class="eyebrow">{{ hugo.Data.giving.online.provider }}</p>
     <h2>Support the parish online.</h2>
     <p>
       Online giving helps support parish worship, ministries, maintenance, faith formation,
       outreach, and the ordinary needs of parish life.
     </p>
-    <p>{{ site.Data.giving.online.note }}</p>
-    <a class="button button-primary" href="{{ site.Data.giving.online.giving_url }}">
+    <p>{{ hugo.Data.giving.online.note }}</p>
+    <a class="button button-primary" href="{{ hugo.Data.giving.online.giving_url }}">
       Give Online
     </a>
   </article>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="giving-grid">
-    {{ range site.Data.giving.ways }}
+    {{ range hugo.Data.giving.ways }}
       <article class="card giving-card">
         <p class="eyebrow">{{ .eyebrow }}</p>
         <h2>{{ .title }}</h2>

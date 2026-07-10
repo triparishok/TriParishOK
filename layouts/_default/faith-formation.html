@@ -3,9 +3,9 @@
 <section class="page-header">
   <div>
     <p class="eyebrow">Faith Formation</p>
-    <h1>{{ site.Data.faith_formation.intro.title }}</h1>
+    <h1>{{ hugo.Data.faith_formation.intro.title }}</h1>
     <p class="page-intro">
-      {{ site.Data.faith_formation.intro.summary }}
+      {{ hugo.Data.faith_formation.intro.summary }}
     </p>
   </div>
 </section>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="formation-grid">
-    {{ range site.Data.faith_formation.sections }}
+    {{ range hugo.Data.faith_formation.sections }}
       <article class="card formation-card">
         <p class="eyebrow">{{ .eyebrow }}</p>
         <h2>{{ .title }}</h2>

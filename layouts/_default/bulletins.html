@@ -15,14 +15,14 @@
     <div class="card-title-row">
       <div>
         <p class="eyebrow">Current Bulletin</p>
-        <h2>{{ site.Data.bulletin.current.title }}</h2>
+        <h2>{{ hugo.Data.bulletin.current.title }}</h2>
       </div>
-      <p class="date-chip">{{ site.Data.bulletin.current.date }}</p>
+      <p class="date-chip">{{ hugo.Data.bulletin.current.date }}</p>
     </div>
 
-    <p>{{ site.Data.bulletin.current.note }}</p>
+    <p>{{ hugo.Data.bulletin.current.note }}</p>
 
-    <a class="button button-primary" href="{{ site.Data.bulletin.current.file }}">
+    <a class="button button-primary" href="{{ hugo.Data.bulletin.current.file }}">
       View Current Bulletin
     </a>
   </article>

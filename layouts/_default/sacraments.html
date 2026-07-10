@@ -3,9 +3,9 @@
 <section class="page-header">
   <div>
     <p class="eyebrow">Sacraments</p>
-    <h1>{{ site.Data.sacraments.intro.title }}</h1>
+    <h1>{{ hugo.Data.sacraments.intro.title }}</h1>
     <p class="page-intro">
-      {{ site.Data.sacraments.intro.summary }}
+      {{ hugo.Data.sacraments.intro.summary }}
     </p>
   </div>
 </section>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="sacrament-grid">
-    {{ range site.Data.sacraments.sacraments }}
+    {{ range hugo.Data.sacraments.sacraments }}
       <article class="card sacrament-card">
         <p class="eyebrow">{{ .eyebrow }}</p>
         <h2>{{ .name }}</h2>

@@ -35,7 +35,7 @@
   </div>
 
   <div class="mass-card-grid">
-    {{ range where site.Data.schedule.mass "section" "weekend" }}
+    {{ range where hugo.Data.schedule.mass "section" "weekend" }}
     <article class="mass-card {{ .parish_class }}">
       <p class="mass-day">{{ .day }}</p>
       <p class="mass-time">{{ .time }}</p>
@@ -61,7 +61,7 @@
   </div>
 
   <div class="parish-cards">
-    {{ range site.Data.locations }}
+    {{ range hugo.Data.locations }}
     <article class="card parish-card">
       <div class="image-placeholder">{{ .name }} photo</div>
       <h3>{{ .name }}</h3>
@@ -82,11 +82,11 @@
         <p class="eyebrow">Bulletin</p>
         <h2>Read this week’s bulletin</h2>
       </div>
-      <p class="date-chip">{{ site.Data.bulletin.current.date }}</p>
+      <p class="date-chip">{{ hugo.Data.bulletin.current.date }}</p>
     </div>
 
     <p>Stay current on parish announcements, schedules, events, and ministry needs.</p>
-    <a class="button button-primary" href="{{ site.Data.bulletin.current.file }}">View Current Bulletin</a>
+    <a class="button button-primary" href="{{ hugo.Data.bulletin.current.file }}">View Current Bulletin</a>
   </article>
 
   <article class="card">

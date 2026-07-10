@@ -74,20 +74,20 @@
       <section>
         <h3>Parish Office</h3>
         <p>
-          <strong>Phone:</strong> <a href="tel:{{ site.Data.contact.office.phone }}">{{ site.Data.contact.office.phone }}</a><br>
-          <strong>Email:</strong> <a href="mailto:{{ site.Data.contact.office.email }}">{{ site.Data.contact.office.email }}</a><br>
-          <strong>Hours:</strong> {{ site.Data.contact.office.office_hours }}
+          <strong>Phone:</strong> <a href="tel:{{ hugo.Data.contact.office.phone }}">{{ hugo.Data.contact.office.phone }}</a><br>
+          <strong>Email:</strong> <a href="mailto:{{ hugo.Data.contact.office.email }}">{{ hugo.Data.contact.office.email }}</a><br>
+          <strong>Hours:</strong> {{ hugo.Data.contact.office.office_hours }}
         </p>
       </section>
 
       <section>
         <h3>Mailing Address</h3>
         <p>
-          {{ range site.Data.contact.office.mailing_address }}
+          {{ range hugo.Data.contact.office.mailing_address }}
             {{ . }}<br>
           {{ end }}
         </p>
-        <p>{{ site.Data.contact.office.bulletin_deadline }}</p>
+        <p>{{ hugo.Data.contact.office.bulletin_deadline }}</p>
       </section>
 
       <section>

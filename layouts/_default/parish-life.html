@@ -3,9 +3,9 @@
 <section class="page-header">
   <div>
     <p class="eyebrow">Parish Life</p>
-    <h1>{{ site.Data.parish_life.intro.title }}</h1>
+    <h1>{{ hugo.Data.parish_life.intro.title }}</h1>
     <p class="page-intro">
-      {{ site.Data.parish_life.intro.summary }}
+      {{ hugo.Data.parish_life.intro.summary }}
     </p>
   </div>
 </section>
@@ -43,7 +43,7 @@
   </div>
 
   <div class="parish-life-grid">
-    {{ range site.Data.parish_life.sections }}
+    {{ range hugo.Data.parish_life.sections }}
       <article class="card parish-life-card">
         <p class="eyebrow">{{ .eyebrow }}</p>
         <h2>{{ .title }}</h2>
@@ -65,7 +65,7 @@
   </div>
 
   <div class="visit-location-grid">
-    {{ range site.Data.locations }}
+    {{ range hugo.Data.locations }}
       <article class="visit-location-card {{ .parish_class }}">
         <div>
           <p class="visit-day">{{ .city }}</p>

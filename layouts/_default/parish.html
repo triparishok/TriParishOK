@@ -3,7 +3,7 @@
 {{ $currentSlug := .File.BaseFileName }}
 {{ $location := dict }}
 
-{{ range site.Data.locations }}
+{{ range hugo.Data.locations }}
   {{ if eq .slug $currentSlug }}
     {{ $location = . }}
   {{ end }}
@@ -50,7 +50,7 @@
     <h2>Mass at {{ $location.short_name }}</h2>
 
     <div class="simple-list">
-      {{ range where site.Data.schedule.mass "location" $location.name }}
+      {{ range where hugo.Data.schedule.mass "location" $location.name }}
         <div class="simple-list-row">
           <strong>{{ .day }}</strong>
           <span>{{ .time }}</span>
@@ -72,7 +72,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Confession</p>
       <div class="simple-list">
-        {{ range where site.Data.schedule.confession "location" $location.name }}
+        {{ range where hugo.Data.schedule.confession "location" $location.name }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>
@@ -86,7 +86,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Adoration</p>
       <div class="simple-list">
-        {{ range where site.Data.schedule.adoration "location" $location.name }}
+        {{ range where hugo.Data.schedule.adoration "location" $location.name }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>
@@ -100,7 +100,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Rosary</p>
       <div class="simple-list">
-        {{ range where site.Data.schedule.rosary "location" $location.name }}
+        {{ range where hugo.Data.schedule.rosary "location" $location.name }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>

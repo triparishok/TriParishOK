@@ -12,7 +12,7 @@
 
 <section class="section">
   <div class="source-note">
-    <strong>Schedule note:</strong> {{ site.Data.schedule.source_note }}
+    <strong>Schedule note:</strong> {{ hugo.Data.schedule.source_note }}
   </div>
 
   <div class="section-heading">
@@ -22,7 +22,7 @@
   </div>
 
   <div class="mass-card-grid">
-    {{ range where site.Data.schedule.mass "section" "weekend" }}
+    {{ range where hugo.Data.schedule.mass "section" "weekend" }}
     <article class="mass-card {{ .parish_class }}">
       <p class="mass-day">{{ .day }}</p>
       <p class="mass-time">{{ .time }}</p>
@@ -41,7 +41,7 @@
   </div>
 
   <div class="daily-schedule">
-    {{ range where site.Data.schedule.mass "section" "weekday" }}
+    {{ range where hugo.Data.schedule.mass "section" "weekday" }}
     <article class="daily-row {{ .parish_class }}">
       <div class="daily-day">{{ .day }}</div>
       <div class="daily-time">{{ .time }}</div>
@@ -66,7 +66,7 @@
       <h3>Confession</h3>
 
       <div class="schedule-mini-list">
-        {{ range site.Data.schedule.confession }}
+        {{ range hugo.Data.schedule.confession }}
         <div class="schedule-mini-row {{ .parish_class }}">
           <div>
             <strong>{{ .day }}</strong>
@@ -82,7 +82,7 @@
       <h3>Adoration</h3>
 
       <div class="schedule-mini-list">
-        {{ range site.Data.schedule.adoration }}
+        {{ range hugo.Data.schedule.adoration }}
         <div class="schedule-mini-row {{ .parish_class }}">
           <div>
             <strong>{{ .day }}</strong>
@@ -98,7 +98,7 @@
       <h3>Rosary</h3>
 
       <div class="schedule-mini-list">
-        {{ range site.Data.schedule.rosary }}
+        {{ range hugo.Data.schedule.rosary }}
         <div class="schedule-mini-row {{ .parish_class }}">
           <div>
             <strong>{{ .day }}</strong>
