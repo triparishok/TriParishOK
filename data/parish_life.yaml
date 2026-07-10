@@ -17,9 +17,9 @@ sections:
 
   - title: "Events & Announcements"
     eyebrow: "Stay Connected"
-    summary: "The weekly bulletin is the best place to find current parish announcements, events, schedules, and ministry updates."
-    action_text: "Read the Bulletin"
-    action_url: "/bulletins/"
+    summary: "Find parish events, bulletin updates, ministry announcements, and current schedule notes."
+    action_text: "View Events"
+    action_url: "/events/"
 
   - title: "Faith Formation"
     eyebrow: "Grow in Faith"

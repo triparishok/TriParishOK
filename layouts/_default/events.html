@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Events</p>
+    <h1>{{ hugo.Data.events.intro.title }}</h1>
+    <p class="page-intro">
+      {{ hugo.Data.events.intro.summary }}
+    </p>
+  </div>
+</section>
+
+<section class="section two-column">
+  <article class="card events-feature-card">
+    <p class="eyebrow">Calendar</p>
+    <h2>{{ hugo.Data.events.calendar.title }}</h2>
+    <p>{{ hugo.Data.events.calendar.summary }}</p>
+    <p>{{ hugo.Data.events.calendar.note }}</p>
+    <a class="button button-primary" href="/bulletins/">Read the Current Bulletin</a>
+  </article>
+
+  <article class="card events-feature-card">
+    <p class="eyebrow">Schedule Changes</p>
+    <h2>Check before you go.</h2>
+    <p>
+      Holy Days, funerals, weather, parish events, and priest availability may affect the weekly schedule.
+    </p>
+    <p>
+      Please check the current bulletin for the most up-to-date information.
+    </p>
+    <a class="button button-secondary" href="/mass-confession/">Mass & Confession Times</a>
+  </article>
+</section>
+
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Stay Connected</p>
+    <h2>Current parish updates</h2>
+    <p>
+      These are the best places to look for current parish life and announcements.
+    </p>
+  </div>
+
+  <div class="events-grid">
+    {{ range hugo.Data.events.featured }}
+      <article class="card events-card">
+        <p class="eyebrow">{{ .eyebrow }}</p>
+        <h2>{{ .title }}</h2>
+        <p>{{ .summary }}</p>
+        <a class="button button-secondary" href="{{ .action_url }}">{{ .action_text }}</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card events-office-card">
+    <p class="eyebrow">Submit an Event</p>
+    <h2>Have something for the bulletin?</h2>
+    <p>
+      Parish event details, announcements, and ministry updates should be sent to the parish office by the bulletin deadline.
+    </p>
+    <p>
+      {{ hugo.Data.contact.office.bulletin_deadline }}
+    </p>
+    <a class="button button-primary" href="mailto:{{ hugo.Data.contact.office.email }}">Email the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}

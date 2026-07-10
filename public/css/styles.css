@@ -2374,3 +2374,73 @@ img {
 .contact-location-section + .section {
   padding-top: 1.5rem;
 }
+
+/* Events page */
+.events-feature-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.events-feature-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.events-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.events-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid var(--gold);
+}
+
+.events-card:nth-child(3n + 1) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.events-card:nth-child(3n + 2) {
+  border-left-color: var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.events-card:nth-child(3n + 3) {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.events-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.events-office-card {
+  min-height: auto;
+}
+
+.events-office-card .button {
+  margin-top: 1rem;
+}
+
+@media (min-width: 760px) {
+  .events-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .events-feature-card {
+    min-height: auto;
+  }
+
+  .events-feature-card .button,
+  .events-card .button,
+  .events-office-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}

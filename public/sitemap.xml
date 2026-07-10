@@ -14,6 +14,8 @@
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
+    <loc>http://localhost:1313/events/</loc>
+  </url><url>
     <loc>http://localhost:1313/faith-formation/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>

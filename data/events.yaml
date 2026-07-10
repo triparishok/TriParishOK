@@ -1,0 +1,27 @@
+intro:
+  title: "Events"
+  summary: "Find parish events, Holy Day schedules, ministry updates, and community announcements."
+
+calendar:
+  title: "Parish calendar coming soon"
+  summary: "A parish calendar can be added here after the office chooses the official calendar source and approval workflow."
+  note: "Until then, the weekly bulletin is the source of truth for current parish events and schedule changes."
+
+featured:
+  - title: "Weekly Bulletin"
+    eyebrow: "Current Updates"
+    summary: "The bulletin includes parish announcements, events, ministry needs, schedule changes, and Holy Day information."
+    action_text: "Read the Bulletin"
+    action_url: "/bulletins/"
+
+  - title: "Meal Support Ministry"
+    eyebrow: "Parish Care"
+    summary: "Help coordinate meals and practical support for parishioners during illness, grief, childbirth, recovery, or a heavy season."
+    action_text: "Meal Support"
+    action_url: "/meal-support/"
+
+  - title: "Catholic Links"
+    eyebrow: "Resources"
+    summary: "Find links to the Archdiocese, vocations, Catholic Charities, Oklahoma Catholic, and available parish social media."
+    action_text: "View Links"
+    action_url: "/catholic-links/"
