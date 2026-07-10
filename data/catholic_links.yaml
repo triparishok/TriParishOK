@@ -58,3 +58,47 @@ groups:
       - name: "Tri-Parish History"
         url: "/our-parishes/"
         description: "Learn more about St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows."
+
+  - title: "Universal Church & Catholic Teaching"
+    links:
+      - name: "The Holy See"
+        url: "https://www.vatican.va/"
+        description: "Official website of the Holy See, with papal documents, Church texts, and Vatican news."
+
+      - name: "United States Conference of Catholic Bishops"
+        url: "https://www.usccb.org/"
+        description: "Resources, statements, prayers, readings, and Catholic teaching from the U.S. bishops."
+
+      - name: "USCCB Bible"
+        url: "https://bible.usccb.org/bible"
+        description: "Read the Bible online through the United States Conference of Catholic Bishops."
+
+      - name: "Catholic Answers"
+        url: "https://www.catholic.com/"
+        description: "Catholic apologetics, articles, answers, and explanations of Catholic teaching."
+
+  - title: "Family, Prayer & Catholic Living"
+    links:
+      - name: "CatholicMom.com"
+        url: "https://www.catholicmom.com/"
+        description: "Articles, reflections, activities, and resources for Catholic mothers and families."
+
+      - name: "Catholic Moms"
+        url: "https://catholicmoms.com/"
+        description: "Traditional Catholic family, prayer, and motherhood resources."
+
+      - name: "Catholic All Year"
+        url: "https://catholicallyear.com/"
+        description: "Catholic family life, liturgical living, feast day ideas, and domestic church resources."
+
+      - name: "Virtual Rosary"
+        url: "http://www.virtualrosary.org/"
+        description: "A simple online resource for praying the Rosary."
+
+      - name: "Catholic Kids"
+        url: "https://www.catholic-kids.com/"
+        description: "Traditional Catholic prayers, Rosary resources, quizzes, and faith resources for children."
+
+      - name: "My Friend Magazine"
+        url: "http://www.myfriendmagazine.com/"
+        description: "Catholic children’s faith resources and activities."
