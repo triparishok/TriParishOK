@@ -26,6 +26,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Catholic Links</title>
+				<link>http://localhost:1313/catholic-links/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/catholic-links/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Contact</title>
 				<link>http://localhost:1313/contact-backup/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -114,7 +121,7 @@
 				<link>http://localhost:1313/parish-life/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/parish-life/</guid>
-				<description>&lt;p&gt;Parish life is where faith becomes visible through prayer, service, formation, fellowship, and care for one another.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ministries&#34;&gt;Ministries&lt;/h2&gt;&#xA;&lt;p&gt;Ministry details will be added after the parish office confirms current groups, leaders, and meeting times.&lt;/p&gt;&#xA;&lt;h2 id=&#34;meal-support-ministry&#34;&gt;Meal Support Ministry&lt;/h2&gt;&#xA;&lt;p&gt;Our Meal Support Ministry helps coordinate meals and practical care for parish families during illness, grief, childbirth, recovery, or other heavy seasons.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/meal-support/&#34;&gt;Learn More About Meal Support&lt;/a&gt;&lt;/p&gt;</description>
+				<description></description>
 			</item>
 			<item>
 				<title>St. Ann</title>

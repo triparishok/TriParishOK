@@ -1,0 +1,38 @@
+groups:
+  - title: "Archdiocese & Local Church"
+    links:
+      - name: "Archdiocese of Oklahoma City"
+        url: "https://archokc.org/"
+        description: "News, offices, ministries, and resources from the Archdiocese of Oklahoma City."
+
+      - name: "Blessed Stanley Rother Shrine"
+        url: "http://www.rothershrine.org/"
+        description: "Information about the shrine, Mass times, pilgrimages, and devotion to Blessed Stanley Rother."
+
+      - name: "Oklahoma Catholic"
+        url: "https://okcatholic.org/"
+        description: "Catholic news and stories from the Archdiocese of Oklahoma City."
+
+  - title: "Vocations & Service"
+    links:
+      - name: "OKC Vocations"
+        url: "https://okcvocations.com/"
+        description: "Resources for men discerning the priesthood and for families praying for vocations."
+
+      - name: "Catholic Charities of the Archdiocese of Oklahoma City"
+        url: "https://catholiccharitiesok.org/"
+        description: "Charitable services, support, and outreach rooted in Catholic social teaching."
+
+  - title: "St. Ann Social Media"
+    links:
+      - name: "St. Ann Facebook Page"
+        url: "https://www.facebook.com/profile.php?id=61580669036506"
+        description: "Updates and community posts from St. Ann Catholic Church."
+
+      - name: "Daughters of St. Ann"
+        url: "https://www.facebook.com/groups/303181199789262"
+        description: "Facebook group for the Daughters of St. Ann."
+
+      - name: "St. Ann Religious Education"
+        url: "https://www.facebook.com/groups/351252334958189"
+        description: "Facebook group for St. Ann religious education updates and community communication."

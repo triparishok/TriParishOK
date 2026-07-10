@@ -1643,3 +1643,147 @@ img {
     text-align: center;
   }
 }
+
+/* Parish Life page */
+.parish-life-feature-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.parish-life-feature-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.parish-life-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.parish-life-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid var(--gold);
+}
+
+.parish-life-card:nth-child(4n + 1) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.parish-life-card:nth-child(4n + 2) {
+  border-left-color: var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.parish-life-card:nth-child(4n + 3) {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.parish-life-card:nth-child(4n + 4) {
+  border-left-color: var(--maroon);
+}
+
+.parish-life-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+@media (min-width: 760px) {
+  .parish-life-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .parish-life-feature-card {
+    min-height: auto;
+  }
+
+  .parish-life-feature-card .button,
+  .parish-life-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Parish Life spacing refinement */
+.parish-life-update-section {
+  padding-top: 1.5rem;
+}
+
+.parish-life-update-card {
+  min-height: auto;
+}
+
+.parish-life-update-card .button {
+  margin-top: 1rem;
+}
+
+/* Faith Formation card on Parish Life should use the red treatment */
+.parish-life-card:nth-child(4n + 4) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+/* Catholic Links page */
+.catholic-links-section {
+  padding-bottom: 1.5rem;
+}
+
+.catholic-links-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.catholic-link-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid var(--gold);
+}
+
+.catholic-link-card:nth-child(3n + 1) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.catholic-link-card:nth-child(3n + 2) {
+  border-left-color: var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.catholic-link-card:nth-child(3n + 3) {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.catholic-link-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.catholic-link-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+@media (min-width: 760px) {
+  .catholic-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .catholic-links-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .catholic-link-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}

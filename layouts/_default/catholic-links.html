@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Catholic Links</p>
+    <h1>Helpful Catholic resources</h1>
+    <p class="page-intro">
+      Find trusted Catholic resources from the Archdiocese of Oklahoma City, local Catholic ministries, vocations, charity, and parish social media.
+    </p>
+  </div>
+</section>
+
+{{ range site.Data.catholic_links.groups }}
+<section class="section catholic-links-section">
+  <div class="section-heading">
+    <p class="eyebrow">Resources</p>
+    <h2>{{ .title }}</h2>
+  </div>
+
+  <div class="catholic-links-grid">
+    {{ range .links }}
+      <article class="card catholic-link-card">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <a class="button button-secondary" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          Visit Website
+        </a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Note</p>
+    <h2>External websites</h2>
+    <p>
+      These links open websites maintained by other Catholic organizations or social media platforms.
+      Please contact the parish office if a link needs to be updated.
+    </p>
+    <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}

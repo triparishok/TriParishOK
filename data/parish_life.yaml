@@ -1,0 +1,34 @@
+intro:
+  title: "Parish Life"
+  summary: "Parish life is where we worship, serve, learn, support one another, and grow together as members of the Body of Christ."
+
+sections:
+  - title: "Serve the Parish"
+    eyebrow: "Volunteer"
+    summary: "There are many ways to serve through parish ministries, hospitality, events, faith formation, care for others, and practical help."
+    action_text: "Contact the Parish Office"
+    action_url: "/contact/"
+
+  - title: "Meal Support Ministry"
+    eyebrow: "Parish Care"
+    summary: "Help provide meals and practical support for parishioners walking through illness, grief, childbirth, recovery, or a heavy season."
+    action_text: "Meal Support"
+    action_url: "/meal-support/"
+
+  - title: "Events & Announcements"
+    eyebrow: "Stay Connected"
+    summary: "The weekly bulletin is the best place to find current parish announcements, events, schedules, and ministry updates."
+    action_text: "Read the Bulletin"
+    action_url: "/bulletins/"
+
+  - title: "Faith Formation"
+    eyebrow: "Grow in Faith"
+    summary: "Children, families, teens, and adults are invited to keep growing in Catholic faith, prayer, Scripture, and sacramental life."
+    action_text: "Faith Formation"
+    action_url: "/faith-formation/"
+  - title: "Catholic Links"
+    eyebrow: "Resources"
+    summary: "Find links to the Archdiocese, Blessed Stanley Rother Shrine, vocations, Catholic Charities, Oklahoma Catholic, and available parish social media."
+    action_text: "View Catholic Links"
+    action_url: "/catholic-links/"
+
