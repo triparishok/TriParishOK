@@ -2156,3 +2156,221 @@ img {
     max-height: 180px;
   }
 }
+
+/* Contact page */
+.contact-feature-card,
+.contact-person-card,
+.contact-location-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-feature-card {
+  min-height: 310px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+
+.contact-list p {
+  margin: 0;
+}
+
+.contact-list a,
+.contact-person-card a {
+  color: var(--maroon);
+  font-weight: 900;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+}
+
+.contact-list a:hover,
+.contact-person-card a:hover {
+  color: var(--navy);
+}
+
+.mailing-address {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--gold);
+  border-radius: 0.85rem;
+  color: var(--navy);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.contact-note {
+  margin-top: auto;
+}
+
+.contact-card-grid,
+.contact-location-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-person-card:nth-child(3n + 1),
+.contact-location-card.parish-st-ann {
+  border-left: 8px solid var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.contact-person-card:nth-child(3n + 2),
+.contact-location-card.parish-olph {
+  border-left: 8px solid var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.contact-person-card:nth-child(3n + 3),
+.contact-location-card.parish-mos {
+  border-left: 8px solid var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.contact-person-card h2,
+.contact-location-card h2 {
+  margin-top: 0;
+}
+
+.contact-person-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-location-card .card-actions,
+.contact-feature-card .card-actions {
+  margin-top: auto;
+}
+
+.contact-urgent-card {
+  border-left: 10px solid var(--maroon);
+  min-height: auto;
+}
+
+.contact-urgent-card .button {
+  margin-top: 1rem;
+}
+
+@media (min-width: 760px) {
+  .contact-card-grid,
+  .contact-location-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .contact-feature-card {
+    min-height: auto;
+  }
+
+  .contact-feature-card .button,
+  .contact-location-card .button,
+  .contact-urgent-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Contact page: compact parish location cards */
+.contact-location-section {
+  overflow: hidden;
+}
+
+.contact-location-grid-compact {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-location-card-compact {
+  min-width: 0;
+  padding: 1.25rem;
+}
+
+.contact-location-card-compact h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+  line-height: 1.05;
+}
+
+.contact-location-card-compact .eyebrow {
+  margin-bottom: 0.55rem;
+}
+
+.contact-location-card-compact .parish-address-box {
+  margin: 1rem 0;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.contact-location-card-compact .card-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: auto;
+}
+
+.contact-location-card-compact .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 980px) {
+  .contact-location-grid-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 760px) and (max-width: 979px) {
+  .contact-location-grid-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .contact-location-grid-compact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact page: even out parish location card spacing */
+.contact-location-card-compact {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+  gap: 0.85rem;
+}
+
+.contact-location-card-compact h2 {
+  min-height: 4.6rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-location-card-compact .parish-address-box {
+  min-height: 7.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-location-card-compact .card-actions {
+  margin-top: auto;
+}
+
+/* Reduce the big gap before the urgent card */
+.contact-urgent-card {
+  margin-top: 0;
+}
+
+.contact-location-section + .section {
+  padding-top: 1.5rem;
+}

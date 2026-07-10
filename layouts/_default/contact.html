@@ -5,88 +5,128 @@
     <p class="eyebrow">Contact</p>
     <h1>Contact the Parish Office</h1>
     <p class="page-intro">
-      Need help with Mass times, sacraments, Religious Education, parish records, or bulletin items?
-      Start with the parish office.
+      We are glad to help with Mass times, Sacraments, parish records, bulletin items, faith formation, giving, and general parish questions.
     </p>
   </div>
 </section>
 
-<section class="section contact-layout">
-  <article class="card contact-card">
+<section class="section two-column contact-top-section">
+  <article class="card contact-feature-card">
     <p class="eyebrow">Parish Office</p>
-    <h2>Office Information</h2>
+    <h2>Tri-Parish Catholic Community</h2>
 
     <div class="contact-list">
       <p>
-        <strong>Phone</strong>
-        <a href="tel:{{ hugo.Data.contact.office.phone }}">{{ hugo.Data.contact.office.phone }}</a>
+        <strong>Phone:</strong>
+        <a href="tel:{{ replace hugo.Data.contact.office.phone "-" "" }}">{{ hugo.Data.contact.office.phone }}</a>
       </p>
 
       <p>
-        <strong>Email</strong>
+        <strong>Email:</strong>
         <a href="mailto:{{ hugo.Data.contact.office.email }}">{{ hugo.Data.contact.office.email }}</a>
       </p>
 
       <p>
-        <strong>Office Hours</strong>
-        <span>{{ hugo.Data.contact.office.office_hours }}</span>
+        <strong>Office Hours:</strong>
+        {{ hugo.Data.contact.office.office_hours }}
       </p>
+    </div>
 
-      <p>
-        <strong>Mailing Address</strong>
-        <span>
-          {{ range hugo.Data.contact.office.mailing_address }}
-            {{ . }}<br>
-          {{ end }}
-        </span>
-      </p>
+    <div class="card-actions">
+      <a class="button button-primary" href="tel:{{ replace hugo.Data.contact.office.phone "-" "" }}">Call the Office</a>
+      <a class="button button-secondary" href="mailto:{{ hugo.Data.contact.office.email }}">Email the Office</a>
     </div>
   </article>
 
-  <article class="card contact-card">
-    <p class="eyebrow">Clergy & Staff</p>
-    <h2>Who to Contact</h2>
+  <article class="card contact-feature-card">
+    <p class="eyebrow">Mailing Address</p>
+    <h2>Send mail to the parish office</h2>
 
-    <div class="contact-list">
-      <p>
-        <strong>{{ hugo.Data.contact.pastor.name }}</strong>
-        <span>{{ hugo.Data.contact.pastor.title }}</span>
-        <a href="mailto:{{ hugo.Data.contact.pastor.email }}">{{ hugo.Data.contact.pastor.email }}</a>
-      </p>
+    <address class="mailing-address">
+      {{ range hugo.Data.contact.office.mailing_address }}
+        {{ . }}<br>
+      {{ end }}
+    </address>
 
-      <p>
-        <strong>{{ hugo.Data.contact.deacon.name }}</strong>
-        <span>{{ hugo.Data.contact.deacon.title }}</span>
-        <a href="mailto:{{ hugo.Data.contact.deacon.email }}">{{ hugo.Data.contact.deacon.email }}</a>
-      </p>
-
-      <p>
-        <strong>{{ hugo.Data.contact.secretary.name }}</strong>
-        <span>{{ hugo.Data.contact.secretary.title }}</span>
-      </p>
+    <div class="office-note contact-note">
+      <strong>Bulletin items:</strong>
+      <span>{{ hugo.Data.contact.office.bulletin_deadline }}</span>
     </div>
+
+    <a class="button button-secondary" href="/bulletins/">View Current Bulletin</a>
   </article>
 </section>
 
-<section class="section two-column">
-  <article class="card">
-    <p class="eyebrow">Bulletin</p>
-    <h2>Submit a Bulletin Item</h2>
-    <p>{{ hugo.Data.contact.office.bulletin_deadline }}</p>
-    <p>
-      Bulletin items should be sent to the parish office for review before publication.
-    </p>
-    <a class="button button-primary" href="mailto:{{ hugo.Data.contact.office.email }}">Email the Parish Office</a>
-  </article>
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Clergy & Staff</p>
+    <h2>Parish contacts</h2>
+  </div>
 
-  <article class="card before-you-go-card">
-    <p class="eyebrow">Important</p>
-    <h2>Emergency Sacramental Needs</h2>
+  <div class="contact-card-grid">
+    <article class="card contact-person-card">
+      <p class="eyebrow">{{ hugo.Data.contact.pastor.title }}</p>
+      <h2>{{ hugo.Data.contact.pastor.name }}</h2>
+      <p>
+        <a href="mailto:{{ hugo.Data.contact.pastor.email }}">{{ hugo.Data.contact.pastor.email }}</a>
+      </p>
+    </article>
+
+    <article class="card contact-person-card">
+      <p class="eyebrow">{{ hugo.Data.contact.deacon.title }}</p>
+      <h2>{{ hugo.Data.contact.deacon.name }}</h2>
+      <p>
+        <a href="mailto:{{ hugo.Data.contact.deacon.email }}">{{ hugo.Data.contact.deacon.email }}</a>
+      </p>
+    </article>
+
+    <article class="card contact-person-card">
+      <p class="eyebrow">{{ hugo.Data.contact.secretary.title }}</p>
+      <h2>{{ hugo.Data.contact.secretary.name }}</h2>
+      <p>
+        Please contact the parish office for scheduling, records, bulletin items, and general parish questions.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section contact-location-section">
+  <div class="section-heading">
+    <p class="eyebrow">Parish Locations</p>
+    <h2>Find your parish</h2>
+  </div>
+
+  <div class="contact-location-grid contact-location-grid-compact">
+    {{ range hugo.Data.locations }}
+      <article class="card contact-location-card contact-location-card-compact {{ .parish_class }}">
+        <p class="eyebrow">{{ .city }}</p>
+        <h2>{{ .short_name }}</h2>
+
+        <div class="parish-address-box">
+          <strong>{{ .address }}</strong>
+          <p>{{ .address_line_2 }}</p>
+        </div>
+
+        <div class="card-actions">
+          <a class="button button-primary" href="/our-parishes/{{ .slug }}/">View Parish</a>
+          <a class="button button-secondary" href="{{ .map_url }}" target="_blank" rel="noopener noreferrer">Directions</a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card contact-urgent-card">
+    <p class="eyebrow">Urgent Sacramental Needs</p>
+    <h2>Need a priest?</h2>
     <p>
-      Emergency sacramental contact guidance should be approved by Father D. before it is posted online.
-      For now, please contact the parish office.
+      For urgent sacramental needs, especially danger of death, please contact the parish office as soon as possible.
     </p>
-    <a class="button button-secondary" href="tel:{{ hugo.Data.contact.office.phone }}">Call the Parish Office</a>
+    <p>
+      If the parish has a separate after-hours emergency number, it should be added here after office approval.
+    </p>
+    <a class="button button-primary" href="tel:{{ replace hugo.Data.contact.office.phone "-" "" }}">Call the Parish Office</a>
   </article>
 </section>
 
