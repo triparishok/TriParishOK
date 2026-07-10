@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="utility-bar" aria-label="Quick links">
+      <a href="/bulletins/">Bulletin</a>
+      <a href="/giving/">Online Giving</a>
+      <a href="/contact/">Contact</a>
+      <a class="utility-primary" href="/mass-confession/">Locations & Mass Times</a>
+    </div>
+
+    <div class="main-nav">
+      <a class="site-logo" href="/">
+        <span class="logo-title">Tri-Parish Catholic Community</span>
+        <span class="logo-subtitle">St. Ann • Our Lady of Perpetual Help • Mother of Sorrows</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/mass-confession/">Worship With Us</a></li>
+          <li><a href="/new-here/">New Here?</a></li>
+          <li><a href="/sacraments/">Sacraments</a></li>
+          <li><a href="/faith-formation/">Faith Formation</a></li>
+          <li><a href="/parish-life/">Parish Life</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="parish-selector" aria-label="Parish pages">
+      <a class="parish-select-link parish-st-ann" href="/our-parishes/st-ann/">
+        <strong>St. Ann</strong>
+        <span>Elgin</span>
+      </a>
+
+      <a class="parish-select-link parish-olph" href="/our-parishes/olph/">
+        <strong>Our Lady of Perpetual Help</strong>
+        <span>Sterling</span>
+      </a>
+
+      <a class="parish-select-link parish-mos" href="/our-parishes/mother-of-sorrows/">
+        <strong>Mother of Sorrows</strong>
+        <span>Apache</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Tri-Parish Catholic Community</strong></p>
+    <p>St. Ann • Our Lady of Perpetual Help • Mother of Sorrows</p>
+    <p>Office phone, email, addresses, and hours will go here.</p>
+  </footer>
+</body>
+</html>

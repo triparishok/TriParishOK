@@ -1,0 +1,93 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Contact</p>
+    <h1>Contact the Parish Office</h1>
+    <p class="page-intro">
+      Need help with Mass times, sacraments, Religious Education, parish records, or bulletin items?
+      Start with the parish office.
+    </p>
+  </div>
+</section>
+
+<section class="section contact-layout">
+  <article class="card contact-card">
+    <p class="eyebrow">Parish Office</p>
+    <h2>Office Information</h2>
+
+    <div class="contact-list">
+      <p>
+        <strong>Phone</strong>
+        <a href="tel:{{ site.Data.contact.office.phone }}">{{ site.Data.contact.office.phone }}</a>
+      </p>
+
+      <p>
+        <strong>Email</strong>
+        <a href="mailto:{{ site.Data.contact.office.email }}">{{ site.Data.contact.office.email }}</a>
+      </p>
+
+      <p>
+        <strong>Office Hours</strong>
+        <span>{{ site.Data.contact.office.office_hours }}</span>
+      </p>
+
+      <p>
+        <strong>Mailing Address</strong>
+        <span>
+          {{ range site.Data.contact.office.mailing_address }}
+            {{ . }}<br>
+          {{ end }}
+        </span>
+      </p>
+    </div>
+  </article>
+
+  <article class="card contact-card">
+    <p class="eyebrow">Clergy & Staff</p>
+    <h2>Who to Contact</h2>
+
+    <div class="contact-list">
+      <p>
+        <strong>{{ site.Data.contact.pastor.name }}</strong>
+        <span>{{ site.Data.contact.pastor.title }}</span>
+        <a href="mailto:{{ site.Data.contact.pastor.email }}">{{ site.Data.contact.pastor.email }}</a>
+      </p>
+
+      <p>
+        <strong>{{ site.Data.contact.deacon.name }}</strong>
+        <span>{{ site.Data.contact.deacon.title }}</span>
+        <a href="mailto:{{ site.Data.contact.deacon.email }}">{{ site.Data.contact.deacon.email }}</a>
+      </p>
+
+      <p>
+        <strong>{{ site.Data.contact.secretary.name }}</strong>
+        <span>{{ site.Data.contact.secretary.title }}</span>
+      </p>
+    </div>
+  </article>
+</section>
+
+<section class="section two-column">
+  <article class="card">
+    <p class="eyebrow">Bulletin</p>
+    <h2>Submit a Bulletin Item</h2>
+    <p>{{ site.Data.contact.office.bulletin_deadline }}</p>
+    <p>
+      Bulletin items should be sent to the parish office for review before publication.
+    </p>
+    <a class="button button-primary" href="mailto:{{ site.Data.contact.office.email }}">Email the Parish Office</a>
+  </article>
+
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Important</p>
+    <h2>Emergency Sacramental Needs</h2>
+    <p>
+      Emergency sacramental contact guidance should be approved by Father D. before it is posted online.
+      For now, please contact the parish office.
+    </p>
+    <a class="button button-secondary" href="tel:{{ site.Data.contact.office.phone }}">Call the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}

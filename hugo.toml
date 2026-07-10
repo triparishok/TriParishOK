@@ -1,0 +1,6 @@
+baseURL = "https://triparishok.org/"
+languageCode = "en-us"
+title = "Tri-Parish Catholic Community"
+
+[params]
+  description = "The Catholic parishes of St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows."

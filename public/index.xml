@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Home on Tri-Parish Catholic Community</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content in Home on Tri-Parish Catholic Community</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Becoming Catholic</title>
+				<link>http://localhost:1313/becoming-catholic/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/becoming-catholic/</guid>
+				<description>&lt;p&gt;Interested in becoming Catholic or learning more about the Catholic faith?&lt;/p&gt;&#xA;&lt;p&gt;We would be honored to walk with you. The parish office can help connect you with the right next step, including OCIA, adult faith formation, or a conversation with Father D.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/contact/&#34;&gt;Contact the Parish Office&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bulletins</title>
+				<link>http://localhost:1313/bulletins/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/bulletins/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Contact</title>
+				<link>http://localhost:1313/contact-backup/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/contact-backup/</guid>
+				<description>&lt;p&gt;Need help from the parish office? Contact details will be confirmed before launch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;parish-office&#34;&gt;Parish Office&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Phone: To be confirmed&lt;/li&gt;&#xA;&lt;li&gt;Email: To be confirmed&lt;/li&gt;&#xA;&lt;li&gt;Office Hours: To be confirmed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;emergency-sacramental-needs&#34;&gt;Emergency Sacramental Needs&lt;/h2&gt;&#xA;&lt;p&gt;Emergency sacramental contact guidance must be approved by Father D. before it is posted.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Contact</title>
+				<link>http://localhost:1313/contact/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/contact/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Faith Formation</title>
+				<link>http://localhost:1313/faith-formation/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/faith-formation/</guid>
+				<description>&lt;p&gt;Faith Formation helps children, teens, adults, and families grow in the Catholic faith.&lt;/p&gt;&#xA;&lt;h2 id=&#34;religious-education&#34;&gt;Religious Education&lt;/h2&gt;&#xA;&lt;p&gt;Registration details, class schedules, sacramental preparation information, and parent resources will be added after parish office approval.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ocia&#34;&gt;OCIA&lt;/h2&gt;&#xA;&lt;p&gt;OCIA is for adults who want to become Catholic, complete their sacraments, or learn more about the faith.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mass &amp; Confession</title>
+				<link>http://localhost:1313/mass-confession/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/mass-confession/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Meal Support Ministry</title>
+				<link>http://localhost:1313/meal-support/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/meal-support/</guid>
+				<description>&lt;p&gt;When someone in our parish family is walking through illness, grief, childbirth, recovery, or a heavy season, a simple meal can be a real act of love.&lt;/p&gt;&#xA;&lt;p&gt;Our Meal Support Ministry helps coordinate meals, freezer meals, grocery drop-offs, delivery cards, and other practical help when there is a need.&lt;/p&gt;&#xA;&lt;p&gt;You may request support for yourself, nominate someone who may need help, or sign up to volunteer. All requests are reviewed before anything is shared. We do not publish private family or medical details.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mother of Sorrows</title>
+				<link>http://localhost:1313/our-parishes/mother-of-sorrows-backup/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/mother-of-sorrows-backup/</guid>
+				<description>&lt;p&gt;Mother of Sorrows parish details will go here.&lt;/p&gt;&#xA;&lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;&#xA;&lt;p&gt;Address to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mass-times&#34;&gt;Mass Times&lt;/h2&gt;&#xA;&lt;p&gt;Mass times to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-mother-of-sorrows&#34;&gt;About Mother of Sorrows&lt;/h2&gt;&#xA;&lt;p&gt;Parish history, patronage, local ministries, and local events can be added here.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mother of Sorrows</title>
+				<link>http://localhost:1313/our-parishes/mother-of-sorrows/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/mother-of-sorrows/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>New Here?</title>
+				<link>http://localhost:1313/new-here/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/new-here/</guid>
+				<description>&lt;p&gt;Welcome. We are glad you are here.&lt;/p&gt;&#xA;&lt;p&gt;Whether you are visiting for Mass, returning to the Church, new to the area, or interested in becoming Catholic, this page will help you take the next step.&lt;/p&gt;&#xA;&lt;h2 id=&#34;start-here&#34;&gt;Start Here&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Find Mass and Confession times&lt;/li&gt;&#xA;&lt;li&gt;Choose the parish location closest to you&lt;/li&gt;&#xA;&lt;li&gt;Contact the parish office&lt;/li&gt;&#xA;&lt;li&gt;Ask about becoming Catholic&lt;/li&gt;&#xA;&lt;li&gt;Register your family with the parish&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Online Giving</title>
+				<link>http://localhost:1313/giving/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/giving/</guid>
+				<description>&lt;p&gt;Thank you for supporting the mission and daily life of our parishes.&lt;/p&gt;&#xA;&lt;p&gt;Online giving details will be added after Father D. and the parish office confirm the correct giving link, parish funds, and approved wording.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#&#34;&gt;Give Online&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Our Lady of Perpetual Help</title>
+				<link>http://localhost:1313/our-parishes/olph-backup/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/olph-backup/</guid>
+				<description>&lt;p&gt;Our Lady of Perpetual Help parish details will go here.&lt;/p&gt;&#xA;&lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;&#xA;&lt;p&gt;Address to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mass-times&#34;&gt;Mass Times&lt;/h2&gt;&#xA;&lt;p&gt;Mass times to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-our-lady-of-perpetual-help&#34;&gt;About Our Lady of Perpetual Help&lt;/h2&gt;&#xA;&lt;p&gt;Parish history, patronage, local ministries, and local events can be added here.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Our Lady of Perpetual Help</title>
+				<link>http://localhost:1313/our-parishes/olph/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/olph/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Our Parishes</title>
+				<link>http://localhost:1313/our-parishes/_index-backup/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/_index-backup/</guid>
+				<description>&lt;p&gt;Our tri-parish Catholic community includes St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows.&lt;/p&gt;&#xA;&lt;p&gt;Each parish has its own history, patron, location, and local community life. Together, we share one Catholic mission.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Parish Life</title>
+				<link>http://localhost:1313/parish-life/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/parish-life/</guid>
+				<description>&lt;p&gt;Parish life is where faith becomes visible through prayer, service, formation, fellowship, and care for one another.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ministries&#34;&gt;Ministries&lt;/h2&gt;&#xA;&lt;p&gt;Ministry details will be added after the parish office confirms current groups, leaders, and meeting times.&lt;/p&gt;&#xA;&lt;h2 id=&#34;meal-support-ministry&#34;&gt;Meal Support Ministry&lt;/h2&gt;&#xA;&lt;p&gt;Our Meal Support Ministry helps coordinate meals and practical care for parish families during illness, grief, childbirth, recovery, or other heavy seasons.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/meal-support/&#34;&gt;Learn More About Meal Support&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>St. Ann</title>
+				<link>http://localhost:1313/our-parishes/st-ann-backup/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/st-ann-backup/</guid>
+				<description>&lt;p&gt;St. Ann parish details will go here.&lt;/p&gt;&#xA;&lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;&#xA;&lt;p&gt;Address to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mass-times&#34;&gt;Mass Times&lt;/h2&gt;&#xA;&lt;p&gt;Mass times to be confirmed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-st-ann&#34;&gt;About St. Ann&lt;/h2&gt;&#xA;&lt;p&gt;Parish history, patron saint information, local ministries, and local events can be added here.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>St. Ann</title>
+				<link>http://localhost:1313/our-parishes/st-ann/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/our-parishes/st-ann/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

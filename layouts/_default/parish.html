@@ -1,0 +1,132 @@
+{{ define "main" }}
+
+{{ range first 1 (where site.Data.locations "slug" .File.BaseFileName) }}
+
+<section class="page-header parish-page-header {{ .parish_class }}">
+  <div>
+    <p class="eyebrow">{{ .city }}</p>
+    <h1>{{ .name }}</h1>
+    <p class="page-intro">{{ .summary }}</p>
+  </div>
+</section>
+
+<section class="section two-column parish-detail-layout">
+  <article class="card parish-detail-card {{ .parish_class }}">
+    <div class="image-placeholder">{{ .name }} photo</div>
+    <h2>Visit {{ .short_name }}</h2>
+
+    <div class="parish-address-box">
+      <strong>Address</strong>
+      <span>{{ .address }}<br>{{ .address_line_2 }}</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="button button-primary" href="{{ .map_url }}">Get Directions</a>
+      <a class="button button-secondary" href="/mass-confession/">View Full Schedule</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <p class="eyebrow">Mass Times</p>
+    <h2>Mass at {{ .short_name }}</h2>
+
+    {{ $parishName := .name }}
+    <div class="parish-schedule-list">
+      {{ range where site.Data.schedule.mass "location" $parishName }}
+      <div class="parish-schedule-row {{ .parish_class }}">
+        <strong>{{ .day }}</strong>
+        <span>{{ .time }}</span>
+      </div>
+      {{ else }}
+      <p>Mass times will be added after the parish office confirms the schedule.</p>
+      {{ end }}
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <div class="three-column">
+    <article class="card clean-schedule-card">
+      <h3>Confession</h3>
+      {{ $parishName := .name }}
+      <div class="schedule-mini-list">
+        {{ range where site.Data.schedule.confession "location" $parishName }}
+        <div class="schedule-mini-row {{ .parish_class }}">
+          <div>
+            <strong>{{ .day }}</strong>
+            <span>{{ .time }}</span>
+          </div>
+          <p>{{ .location }}</p>
+        </div>
+        {{ else }}
+        <p>Please check the full Mass & Confession page or current bulletin.</p>
+        {{ end }}
+      </div>
+    </article>
+
+    <article class="card clean-schedule-card">
+      <h3>Adoration</h3>
+      {{ $parishName := .name }}
+      <div class="schedule-mini-list">
+        {{ range where site.Data.schedule.adoration "location" $parishName }}
+        <div class="schedule-mini-row {{ .parish_class }}">
+          <div>
+            <strong>{{ .day }}</strong>
+            <span>{{ .time }}</span>
+          </div>
+          <p>{{ .location }}</p>
+        </div>
+        {{ else }}
+        <p>Please check the full Mass & Confession page or current bulletin.</p>
+        {{ end }}
+      </div>
+    </article>
+
+    <article class="card clean-schedule-card">
+      <h3>Rosary</h3>
+      {{ $parishName := .name }}
+      <div class="schedule-mini-list">
+        {{ range where site.Data.schedule.rosary "location" $parishName }}
+        <div class="schedule-mini-row {{ .parish_class }}">
+          <div>
+            <strong>{{ .day }}</strong>
+            <span>{{ .time }}</span>
+          </div>
+          <p>{{ .location }}</p>
+        </div>
+        {{ else }}
+        <p>Please check the full Mass & Confession page or current bulletin.</p>
+        {{ end }}
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Local Parish Details</p>
+    <h2>More About {{ .short_name }}</h2>
+    <p>{{ .local_details_note }}</p>
+    <p>
+      The weekly bulletin is the source of truth for schedules and announcements.
+    </p>
+    <a class="button button-primary" href="/bulletins/">View Current Bulletin</a>
+  </article>
+</section>
+
+{{ else }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Our Parishes</p>
+    <h1>Parish Not Found</h1>
+  </div>
+</section>
+
+<section class="section">
+  <p>This parish page could not be matched to the location data.</p>
+</section>
+
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Bulletins</p>
+    <h1>Weekly Bulletin</h1>
+    <p class="page-intro">
+      Read this week’s bulletin for parish schedules, announcements, events, and ministry updates.
+    </p>
+  </div>
+</section>
+
+<section class="section two-column">
+  <article class="card bulletin-feature-card">
+    <div class="card-title-row">
+      <div>
+        <p class="eyebrow">Current Bulletin</p>
+        <h2>{{ site.Data.bulletin.current.title }}</h2>
+      </div>
+      <p class="date-chip">{{ site.Data.bulletin.current.date }}</p>
+    </div>
+
+    <p>{{ site.Data.bulletin.current.note }}</p>
+
+    <a class="button button-primary" href="{{ site.Data.bulletin.current.file }}">
+      View Current Bulletin
+    </a>
+  </article>
+
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Schedules</p>
+    <h2>Check Before You Go</h2>
+    <p>
+      Mass, Confession, Adoration, Rosary, Holy Day, funeral, and weather-related schedule changes
+      should be checked against the current bulletin.
+    </p>
+    <a class="button button-secondary" href="/mass-confession/">View Mass & Confession Times</a>
+  </article>
+</section>
+
+{{ end }}

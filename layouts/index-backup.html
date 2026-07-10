@@ -1,0 +1,109 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Welcome</p>
+    <h1>Worship with us across our tri-parish Catholic community.</h1>
+    <p>
+      One Catholic community serving St. Ann, Our Lady of Perpetual Help,
+      and Mother of Sorrows.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button button-primary" href="/mass-confession/">View Mass Times</a>
+      <a class="button button-secondary" href="/bulletins/">Read the Bulletin</a>
+      <a class="button button-secondary" href="/contact/">Contact the Office</a>
+    </div>
+  </div>
+</section>
+
+<section class="quick-start">
+  <h2>New here? Start here.</h2>
+  <div class="quick-links">
+    <a href="/mass-confession/">I’m visiting for Mass</a>
+    <a href="/becoming-catholic/">I want to become Catholic</a>
+    <a href="/sacraments/">I need a sacrament</a>
+    <a href="/faith-formation/">Register my family</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Worship With Us</p>
+    <h2>Weekend Mass at a Glance</h2>
+    <p>Find the next Sunday Mass across our three parish communities.</p>
+  </div>
+
+  <div class="mass-card-grid">
+    <article class="mass-card">
+      <p class="mass-day">Saturday Vigil</p>
+      <p class="mass-time">4:30 PM</p>
+      <h3>Mother of Sorrows</h3>
+      <p>Apache</p>
+    </article>
+
+    <article class="mass-card">
+      <p class="mass-day">Sunday</p>
+      <p class="mass-time">8:30 AM</p>
+      <h3>St. Ann</h3>
+      <p>Elgin</p>
+    </article>
+
+    <article class="mass-card">
+      <p class="mass-day">Sunday</p>
+      <p class="mass-time">10:30 AM</p>
+      <h3>Our Lady of Perpetual Help</h3>
+      <p>Sterling</p>
+    </article>
+  </div>
+
+  <p class="note">
+    The weekly bulletin is the source of truth for parish schedules.
+  </p>
+
+  <a class="button button-primary" href="/mass-confession/">
+    See Full Mass, Confession & Adoration Schedule
+  </a>
+</section>
+
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Our Parishes</p>
+    <h2>Three parishes. One Catholic community.</h2>
+  </div>
+
+  <div class="parish-cards">
+    {{ range site.Data.locations }}
+    <article class="card parish-card">
+      <div class="image-placeholder">{{ .name }} photo</div>
+      <h3>{{ .name }}</h3>
+      <p>{{ .address }}<br>{{ .address_line_2 }}</p>
+      <div class="card-actions">
+        <a class="button button-small" href="/our-parishes/{{ .slug }}/">Explore {{ .short_name }}</a>
+        <a class="button button-secondary button-small-secondary" href="{{ .map_url }}">Get Directions</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section two-column">
+  <article class="card">
+    <p class="eyebrow">Bulletin</p>
+    <h2>Read this week’s bulletin</h2>
+    <p>Stay current on parish announcements, schedules, events, and ministry needs.</p>
+    <a class="button button-primary" href="/bulletins/current-bulletin.pdf">View Current Bulletin</a>
+  </article>
+
+  <article class="card">
+    <p class="eyebrow">Parish Care</p>
+    <h2>Meal Support Ministry</h2>
+    <p>
+      Request support, nominate someone in need, or volunteer to help with meals
+      and practical care.
+    </p>
+    <a class="button button-secondary" href="/meal-support/">Learn More</a>
+  </article>
+</section>
+
+{{ end }}

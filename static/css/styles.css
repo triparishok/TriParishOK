@@ -1,0 +1,1276 @@
+:root {
+  --ivory: #F4F1EA;
+  --white: #FFFFFF;
+  --navy: #0D233A;
+  --maroon: #8B1E2E;
+  --gold: #D0B27A;
+  --gold-tint: #FBF6E8;
+  --text: #1F2933;
+  --muted: #5B6470;
+  --border: #E4DED3;
+
+  --st-ann-tint: #F8E9EC;
+  --olph-tint: #EAF0F7;
+  --mos-tint: #FBF6E8;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--ivory);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--navy);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  background: var(--white);
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+/* Parish color system */
+.parish-st-ann {
+  --parish-color: var(--maroon);
+  --parish-tint: var(--st-ann-tint);
+}
+
+.parish-olph {
+  --parish-color: var(--navy);
+  --parish-tint: var(--olph-tint);
+}
+
+.parish-mos {
+  --parish-color: var(--gold);
+  --parish-tint: var(--mos-tint);
+}
+
+/* Header */
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.utility-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.18);
+  flex-wrap: wrap;
+}
+
+.utility-bar a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
+.utility-bar .utility-primary {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.main-nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.site-logo {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo-title {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.logo-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #E9EEF5;
+}
+
+.main-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.main-nav nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav nav a:hover,
+.main-nav nav a:focus-visible {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Parish selector */
+.parish-selector {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.parish-select-link {
+  display: grid;
+  gap: 0.15rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-left: 6px solid var(--parish-color);
+  border-radius: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  color: var(--white);
+}
+
+.parish-select-link strong {
+  color: var(--white);
+  font-size: 0.98rem;
+  line-height: 1.15;
+}
+
+.parish-select-link span {
+  color: #E9EEF5;
+  font-size: 0.85rem;
+}
+
+.parish-select-link.parish-olph {
+  border-color: rgba(255, 255, 255, 0.34);
+  border-left-color: #B9C8D8;
+  box-shadow:
+    inset 5px 0 0 var(--navy),
+    0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.parish-select-link.parish-olph:hover,
+.parish-select-link.parish-olph:focus-visible {
+  border-left-color: var(--gold);
+  box-shadow:
+    inset 5px 0 0 var(--gold),
+    0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(13, 35, 58, 0.78), rgba(13, 35, 58, 0.78)), var(--navy);
+  color: var(--white);
+  padding: 5rem 1rem;
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  max-width: 680px;
+  font-size: 1.2rem;
+}
+
+.eyebrow {
+  color: var(--maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.hero .eyebrow {
+  color: var(--gold);
+}
+
+/* Buttons */
+.hero-actions,
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button,
+.quick-links a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.button-primary {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.button-secondary,
+.quick-links a {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--border);
+}
+
+.button-small {
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.65rem 0.9rem;
+}
+
+.button-small-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--border);
+}
+
+/* Global motion and interaction */
+.button,
+.quick-links a,
+.utility-bar a,
+.parish-select-link,
+.main-nav nav a,
+.mass-card,
+.daily-row,
+.schedule-mini-row {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible,
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(13, 35, 58, 0.16);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible,
+.button-small:hover,
+.button-small:focus-visible,
+.utility-bar .utility-primary:hover,
+.utility-bar .utility-primary:focus-visible {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible,
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.utility-bar a:hover,
+.utility-bar a:focus-visible {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+  transform: translateY(-1px);
+}
+
+.parish-select-link:hover,
+.parish-select-link:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Sections */
+.quick-start {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 1rem;
+}
+
+.quick-start h2,
+.quick-links {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.section-light {
+  max-width: none;
+  background: var(--white);
+}
+
+.section-light > * {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.card h2 {
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0.25rem 0;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(13, 35, 58, 0.08);
+}
+
+.card h3 {
+  color: var(--maroon);
+  margin-top: 0;
+}
+
+.schedule-grid,
+.parish-cards,
+.two-column,
+.three-column {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Parish cards */
+.image-placeholder {
+  min-height: 180px;
+  border-radius: 0.75rem;
+  background: var(--ivory);
+  border: 1px dashed var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Interior pages */
+.page-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4rem 1rem;
+}
+
+.page-header > div {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.page-intro {
+  max-width: 680px;
+  color: #E9EEF5;
+  font-size: 1.15rem;
+}
+
+.page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  background: var(--ivory);
+}
+
+.page-content h2 {
+  color: var(--navy);
+  margin-top: 2rem;
+}
+
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--white);
+}
+
+.page-content th,
+.page-content td {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.page-content th {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.page-content a {
+  font-weight: 700;
+}
+
+/* Mass page */
+.source-note {
+  background: var(--white);
+  border-left: 6px solid var(--gold);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(13, 35, 58, 0.06);
+}
+
+.mass-card-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mass-card {
+  background: linear-gradient(180deg, var(--parish-tint), var(--white) 52%);
+  border: 2px solid var(--parish-color);
+  border-top-width: 10px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 28px rgba(13, 35, 58, 0.10);
+}
+
+.mass-card.parish-mos {
+  border-color: var(--gold);
+  box-shadow:
+    inset 0 0 0 1px rgba(13, 35, 58, 0.12),
+    0 10px 28px rgba(13, 35, 58, 0.10);
+}
+
+.mass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(13, 35, 58, 0.14);
+}
+
+.mass-card.parish-olph:hover,
+.mass-card.parish-olph:focus-within {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 52%);
+}
+
+.mass-day {
+  color: var(--parish-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.mass-card.parish-mos .mass-day {
+  color: var(--navy);
+}
+
+.mass-time {
+  color: var(--navy);
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.mass-card h3 {
+  color: var(--navy);
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.mass-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* Daily Mass schedule */
+.daily-schedule {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 1080px;
+}
+
+.daily-row {
+  background: linear-gradient(90deg, var(--parish-tint), var(--white) 38%);
+  border: 2px solid var(--border);
+  border-left: 10px solid var(--parish-color);
+  border-radius: 0.85rem;
+  padding: 1.1rem 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+  box-shadow: 0 8px 24px rgba(13, 35, 58, 0.06);
+}
+
+.daily-row.parish-mos {
+  border-left-color: var(--gold);
+}
+
+.daily-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(13, 35, 58, 0.10);
+}
+
+.daily-row.parish-olph:hover {
+  border-left-color: var(--gold);
+  background: linear-gradient(90deg, var(--gold-tint), var(--white) 42%);
+}
+
+.daily-day {
+  color: var(--parish-color);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.daily-row.parish-mos .daily-day {
+  color: var(--navy);
+}
+
+.daily-time {
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.daily-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.55rem 0.85rem;
+  font-weight: 700;
+}
+
+.location-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--parish-color);
+  flex: 0 0 auto;
+}
+
+.parish-mos .location-dot {
+  background: var(--gold);
+  border: 1px solid var(--navy);
+}
+
+/* Confession, Adoration, Rosary */
+.schedule-card-grid {
+  align-items: stretch;
+}
+
+.clean-schedule-card {
+  border: 2px solid var(--border);
+  background: var(--white);
+  box-shadow: 0 10px 28px rgba(13, 35, 58, 0.08);
+}
+
+.clean-schedule-card h3 {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--navy);
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.schedule-mini-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.schedule-mini-row {
+  background: linear-gradient(90deg, var(--parish-tint), var(--white) 42%);
+  border: 2px solid var(--border);
+  border-left: 10px solid var(--parish-color);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.schedule-mini-row.parish-mos {
+  border-left-color: var(--gold);
+}
+
+.schedule-mini-row.parish-olph:hover {
+  border-left-color: var(--gold);
+  background: linear-gradient(90deg, var(--gold-tint), var(--white) 42%);
+}
+
+.schedule-mini-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(13, 35, 58, 0.08);
+}
+
+.schedule-mini-row strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.schedule-mini-row span {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.schedule-mini-row p {
+  color: var(--navy);
+  font-weight: 800;
+  margin: 0;
+}
+
+.before-you-go-card {
+  border: 2px solid var(--gold);
+  box-shadow:
+    inset 0 0 0 1px rgba(13, 35, 58, 0.12),
+    0 10px 28px rgba(13, 35, 58, 0.09);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Accessibility */
+.button:focus-visible,
+.quick-links a:focus-visible,
+.utility-bar a:focus-visible,
+.parish-select-link:focus-visible,
+.main-nav nav a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (min-width: 760px) {
+  .main-nav {
+    grid-template-columns: minmax(300px, 0.95fr) minmax(520px, 1.6fr);
+    align-items: center;
+  }
+
+  .main-nav nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .parish-selector,
+  .mass-card-grid,
+  .parish-cards,
+  .three-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .daily-row {
+    grid-template-columns: minmax(160px, 1fr) 150px minmax(320px, 1.4fr);
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .daily-time {
+    justify-self: center;
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .daily-location {
+    justify-self: end;
+    min-width: 300px;
+  }
+
+  .schedule-mini-row {
+    grid-template-columns: 1fr minmax(135px, auto);
+    align-items: center;
+  }
+
+  .schedule-mini-row p {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1100px) {
+  .main-nav nav ul {
+    gap: 1.25rem;
+  }
+
+  .schedule-mini-row {
+    grid-template-columns: 1fr 170px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .quick-links a,
+  .utility-bar a,
+  .parish-select-link,
+  .main-nav nav a,
+  .mass-card,
+  .daily-row,
+  .schedule-mini-row {
+    transition: none;
+  }
+
+  .button:hover,
+  .button:focus-visible,
+  .quick-links a:hover,
+  .quick-links a:focus-visible,
+  .utility-bar a:hover,
+  .utility-bar a:focus-visible,
+  .parish-select-link:hover,
+  .parish-select-link:focus-visible,
+  .main-nav nav a:hover,
+  .main-nav nav a:focus-visible,
+  .mass-card:hover,
+  .daily-row:hover,
+  .schedule-mini-row:hover {
+    transform: none;
+  }
+}
+
+/* Contact page */
+.contact-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-card h2 {
+  margin-top: 0;
+}
+
+.contact-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-list p {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--gold);
+  border-radius: 0.75rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.contact-list strong,
+.contact-list span,
+.contact-list a {
+  display: block;
+}
+
+.contact-list strong {
+  color: var(--navy);
+}
+
+.contact-list a {
+  font-weight: 800;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3rem 1rem;
+  text-align: left;
+}
+
+.footer-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.site-footer h2,
+.site-footer h3 {
+  color: var(--white);
+  margin-top: 0;
+}
+
+.site-footer a {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.footer-note {
+  color: #E9EEF5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (min-width: 760px) {
+  .contact-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+/* Footer refinement: smaller text, cleaner wrapping */
+.site-footer {
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.site-footer h2 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer h3 {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.site-footer p {
+  margin: 0 0 0.65rem;
+}
+
+.footer-note {
+  font-size: 0.88rem;
+  max-width: 32rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  padding: 0.15rem 0;
+}
+
+.footer-grid {
+  gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1020px) {
+  .footer-grid {
+    grid-template-columns: 1.25fr 1fr 1fr 0.9fr;
+    gap: 2rem;
+  }
+}
+
+/* Parish pages */
+.parish-page-card {
+  border: 2px solid var(--border);
+  border-top: 10px solid var(--parish-color);
+  background: linear-gradient(180deg, var(--parish-tint), var(--white) 42%);
+}
+
+.parish-page-card.parish-mos {
+  border-top-color: var(--gold);
+}
+
+.parish-page-card h2 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.parish-page-header {
+  background:
+    linear-gradient(rgba(13, 35, 58, 0.86), rgba(13, 35, 58, 0.86)),
+    var(--navy);
+  border-bottom: 8px solid var(--parish-color);
+}
+
+.parish-page-header.parish-mos {
+  border-bottom-color: var(--gold);
+}
+
+.parish-address-box {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--gold);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.parish-address-box strong,
+.parish-address-box span {
+  display: block;
+}
+
+.parish-address-box strong {
+  color: var(--navy);
+}
+
+.parish-schedule-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.parish-schedule-row {
+  display: grid;
+  gap: 0.25rem;
+  background: linear-gradient(90deg, var(--parish-tint), var(--white) 42%);
+  border: 2px solid var(--border);
+  border-left: 10px solid var(--parish-color);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+}
+
+.parish-schedule-row.parish-mos {
+  border-left-color: var(--gold);
+}
+
+.parish-schedule-row strong {
+  color: var(--text);
+}
+
+.parish-schedule-row span {
+  color: var(--navy);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+@media (min-width: 760px) {
+  .parish-detail-layout {
+    align-items: start;
+  }
+
+  .parish-schedule-row {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+/* Parish selector heading link */
+.parish-selector-heading {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+}
+
+.parish-selector-heading a {
+  color: var(--gold);
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.parish-selector-heading a:hover,
+.parish-selector-heading a:focus-visible {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.parish-selector-heading span {
+  color: #E9EEF5;
+  font-size: 0.9rem;
+}
+
+/* Make Our Parishes cards line up better */
+.parish-page-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.parish-page-card .image-placeholder {
+  min-height: 190px;
+}
+
+.parish-page-card h2 {
+  min-height: 2.4em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.parish-page-card > p:not(.eyebrow) {
+  min-height: 4.75rem;
+}
+
+.parish-page-card .parish-address-box {
+  margin-top: 0;
+}
+
+.parish-page-card .card-actions {
+  margin-top: auto;
+}
+
+/* Keep buttons consistent on parish cards */
+.parish-page-card .card-actions .button {
+  text-align: center;
+}
+
+@media (max-width: 759px) {
+  .parish-page-card h2,
+  .parish-page-card > p:not(.eyebrow) {
+    min-height: auto;
+  }
+}
+
+/* Parish page cards: stack action buttons for cleaner spacing */
+.parish-page-card .card-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.parish-page-card .card-actions .button {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Keep homepage parish card buttons flexible unless they become crowded */
+@media (min-width: 760px) {
+  .parish-page-card .card-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Color-code address boxes by parish */
+.parish-page-card .parish-address-box,
+.parish-detail-card .parish-address-box {
+  border-left-color: var(--parish-color);
+  background: linear-gradient(90deg, var(--parish-tint), var(--ivory) 42%);
+}
+
+.parish-page-card.parish-mos .parish-address-box,
+.parish-detail-card.parish-mos .parish-address-box {
+  border-left-color: var(--gold);
+}
+
+.parish-page-card .parish-address-box strong,
+.parish-detail-card .parish-address-box strong {
+  color: var(--navy);
+}
+
+/* Color-code parish city labels */
+.parish-page-card .eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  background: var(--parish-tint);
+  border: 1px solid var(--parish-color);
+  color: var(--parish-color);
+}
+
+/* Gold text on ivory is too low contrast, so Mother of Sorrows uses navy text with gold accent */
+.parish-page-card.parish-mos .eyebrow {
+  color: var(--navy);
+  border-color: var(--gold);
+  background: var(--gold-tint);
+}
+
+/* OLPH city label needs a slightly clearer edge */
+.parish-page-card.parish-olph .eyebrow {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+/* Bulletins page */
+.bulletin-feature-card {
+  border: 2px solid var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 48%);
+}
+
+.office-note {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--gold);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.office-note code {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--navy);
+  overflow-wrap: anywhere;
+}
+
+/* Balanced two-column cards */
+.two-column {
+  align-items: stretch;
+}
+
+.two-column > .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-column > .card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+/* Bulletin page card balance */
+.bulletin-feature-card,
+.before-you-go-card {
+  min-height: 320px;
+}
+
+.bulletin-feature-card h2,
+.before-you-go-card h2 {
+  margin-bottom: 1rem;
+}
+
+.bulletin-feature-card p,
+.before-you-go-card p {
+  max-width: 38rem;
+}
+
+/* Keep mobile natural */
+@media (max-width: 759px) {
+  .bulletin-feature-card,
+  .before-you-go-card {
+    min-height: auto;
+  }
+
+  .two-column > .card .button {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Card title row with date chip */
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title-row h2 {
+  margin-bottom: 0;
+}
+
+.date-chip {
+  flex: 0 0 auto;
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.55rem 0.75rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 759px) {
+  .card-title-row {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .date-chip {
+    width: fit-content;
+  }
+}

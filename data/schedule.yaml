@@ -1,0 +1,118 @@
+source_note: "The weekly bulletin is the source of truth for parish schedules. If the website and bulletin do not match, please follow the bulletin."
+
+mass:
+  - section: "weekend"
+    day: "Saturday Vigil"
+    time: "4:30 PM"
+    location: "Mother of Sorrows"
+    city: "Apache"
+    parish_class: "parish-mos"
+
+  - section: "weekend"
+    day: "Sunday"
+    time: "8:30 AM"
+    location: "St. Ann"
+    city: "Elgin"
+    parish_class: "parish-st-ann"
+
+  - section: "weekend"
+    day: "Sunday"
+    time: "10:30 AM"
+    location: "Our Lady of Perpetual Help"
+    city: "Sterling"
+    parish_class: "parish-olph"
+
+  - section: "weekday"
+    day: "Monday"
+    time: "8:30 AM"
+    location: "St. Ann"
+    city: "Elgin"
+    parish_class: "parish-st-ann"
+
+  - section: "weekday"
+    day: "Tuesday"
+    time: "4:30 PM"
+    location: "Mother of Sorrows"
+    city: "Apache"
+    parish_class: "parish-mos"
+
+  - section: "weekday"
+    day: "Wednesday"
+    time: "8:30 AM"
+    location: "St. Ann"
+    city: "Elgin"
+    parish_class: "parish-st-ann"
+
+  - section: "weekday"
+    day: "Thursday"
+    time: "8:30 AM"
+    location: "Our Lady of Perpetual Help"
+    city: "Sterling"
+    parish_class: "parish-olph"
+
+  - section: "weekday"
+    day: "Friday"
+    time: "8:30 AM"
+    location: "St. Ann"
+    city: "Elgin"
+    parish_class: "parish-st-ann"
+
+  - section: "weekday"
+    day: "First Saturday"
+    time: "8:30 AM"
+    location: "St. Ann"
+    city: "Elgin"
+    parish_class: "parish-st-ann"
+
+confession:
+  - day: "First Friday"
+    time: "9:00 AM–10:00 AM"
+    location: "St. Ann"
+    parish_class: "parish-st-ann"
+
+  - day: "Saturday"
+    time: "4:00 PM"
+    location: "Mother of Sorrows"
+    parish_class: "parish-mos"
+
+  - day: "Sunday"
+    time: "8:00 AM"
+    location: "St. Ann"
+    parish_class: "parish-st-ann"
+
+  - day: "Sunday"
+    time: "After Mass"
+    location: "Our Lady of Perpetual Help"
+    parish_class: "parish-olph"
+
+adoration:
+  - day: "First Thursday"
+    time: "6:00 PM–7:00 PM"
+    location: "Our Lady of Perpetual Help"
+    parish_class: "parish-olph"
+
+  - day: "Other Thursdays"
+    time: "6:00 PM–7:00 PM"
+    location: "St. Ann"
+    parish_class: "parish-st-ann"
+
+  - day: "First Friday"
+    time: "9:00 AM–10:00 AM"
+    location: "St. Ann"
+    parish_class: "parish-st-ann"
+
+rosary:
+  - day: "Saturday"
+    time: "4:00 PM"
+    location: "Mother of Sorrows"
+    parish_class: "parish-mos"
+
+  - day: "Sunday"
+    time: "8:00 AM"
+    location: "St. Ann"
+    parish_class: "parish-st-ann"
+
+  - day: "Sunday"
+    time: "10:00 AM"
+    location: "Our Lady of Perpetual Help"
+    parish_class: "parish-olph"
