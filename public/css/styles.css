@@ -1349,3 +1349,126 @@ img {
     text-align: center;
   }
 }
+
+/* New Here page */
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.welcome-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.info-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.info-card {
+  border-left: 8px solid var(--gold);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.info-card p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .welcome-card {
+    min-height: auto;
+  }
+
+  .welcome-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* New Here: visitor-friendly weekend Mass cards */
+.visit-location-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.visit-location-card {
+  display: grid;
+  gap: 1rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-left: 10px solid var(--parish-color);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.visit-location-card.parish-mos {
+  border-left-color: var(--gold);
+}
+
+.visit-day {
+  margin: 0 0 0.35rem;
+  color: var(--maroon);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.visit-location-card.parish-olph .visit-day {
+  color: var(--navy);
+}
+
+.visit-location-card.parish-mos .visit-day {
+  color: var(--navy);
+}
+
+.visit-location-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  line-height: 1;
+}
+
+.visit-location-details {
+  background: var(--parish-tint);
+  border-radius: 0.85rem;
+  padding: 0.85rem;
+}
+
+.visit-location-card.parish-mos .visit-location-details {
+  background: var(--gold-tint);
+}
+
+.visit-parish {
+  margin: 0 0 0.2rem;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.visit-location-details p:last-child {
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .visit-location-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .visit-location-card {
+    align-content: space-between;
+    min-height: 220px;
+  }
+}
