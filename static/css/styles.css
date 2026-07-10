@@ -1578,3 +1578,68 @@ img {
   border-left-color: var(--navy);
   background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
 }
+
+/* Faith Formation page */
+.faith-feature-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.faith-feature-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.formation-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.formation-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid var(--gold);
+}
+
+.formation-card:nth-child(4n + 1) {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 38%);
+}
+
+.formation-card:nth-child(4n + 2) {
+  border-left-color: var(--navy);
+  background: linear-gradient(180deg, var(--olph-tint), var(--white) 38%);
+}
+
+.formation-card:nth-child(4n + 3) {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-tint), var(--white) 38%);
+}
+
+.formation-card:nth-child(4n + 4) {
+  border-left-color: var(--maroon);
+}
+
+.formation-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+@media (min-width: 760px) {
+  .formation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .faith-feature-card {
+    min-height: auto;
+  }
+
+  .faith-feature-card .button,
+  .formation-card .button {
+    width: 100%;
+    text-align: center;
+  }
+}

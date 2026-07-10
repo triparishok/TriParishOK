@@ -1,0 +1,28 @@
+intro:
+  title: "Faith Formation"
+  summary: "Faith formation helps children, families, teens, and adults grow in knowledge of the Catholic faith, love for Jesus Christ, and life in the Church."
+
+sections:
+  - title: "Children’s Faith Formation"
+    eyebrow: "For Children"
+    summary: "Formation for children helps them learn the faith, pray with confidence, understand the Mass, and prepare for the Sacraments at the proper time."
+    action_text: "Contact the Parish Office"
+    action_url: "/contact/"
+
+  - title: "Sacramental Preparation"
+    eyebrow: "First Communion, Confirmation & More"
+    summary: "Preparation for First Confession, First Holy Communion, Confirmation, Baptism, and other sacramental needs should be arranged through the parish."
+    action_text: "View Sacraments"
+    action_url: "/sacraments/"
+
+  - title: "Adult Faith Formation"
+    eyebrow: "For Adults"
+    summary: "Adults are invited to keep growing in Scripture, prayer, Catholic teaching, and the sacramental life of the Church."
+    action_text: "Becoming Catholic"
+    action_url: "/becoming-catholic/"
+
+  - title: "Family Faith at Home"
+    eyebrow: "Domestic Church"
+    summary: "Parents are the first teachers of the faith. The parish supports families as they pray, learn, attend Mass, and live the liturgical year at home."
+    action_text: "View Mass Times"
+    action_url: "/mass-confession/"
