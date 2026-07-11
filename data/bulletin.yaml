@@ -1,24 +1,30 @@
 current:
-  date: "July 5, 2026"
-  file: "/bulletins/current-bulletin.pdf"
-  pages: "2 pages"
+  date: July 10, 2026
+  file: /bulletins/current-bulletin.pdf
+  pages: 2 pages
   summary:
-    - label: "Special Mass"
-      title: "Archbishop Coakley will celebrate Mass at St. Ann"
-      detail: "Archbishop Paul S. Coakley, Archbishop of Oklahoma City and President of the USCCB, will celebrate Mass with the tri-parish community on Sunday, August 2 at 10:30 AM at St. Ann in Elgin. A meal will follow Mass. The regular Sunday Mass schedule changes that day."
-      parish: "St. Ann"
-      parish_class: "parish-pill-st-ann"
-
-    - label: "Current Need"
-      title: "Religious Education volunteers needed"
-      detail: "The parish is seeking volunteers to help form children in the Catholic faith through Religious Education."
-
-    - label: "Current Need"
-      title: "Lawn-care volunteers needed at OLPH"
-      detail: "Our Lady of Perpetual Help needs volunteers to help care for the parish grounds."
-      parish: "OLPH"
-      parish_class: "parish-pill-olph"
-
-  accessibility_note: "The bulletin is provided as a PDF. Key notices from the bulletin are also listed on this page as regular web text for easier reading on phones and screen readers."
-
-source_note: "Schedules may change for Holy Days, funerals, weather, and special events. Check current parish notices before traveling."
+    - label: Schedule Change
+      title: Archbishop Coakley will celebrate Mass at St. Ann
+      detail: Archbishop Paul S. Coakley, Archbishop of Oklahoma City and President of
+        the USCCB, will celebrate Mass with the tri-parish community on Sunday,
+        August 2 at 10:30 AM at St. Ann in Elgin. A meal will follow Mass. The
+        regular Sunday Mass schedule changes that day.
+      parish: St. Ann
+      parish_class: parish-pill-st-ann
+    - label: Current Need
+      title: Religious Education volunteers needed
+      detail: The parish is seeking volunteers to help form children in the Catholic
+        faith through Religious Education.
+      parish: St. Ann
+      parish_class: parish-pill-st-ann
+    - label: Current Need
+      title: Lawn-care volunteers needed at OLPH
+      detail: Our Lady of Perpetual Help needs volunteers to help care for the parish
+        grounds.
+      parish: OLPH
+      parish_class: parish-pill-olph
+  accessibility_note: The bulletin is provided as a PDF. Key notices from the
+    bulletin are also listed on this page as regular web text for easier reading
+    on phones and screen readers.
+source_note: Schedules may change for Holy Days, funerals, weather, and special
+  events. Check current parish notices before traveling.
