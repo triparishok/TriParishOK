@@ -1,0 +1,121 @@
+media:
+  - name: bulletin_pdf
+    label: Bulletin PDFs
+    input: static/bulletins
+    output: /bulletins
+    extensions: [pdf]
+    rename: safe
+    categories: [document]
+
+content:
+  - name: bulletin
+    label: Weekly Bulletin
+    type: file
+    path: data/bulletin.yaml
+    format: yaml
+    fields:
+      - name: current
+        label: Current Bulletin
+        type: object
+        fields:
+          - name: date
+            label: Bulletin Date
+            type: string
+            required: true
+            description: "Example: July 12, 2026"
+
+          - name: file
+            label: Bulletin PDF
+            type: file
+            required: true
+            description: "Upload the current bulletin PDF here."
+            options:
+              media: bulletin_pdf
+              extensions: [pdf]
+              rename: safe
+
+          - name: pages
+            label: Number of Pages
+            type: string
+            required: true
+            description: "Example: 2 pages"
+
+          - name: summary
+            label: Key Notices
+            type: object
+            list:
+              min: 1
+              max: 3
+              collapsible:
+                collapsed: false
+                summary: "{title}"
+            fields:
+              - name: label
+                label: Notice Type
+                type: select
+                required: true
+                options:
+                  values:
+                    - Schedule Change
+                    - Current Need
+                    - Parish Event
+                    - Faith Formation
+                    - Office Notice
+                    - Sacrament Notice
+                    - Community Meal
+
+              - name: title
+                label: Notice Title
+                type: string
+                required: true
+                description: "Short headline. Example: Religious Education volunteers needed"
+
+              - name: detail
+                label: Notice Details
+                type: text
+                required: true
+                description: "One or two clear sentences from the bulletin."
+
+              - name: parish
+                label: Parish
+                type: select
+                required: false
+                description: "Use only if the notice belongs to one parish."
+                options:
+                  values:
+                    - name: ""
+                      label: No specific parish
+                    - name: St. Ann
+                      label: St. Ann
+                    - name: OLPH
+                      label: OLPH
+                    - name: Mother of Sorrows
+                      label: Mother of Sorrows
+
+              - name: parish_class
+                label: Parish Color
+                type: select
+                required: false
+                description: "Match this to the parish above. Leave blank if no specific parish."
+                options:
+                  values:
+                    - name: ""
+                      label: No parish color
+                    - name: parish-pill-st-ann
+                      label: St. Ann
+                    - name: parish-pill-olph
+                      label: OLPH
+                    - name: parish-pill-mos
+                      label: Mother of Sorrows
+
+          - name: accessibility_note
+            label: Reading Note
+            type: text
+            required: true
+            readonly: true
+
+      - name: source_note
+        label: Schedule Source Note
+        type: text
+        required: true
+        readonly: true

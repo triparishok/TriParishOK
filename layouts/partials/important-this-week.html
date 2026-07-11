@@ -1,37 +1,34 @@
-{{ with hugo.Data.important_this_week }}
-  {{ if .enabled }}
+{{ with hugo.Data.bulletin.current }}
+  {{ if .summary }}
     <section class="section important-week-section" aria-labelledby="important-week-heading">
       <div class="section-heading">
         <p class="eyebrow">This Week</p>
-        <h2 id="important-week-heading">{{ .heading }}</h2>
-        {{ with .intro }}
-          <p>{{ . }}</p>
-        {{ end }}
+        <h2 id="important-week-heading">Important This Week</h2>
+        <p>
+          Key parish notices from the current bulletin are listed here for quick reading.
+        </p>
       </div>
 
       <div class="important-week-grid">
-        {{ range .items }}
+        {{ range first 3 .summary }}
           {{ $item := . }}
           <article class="important-week-card">
             <header class="important-week-card-header">
               {{ with $item.label }}
-                <span class="important-week-label important-week-label-{{ $item.label_class | default "neutral" }}">{{ . }}</span>
+                <span class="important-week-label important-week-label-neutral">{{ . }}</span>
               {{ end }}
 
-              {{ with $item.context }}
-                <span class="parish-pill {{ $item.context_parish_class }}">{{ . }}</span>
+              {{ with $item.parish }}
+                <span class="parish-pill {{ $item.parish_class }}">{{ . }}</span>
               {{ end }}
             </header>
 
             <h3>{{ $item.title }}</h3>
-            <p>{{ $item.description }}</p>
+            <p>{{ $item.detail }}</p>
 
-            {{ with $item.link_url }}
-              {{ $isPdf := in . ".pdf" }}
-              <a class="button button-secondary important-week-button" href="{{ . }}"{{ if $isPdf }} target="_blank" rel="noopener"{{ end }}>
-                {{ $item.link_text }}{{ if $isPdf }} — opens PDF in a new tab{{ end }}
-              </a>
-            {{ end }}
+            <a class="button button-secondary important-week-button" href="/bulletins/">
+              Read the bulletin details
+            </a>
           </article>
         {{ end }}
       </div>
