@@ -1,0 +1,28 @@
+sections:
+  - title: "Religious Education"
+    label: "Children & Families"
+    summary: "Religious Education helps children grow in knowledge of the Catholic faith, prayer, virtue, and love for Christ and His Church."
+    link_text: "Contact the parish office"
+    link_url: "/contact/"
+
+  - title: "Sacramental Preparation"
+    label: "Preparation"
+    summary: "Preparation for First Confession, First Holy Communion, Confirmation, Baptism, and other sacramental needs is arranged through the parish."
+    link_text: "View Sacraments"
+    link_url: "/sacraments/"
+
+  - title: "Parents as First Teachers"
+    label: "Domestic Church"
+    summary: "Parents are the first teachers of the faith. Parish formation supports what is lived first in the home through prayer, Mass, Scripture, and Catholic family life."
+    link_text: "Plan your next step"
+    link_url: "/contact/"
+
+details:
+  - question: "Who should contact the parish?"
+    answer: "Families seeking Religious Education, sacramental preparation, Baptism for a child, First Confession, First Holy Communion, Confirmation, or help returning to formation should contact the parish office."
+
+  - question: "What information should families be ready to share?"
+    answer: "The parish may need the child’s name, age or grade, parish connection, sacramental history, parent contact information, and any preparation already completed."
+
+  - question: "Where are current schedules and deadlines posted?"
+    answer: "Current parish notices, volunteer needs, registration updates, and schedule changes are shared through the weekly bulletin and parish office."

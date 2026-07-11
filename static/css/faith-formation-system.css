@@ -1,0 +1,209 @@
+/* =========================================================
+   Faith Formation System
+   Clean page-specific treatment.
+   ========================================================= */
+
+.faith-formation-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3rem 1rem 3.25rem;
+}
+
+.faith-formation-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.faith-formation-hero h1 {
+  color: var(--white);
+  max-width: 760px;
+  font-size: clamp(3rem, 5vw, 4.15rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.faith-formation-hero p:not(.eyebrow) {
+  max-width: 780px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.faith-formation-actions {
+  margin-top: 1.4rem;
+}
+
+/* Image */
+
+.faith-formation-image-section {
+  background: var(--white);
+}
+
+.faith-formation-image-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.faith-formation-image-card img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.faith-formation-image-card figcaption {
+  padding: 0.75rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+/* Main cards */
+
+.faith-formation-main-section,
+.faith-formation-details-section {
+  background: var(--ivory);
+}
+
+.faith-formation-card-grid,
+.faith-formation-detail-list {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.faith-formation-card,
+.faith-formation-detail-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem;
+}
+
+.faith-formation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.faith-formation-label {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0.32rem 0.62rem;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+}
+
+.faith-formation-card h3,
+.faith-formation-detail-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.faith-formation-card p:not(.faith-formation-label),
+.faith-formation-detail-card p {
+  margin: 0;
+}
+
+.faith-formation-card .text-link {
+  margin-top: auto;
+}
+
+/* Contact */
+
+.faith-formation-contact-section {
+  background: var(--white);
+}
+
+.faith-formation-contact-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: var(--gold-tint);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.faith-formation-contact-card h2 {
+  margin-top: 0;
+}
+
+.faith-formation-contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.faith-formation-contact-actions {
+  display: grid;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.faith-formation-contact-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (min-width: 760px) {
+  .faith-formation-card-grid,
+  .faith-formation-detail-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .faith-formation-contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  }
+}
+
+@media (max-width: 759px) {
+  .faith-formation-hero {
+    padding: 2.35rem 1rem 2.75rem;
+  }
+
+  .faith-formation-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 3.7rem);
+  }
+
+  .faith-formation-hero p:not(.eyebrow) {
+    font-size: 1.08rem;
+  }
+
+  .faith-formation-actions {
+    display: grid;
+  }
+
+  .faith-formation-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .faith-formation-image-card img {
+    height: 240px;
+  }
+}

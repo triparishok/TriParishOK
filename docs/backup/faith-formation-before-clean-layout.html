@@ -1,0 +1,118 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Faith Formation</p>
+    <h1>{{ hugo.Data.faith_formation.intro.title }}</h1>
+    <p class="page-intro">
+      {{ hugo.Data.faith_formation.intro.summary }}
+    </p>
+  </div>
+</section>
+
+<section class="section page-image-feature-section">
+  <figure class="page-image-feature">
+    {{ with hugo.Data.site_images.devotional.rosary_bible }}
+      <img src="{{ .src }}" alt="{{ .alt }}">
+      <figcaption>{{ .caption }}. {{ .credit }}.</figcaption>
+    {{ end }}
+  </figure>
+</section>
+
+<section class="section two-column">
+  <article class="card faith-feature-card">
+    <p class="eyebrow">Formation Begins at Mass</p>
+    <h2>Learn the faith by living it.</h2>
+    <p>
+      Catholic formation is more than a class. It begins with Sunday Mass, prayer,
+      the Sacraments, Scripture, and learning to live as disciples of Jesus Christ.
+    </p>
+    <a class="button button-primary" href="/mass-confession/">View Mass Times</a>
+  </article>
+
+  <article class="card faith-feature-card">
+    <p class="eyebrow">Need Information?</p>
+    <h2>Contact the parish office.</h2>
+    <p>
+      Class schedules, registration details, sacramental preparation timelines,
+      and parish-specific requirements are confirmed through the parish office.
+    </p>
+    <a class="button button-secondary" href="/contact/">Contact Us</a>
+  </article>
+</section>
+
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Formation Opportunities</p>
+    <h2>Growing in faith together</h2>
+    <p>
+      The parish helps form Catholics at every stage of life.
+    </p>
+  </div>
+
+  <div class="formation-grid">
+    {{ range hugo.Data.faith_formation.sections }}
+      <article class="card formation-card">
+        <p class="eyebrow">{{ .eyebrow }}</p>
+        <h2>{{ .title }}</h2>
+        <p>{{ .summary }}</p>
+        <a class="button button-secondary" href="{{ .action_url }}">{{ .action_text }}</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Parents & Families</p>
+    <h2>The home is the first school of faith.</h2>
+    <p>
+      The Church teaches that parents have the first responsibility for the education of their children in the faith.
+      Parish formation supports that mission; it does not replace it.
+    </p>
+  </div>
+
+  <div class="info-grid">
+    <article class="card info-card">
+      <h3>Attend Sunday Mass.</h3>
+      <p>
+        The Mass is the center of Catholic life. Regular Sunday worship forms the whole family.
+      </p>
+    </article>
+
+    <article class="card info-card">
+      <h3>Pray at home.</h3>
+      <p>
+        Simple habits like grace before meals, bedtime prayers, the Rosary, and Scripture reading help children grow in faith.
+      </p>
+    </article>
+
+    <article class="card info-card">
+      <h3>Prepare for the Sacraments.</h3>
+      <p>
+        Sacramental preparation includes parish formation, family prayer, and faithful participation in Mass.
+      </p>
+    </article>
+
+    <article class="card info-card">
+      <h3>Live the liturgical year.</h3>
+      <p>
+        Advent, Christmas, Lent, Easter, feast days, and saint days help families mark time with Christ and His Church.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Important</p>
+    <h2>Registration and schedules</h2>
+    <p>
+      Current class times, registration forms, safe environment requirements, and sacramental preparation details
+      are confirmed directly with the parish office.
+    </p>
+    <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+  </article>
+</section>
+
+{{ end }}

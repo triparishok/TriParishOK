@@ -1,0 +1,193 @@
+/* =========================================================
+   Parish Life System
+   Clean page-specific treatment.
+   ========================================================= */
+
+.parish-life-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3rem 1rem 3.25rem;
+}
+
+.parish-life-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.parish-life-hero h1 {
+  color: var(--white);
+  max-width: 720px;
+  font-size: clamp(3rem, 5vw, 4.15rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.parish-life-hero p:not(.eyebrow) {
+  max-width: 760px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.parish-life-actions {
+  margin-top: 1.4rem;
+}
+
+/* Categories */
+
+.parish-life-categories-section {
+  background: var(--ivory);
+}
+
+.parish-life-category-list {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.parish-life-category {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.2rem, 3vw, 1.75rem);
+}
+
+.parish-life-category-heading {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.parish-life-category-label {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0.34rem 0.65rem;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+}
+
+.parish-life-category-heading p:not(.parish-life-category-label) {
+  max-width: 780px;
+  margin: 0;
+}
+
+.parish-life-card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.parish-life-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.parish-life-card h3 {
+  margin: 0;
+  font-size: 1.16rem;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.parish-life-card p {
+  margin: 0;
+}
+
+.parish-life-card .text-link {
+  margin-top: auto;
+}
+
+/* Contact */
+
+.parish-life-contact-section {
+  background: var(--white);
+}
+
+.parish-life-contact-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: var(--gold-tint);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.parish-life-contact-card h2 {
+  margin-top: 0;
+}
+
+.parish-life-contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.parish-life-contact-actions {
+  display: grid;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.parish-life-contact-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (min-width: 760px) {
+  .parish-life-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .parish-life-category:nth-child(1) .parish-life-card-grid,
+  .parish-life-category:nth-child(3) .parish-life-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parish-life-contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  }
+}
+
+@media (max-width: 759px) {
+  .parish-life-hero {
+    padding: 2.35rem 1rem 2.75rem;
+  }
+
+  .parish-life-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 3.7rem);
+  }
+
+  .parish-life-hero p:not(.eyebrow) {
+    font-size: 1.08rem;
+  }
+
+  .parish-life-actions {
+    display: grid;
+  }
+
+  .parish-life-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

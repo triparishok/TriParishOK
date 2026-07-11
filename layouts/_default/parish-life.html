@@ -1,98 +1,71 @@
 {{ define "main" }}
 
-<section class="page-header">
-  <div>
+<section class="parish-life-hero">
+  <div class="parish-life-inner">
     <p class="eyebrow">Parish Life</p>
-    <h1>{{ hugo.Data.parish_life.intro.title }}</h1>
-    <p class="page-intro">
-      {{ hugo.Data.parish_life.intro.summary }}
+    <h1>{{ .Title }}</h1>
+    <p>
+      Parish life is more than events. It is the ordinary Catholic life of worship,
+      formation, service, and belonging lived together in Christ.
     </p>
+
+    <div class="button-row parish-life-actions">
+      <a class="button button-primary" href="/mass-confession/">Find Mass Times</a>
+      <a class="button button-secondary" href="/new-here/">Plan Your First Visit</a>
+    </div>
   </div>
 </section>
 
-<section class="section two-column">
-  <article class="card parish-life-feature-card">
+<section class="section parish-life-categories-section" aria-labelledby="parish-life-categories-heading">
+  <div class="section-heading">
     <p class="eyebrow">Start Here</p>
-    <h2>Worship, serve, and belong.</h2>
+    <h2 id="parish-life-categories-heading">Pray, learn, serve, and belong.</h2>
     <p>
-      The heart of parish life is the Mass. From there, we grow through prayer,
-      service, fellowship, formation, and care for one another.
-    </p>
-    <a class="button button-primary" href="/mass-confession/">View Mass Times</a>
-  </article>
-
-  <article class="card parish-life-feature-card">
-    <p class="eyebrow">Need Help Finding a Place?</p>
-    <h2>Contact the parish office.</h2>
-    <p>
-      If you would like to volunteer, join a ministry, ask about an event,
-      or get connected with parish life, the parish office can help.
-    </p>
-    <a class="button button-secondary" href="/contact/">Contact Us</a>
-  </article>
-</section>
-
-<section class="section section-light">
-  <div class="section-heading">
-    <p class="eyebrow">Get Connected</p>
-    <h2>Ways to participate</h2>
-    <p>
-      Parish life looks different in every season, but every Catholic is called to worship God,
-      serve others, and build up the Church.
+      These are the main ways parishioners and visitors can enter more deeply
+      into the life of the tri-parish community.
     </p>
   </div>
 
-  <div class="parish-life-grid">
-    {{ range hugo.Data.parish_life.sections }}
-      <article class="card parish-life-card">
-        <p class="eyebrow">{{ .eyebrow }}</p>
-        <h2>{{ .title }}</h2>
-        <p>{{ .summary }}</p>
-        <a class="button button-secondary" href="{{ .action_url }}">{{ .action_text }}</a>
-      </article>
+  <div class="parish-life-category-list">
+    {{ range hugo.Data.parish_life_categories.categories }}
+      <section class="parish-life-category" aria-labelledby="parish-life-{{ .title | urlize }}">
+        <div class="parish-life-category-heading">
+          <p class="parish-life-category-label">{{ .title }}</p>
+          <p>{{ .intro }}</p>
+        </div>
+
+        <div class="parish-life-card-grid">
+          {{ range .items }}
+            <article class="parish-life-card">
+              <h3>{{ .title }}</h3>
+              <p>{{ .summary }}</p>
+              <a class="text-link" href="{{ .link_url }}">{{ .link_text }}</a>
+            </article>
+          {{ end }}
+        </div>
+      </section>
     {{ end }}
   </div>
 </section>
 
-<section class="section">
-  <div class="section-heading">
-    <p class="eyebrow">Our Parishes</p>
-    <h2>One Catholic community across three locations</h2>
-    <p>
-      St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows each have their own local life,
-      while sharing one tri-parish Catholic community.
-    </p>
+{{ partial "important-this-week.html" . }}
+
+<section class="section parish-life-contact-section" aria-labelledby="parish-life-contact-heading">
+  <div class="parish-life-contact-card">
+    <div>
+      <p class="eyebrow">Questions?</p>
+      <h2 id="parish-life-contact-heading">Contact the parish office.</h2>
+      <p>
+        The parish office can help connect you with Mass times, parish contacts,
+        faith formation, sacramental preparation, and current volunteer needs.
+      </p>
+    </div>
+
+    <div class="parish-life-contact-actions">
+      <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+      <a class="button button-secondary" href="/bulletins/">Read the Bulletin</a>
+    </div>
   </div>
-
-  <div class="visit-location-grid">
-    {{ range hugo.Data.locations }}
-      <article class="visit-location-card {{ .parish_class }}">
-        <div>
-          <p class="visit-day">{{ .city }}</p>
-          <h3>{{ .short_name }}</h3>
-        </div>
-
-        <div class="visit-location-details">
-          <p class="visit-parish">{{ .address }}</p>
-          <p>{{ .address_line_2 }}</p>
-        </div>
-
-        <a class="button button-secondary" href="/our-parishes/{{ .slug }}/">View {{ .short_name | default .name }} details</a>
-      </article>
-    {{ end }}
-  </div>
-</section>
-
-<section class="section parish-life-update-section">
-  <article class="card before-you-go-card parish-life-update-card">
-    <p class="eyebrow">Current Information</p>
-    <h2>Check the bulletin for weekly updates.</h2>
-    <p>
-      Ministry details, parish events, Holy Day schedules, meal needs, and announcements may change from week to week.
-      Please check the current bulletin for the latest information.
-    </p>
-    <a class="button button-primary" href="/bulletins/">Read the Bulletin</a>
-  </article>
 </section>
 
 {{ end }}
