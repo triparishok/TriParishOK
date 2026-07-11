@@ -12,33 +12,32 @@
 
 <section class="section two-column">
   <article class="card giving-feature-card">
-    <p class="eyebrow">{{ hugo.Data.giving.online.provider }}</p>
-    <h2>Support the parish online.</h2>
-    <p>
-      Online giving helps support parish worship, ministries, maintenance, faith formation,
-      outreach, and the ordinary needs of parish life.
-    </p>
-    <p>{{ hugo.Data.giving.online.note }}</p>
-    <a class="button button-primary" href="{{ hugo.Data.giving.online.giving_url }}">
-      Giving Options
+    <p class="eyebrow">{{ hugo.Data.giving.status.eyebrow }}</p>
+    <h2>{{ hugo.Data.giving.status.title }}</h2>
+    <p>{{ hugo.Data.giving.status.summary }}</p>
+    <a class="button button-primary" href="{{ hugo.Data.giving.status.action_url }}">
+      {{ hugo.Data.giving.status.action_text }}
     </a>
   </article>
 
   <article class="card giving-feature-card">
-    <p class="eyebrow">Stewardship</p>
-    <h2>Giving is part of parish life.</h2>
-    <p>
-      Catholic stewardship is a response of gratitude to God. We give back from what He has given us,
-      supporting the work of the Church and the needs of our parish family.
-    </p>
-    <a class="button button-secondary" href="/contact/">Questions? Contact Us</a>
+    <p class="eyebrow">{{ hugo.Data.giving.stewardship.eyebrow }}</p>
+    <h2>{{ hugo.Data.giving.stewardship.title }}</h2>
+    <p>{{ hugo.Data.giving.stewardship.summary }}</p>
+    <a class="button button-secondary" href="{{ hugo.Data.giving.stewardship.action_url }}">
+      {{ hugo.Data.giving.stewardship.action_text }}
+    </a>
   </article>
 </section>
 
 <section class="section section-light">
   <div class="section-heading">
     <p class="eyebrow">Ways to Give</p>
-    <h2>Choose the giving option that fits your situation</h2>
+    <h2>Simple ways to support parish life</h2>
+    <p>
+      These options keep the page useful without listing an online platform before
+      the parish has approved an official link.
+    </p>
   </div>
 
   <div class="giving-grid">
@@ -57,11 +56,11 @@
 
 <section class="section">
   <article class="card before-you-go-card giving-note-card">
-    <p class="eyebrow">Important</p>
-    <h2>Use only the official parish giving link.</h2>
+    <p class="eyebrow">Safety Note</p>
+    <h2>Use only official parish giving information.</h2>
     <p>
-      For safety, use only the giving link provided on this website,
-      in the bulletin, or directly by the parish office.
+      For safety, use only giving information provided by the parish office,
+      the current bulletin, or the official parish website.
     </p>
     <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
   </article>

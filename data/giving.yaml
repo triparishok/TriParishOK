@@ -1,25 +1,34 @@
 intro:
   title: "Giving Options"
-  summary: "Thank you for supporting the mission and daily life of our tri-parish Catholic community."
+  summary: "Thank you for supporting the worship, ministry, maintenance, and daily life of our tri-parish Catholic community."
 
-online:
-  provider: "Tithe.ly"
-  giving_url: "#"
-  note: "The parish office can help with current giving options."
+status:
+  eyebrow: "Current Giving"
+  title: "For current giving options, contact the parish office."
+  summary: "The parish office can help with offertory envelopes, parish records, donation questions, and any current giving options approved for parish use."
+  action_text: "Contact the Parish Office"
+  action_url: "/contact/"
+
+stewardship:
+  eyebrow: "Stewardship"
+  title: "Giving is part of parish life."
+  summary: "Catholic stewardship is a response of gratitude to God. We give back from what He has given us, supporting the Holy Sacrifice of the Mass, the work of the Church, and the needs of our parish family."
+  action_text: "View Current Bulletin"
+  action_url: "/bulletins/"
 
 ways:
-  - title: "Giving Options"
-    eyebrow: "Giving Options"
-    summary: "For current giving options, please contact the parish office."
-    action_text: "Contact the parish office"
-    action_url: "#"
-
   - title: "Give at Mass"
     eyebrow: "Offertory"
     summary: "Offerings may be placed in the collection during Mass."
 
-  - title: "Contact the Office"
-    eyebrow: "Questions"
-    summary: "For questions about giving, envelopes, parish records, or donations, please contact the parish office."
-    action_text: "Contact the Office"
+  - title: "Offertory Envelopes"
+    eyebrow: "Parish Records"
+    summary: "For offertory envelopes, donation records, or parish registration questions, please contact the parish office."
+    action_text: "Contact the Parish Office"
+    action_url: "/contact/"
+
+  - title: "Questions About Giving"
+    eyebrow: "Parish Office"
+    summary: "For questions about gifts, donations, records, or current parish giving options, the parish office will be glad to help."
+    action_text: "Contact the Parish Office"
     action_url: "/contact/"
