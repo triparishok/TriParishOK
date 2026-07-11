@@ -90,6 +90,63 @@
   </div>
 </section>
 
+<section class="section contact-safety-section" id="safe-environment-reporting" aria-labelledby="safe-environment-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Safe Environment</p>
+    <h2 id="safe-environment-heading">{{ hugo.Data.safe_environment.title }}</h2>
+    <p>
+      The Church has a serious duty to protect children and vulnerable adults.
+      These reporting resources are provided for safety, accountability, and care for victims.
+    </p>
+  </div>
+
+  <div class="contact-safety-grid">
+    <article class="card contact-safety-card">
+      <p class="eyebrow">Emergency</p>
+      <h3>{{ hugo.Data.safe_environment.immediate_danger.title }}</h3>
+      <p>{{ hugo.Data.safe_environment.immediate_danger.description }}</p>
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.immediate_danger.phone_href }}">
+        Call {{ hugo.Data.safe_environment.immediate_danger.phone_display }}
+      </a>
+    </article>
+
+    <article class="card contact-safety-card">
+      <p class="eyebrow">Civil Reporting</p>
+      <h3>{{ hugo.Data.safe_environment.state_hotline.title }}</h3>
+      <p>{{ hugo.Data.safe_environment.state_hotline.description }}</p>
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.state_hotline.phone_href }}">
+        Call {{ hugo.Data.safe_environment.state_hotline.phone_display }}
+      </a>
+    </article>
+
+    <article class="card contact-safety-card">
+      <p class="eyebrow">Archdiocese</p>
+      <h3>{{ hugo.Data.safe_environment.archdiocesan_hotline.title }}</h3>
+      <p>{{ hugo.Data.safe_environment.archdiocesan_hotline.description }}</p>
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.archdiocesan_hotline.phone_href }}">
+        Call {{ hugo.Data.safe_environment.archdiocesan_hotline.phone_display }}
+      </a>
+    </article>
+  </div>
+
+  <article class="card contact-safety-resource-card">
+    <div>
+      <p class="eyebrow">Official Resources</p>
+      <h3>Archdiocese of Oklahoma City Safe Environment</h3>
+      <p>
+        For training, policies, reporting information, and Archdiocesan resources,
+        visit the official Safe Environment pages.
+      </p>
+    </div>
+
+    <div class="contact-safety-actions">
+      <a class="button button-secondary" href="{{ hugo.Data.safe_environment.urls.safe_environment }}" target="_blank" rel="noopener noreferrer">Safe Environment</a>
+      <a class="button button-secondary" href="{{ hugo.Data.safe_environment.urls.state_hotline }}" target="_blank" rel="noopener noreferrer">State Hotline Info</a>
+      <a class="button button-secondary" href="{{ hugo.Data.safe_environment.urls.pastoral_response }}" target="_blank" rel="noopener noreferrer">Pastoral Response</a>
+    </div>
+  </article>
+</section>
+
 <section class="section contact-location-section">
   <div class="section-heading">
     <p class="eyebrow">Parish Locations</p>
@@ -122,9 +179,7 @@
     <h2>Need a priest?</h2>
     <p>
       For urgent sacramental needs, especially danger of death, please contact the parish office as soon as possible.
-    </p>
-    <p>
-      For urgent sacramental needs, call the parish office. Staff will route the request appropriately.
+      Staff will route the request appropriately.
     </p>
     <a class="button button-primary" href="tel:{{ replace hugo.Data.contact.office.phone "-" "" }}">Call the Parish Office</a>
   </article>

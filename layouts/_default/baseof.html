@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/css/parish-life-system.css">
   <link rel="stylesheet" href="/css/faith-formation-system.css">
   <link rel="stylesheet" href="/css/bulletins-system.css">
+  <link rel="stylesheet" href="/css/contact-system.css">
 </head>
 
 <body>
@@ -72,18 +73,9 @@
       <section>
         <h3>Parish Office</h3>
         <p>
-          <strong>Phone:</strong> <a href="tel:{{ hugo.Data.contact.office.phone }}">{{ hugo.Data.contact.office.phone }}</a><br>
+          <strong>Phone:</strong> <a href="tel:{{ replace hugo.Data.contact.office.phone "-" "" }}">{{ hugo.Data.contact.office.phone }}</a><br>
           <strong>Email:</strong> <a href="mailto:{{ hugo.Data.contact.office.email }}">{{ hugo.Data.contact.office.email }}</a><br>
           <strong>Hours:</strong> {{ hugo.Data.contact.office.office_hours }}
-        </p>
-      </section>
-
-      <section>
-        <h3>Mailing Address</h3>
-        <p>
-          {{ range hugo.Data.contact.office.mailing_address }}
-            {{ . }}<br>
-          {{ end }}
         </p>
         <p>{{ hugo.Data.contact.office.bulletin_deadline }}</p>
       </section>
@@ -94,9 +86,17 @@
           <li><a href="/mass-confession/">Mass & Confession</a></li>
           <li><a href="/bulletins/">Bulletin</a></li>
           <li><a href="/giving/">Giving Options</a></li>
-          <li><a href="/contact/">Contact the Office</a>
-          <a href="/photo-privacy-notice/">Photo & Privacy Notice</a>
-          <a href="/image-credits/">Image Credits</a></li>
+          <li><a href="/contact/">Contact the Office</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Safety & Notices</h3>
+        <ul class="footer-links">
+          <li><a href="/contact/#safe-environment-reporting">Safe Environment & Reporting Abuse</a></li>
+          <li><a href="{{ hugo.Data.safe_environment.urls.safe_environment }}" target="_blank" rel="noopener noreferrer">Archdiocese Safe Environment</a></li>
+          <li><a href="/photo-privacy-notice/">Photo & Privacy Notice</a></li>
+          <li><a href="/image-credits/">Image Credits</a></li>
         </ul>
       </section>
     </div>

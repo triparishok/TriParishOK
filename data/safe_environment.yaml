@@ -1,0 +1,23 @@
+title: "Safe Environment & Reporting Abuse"
+immediate_danger:
+  title: "Immediate danger"
+  description: "If a child or vulnerable adult is in immediate danger, call 911."
+  phone_display: "911"
+  phone_href: "tel:911"
+
+state_hotline:
+  title: "Oklahoma DHS Statewide Abuse Hotline"
+  description: "To report known or suspected abuse or neglect of a child or vulnerable adult, call the Oklahoma DHS Statewide Abuse Hotline."
+  phone_display: "1-800-522-3511"
+  phone_href: "tel:18005223511"
+
+archdiocesan_hotline:
+  title: "Archdiocesan Pastoral Response Hotline"
+  description: "For abuse of a minor or vulnerable adult, past or present, by clergy or other Archdiocesan personnel, contact the Archdiocesan Pastoral Response Hotline."
+  phone_display: "405-720-9878"
+  phone_href: "tel:4057209878"
+
+urls:
+  safe_environment: "https://archokc.org/safe-environment"
+  state_hotline: "https://archokc.org/statewide-child-abuse-reporting-hotline"
+  pastoral_response: "https://archokc.org/archdiocesan-pastoral-response-hotline"

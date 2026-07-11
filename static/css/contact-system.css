@@ -1,0 +1,71 @@
+/* =========================================================
+   Contact System
+   Safe Environment and footer-support styling.
+   ========================================================= */
+
+.contact-safety-section {
+  background: var(--ivory);
+}
+
+.contact-safety-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-safety-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-safety-card h3,
+.contact-safety-resource-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.contact-safety-card p,
+.contact-safety-resource-card p {
+  margin: 0;
+}
+
+.contact-safety-card .button {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-safety-resource-card {
+  max-width: 1040px;
+  margin: 1rem auto 0;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  background: var(--white);
+}
+
+.contact-safety-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-safety-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 760px) {
+  .contact-safety-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-safety-resource-card {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  }
+}
