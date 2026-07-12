@@ -8,153 +8,333 @@ media:
     categories: [image, document]
 
 content:
-  - name: bulletin
-    label: Weekly Bulletin
-    type: file
-    path: data/bulletin.yaml
-    format: yaml
-    fields:
-      - name: current
-        label: Current Bulletin
-        type: object
+  - name: weekly-updates
+    label: Weekly Updates
+    type: group
+    items:
+      - name: bulletin
+        label: Weekly Bulletin
+        type: file
+        path: data/bulletin.yaml
+        format: yaml
         fields:
-          - name: date
-            label: Bulletin Date
-            type: string
-            required: true
-            description: "Example: July 12, 2026"
-
-          - name: pages
-            label: Number of Pages
-            type: string
-            required: true
-            description: "Example: 2 pages"
-
-          - name: page_images
-            label: Bulletin Page Images
-            type: object
-            list:
-              min: 1
-              max: 8
-              collapsible:
-                collapsed: false
-                summary: "{alt}"
-            fields:
-              - name: src
-                label: Page Image or PDF
-                type: file
-                required: true
-                description: "Upload page 1 first, then page 2, etc. PNG or JPG is best for page images."
-                options:
-                  media: bulletin_files
-                  extensions: [png, jpg, jpeg, pdf]
-                  rename: safe
-
-              - name: alt
-                label: Alt Text
-                type: string
-                required: true
-                description: "Example: Page 1 of the July 12, 2026 tri-parish bulletin"
-
-          - name: summary
-            label: Key Notices
-            type: object
-            list:
-              min: 1
-              max: 6
-              collapsible:
-                collapsed: false
-                summary: "{title}"
-            fields:
-              - name: label
-                label: Notice Type
-                type: select
-                required: true
-                options:
-                  values:
-                    - Schedule Change
-                    - Current Need
-                    - Special Mass
-                    - Parish Event
-                    - Faith Formation
-                    - Office Notice
-                    - Sacrament Notice
-                    - Community Meal
-
-              - name: title
-                label: Notice Title
-                type: string
-                required: true
-                description: "Short headline. Example: Religious Education volunteers needed"
-
-              - name: detail
-                label: Notice Details
-                type: text
-                required: true
-                description: "One or two clear sentences from the bulletin."
-
-              - name: parish
-                label: Parish
-                type: select
-                required: false
-                description: "Use only if the notice belongs to one parish."
-                options:
-                  values:
-                    - name: ""
-                      label: No specific parish
-                    - name: St. Ann
-                      label: St. Ann
-                    - name: OLPH
-                      label: OLPH
-                    - name: Mother of Sorrows
-                      label: Mother of Sorrows
-
-          - name: homily
-            label: Father's Homily Note
+          - name: current
+            label: Current Bulletin
             type: object
             fields:
-              - name: enabled
-                label: Show Homily Note This Week
-                type: boolean
-                required: false
-                default: true
-                description: "Turn this off if there is no homily note for the current bulletin."
-
-              - name: title
-                label: Title
+              - name: date
+                label: Bulletin Date
                 type: string
-                required: false
-                description: "Leave blank if there is no homily note this week."
+                required: true
+                description: "Example: July 12, 2026"
 
-              - name: intro
-                label: Intro
-                type: text
-                required: false
+              - name: pages
+                label: Number of Pages
+                type: string
+                required: true
+                description: "Example: 2 pages"
 
-              - name: paragraphs
-                label: Paragraphs
+              - name: page_images
+                label: Bulletin Page Images
                 type: object
-                required: false
                 list:
-                  min: 0
+                  min: 1
                   max: 8
                   collapsible:
                     collapsed: false
-                    summary: "{text}"
+                    summary: "{alt}"
                 fields:
-                  - name: text
-                    label: Paragraph Text
+                  - name: src
+                    label: Page Image or PDF
+                    type: file
+                    required: true
+                    description: "Upload page 1 first, then page 2, etc. PNG or JPG is best for page images."
+                    options:
+                      media: bulletin_files
+                      extensions: [png, jpg, jpeg, pdf]
+                      rename: safe
+
+                  - name: alt
+                    label: Alt Text
+                    type: string
+                    required: true
+                    description: "Example: Page 1 of the July 12, 2026 tri-parish bulletin"
+
+              - name: summary
+                label: Key Notices
+                type: object
+                list:
+                  min: 1
+                  max: 6
+                  collapsible:
+                    collapsed: false
+                    summary: "{title}"
+                fields:
+                  - name: label
+                    label: Notice Type
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - Schedule Change
+                        - Current Need
+                        - Special Mass
+                        - Parish Event
+                        - Faith Formation
+                        - Office Notice
+                        - Sacrament Notice
+                        - Community Meal
+
+                  - name: title
+                    label: Notice Title
+                    type: string
+                    required: true
+                    description: "Short headline. Example: Religious Education volunteers needed"
+
+                  - name: detail
+                    label: Notice Details
+                    type: text
+                    required: true
+                    description: "One or two clear sentences from the bulletin."
+
+                  - name: parish
+                    label: Parish
+                    type: select
+                    required: false
+                    description: "Use only if the notice belongs to one parish."
+                    options:
+                      values:
+                        - name: ""
+                          label: No specific parish
+                        - name: St. Ann
+                          label: St. Ann
+                        - name: OLPH
+                          label: OLPH
+                        - name: Mother of Sorrows
+                          label: Mother of Sorrows
+
+              - name: homily
+                label: Father's Homily Note
+                type: object
+                fields:
+                  - name: enabled
+                    label: Show Homily Note This Week
+                    type: boolean
+                    required: false
+                    default: true
+                    description: "Turn this off if there is no homily note for the current bulletin."
+
+                  - name: title
+                    label: Title
+                    type: string
+                    required: false
+                    description: "Leave blank if there is no homily note this week."
+
+                  - name: intro
+                    label: Intro
                     type: text
                     required: false
 
-          - name: accessibility_note
-            label: Reading Note
+                  - name: paragraphs
+                    label: Paragraphs
+                    type: object
+                    required: false
+                    list:
+                      min: 0
+                      max: 8
+                      collapsible:
+                        collapsed: false
+                        summary: "{text}"
+                    fields:
+                      - name: text
+                        label: Paragraph Text
+                        type: text
+                        required: false
+
+              - name: accessibility_note
+                label: Reading Note
+                type: text
+                required: true
+                readonly: true
+
+          - name: source_note
+            label: Schedule Source Note
             type: text
             required: true
             readonly: true
 
-      - name: source_note
-        label: Schedule Source Note
-        type: text
-        required: true
-        readonly: true
+  - name: regular-schedules
+    label: Regular Schedules — Rare Changes
+    type: group
+    items:
+      - name: schedule
+        label: Regular Mass & Prayer Schedule
+        type: file
+        path: data/schedule.yaml
+        format: yaml
+        fields:
+          - name: source_note
+            label: Important
+            type: text
+            readonly: true
+            description: "This reminder appears on the website and cannot be changed from this screen."
+
+          - name: mass
+            label: Regular Mass Times
+            type: object
+            description: "Only edit when the normal recurring Mass schedule changes. Put one-week cancellations and special Masses under Weekly Updates instead."
+            list:
+              min: 1
+              max: 30
+              collapsible:
+                collapsed: true
+                summary: "{day} — {time}"
+            fields:
+              - name: section
+                label: Weekend or Weekday?
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose weekend or weekday"
+                  values:
+                    - name: weekend
+                      label: Weekend Mass
+                    - name: weekday
+                      label: Weekday Mass
+
+              - name: day
+                label: Day
+                type: string
+                required: true
+                description: "Examples: Sunday, Tuesday, Saturday Vigil, or First Saturday"
+
+              - name: time
+                label: Time
+                type: string
+                required: true
+                description: "Example: 8:30 AM"
+
+              - name: parish
+                label: Parish
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose the parish"
+                  values:
+                    - name: mother-of-sorrows
+                      label: Mother of Sorrows — Apache
+                    - name: st-ann
+                      label: St. Ann — Elgin
+                    - name: olph
+                      label: Our Lady of Perpetual Help — Sterling
+
+          - name: confession
+            label: Regular Confession Times
+            type: object
+            description: "Only edit when the normal recurring Confession schedule changes. Put temporary changes under Weekly Updates."
+            list:
+              min: 1
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{day} — {time}"
+            fields:
+              - name: day
+                label: Day
+                type: string
+                required: true
+                description: "Examples: Sunday, Saturday, or First Friday"
+
+              - name: time
+                label: Time
+                type: string
+                required: true
+                description: "Examples: 8:00 AM, After Mass, or 9:00 AM–10:00 AM"
+
+              - name: parish
+                label: Parish
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose the parish"
+                  values:
+                    - name: mother-of-sorrows
+                      label: Mother of Sorrows — Apache
+                    - name: st-ann
+                      label: St. Ann — Elgin
+                    - name: olph
+                      label: Our Lady of Perpetual Help — Sterling
+
+          - name: adoration
+            label: Regular Adoration Times
+            type: object
+            description: "Only edit when the normal recurring Adoration schedule changes. Put temporary changes under Weekly Updates."
+            list:
+              min: 1
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{day} — {time}"
+            fields:
+              - name: day
+                label: Day
+                type: string
+                required: true
+                description: "Examples: First Thursday, Other Thursdays, or First Friday"
+
+              - name: time
+                label: Time
+                type: string
+                required: true
+                description: "Example: 6:00 PM–7:00 PM"
+
+              - name: parish
+                label: Parish
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose the parish"
+                  values:
+                    - name: mother-of-sorrows
+                      label: Mother of Sorrows — Apache
+                    - name: st-ann
+                      label: St. Ann — Elgin
+                    - name: olph
+                      label: Our Lady of Perpetual Help — Sterling
+
+          - name: rosary
+            label: Regular Rosary Times
+            type: object
+            description: "Only edit when the normal recurring Rosary schedule changes. Put temporary changes under Weekly Updates."
+            list:
+              min: 1
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{day} — {time}"
+            fields:
+              - name: day
+                label: Day
+                type: string
+                required: true
+                description: "Example: Sunday"
+
+              - name: time
+                label: Time
+                type: string
+                required: true
+                description: "Example: 10:00 AM"
+
+              - name: parish
+                label: Parish
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose the parish"
+                  values:
+                    - name: mother-of-sorrows
+                      label: Mother of Sorrows — Apache
+                    - name: st-ann
+                      label: St. Ann — Elgin
+                    - name: olph
+                      label: Our Lady of Perpetual Help — Sterling
