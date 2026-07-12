@@ -70,23 +70,43 @@
 </section>
 
 
-<section class="section section-light home-mass-section" aria-labelledby="weekend-mass-heading">
+<section class="section section-light home-mass-section" aria-labelledby="home-worship-schedule-heading">
   <div class="section-heading">
     <p class="eyebrow">Worship with Us</p>
-    <h2 id="weekend-mass-heading">Weekend Mass at a Glance</h2>
-    <p>Find the regular weekend Mass times across our three parish communities.</p>
+    <h2 id="home-worship-schedule-heading">Mass & Confession at a Glance</h2>
+    <p>Find regular weekend Mass and Confession times across our three parish communities.</p>
   </div>
 
-  <div class="home-mass-grid">
-    {{ range where hugo.Data.schedule.mass "section" "weekend" }}
-      {{ $parish := partial "location-by-slug.html" .parish }}
-      <article class="home-mass-card {{ $parish.parish_class }}">
-        <p class="home-mass-day">{{ .day }}</p>
-        <p class="home-mass-time">{{ .time }}</p>
-        <p class="home-mass-parish">{{ $parish.name }}</p>
-        <p class="home-mass-city">{{ $parish.city }}</p>
-      </article>
-    {{ end }}
+  <div class="home-schedule-group" aria-labelledby="home-weekend-mass-heading">
+    <h3 class="home-schedule-subheading" id="home-weekend-mass-heading">Weekend Mass</h3>
+
+    <div class="home-mass-grid">
+      {{ range where hugo.Data.schedule.mass "section" "weekend" }}
+        {{ $parish := partial "location-by-slug.html" .parish }}
+        <article class="home-mass-card {{ $parish.parish_class }}">
+          <p class="home-mass-day">{{ .day }}</p>
+          <p class="home-mass-time">{{ .time }}</p>
+          <p class="home-mass-parish">{{ $parish.name }}</p>
+          <p class="home-mass-city">{{ $parish.city }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="home-schedule-group home-confession-group" aria-labelledby="home-confession-heading">
+    <h3 class="home-schedule-subheading" id="home-confession-heading">Regular Confession</h3>
+
+    <div class="home-mass-grid home-confession-grid">
+      {{ range hugo.Data.schedule.confession }}
+        {{ $parish := partial "location-by-slug.html" .parish }}
+        <article class="home-mass-card home-confession-card {{ $parish.parish_class }}">
+          <p class="home-mass-day">{{ .day }}</p>
+          <p class="home-mass-time">{{ .time }}</p>
+          <p class="home-mass-parish">{{ $parish.name }}</p>
+          <p class="home-mass-city">{{ $parish.city }}</p>
+        </article>
+      {{ end }}
+    </div>
   </div>
 
   <p class="source-note home-mass-note">

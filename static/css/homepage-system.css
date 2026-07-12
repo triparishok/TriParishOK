@@ -877,3 +877,26 @@
     padding-right: 0.55rem !important;
   }
 }
+
+/* ---------- Homepage worship schedule groups ---------- */
+
+.home-schedule-group {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-schedule-group + .home-schedule-group {
+  margin-top: 2rem;
+}
+
+.home-schedule-subheading {
+  margin: 0 0 0.9rem;
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.home-confession-card {
+  background: var(--ivory);
+}
