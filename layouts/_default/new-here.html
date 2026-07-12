@@ -63,15 +63,16 @@
 
   <div class="visit-location-grid">
     {{ range where hugo.Data.schedule.mass "section" "weekend" }}
-      <article class="visit-location-card {{ .parish_class }}">
+      {{ $parish := partial "location-by-slug.html" .parish }}
+      <article class="visit-location-card {{ $parish.parish_class }}">
         <div>
           <p class="visit-day">{{ .day }}</p>
           <h3>{{ .time }}</h3>
         </div>
 
         <div class="visit-location-details">
-          <p class="visit-parish">{{ .location }}</p>
-          <p>{{ .city }}</p>
+          <p class="visit-parish">{{ $parish.name }}</p>
+          <p>{{ $parish.city }}</p>
         </div>
       </article>
     {{ end }}

@@ -1,0 +1,10 @@
+{{- $result := dict -}}
+{{- $matches := where hugo.Data.locations "slug" . -}}
+
+{{- if gt (len $matches) 0 -}}
+  {{- $result = index $matches 0 -}}
+{{- else -}}
+  {{- errorf "Unknown parish slug: %q" . -}}
+{{- end -}}
+
+{{- return $result -}}

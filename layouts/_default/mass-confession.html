@@ -33,11 +33,12 @@
 
   <div class="mass-card-grid">
     {{ range where hugo.Data.schedule.mass "section" "weekend" }}
-      <article class="mass-card {{ .parish_class }}">
+      {{ $parish := partial "location-by-slug.html" .parish }}
+      <article class="mass-card {{ $parish.parish_class }}">
         <p class="mass-day">{{ .day }}</p>
         <p class="mass-time">{{ .time }}</p>
-        <h3>{{ .location }}</h3>
-        <p>{{ .city }}</p>
+        <h3>{{ $parish.name }}</h3>
+        <p>{{ $parish.city }}</p>
       </article>
     {{ end }}
   </div>
@@ -51,12 +52,13 @@
 
   <div class="daily-schedule">
     {{ range where hugo.Data.schedule.mass "section" "weekday" }}
-      <article class="daily-row {{ .parish_class }}">
+      {{ $parish := partial "location-by-slug.html" .parish }}
+      <article class="daily-row {{ $parish.parish_class }}">
         <div class="daily-day">{{ .day }}</div>
         <div class="daily-time">{{ .time }}</div>
         <div class="daily-location">
           <span class="location-dot"></span>
-          <span>{{ .location }} · {{ .city }}</span>
+          <span>{{ $parish.name }} · {{ $parish.city }}</span>
         </div>
       </article>
     {{ end }}
@@ -78,12 +80,13 @@
 
       <div class="schedule-mini-list">
         {{ range hugo.Data.schedule.confession }}
-          <div class="schedule-mini-row {{ .parish_class }}">
+          {{ $parish := partial "location-by-slug.html" .parish }}
+          <div class="schedule-mini-row {{ $parish.parish_class }}">
             <div>
               <strong>{{ .day }}</strong>
               <span>{{ .time }}</span>
             </div>
-            <p>{{ .location }}</p>
+            <p>{{ $parish.name }}</p>
           </div>
         {{ end }}
       </div>
@@ -94,12 +97,13 @@
 
       <div class="schedule-mini-list">
         {{ range hugo.Data.schedule.adoration }}
-          <div class="schedule-mini-row {{ .parish_class }}">
+          {{ $parish := partial "location-by-slug.html" .parish }}
+          <div class="schedule-mini-row {{ $parish.parish_class }}">
             <div>
               <strong>{{ .day }}</strong>
               <span>{{ .time }}</span>
             </div>
-            <p>{{ .location }}</p>
+            <p>{{ $parish.name }}</p>
           </div>
         {{ end }}
       </div>
@@ -110,12 +114,13 @@
 
       <div class="schedule-mini-list">
         {{ range hugo.Data.schedule.rosary }}
-          <div class="schedule-mini-row {{ .parish_class }}">
+          {{ $parish := partial "location-by-slug.html" .parish }}
+          <div class="schedule-mini-row {{ $parish.parish_class }}">
             <div>
               <strong>{{ .day }}</strong>
               <span>{{ .time }}</span>
             </div>
-            <p>{{ .location }}</p>
+            <p>{{ $parish.name }}</p>
           </div>
         {{ end }}
       </div>

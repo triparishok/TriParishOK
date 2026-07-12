@@ -51,7 +51,7 @@
     </p>
 
     <div class="simple-list">
-      {{ range where hugo.Data.schedule.mass "location" $location.name }}
+      {{ range where hugo.Data.schedule.mass "parish" $location.slug }}
         <div class="simple-list-row">
           <strong>{{ .day }}</strong>
           <span>{{ .time }}</span>
@@ -103,7 +103,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Confession</p>
       <div class="simple-list">
-        {{ range where hugo.Data.schedule.confession "location" $location.name }}
+        {{ range where hugo.Data.schedule.confession "parish" $location.slug }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>
@@ -117,7 +117,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Adoration</p>
       <div class="simple-list">
-        {{ range where hugo.Data.schedule.adoration "location" $location.name }}
+        {{ range where hugo.Data.schedule.adoration "parish" $location.slug }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>
@@ -131,7 +131,7 @@
     <article class="card parish-detail-card {{ $location.parish_class }}">
       <p class="eyebrow">Rosary</p>
       <div class="simple-list">
-        {{ range where hugo.Data.schedule.rosary "location" $location.name }}
+        {{ range where hugo.Data.schedule.rosary "parish" $location.slug }}
           <div class="simple-list-row">
             <strong>{{ .day }}</strong>
             <span>{{ .time }}</span>
