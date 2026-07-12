@@ -11,8 +11,8 @@
 
     {{ with hugo.Data.bulletin.current }}
       <div class="button-row bulletins-hero-actions">
-        <a class="button button-primary" href="{{ .file }}" target="_blank" rel="noopener">
-          Open current bulletin — PDF{{ with .pages }}, {{ . }}{{ end }}; opens in a new tab
+        <a class="button button-primary" href="#current-bulletin-pages">
+          View the {{ .date }} bulletin
         </a>
       </div>
     {{ end }}
@@ -24,7 +24,7 @@
     <p class="eyebrow">Key Notices</p>
     <h2 id="bulletin-summary-heading">This week from the bulletin</h2>
     <p>
-      The bulletin PDF remains the source of truth. Key notices are also listed
+      The bulletin remains the source of truth. Key notices are also listed
       here as regular webpage text for easier reading on phones and screen readers.
     </p>
   </div>
@@ -49,6 +49,41 @@
           <h3>{{ $notice.title }}</h3>
           <p>{{ $notice.detail }}</p>
         </article>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
+
+{{ with hugo.Data.bulletin.current.homily }}
+<section class="section bulletin-homily-section" aria-labelledby="bulletin-homily-heading">
+  <article class="bulletin-homily-card">
+    <p class="eyebrow">From Father’s Homily Notes</p>
+    <h2 id="bulletin-homily-heading">{{ .title }}</h2>
+
+    {{ with .intro }}
+      <p class="bulletin-homily-intro">{{ . }}</p>
+    {{ end }}
+
+    {{ range .paragraphs }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </article>
+</section>
+{{ end }}
+
+<section class="section bulletin-pages-section" id="current-bulletin-pages" aria-labelledby="current-bulletin-pages-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Current Bulletin</p>
+    <h2 id="current-bulletin-pages-heading">{{ hugo.Data.bulletin.current.date }}</h2>
+    <p>{{ hugo.Data.bulletin.current.accessibility_note }}</p>
+  </div>
+
+  {{ with hugo.Data.bulletin.current.page_images }}
+    <div class="bulletin-page-image-list">
+      {{ range . }}
+        <figure class="bulletin-page-image-card">
+          <img src="{{ .src }}" alt="{{ .alt }}">
+        </figure>
       {{ end }}
     </div>
   {{ end }}

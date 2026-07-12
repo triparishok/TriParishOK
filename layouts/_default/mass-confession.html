@@ -123,6 +123,22 @@
   </div>
 </section>
 
+<section class="section section-light" aria-labelledby="mass-intentions-heading">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Mass Intentions</p>
+    <h2 id="mass-intentions-heading">{{ hugo.Data.mass_intentions.title }}</h2>
+    <p>{{ hugo.Data.mass_intentions.summary }}</p>
+
+    <ul>
+      {{ range hugo.Data.mass_intentions.steps }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <a class="button button-secondary" href="/contact/">Questions? Contact the Parish Office</a>
+  </article>
+</section>
+
 <section class="section">
   <article class="card before-you-go-card">
     <p class="eyebrow">Before You Go</p>

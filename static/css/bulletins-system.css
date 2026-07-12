@@ -206,3 +206,58 @@
     text-align: center;
   }
 }
+
+/* Bulletin homily note */
+
+.bulletin-homily-section {
+  background: var(--white);
+}
+
+.bulletin-homily-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 8px solid var(--gold);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.bulletin-homily-card h2 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.bulletin-homily-intro {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+/* Bulletin page images */
+
+.bulletin-pages-section {
+  background: var(--ivory);
+}
+
+.bulletin-page-image-list {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.bulletin-page-image-card {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.bulletin-page-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

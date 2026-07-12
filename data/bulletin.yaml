@@ -1,27 +1,41 @@
 current:
-  date: July 10, 2026
-  file: /bulletins/current-bulletin.pdf
-  pages: 2 pages
+  date: "July 12, 2026"
+  pages: "2 pages"
+  file: "/bulletins/2026-07-12/page-1.png"
+  page_images:
+    - src: "/bulletins/2026-07-12/page-1.png"
+      alt: "Page 1 of the July 12, 2026 tri-parish bulletin"
+    - src: "/bulletins/2026-07-12/page-2.png"
+      alt: "Page 2 of the July 12, 2026 tri-parish bulletin"
+
   summary:
-    - label: Schedule Change
-      title: Archbishop Coakley will celebrate Mass at St. Ann
-      detail: Archbishop Paul S. Coakley, Archbishop of Oklahoma City and President of
-        the USCCB, will celebrate Mass with the tri-parish community on Sunday,
-        August 2 at 10:30 AM at St. Ann in Elgin. A meal will follow Mass. The
-        regular Sunday Mass schedule changes that day.
-      parish: St. Ann
-    - label: Current Need
-      title: Religious Education volunteers needed
-      detail: The parish is seeking volunteers to help form children in the Catholic
-        faith through Religious Education.
-      parish: St. Ann
-    - label: Current Need
-      title: Lawn-care volunteers needed at OLPH
-      detail: Our Lady of Perpetual Help needs volunteers to help care for the parish
-        grounds.
-      parish: OLPH
-  accessibility_note: The bulletin is provided as a PDF. Key notices from the
-    bulletin are also listed on this page as regular web text for easier reading
-    on phones and screen readers.
-source_note: Schedules may change for Holy Days, funerals, weather, and special
-  events. Check current parish notices before traveling.
+    - label: "Schedule Change"
+      title: "No weekday Mass Tuesday at Mother of Sorrows or Thursday at OLPH"
+      detail: "There will be no weekday Mass on Tuesday, July 14 at Mother of Sorrows or Thursday, July 16 at Our Lady of Perpetual Help."
+
+    - label: "Special Mass"
+      title: "Archbishop Coakley will celebrate Mass at St. Ann"
+      detail: "Please join us on Sunday, August 2 at 10:30 AM as Archbishop Coakley celebrates Holy Mass at St. Ann. There will be only one Mass that day, and there will be no Mass at Our Lady of Perpetual Help. A dinner will follow Mass in the parish hall."
+      parish: "St. Ann"
+
+    - label: "Faith Formation"
+      title: "St. Ann Religious Education needs teachers and aides"
+      detail: "St. Ann Religious Education needs teachers and aides for the upcoming school year. Classes meet Sunday mornings after the 8:30 AM Mass. If interested, please contact Sarah Sminkey."
+      parish: "St. Ann"
+
+    - label: "Current Need"
+      title: "Lawn-care volunteers needed at OLPH"
+      detail: "Our Lady of Perpetual Help needs volunteers to help care for the parish grounds."
+      parish: "OLPH"
+
+  homily:
+    title: "The Parable of the Sower"
+    intro: "In this Sunday’s Gospel, Jesus tells the familiar Parable of the Sower."
+    paragraphs:
+      - "The seed is the Word of God, generously sown for all people. The different types of soil represent the condition of our hearts. At times, our hearts can become hardened by pride or indifference, shallow through lack of prayer, or crowded with the worries, distractions, and temptations of daily life. Yet God never stops sowing His Word with patience, love, and hope."
+      - "Jesus invites us to become rich soil where His Word can take deep root and bear abundant fruit. This happens as we listen attentively to Scripture, remain faithful in prayer, receive the sacraments, and put our faith into action through charity and service. The Christian life is not simply about hearing God’s Word but allowing it to transform us from within."
+      - "As we celebrate the Eucharist this weekend, let us ask the Holy Spirit to prepare our hearts to receive God’s Word with openness and trust. May His grace remove whatever prevents us from growing in holiness, so that our lives may bear a rich harvest of faith, hope, love, and joyful witness to Christ in our families, our parish, and our community."
+
+  accessibility_note: "The bulletin is provided as page images. Key notices and Father’s homily note are also listed on this page as regular web text for easier reading on phones and screen readers."
+
+source_note: "Schedules may change for Holy Days, funerals, weather, and special events. Check current parish notices before traveling."

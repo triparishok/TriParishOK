@@ -16,6 +16,11 @@
     - "In 1941, the community began planning for a new church. Parish families contributed money and livestock, and Catholic Extension Society support helped make the new church possible. The church was named St. Ann’s in memory of Anna A. Beckert."
     - "Construction began in November 1946, with much of the work done by parish members. The new church was dedicated on May 11, 1948. A parish hall was built in 1967, a rectory was added in 1997, and new religious education classrooms were built in 2004."
   history_source_note: "History adapted from the former Tri-Parish About page."
+  recurring_events:
+    - title: "Sunday Coffee and Donuts"
+      when: "First Sunday after the 8:30 AM Mass"
+      location: "St. Ann Parish Hall"
+      description: "Join parishioners for coffee and donuts in the parish hall after the 8:30 AM First Sunday Mass."
 
 - name: "Our Lady of Perpetual Help"
   slug: "olph"
