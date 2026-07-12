@@ -5497,3 +5497,123 @@ img {
 [class*="hero"] .eyebrow {
   color: var(--gold) !important;
 }
+
+/* Forms page */
+
+.forms-intro-card {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.forms-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.forms-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.forms-card .card-actions {
+  margin-top: auto;
+}
+
+@media (min-width: 820px) {
+  .forms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1120px) {
+  .forms-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Grouped dropdown menu */
+
+.menu-panel-grouped {
+  min-width: min(92vw, 430px);
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.menu-panel-grouped .menu-group {
+  display: grid;
+  gap: 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.18);
+}
+
+.menu-panel-grouped .menu-group:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.menu-group-title {
+  margin: 0 0 0.15rem;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-panel-grouped a {
+  border-radius: 999px;
+}
+
+@media (max-width: 560px) {
+  .menu-panel-grouped {
+    min-width: min(90vw, 340px);
+  }
+}
+
+/* Mobile-safe dropdown menu */
+.site-menu-minimal {
+  position: relative;
+}
+
+.menu-panel-grouped {
+  right: 0;
+  left: auto;
+  max-height: calc(100dvh - 5.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 640px) {
+  .menu-panel-grouped {
+    width: min(92vw, 360px);
+    min-width: 0;
+    padding: 0.75rem;
+    gap: 0.65rem;
+  }
+
+  .menu-panel-grouped .menu-group {
+    gap: 0.18rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .menu-panel-grouped a {
+    padding: 0.52rem 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.15;
+  }
+
+  .menu-group-title {
+    font-size: 0.7rem;
+    margin-bottom: 0.05rem;
+  }
+}

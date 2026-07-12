@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Forms</p>
+    <h1>Parish Forms</h1>
+    <p class="page-intro">
+      Find printable forms for Sacraments, parish registration, Religious Education,
+      youth activities, and parish requests.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <article class="card forms-intro-card">
+    <p>{{ hugo.Data.forms.intro }}</p>
+    <p><strong>{{ hugo.Data.forms.note }}</strong></p>
+    <div class="card-actions">
+      <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+      <a class="button button-secondary" href="/bulletins/">Current Bulletin</a>
+    </div>
+  </article>
+</section>
+
+{{ range hugo.Data.forms.groups }}
+<section class="section forms-section" id="{{ .title | urlize }}">
+  <div class="section-heading">
+    <p class="eyebrow">Forms</p>
+    <h2>{{ .title }}</h2>
+    <p>{{ .description }}</p>
+  </div>
+
+  <div class="forms-grid">
+    {{ range .items }}
+      {{ $parishClass := "" }}
+      {{ if eq .parish "St. Ann" }}{{ $parishClass = "parish-pill-st-ann" }}{{ end }}
+      {{ if eq .parish "OLPH" }}{{ $parishClass = "parish-pill-olph" }}{{ end }}
+      {{ if eq .parish "Mother of Sorrows" }}{{ $parishClass = "parish-pill-mos" }}{{ end }}
+
+      <article class="card forms-card">
+        {{ with .parish }}
+          <p><span class="parish-pill {{ $parishClass }}">{{ . }}</span></p>
+        {{ end }}
+
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+
+        <div class="card-actions">
+          {{ with .file }}
+            <a class="button button-primary" href="{{ . }}">Download PDF</a>
+          {{ else }}
+            <a class="button button-secondary" href="{{ .link }}">{{ or .link_text "Learn More" }}</a>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Before You Submit</p>
+    <h2>Check with the parish office when needed.</h2>
+    <p>
+      Sacramental preparation, youth activity forms, and parish registration may require
+      additional documents or parish approval. When in doubt, contact the office before submitting.
+    </p>
+    <div class="card-actions">
+      <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+    </div>
+  </article>
+</section>
+
+{{ end }}

@@ -1,5 +1,73 @@
-meal_support:
-  request_link: "#"
-  nominate_link: "#"
-  volunteer_link: "#"
-  note: "All meal support requests are reviewed before anything is shared with volunteers."
+intro: "Download, print, and complete the form you need. Unless a form says otherwise, completed forms may be returned to the parish office."
+
+note: "Some forms may eventually move to a digital process. Until then, these printable forms are provided for convenience."
+
+groups:
+  - title: "Sacrament Forms"
+    description: "Forms related to Baptism, First Holy Communion, Confirmation, and OCIA."
+    items:
+      - title: "Baptismal Form"
+        description: "For families preparing for a child’s Baptism."
+        file: "/forms/baptismal-form.pdf"
+
+      - title: "OCIA Candidate Form"
+        description: "For adults inquiring into the Catholic faith or preparing for full communion with the Church."
+        file: "/forms/ocia-candidate-form.pdf"
+
+      - title: "Confirmation Candidate Form"
+        description: "For Confirmation preparation."
+        file: "/forms/confirmation-candidate-form.pdf"
+
+      - title: "First Communion Form"
+        description: "For First Holy Communion preparation."
+        file: "/forms/first-communion-form.pdf"
+
+  - title: "Parish Registration Forms"
+    description: "Use the form for the parish where your household will register."
+    items:
+      - title: "St. Ann Registration"
+        description: "Member registration for St. Ann in Elgin."
+        file: "/forms/st-ann-member-registration.pdf"
+        parish: "St. Ann"
+
+      - title: "Our Lady of Perpetual Help Registration"
+        description: "Member registration for OLPH in Sterling."
+        file: "/forms/olph-member-registration.pdf"
+        parish: "OLPH"
+
+      - title: "Mother of Sorrows Registration"
+        description: "Member registration for Mother of Sorrows in Apache."
+        file: "/forms/mother-of-sorrows-member-registration.pdf"
+        parish: "Mother of Sorrows"
+
+  - title: "Religious Education & Youth Forms"
+    description: "Forms for RE/youth registration, consent, and off-site activities."
+    items:
+      - title: "RE / Youth Registration, Consent, and Waiver"
+        description: "For participation in Religious Education and youth activities."
+        file: "/forms/re-youth-registration-consent-waiver.pdf"
+
+      - title: "RE / Youth Off-Site Consent and Waiver"
+        description: "For youth field trips, overnight trips, or activities outside the local area."
+        file: "/forms/re-youth-offsite-consent-waiver.pdf"
+
+      - title: "Safe Environment & Reporting"
+        description: "For abuse reporting and Safe Environment information, use the parish reporting section."
+        link: "/contact/#safe-environment-reporting"
+        link_text: "View Reporting Information"
+
+  - title: "Other Forms"
+    description: "Additional parish forms and requests."
+    items:
+      - title: "Reimbursement Form"
+        description: "For approved parish reimbursement requests. Both required signatures must be included."
+        file: "/forms/reimbursement-form.pdf"
+
+      - title: "St. Ann Memorial Brick Order Form"
+        description: "For ordering an engraved brick for the St. Ann Prayer Garden."
+        file: "/forms/st-ann-memorial-brick-order-form.pdf"
+
+      - title: "Scholarship Information"
+        description: "Scholarship forms should be confirmed with the parish office before use."
+        link: "/contact/"
+        link_text: "Contact the Parish Office"

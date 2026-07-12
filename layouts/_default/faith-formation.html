@@ -28,7 +28,7 @@
 <section class="section faith-formation-main-section" aria-labelledby="faith-formation-main-heading">
   <div class="section-heading">
     <p class="eyebrow">Formation</p>
-    <h2 id="faith-formation-main-heading">Helping families grow in the Catholic faith.</h2>
+    <h2 id="faith-formation-main-heading">Helping Families Grow in the Catholic Faith.</h2>
     <p>
       The parish office can help families find the right next step for Religious Education,
       sacramental preparation, and Catholic formation.
@@ -41,7 +41,7 @@
         <p class="faith-formation-label">{{ .label }}</p>
         <h3>{{ .title }}</h3>
         <p>{{ .summary }}</p>
-        <a class="text-link" href="{{ .link_url }}">{{ .link_text }}</a>
+        <div class="card-actions"><a class="button button-secondary" href="{{ .link_url }}">{{ .link_text }}</a></div>
       </article>
     {{ end }}
   </div>
@@ -50,7 +50,7 @@
 <section class="section faith-formation-details-section" aria-labelledby="faith-formation-details-heading">
   <div class="section-heading">
     <p class="eyebrow">Practical Details</p>
-    <h2 id="faith-formation-details-heading">What families should know.</h2>
+    <h2 id="faith-formation-details-heading">What Families Should Know.</h2>
     <p>
       Specific class times, registration windows, and sacramental requirements are confirmed
       through the parish office and current parish notices.
@@ -71,7 +71,7 @@
   <div class="faith-formation-contact-card">
     <div>
       <p class="eyebrow">Next Step</p>
-      <h2 id="faith-formation-contact-heading">Contact the parish office.</h2>
+      <h2 id="faith-formation-contact-heading">Contact the Parish Office.</h2>
       <p>
         The office can help with Religious Education, sacramental preparation,
         registration questions, volunteer needs, and current schedules.
@@ -83,6 +83,22 @@
       <a class="button button-secondary" href="/bulletins/">Read the Bulletin</a>
     </div>
   </div>
+</section>
+
+
+<section class="section forms-crosslink-section forms-crosslink-formation">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Forms</p>
+    <h2>Need Religious Education or Youth Forms?</h2>
+    <p>
+      Registration, consent, waiver, and off-site youth forms are available on the Forms page.
+      The parish office can help confirm what is needed for the current year.
+    </p>
+    <div class="card-actions">
+      <a class="button button-primary" href="/forms/#religious-education-youth-forms">View Religious Education / Youth Forms</a>
+      <a class="button button-secondary" href="/contact/">Contact the Parish Office</a>
+    </div>
+  </article>
 </section>
 
 {{ end }}
