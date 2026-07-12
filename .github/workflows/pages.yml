@@ -38,43 +38,29 @@ jobs:
 
       - name: Build with Hugo
         run: |
-          hugo --gc --minify --baseURL "${HUGO_BASEURL}"
+          hugo --gc --baseURL "${HUGO_BASEURL}"
 
       - name: Rewrite root-relative paths for GitHub Pages
         run: |
           python3 <<'PY2'
           from pathlib import Path
           import os
-          import re
 
           prefix = os.environ["GITHUB_PAGES_PREFIX"].rstrip("/")
           public = Path("public")
           exts = {".html", ".xml", ".css", ".js", ".json", ".webmanifest"}
 
-          def should_rewrite(url):
-              return (
-                  url.startswith("/")
-                  and not url.startswith("//")
-                  and not url.startswith(prefix + "/")
-              )
-
-          def rewrite_quoted_attr(match):
-              attr, quote, url = match.groups()
-              if should_rewrite(url):
-                  url = prefix + url
-              return f"{attr}{quote}{url}{quote}"
-
-          def rewrite_unquoted_attr(match):
-              attr, url = match.groups()
-              if should_rewrite(url):
-                  url = prefix + url
-              return f"{attr}{url}"
-
-          def rewrite_css_url(match):
-              quote, url = match.groups()
-              if should_rewrite(url):
-                  url = prefix + url
-              return f"url({quote}{url}{quote})"
+          replacements = [
+              ('href="/', f'href="{prefix}/'),
+              ("href='/", f"href='{prefix}/"),
+              ('src="/', f'src="{prefix}/'),
+              ("src='/", f"src='{prefix}/"),
+              ('action="/', f'action="{prefix}/'),
+              ("action='/", f"action='{prefix}/"),
+              ('url("/', f'url("{prefix}/'),
+              ("url('/", f"url('{prefix}/"),
+              ('url(/', f'url({prefix}/'),
+          ]
 
           for path in public.rglob("*"):
               if not path.is_file() or path.suffix.lower() not in exts:
@@ -83,26 +69,10 @@ jobs:
               text = path.read_text(errors="ignore")
               original = text
 
-              # href="/..." src="/..." action="/..."
-              text = re.sub(
-                  r'(\b(?:href|src|action)=)(["\'])(/(?!/)[^"\']*)\2',
-                  rewrite_quoted_attr,
-                  text,
-              )
+              for old, new in replacements:
+                  text = text.replace(old, new)
 
-              # href=/... src=/... action=/...
-              text = re.sub(
-                  r'(\b(?:href|src|action)=)(/(?!/)[^\s>]+)',
-                  rewrite_unquoted_attr,
-                  text,
-              )
-
-              # CSS url("/..."), url('/...'), url(/...)
-              text = re.sub(
-                  r'url\((["\']?)(/(?!/)[^)\'"]+)\1\)',
-                  rewrite_css_url,
-                  text,
-              )
+              text = text.replace(f"{prefix}{prefix}/", f"{prefix}/")
 
               if text != original:
                   path.write_text(text)
