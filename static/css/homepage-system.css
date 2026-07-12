@@ -683,3 +683,54 @@
       url("/images/home/st-ann-sanctuary-hero.jpg") center center / cover no-repeat !important;
   }
 }
+
+/* Individual parish recurring events */
+.parish-event-single {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+}
+
+.parish-event-single .parish-event-card {
+  width: 100%;
+}
+
+.parish-event-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+/* Important This Week: show four notices in one row on desktop */
+.important-week-section .important-week-grid {
+  max-width: 1180px !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0.9rem !important;
+}
+
+.important-week-section .important-week-card {
+  padding: 1rem !important;
+}
+
+.important-week-section .important-week-card h3 {
+  font-size: 1.02rem !important;
+  line-height: 1.2 !important;
+}
+
+.important-week-section .important-week-card p {
+  font-size: 0.94rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Two per row on tablet */
+@media (max-width: 1050px) {
+  .important-week-section .important-week-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* One per row on phone */
+@media (max-width: 640px) {
+  .important-week-section .important-week-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

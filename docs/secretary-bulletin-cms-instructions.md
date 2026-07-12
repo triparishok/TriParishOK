@@ -8,7 +8,7 @@
 4. Upload the new bulletin PDF.
 5. Update the bulletin date.
 6. Update the number of pages.
-7. Add up to three key notices from the bulletin.
+7. Add up to six key notices from the bulletin.
 8. Click **Save**.
 
 That is all.
@@ -17,12 +17,12 @@ That is all.
 
 The information entered here updates:
 
-- the Bulletins page
-- the homepage “Important This Week” cards
+- the Bulletins page, which can show all key notices
+- the homepage “Important This Week” cards, which show the first four notices
 
 ## What to include as key notices
 
-Use up to three of the most important items from the current bulletin.
+Use up to six of the most important items from the current bulletin.
 
 Good choices include:
 

@@ -70,6 +70,27 @@
   </article>
 </section>
 
+{{ with $location.recurring_events }}
+<section class="section section-light">
+  <div class="section-heading">
+    <p class="eyebrow">Parish Life</p>
+    <h2>Recurring events at {{ $location.short_name }}</h2>
+  </div>
+
+  {{ $events := . }}
+  <div class="{{ if eq (len $events) 1 }}parish-event-single{{ else }}three-column{{ end }}">
+    {{ range $events }}
+      <article class="card parish-detail-card parish-event-card {{ $location.parish_class }}">
+        <p class="eyebrow">{{ .when }}</p>
+        <h3>{{ .title }}</h3>
+        <p><strong>{{ .location }}</strong></p>
+        <p>{{ .description }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 <section class="section section-light">
   <div class="section-heading">
     <p class="eyebrow">Prayer & Sacraments</p>
