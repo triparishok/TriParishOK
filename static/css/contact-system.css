@@ -69,3 +69,149 @@
     grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
   }
 }
+
+/* Parish ministry contacts */
+
+.contact-ministry-section {
+  background: var(--white);
+}
+
+.contact-ministry-legend {
+  max-width: 760px;
+  margin: 0.65rem auto 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 750;
+}
+
+.contact-ministry-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-ministry-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+}
+
+.contact-ministry-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.contact-ministry-row {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.contact-ministry-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.contact-ministry-row strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.contact-ministry-row p {
+  margin: 0;
+}
+
+@media (min-width: 860px) {
+  .contact-ministry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Parish contact lines with parish badges */
+
+.contact-ministry-contact-list {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+}
+
+.contact-ministry-contact {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: start;
+  margin: 0;
+}
+
+.parish-pill-neutral {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  color: var(--navy);
+}
+
+@media (max-width: 560px) {
+  .contact-ministry-contact {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}
+
+/* Fix Mother of Sorrows parish pill in ministry contacts */
+.contact-ministry-contact .parish-pill {
+  min-width: 9.75rem;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.contact-ministry-contact .parish-pill-mos {
+  background: rgba(208, 178, 122, 0.22);
+  border: 1px solid rgba(154, 116, 43, 0.45);
+  color: #5c4518;
+}
+
+.contact-ministry-contact .parish-pill-st-ann {
+  background: rgba(139, 30, 46, 0.08);
+  border: 1px solid rgba(139, 30, 46, 0.35);
+  color: var(--maroon);
+}
+
+.contact-ministry-contact .parish-pill-olph {
+  background: rgba(13, 35, 58, 0.07);
+  border: 1px solid rgba(13, 35, 58, 0.28);
+  color: var(--navy);
+}
+
+@media (max-width: 560px) {
+  .contact-ministry-contact .parish-pill {
+    min-width: 0;
+    width: fit-content;
+  }
+}
+
+/* Safe Environment section: remove gold call-to-action color */
+.contact-safety-section .contact-safety-card .button-primary {
+  background: var(--navy) !important;
+  border-color: var(--navy) !important;
+  color: var(--white) !important;
+}
+
+.contact-safety-section .contact-safety-card .button-primary:hover,
+.contact-safety-section .contact-safety-card .button-primary:focus {
+  background: #081a2d !important;
+  border-color: #081a2d !important;
+  color: var(--white) !important;
+}
+
+.contact-safety-section .contact-safety-resource-card .button-secondary {
+  background: var(--white) !important;
+  border-color: var(--border) !important;
+  color: var(--navy) !important;
+}
+
+.contact-safety-section .contact-safety-resource-card .button-secondary:hover,
+.contact-safety-section .contact-safety-resource-card .button-secondary:focus {
+  background: var(--ivory) !important;
+  color: var(--navy) !important;
+}

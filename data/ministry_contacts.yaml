@@ -1,0 +1,81 @@
+groups:
+  - title: "Organizations"
+    items:
+      - label: "Parish Council Chairpersons"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Leonard Baker"
+          - parish: "OLPH"
+            detail: "Eddie King"
+          - parish: "Mother of Sorrows"
+            detail: "Dennis Porter"
+
+      - label: "Ladies Organizations"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Leslie Durham"
+          - parish: "OLPH"
+            detail: "Anita Huitt"
+
+      - label: "Youth Groups"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Sarah Sminkey"
+          - parish: "OLPH"
+            detail: "Helen Mansel & Monica Mindemann"
+
+  - title: "Sunday Mass Ministries"
+    items:
+      - label: "Music Directors"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Mary Kilgore"
+          - parish: "OLPH"
+            detail: "Susan Milam"
+
+      - label: "Altar Servers"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Mary Cunningham"
+          - parish: "OLPH"
+            detail: "Jeff Milam"
+
+      - label: "Communion Ministers and Lectors"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Anne Biles"
+          - parish: "OLPH"
+            detail: "Monica Mindeman"
+
+  - title: "Religious Education & Formation"
+    items:
+      - label: "Religious Education"
+        contacts:
+          - parish: "Mother of Sorrows"
+            detail: "Saturday at 6:00 PM — DRE Mike Farrell"
+          - parish: "St. Ann"
+            detail: "Sunday at 9:30 AM — DRE Sarah Sminkey"
+          - parish: "OLPH"
+            detail: "Wednesday at 6:00 PM — DRE Janet Hanza and Mallory Geiger"
+
+      - label: "Confirmation"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Wednesdays at 7:00 PM in Elgin — Contact Sarah Sminkey"
+
+      - label: "OCIA"
+        contacts:
+          - parish: "St. Ann"
+            detail: "Wednesdays during the school year at 7:00 PM in Elgin — Contact Tom Biles"
+
+  - title: "Prayer & Safe Environment"
+    items:
+      - label: "Prayer Line"
+        contacts:
+          - parish: "OLPH"
+            detail: "For requesting prayers, contact Clarice Pierce"
+
+      - label: "Tri-Parish Safe Environment"
+        contacts:
+          - parish: "Tri-Parish"
+            detail: "Contact Sherri Wooldridge"

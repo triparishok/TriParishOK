@@ -90,6 +90,48 @@
   </div>
 </section>
 
+<section class="section contact-ministry-section" aria-labelledby="contact-ministry-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Parish Contacts</p>
+    <h2 id="contact-ministry-heading">Organizations, ministries, and formation contacts</h2>
+    <p>
+      These parish contacts help coordinate local ministries, Religious Education,
+      OCIA, prayer requests, and parish organizations.
+    </p>
+  </div>
+
+  <div class="contact-ministry-grid">
+    {{ range hugo.Data.ministry_contacts.groups }}
+      <article class="card contact-ministry-card">
+        <h3>{{ .title }}</h3>
+
+        <div class="contact-ministry-list">
+          {{ range .items }}
+            <div class="contact-ministry-row">
+              <strong>{{ .label }}</strong>
+
+              <div class="contact-ministry-contact-list">
+                {{ range .contacts }}
+                  {{ $parishClass := "" }}
+                  {{ if eq .parish "St. Ann" }}{{ $parishClass = "parish-pill-st-ann" }}{{ end }}
+                  {{ if eq .parish "OLPH" }}{{ $parishClass = "parish-pill-olph" }}{{ end }}
+                  {{ if eq .parish "Mother of Sorrows" }}{{ $parishClass = "parish-pill-mos" }}{{ end }}
+                  {{ if eq .parish "Tri-Parish" }}{{ $parishClass = "parish-pill-neutral" }}{{ end }}
+
+                  <p class="contact-ministry-contact">
+                    <span class="parish-pill {{ $parishClass }}">{{ .parish }}</span>
+                    <span>{{ .detail }}</span>
+                  </p>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
 <section class="section contact-safety-section" id="safe-environment-reporting" aria-labelledby="safe-environment-heading">
   <div class="section-heading">
     <p class="eyebrow">Safe Environment</p>
