@@ -17,7 +17,7 @@ concurrency:
 
 env:
   HUGO_VERSION: 0.164.0
-  HUGO_BASEURL: https://amberlargent.github.io/TriParishOK/
+  HUGO_BASEURL: https://triparishok.github.io/TriParishOK/
   GITHUB_PAGES_PREFIX: /TriParishOK
 
 jobs:
