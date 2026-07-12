@@ -140,13 +140,10 @@
             <p class="eyebrow">{{ .city }}</p>
             <h3>{{ .name }}</h3>
             <p>{{ .address }}</p>
-            <div class="button-row">
-              <a class="button button-secondary" href="/our-parishes/{{ .slug }}/">
-                Explore {{ .short_name | default .name }}
-              </a>
-              <a class="button button-primary" href="{{ .map_url }}">
-                Get Directions
-              </a>
+            <div class="card-actions parish-direction-actions home-parish-direction-actions">
+              <a class="button button-secondary" href="{{ .apple_map_url }}" target="_blank" rel="noopener noreferrer">Apple Maps</a>
+              <a class="button button-secondary" href="{{ .map_url }}" target="_blank" rel="noopener noreferrer">Google Maps</a>
+              <a class="button button-primary" href="/our-parishes/{{ .slug }}/">Explore {{ .short_name | default .name }}</a>
             </div>
           </div>
         </article>

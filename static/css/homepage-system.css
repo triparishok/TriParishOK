@@ -848,3 +848,32 @@
     justify-content: center;
   }
 }
+
+/* Final map button layout: Apple/Google side by side, third action full width */
+.card-actions.parish-direction-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.65rem !important;
+}
+
+.card-actions.parish-direction-actions .button {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  justify-content: center !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.card-actions.parish-direction-actions .button:nth-child(n + 3) {
+  grid-column: 1 / -1 !important;
+}
+
+@media (max-width: 420px) {
+  .card-actions.parish-direction-actions .button {
+    font-size: 0.9rem !important;
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+  }
+}

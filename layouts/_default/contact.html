@@ -207,9 +207,9 @@
         </div>
 
         <div class="card-actions parish-direction-actions">
-          <a class="button button-primary" href="/our-parishes/{{ .slug }}/">View {{ .short_name | default .name }} details</a>
           <a class="button button-secondary" href="{{ .apple_map_url }}" target="_blank" rel="noopener noreferrer">Apple Maps</a>
           <a class="button button-secondary" href="{{ .map_url }}" target="_blank" rel="noopener noreferrer">Google Maps</a>
+          <a class="button button-primary" href="/our-parishes/{{ .slug }}/">View {{ .short_name | default .name }} Details</a>
         </div>
       </article>
     {{ end }}
