@@ -15,28 +15,6 @@ def should_rewrite(url: str) -> bool:
         and not url.startswith(prefix + "/")
     )
 
-def rewrite_quoted_attr(match):
-    attr = match.group("attr")
-    quote = match.group("quote")
-    url = match.group("url")
-    if should_rewrite(url):
-        url = prefix + url
-    return f"{attr}{quote}{url}{quote}"
-
-def rewrite_unquoted_attr(match):
-    attr = match.group("attr")
-    url = match.group("url")
-    if should_rewrite(url):
-        url = prefix + url
-    return f"{attr}{url}"
-
-def rewrite_css_url(match):
-    quote = match.group("quote") or ""
-    url = match.group("url")
-    if should_rewrite(url):
-        url = prefix + url
-    return f"url({quote}{url}{quote})"
-
 quoted_attr = re.compile(
     r'(?P<attr>\b(?:href|src|action)=)(?P<quote>["\'])(?P<url>/(?!/)[^"\']*)(?P=quote)'
 )
@@ -49,6 +27,28 @@ css_url = re.compile(
     r'url\((?P<quote>["\']?)(?P<url>/(?!/)[^)\'"]+)(?P=quote)\)'
 )
 
+def rewrite_quoted(match):
+    attr = match.group("attr")
+    quote = match.group("quote")
+    url = match.group("url")
+    if should_rewrite(url):
+        url = prefix + url
+    return f"{attr}{quote}{url}{quote}"
+
+def rewrite_unquoted(match):
+    attr = match.group("attr")
+    url = match.group("url")
+    if should_rewrite(url):
+        url = prefix + url
+    return f"{attr}{url}"
+
+def rewrite_css(match):
+    quote = match.group("quote") or ""
+    url = match.group("url")
+    if should_rewrite(url):
+        url = prefix + url
+    return f"url({quote}{url}{quote})"
+
 changed = 0
 
 for path in public.rglob("*"):
@@ -58,9 +58,9 @@ for path in public.rglob("*"):
     text = path.read_text(errors="ignore")
     original = text
 
-    text = quoted_attr.sub(rewrite_quoted_attr, text)
-    text = unquoted_attr.sub(rewrite_unquoted_attr, text)
-    text = css_url.sub(rewrite_css_url, text)
+    text = quoted_attr.sub(rewrite_quoted, text)
+    text = unquoted_attr.sub(rewrite_unquoted, text)
+    text = css_url.sub(rewrite_css, text)
 
     text = text.replace(f"{prefix}{prefix}/", f"{prefix}/")
 

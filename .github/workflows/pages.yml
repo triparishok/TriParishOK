@@ -17,7 +17,7 @@ concurrency:
 
 env:
   HUGO_VERSION: 0.164.0
-  HUGO_BASEURL: https://amberlargent.me/TriParishOK/
+  HUGO_BASEURL: https://amberlargent.github.io/TriParishOK/
   GITHUB_PAGES_PREFIX: /TriParishOK
 
 jobs:
@@ -40,43 +40,9 @@ jobs:
         run: |
           hugo --gc --baseURL "${HUGO_BASEURL}"
 
-      - name: Rewrite root-relative paths for GitHub Pages
+      - name: Rewrite root-relative paths for GitHub Pages project preview
         run: |
-          python3 <<'PY2'
-          from pathlib import Path
-          import os
-
-          prefix = os.environ["GITHUB_PAGES_PREFIX"].rstrip("/")
-          public = Path("public")
-          exts = {".html", ".xml", ".css", ".js", ".json", ".webmanifest"}
-
-          replacements = [
-              ('href="/', f'href="{prefix}/'),
-              ("href='/", f"href='{prefix}/"),
-              ('src="/', f'src="{prefix}/'),
-              ("src='/", f"src='{prefix}/"),
-              ('action="/', f'action="{prefix}/'),
-              ("action='/", f"action='{prefix}/"),
-              ('url("/', f'url("{prefix}/'),
-              ("url('/", f"url('{prefix}/"),
-              ('url(/', f'url({prefix}/'),
-          ]
-
-          for path in public.rglob("*"):
-              if not path.is_file() or path.suffix.lower() not in exts:
-                  continue
-
-              text = path.read_text(errors="ignore")
-              original = text
-
-              for old, new in replacements:
-                  text = text.replace(old, new)
-
-              text = text.replace(f"{prefix}{prefix}/", f"{prefix}/")
-
-              if text != original:
-                  path.write_text(text)
-          PY2
+          python3 scripts/rewrite-gh-pages-paths.py public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
