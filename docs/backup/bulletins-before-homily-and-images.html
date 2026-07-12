@@ -1,0 +1,72 @@
+{{ define "main" }}
+
+<section class="bulletins-hero">
+  <div class="bulletins-inner">
+    <p class="eyebrow">Bulletin</p>
+    <h1>{{ .Title }}</h1>
+    <p>
+      Read the current tri-parish bulletin and review key weekly notices in a
+      phone-friendly format.
+    </p>
+
+    {{ with hugo.Data.bulletin.current }}
+      <div class="button-row bulletins-hero-actions">
+        <a class="button button-primary" href="{{ .file }}" target="_blank" rel="noopener">
+          Open current bulletin — PDF{{ with .pages }}, {{ . }}{{ end }}; opens in a new tab
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section bulletins-summary-section" aria-labelledby="bulletin-summary-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Key Notices</p>
+    <h2 id="bulletin-summary-heading">This week from the bulletin</h2>
+    <p>
+      The bulletin PDF remains the source of truth. Key notices are also listed
+      here as regular webpage text for easier reading on phones and screen readers.
+    </p>
+  </div>
+
+  {{ with hugo.Data.bulletin.current.summary }}
+    <div class="bulletins-summary-grid">
+      {{ range . }}
+        {{ $notice := . }}
+        <article class="bulletins-summary-card">
+          <header class="bulletins-summary-header">
+            <span class="bulletins-summary-label">{{ $notice.label }}</span>
+
+            {{ with $notice.parish }}
+              {{ $parishClass := "" }}
+              {{ if eq . "St. Ann" }}{{ $parishClass = "parish-pill-st-ann" }}{{ end }}
+              {{ if eq . "OLPH" }}{{ $parishClass = "parish-pill-olph" }}{{ end }}
+              {{ if eq . "Mother of Sorrows" }}{{ $parishClass = "parish-pill-mos" }}{{ end }}
+              <span class="parish-pill {{ $parishClass }}">{{ . }}</span>
+            {{ end }}
+          </header>
+
+          <h3>{{ $notice.title }}</h3>
+          <p>{{ $notice.detail }}</p>
+        </article>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
+
+<section class="section bulletins-source-section" aria-labelledby="bulletin-source-heading">
+  <div class="bulletins-source-card">
+    <div>
+      <p class="eyebrow">Schedule Note</p>
+      <h2 id="bulletin-source-heading">Check current parish notices before traveling.</h2>
+      <p>{{ hugo.Data.bulletin.source_note }}</p>
+    </div>
+
+    <div class="bulletins-source-actions">
+      <a class="button button-primary" href="/mass-confession/">Mass & Confession Times</a>
+      <a class="button button-secondary" href="/contact/">Contact the Parish Office</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

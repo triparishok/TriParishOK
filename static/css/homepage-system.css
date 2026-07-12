@@ -734,3 +734,28 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Individual parish recurring events */
+.parish-event-single,
+.parish-event-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.parish-event-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.parish-event-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+}
+
+@media (max-width: 760px) {
+  .parish-event-grid {
+    grid-template-columns: 1fr;
+  }
+}

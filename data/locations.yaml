@@ -11,16 +11,32 @@
   summary: "Serving the Catholic community in Elgin and the surrounding area."
   image: "/images/parishes/st-ann.jpg"
   image_alt: "St. Ann Catholic Church in Elgin, Oklahoma"
-  history:
-    - "St. Ann traces its roots to a Catholic community in Elgin that first worshiped in a former schoolhouse known as St. Anthony’s. Before a regular Mass schedule was established, priests came from Lawton and the church served as a chapel of convenience for local Catholic families."
-    - "In 1941, the community began planning for a new church. Parish families contributed money and livestock, and Catholic Extension Society support helped make the new church possible. The church was named St. Ann’s in memory of Anna A. Beckert."
-    - "Construction began in November 1946, with much of the work done by parish members. The new church was dedicated on May 11, 1948. A parish hall was built in 1967, a rectory was added in 1997, and new religious education classrooms were built in 2004."
-  history_source_note: "History adapted from the former Tri-Parish About page."
   recurring_events:
     - title: "Sunday Coffee and Donuts"
       when: "First Sunday after the 8:30 AM Mass"
       location: "St. Ann Parish Hall"
       description: "Join parishioners for coffee and donuts in the parish hall after the 8:30 AM First Sunday Mass."
+
+    - title: "Religious Education"
+      when: "Sundays at 9:30 AM"
+      location: "St. Ann"
+      description: "Religious Education meets Sunday mornings in Elgin. Contact Sarah Sminkey for current details."
+
+    - title: "Confirmation"
+      when: "Wednesdays at 7:00 PM"
+      location: "St. Ann, Elgin"
+      description: "Confirmation preparation meets in Elgin. Contact Sarah Sminkey for current details."
+
+    - title: "OCIA"
+      when: "Wednesdays during the school year at 7:00 PM"
+      location: "St. Ann, Elgin"
+      description: "OCIA is for those inquiring into the Catholic faith and preparing for full communion with the Church. Contact Tom Biles for current details."
+
+  history:
+    - "St. Ann traces its roots to a Catholic community in Elgin that first worshiped in a former schoolhouse known as St. Anthony’s. Before a regular Mass schedule was established, priests came from Lawton and the church served as a chapel of convenience for local Catholic families."
+    - "In 1941, the community began planning for a new church. Parish families contributed money and livestock, and Catholic Extension Society support helped make the new church possible. The church was named St. Ann’s in memory of Anna A. Beckert."
+    - "Construction began in November 1946, with much of the work done by parish members. The new church was dedicated on May 11, 1948. A parish hall was built in 1967, a rectory was added in 1997, and new religious education classrooms were built in 2004."
+  history_source_note: "History adapted from the former Tri-Parish About page."
 
 - name: "Our Lady of Perpetual Help"
   slug: "olph"
@@ -35,6 +51,12 @@
   summary: "Serving the Catholic community in Sterling and the surrounding area."
   image: "/images/parishes/olph.jpg"
   image_alt: "Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma"
+  recurring_events:
+    - title: "Religious Education"
+      when: "Wednesdays at 6:00 PM"
+      location: "Our Lady of Perpetual Help"
+      description: "Religious Education meets Wednesday evenings in Sterling. Contact Janet Hanza or Mallory Geiger for current details."
+
   history:
     - "The first Mass for the Catholic community that became Our Lady of Perpetual Help was celebrated in a parishioner’s home by Rev. Urban de Hasque on August 21, 1902. Under the direction of Rev. William Huffer of Lawton, a church was established and built in 1904."
     - "The early parish community was made up largely of farm families. A school was established in 1909, and the first rectory was built in 1910 during the residency of Rev. Anthony Van der Grinten."
@@ -54,6 +76,12 @@
   summary: "Serving the Catholic community in Apache and the surrounding area."
   image: "/images/parishes/mother-of-sorrows.jpg"
   image_alt: "Mother of Sorrows Catholic Church in Apache, Oklahoma"
+  recurring_events:
+    - title: "Religious Education"
+      when: "Saturdays at 6:00 PM"
+      location: "Mother of Sorrows"
+      description: "Religious Education meets Saturday evenings in Apache. Contact Mike Farrell for current details."
+
   history:
     - "The Catholic history of Mother of Sorrows begins with Rev. Urban de Hasque, a young Belgian priest who first visited Apache on October 9, 1901. The first Catholic service in Apache was held on November 27, 1901, in George Rose’s building."
     - "The congregation organized quickly, and a committee secured land for a church. During the next few years, the community built the church, working through financial challenges and questions about the best location."
