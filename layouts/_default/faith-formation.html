@@ -47,6 +47,47 @@
   </div>
 </section>
 
+<section class="section section-light faith-formation-programs-section" aria-labelledby="formation-programs-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Regular Programs</p>
+    <h2 id="formation-programs-heading">Religious Education, Confirmation & OCIA</h2>
+    <p>
+      These regular programs are listed from one shared parish record. Current registration,
+      seasonal changes, and special announcements are confirmed through the parish office and current notices.
+    </p>
+  </div>
+
+  <div class="faith-formation-card-grid">
+    {{ range hugo.Data.formation_programs.programs }}
+      {{ if ne .enabled false }}
+        {{ $host := partial "location-by-slug.html" .host_parish }}
+        <article class="faith-formation-card">
+          <p class="faith-formation-label">
+            {{ if eq .serves "tri-parish" }}All Three Parishes{{ else }}{{ $host.short_name }}{{ end }}
+          </p>
+          <h3>{{ .program }}</h3>
+          <p><strong>{{ .when }}</strong></p>
+          <p>
+            {{ if eq .serves "tri-parish" }}
+              Serves the whole tri-parish community and is hosted at {{ $host.name }} in {{ $host.city }}.
+            {{ else }}
+              Serves children and families at {{ $host.name }} in {{ $host.city }}.
+            {{ end }}
+          </p>
+          <p>{{ .summary }}</p>
+          <p><strong>Program contact:</strong> {{ .contact_name }}</p>
+          <div class="card-actions">
+            <a class="button button-secondary"
+               href="mailto:{{ hugo.Data.contact.office.email }}?subject={{ printf "%s information" .program | urlquery }}">
+              Ask the Parish Office
+            </a>
+          </div>
+        </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
 <section class="section faith-formation-details-section" aria-labelledby="faith-formation-details-heading">
   <div class="section-heading">
     <p class="eyebrow">Practical Details</p>

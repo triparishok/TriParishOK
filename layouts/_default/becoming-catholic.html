@@ -107,6 +107,33 @@
   </div>
 </section>
 
+{{ range where hugo.Data.formation_programs.programs "program" "OCIA" }}
+  {{ if ne .enabled false }}
+    {{ $host := partial "location-by-slug.html" .host_parish }}
+<section class="section">
+  <article class="card before-you-go-card">
+    <p class="eyebrow">Current OCIA Information</p>
+    <h2>OCIA serves all three parish communities.</h2>
+    <p>{{ .summary }}</p>
+    <p><strong>Regular meeting time:</strong> {{ .when }}</p>
+    <p><strong>Host location:</strong> {{ $host.name }} in {{ $host.city }}</p>
+    <p><strong>Program contact:</strong> {{ .contact_name }}</p>
+    <p>
+      St. Ann is the host parish, but OCIA is a tri-parish program for inquirers and candidates
+      from St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows.
+    </p>
+    <div class="card-actions">
+      <a class="button button-primary"
+         href="mailto:{{ hugo.Data.contact.office.email }}?subject={{ "OCIA information" | urlquery }}">
+        Ask About OCIA
+      </a>
+      <a class="button button-secondary" href="/forms/#sacrament-forms">View OCIA Form</a>
+    </div>
+  </article>
+</section>
+  {{ end }}
+{{ end }}
+
 <section class="section">
   <article class="card before-you-go-card">
     <p class="eyebrow">Next Step</p>

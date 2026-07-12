@@ -90,6 +90,42 @@
 </section>
 {{ end }}
 
+{{ $hostedPrograms := where hugo.Data.formation_programs.programs "host_parish" $location.slug }}
+{{ if gt (len $hostedPrograms) 0 }}
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Faith Formation</p>
+    <h2>Programs hosted at {{ $location.short_name }}</h2>
+    <p>
+      A host parish is the regular meeting location. Programs marked Tri-Parish serve people
+      from all three parish communities.
+    </p>
+  </div>
+
+  <div class="parish-event-grid">
+    {{ range $hostedPrograms }}
+      {{ if ne .enabled false }}
+        <article class="card parish-detail-card parish-event-card {{ $location.parish_class }}">
+          <p class="eyebrow">
+            {{ if eq .serves "tri-parish" }}Tri-Parish Program{{ else }}{{ $location.short_name }} Program{{ end }}
+          </p>
+          <h3>{{ .program }}</h3>
+          <p><strong>{{ .when }}</strong></p>
+          <p>{{ .summary }}</p>
+          <p><strong>Program contact:</strong> {{ .contact_name }}</p>
+          {{ if eq .serves "tri-parish" }}
+            <p>This program serves all three parishes and is hosted here at {{ $location.short_name }}.</p>
+          {{ end }}
+          <div class="card-actions">
+            <a class="button button-secondary" href="/faith-formation/">Faith Formation Details</a>
+          </div>
+        </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 <section class="section section-light">
   <div class="section-heading">
     <p class="eyebrow">Prayer & Sacraments</p>

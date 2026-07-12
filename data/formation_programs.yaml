@@ -1,0 +1,40 @@
+programs:
+  - enabled: true
+    program: "Religious Education"
+    serves: "parish"
+    host_parish: "mother-of-sorrows"
+    when: "Saturdays at 6:00 PM"
+    contact_name: "Mike Farrell"
+    summary: "Religious Education helps children grow in knowledge of the Catholic faith, prayer, virtue, and love for Christ and His Church."
+
+  - enabled: true
+    program: "Religious Education"
+    serves: "parish"
+    host_parish: "st-ann"
+    when: "Sundays at 9:30 AM"
+    contact_name: "Sarah Sminkey"
+    summary: "Religious Education helps children grow in knowledge of the Catholic faith, prayer, virtue, and love for Christ and His Church."
+
+  - enabled: true
+    program: "Religious Education"
+    serves: "parish"
+    host_parish: "olph"
+    when: "Wednesdays at 6:00 PM"
+    contact_name: "Janet Hanza or Mallory Geiger"
+    summary: "Religious Education helps children grow in knowledge of the Catholic faith, prayer, virtue, and love for Christ and His Church."
+
+  - enabled: true
+    program: "Confirmation"
+    serves: "tri-parish"
+    host_parish: "st-ann"
+    when: "Wednesdays at 7:00 PM"
+    contact_name: "Sarah Sminkey"
+    summary: "Confirmation preparation helps young Catholics deepen baptismal faith, grow in discipleship, and prepare to receive the gifts of the Holy Spirit."
+
+  - enabled: true
+    program: "OCIA"
+    serves: "tri-parish"
+    host_parish: "st-ann"
+    when: "Wednesdays during the school year at 7:00 PM"
+    contact_name: "Tom Biles"
+    summary: "OCIA is for adults inquiring into the Catholic faith, preparing to enter the Church, or completing the Sacraments of Initiation."

@@ -400,3 +400,86 @@ content:
                       label: St. Ann — Elgin
                     - name: olph
                       label: Our Lady of Perpetual Help — Sterling
+
+  - name: formation-programs
+    label: Formation Programs — Occasional Changes
+    type: group
+    items:
+      - name: programs
+        label: Religious Education, Confirmation & OCIA
+        type: file
+        path: data/formation_programs.yaml
+        format: yaml
+        fields:
+          - name: programs
+            label: Programs
+            type: object
+            description: "Edit these only when a regular program, meeting time, host parish, or contact changes."
+            list:
+              min: 1
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{program} — {when}"
+            fields:
+              - name: enabled
+                label: Show This Program
+                type: boolean
+                required: false
+                default: true
+                description: "Turn this off to hide the program without deleting it."
+
+              - name: program
+                label: Program
+                type: select
+                required: true
+                options:
+                  placeholder: "Choose the program"
+                  values:
+                    - Religious Education
+                    - Confirmation
+                    - OCIA
+
+              - name: serves
+                label: Who Does It Serve?
+                type: select
+                required: true
+                options:
+                  values:
+                    - name: parish
+                      label: Families at the Host Parish
+                    - name: tri-parish
+                      label: All Three Parishes
+
+              - name: host_parish
+                label: Host Parish
+                type: select
+                required: true
+                description: "This is where the program normally meets. It does not limit a Tri-Parish program to that parish."
+                options:
+                  placeholder: "Choose the host parish"
+                  values:
+                    - name: mother-of-sorrows
+                      label: Mother of Sorrows — Apache
+                    - name: st-ann
+                      label: St. Ann — Elgin
+                    - name: olph
+                      label: Our Lady of Perpetual Help — Sterling
+
+              - name: when
+                label: Regular Meeting Time
+                type: string
+                required: true
+                description: "Example: Wednesdays during the school year at 7:00 PM"
+
+              - name: contact_name
+                label: Program Contact
+                type: string
+                required: true
+                description: "Enter the contact name only. Visitors will still be directed through the parish office."
+
+              - name: summary
+                label: Program Description
+                type: text
+                required: true
+                description: "Briefly explain the purpose of the program."

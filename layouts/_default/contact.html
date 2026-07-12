@@ -95,8 +95,8 @@
     <p class="eyebrow">Parish Contacts</p>
     <h2 id="contact-ministry-heading">Organizations, ministries, and formation contacts</h2>
     <p>
-      These parish contacts help coordinate local ministries, Religious Education,
-      OCIA, prayer requests, and parish organizations.
+      These parish contacts help coordinate local ministries, formation programs,
+      prayer requests, and parish organizations.
     </p>
   </div>
 
@@ -129,6 +129,29 @@
         </div>
       </article>
     {{ end }}
+
+    <article class="card contact-ministry-card">
+      <h3>Religious Education, Confirmation & OCIA</h3>
+
+      <div class="contact-ministry-list">
+        {{ range hugo.Data.formation_programs.programs }}
+          {{ if ne .enabled false }}
+            {{ $host := partial "location-by-slug.html" .host_parish }}
+            <div class="contact-ministry-row">
+              <strong>{{ .program }}</strong>
+              <p class="contact-ministry-contact">
+                <span class="parish-pill {{ replace $host.parish_class "parish-" "parish-pill-" }}">
+                  {{ if eq .serves "tri-parish" }}Tri-Parish{{ else }}{{ $host.short_name }}{{ end }}
+                </span>
+                <span>
+                  {{ .when }} at {{ $host.short_name }} — Contact {{ .contact_name }}
+                </span>
+              </p>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </article>
   </div>
 </section>
 

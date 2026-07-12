@@ -47,27 +47,6 @@ groups:
           - parish: "OLPH"
             detail: "Monica Mindeman"
 
-  - title: "Religious Education & Formation"
-    items:
-      - label: "Religious Education"
-        contacts:
-          - parish: "Mother of Sorrows"
-            detail: "Saturday at 6:00 PM — Contact Mike Farrell"
-          - parish: "St. Ann"
-            detail: "Sunday at 9:30 AM — Contact Sarah Sminkey"
-          - parish: "OLPH"
-            detail: "Wednesday at 6:00 PM — Contact Janet Hanza or Mallory Geiger"
-
-      - label: "Confirmation"
-        contacts:
-          - parish: "St. Ann"
-            detail: "Wednesdays at 7:00 PM in Elgin — Contact Sarah Sminkey"
-
-      - label: "OCIA"
-        contacts:
-          - parish: "St. Ann"
-            detail: "Wednesdays during the school year at 7:00 PM in Elgin — Contact Tom Biles"
-
   - title: "Prayer & Safe Environment"
     items:
       - label: "Prayer Line"
