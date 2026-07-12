@@ -2,7 +2,7 @@ sections:
   - title: "Religious Education"
     label: "Children & Families"
     summary: "Religious Education helps children grow in knowledge of the Catholic faith, prayer, virtue, and love for Christ and His Church."
-    link_text: "Contact the parish office"
+    link_text: "Contact the Parish Office"
     link_url: "/contact/"
 
   - title: "Sacramental Preparation"
@@ -14,7 +14,7 @@ sections:
   - title: "Parents as First Teachers"
     label: "Domestic Church"
     summary: "Parents are the first teachers of the faith. Parish formation supports what is lived first in the home through prayer, Mass, Scripture, and Catholic family life."
-    link_text: "Plan your next step"
+    link_text: "Plan Your Next Step"
     link_url: "/contact/"
 
 details:

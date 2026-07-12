@@ -5617,3 +5617,56 @@ img {
     margin-bottom: 0.05rem;
   }
 }
+
+/* Page title intentional line breaks */
+.page-title-line {
+  display: block;
+}
+
+/* Map action layout: Apple/Google side by side, contact full width */
+.parish-direction-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.65rem !important;
+}
+
+.parish-direction-actions .button {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+.parish-direction-actions .button:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 420px) {
+  .parish-direction-actions .button {
+    font-size: 0.92rem;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+}
+
+/* Becoming Catholic page */
+.becoming-list {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.becoming-list .card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+@media (min-width: 820px) {
+  .becoming-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

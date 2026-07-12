@@ -11,7 +11,7 @@ sacraments:
 
   - name: "Confirmation"
     eyebrow: "Strengthened by the Holy Spirit"
-    summary: "Confirmation completes baptismal grace and strengthens Catholics to live and witness the faith. Contact the parish office for preparation information."
+    summary: "Confirmation completes baptismal grace and strengthens Catholics to live and witness the faith. Please contact the parish office for preparation information."
     action_text: "Contact the Parish Office"
     action_url: "/contact/"
 

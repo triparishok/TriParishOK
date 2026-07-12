@@ -52,11 +52,11 @@ groups:
       - label: "Religious Education"
         contacts:
           - parish: "Mother of Sorrows"
-            detail: "Saturday at 6:00 PM — DRE Mike Farrell"
+            detail: "Saturday at 6:00 PM — Contact Mike Farrell"
           - parish: "St. Ann"
-            detail: "Sunday at 9:30 AM — DRE Sarah Sminkey"
+            detail: "Sunday at 9:30 AM — Contact Sarah Sminkey"
           - parish: "OLPH"
-            detail: "Wednesday at 6:00 PM — DRE Janet Hanza and Mallory Geiger"
+            detail: "Wednesday at 6:00 PM — Contact Janet Hanza or Mallory Geiger"
 
       - label: "Confirmation"
         contacts:

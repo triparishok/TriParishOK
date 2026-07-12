@@ -147,7 +147,7 @@
       <p class="eyebrow">Emergency</p>
       <h3>{{ hugo.Data.safe_environment.immediate_danger.title }}</h3>
       <p>{{ hugo.Data.safe_environment.immediate_danger.description }}</p>
-      <a class="button button-primary" href="{{ hugo.Data.safe_environment.immediate_danger.phone_href }}">
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.immediate_danger.phone_href | safeURL }}">
         Call {{ hugo.Data.safe_environment.immediate_danger.phone_display }}
       </a>
     </article>
@@ -156,7 +156,7 @@
       <p class="eyebrow">Civil Reporting</p>
       <h3>{{ hugo.Data.safe_environment.state_hotline.title }}</h3>
       <p>{{ hugo.Data.safe_environment.state_hotline.description }}</p>
-      <a class="button button-primary" href="{{ hugo.Data.safe_environment.state_hotline.phone_href }}">
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.state_hotline.phone_href | safeURL }}">
         Call {{ hugo.Data.safe_environment.state_hotline.phone_display }}
       </a>
     </article>
@@ -165,7 +165,7 @@
       <p class="eyebrow">Archdiocese</p>
       <h3>{{ hugo.Data.safe_environment.archdiocesan_hotline.title }}</h3>
       <p>{{ hugo.Data.safe_environment.archdiocesan_hotline.description }}</p>
-      <a class="button button-primary" href="{{ hugo.Data.safe_environment.archdiocesan_hotline.phone_href }}">
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.archdiocesan_hotline.phone_href | safeURL }}">
         Call {{ hugo.Data.safe_environment.archdiocesan_hotline.phone_display }}
       </a>
     </article>
