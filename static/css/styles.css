@@ -5487,3 +5487,13 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* Accessibility fix: eyebrow text on dark hero/header areas */
+.page-header .eyebrow,
+.hero .eyebrow,
+.hero-section .eyebrow,
+.site-hero .eyebrow,
+.home-hero .eyebrow,
+[class*="hero"] .eyebrow {
+  color: var(--gold) !important;
+}
