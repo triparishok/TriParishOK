@@ -191,3 +191,29 @@
     text-align: center;
   }
 }
+
+/* Parish Life hub */
+
+.parish-life-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.parish-life-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.parish-life-card p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 860px) {
+  .parish-life-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
