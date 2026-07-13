@@ -342,6 +342,7 @@
   color: var(--navy) !important;
 }
 
+.parish-pill-mos,
 .parish-pill-mother-of-sorrows {
   background: var(--gold-tint) !important;
   border: 1px solid var(--gold) !important;
