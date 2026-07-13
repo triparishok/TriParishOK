@@ -32,14 +32,18 @@
 
   <div class="forms-grid">
     {{ range .items }}
-      {{ $parishClass := "" }}
-      {{ if eq .parish "St. Ann" }}{{ $parishClass = "parish-pill-st-ann" }}{{ end }}
-      {{ if eq .parish "OLPH" }}{{ $parishClass = "parish-pill-olph" }}{{ end }}
-      {{ if eq .parish "Mother of Sorrows" }}{{ $parishClass = "parish-pill-mos" }}{{ end }}
+      {{ $parish := false }}
+      {{ with .parish }}
+        {{ $parish = partial "location-by-slug.html" . }}
+      {{ end }}
 
       <article class="card forms-card">
-        {{ with .parish }}
-          <p><span class="parish-pill {{ $parishClass }}">{{ . }}</span></p>
+        {{ with $parish }}
+          <p>
+            <span class="parish-pill {{ replace .parish_class "parish-" "parish-pill-" }}">
+              {{ .short_name }}
+            </span>
+          </p>
         {{ end }}
 
         <h3>{{ .title }}</h3>

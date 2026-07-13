@@ -28,17 +28,17 @@ groups:
       - title: "St. Ann Registration"
         description: "Member registration for St. Ann in Elgin."
         file: "/forms/st-ann-member-registration.pdf"
-        parish: "St. Ann"
+        parish: "st-ann"
 
       - title: "Our Lady of Perpetual Help Registration"
         description: "Member registration for OLPH in Sterling."
         file: "/forms/olph-member-registration.pdf"
-        parish: "OLPH"
+        parish: "olph"
 
       - title: "Mother of Sorrows Registration"
         description: "Member registration for Mother of Sorrows in Apache."
         file: "/forms/mother-of-sorrows-member-registration.pdf"
-        parish: "Mother of Sorrows"
+        parish: "mother-of-sorrows"
 
   - title: "Religious Education & Youth Forms"
     description: "Forms for RE/youth registration, consent, and off-site activities."
