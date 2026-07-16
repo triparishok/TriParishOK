@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="page-header">
+<section class="page-header new-here-page-header">
   <div>
     <p class="eyebrow">New Here?</p>
     <h1>You are welcome here.</h1>
@@ -11,14 +11,15 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="section-heading">
+<section class="section new-here-expect-section" aria-labelledby="new-here-expect-heading">
+  <div class="section-heading new-here-centered-heading">
     <p class="eyebrow">What to Expect</p>
-    <h2>If you are visiting Mass for the first time</h2>
+    <h2 id="new-here-expect-heading">Visiting Mass for the first time</h2>
   </div>
 
-  <div class="info-grid">
-    <article class="card info-card">
+  <div class="new-here-expect-grid">
+    <article class="card new-here-expect-card">
+      <span class="new-here-step-number" aria-hidden="true">01</span>
       <h3>Come as you are, with reverence.</h3>
       <p>
         Some people dress formally and others dress simply. The most important thing is to come with respect
@@ -26,7 +27,8 @@
       </p>
     </article>
 
-    <article class="card info-card">
+    <article class="card new-here-expect-card">
+      <span class="new-here-step-number" aria-hidden="true">02</span>
       <h3>You may follow along quietly.</h3>
       <p>
         Catholic Mass includes standing, sitting, kneeling, Scripture readings, prayers, and the Eucharist.
@@ -34,7 +36,8 @@
       </p>
     </article>
 
-    <article class="card info-card">
+    <article class="card new-here-expect-card">
+      <span class="new-here-step-number" aria-hidden="true">03</span>
       <h3>Children are welcome.</h3>
       <p>
         Families are part of parish life. If your children are learning how to be at Mass, you are not alone.
@@ -42,7 +45,8 @@
       </p>
     </article>
 
-    <article class="card info-card">
+    <article class="card new-here-expect-card">
+      <span class="new-here-step-number" aria-hidden="true">04</span>
       <h3>Holy Communion is sacred.</h3>
       <p>
         Catholics receive Holy Communion when they are properly prepared and in a state of grace.
@@ -52,98 +56,126 @@
   </div>
 </section>
 
-<section class="section section-light visit-location-section">
-  <div class="section-heading">
-    <p class="eyebrow">Weekend Mass</p>
-    <h2>Find a Mass near you</h2>
-    <p>
-      Choose the parish location and Mass time that works best for your family.
-    </p>
-  </div>
+<section class="new-here-plan-section" aria-labelledby="plan-your-visit-heading">
+  <div class="new-here-plan-inner">
+    <div class="section-heading new-here-centered-heading">
+      <p class="eyebrow">Plan Your Visit</p>
+      <h2 id="plan-your-visit-heading">Choose a parish and plan your visit</h2>
+      <p>Mass times, directions, accessibility, and family information are together in one place.</p>
+    </div>
 
-  <div class="visit-location-grid">
-    {{ range where hugo.Data.schedule.mass "section" "weekend" }}
-      {{ $parish := partial "location-by-slug.html" .parish }}
-      <article class="visit-location-card {{ $parish.parish_class }}">
-        <div>
-          <p class="visit-day">{{ .day }}</p>
-          <h3>{{ .time }}</h3>
-        </div>
+    {{ $weekendMasses := where hugo.Data.schedule.mass "section" "weekend" }}
+    <div class="new-here-parish-grid">
+      {{ range slice "mother-of-sorrows" "st-ann" "olph" }}
+        {{ $slug := . }}
+        {{ range where hugo.Data.locations "slug" $slug }}
+          {{ $location := . }}
+          <article class="new-here-parish-card {{ $location.parish_class }}">
+            <img
+              class="new-here-parish-photo"
+              src="{{ $location.image | relURL }}"
+              alt="{{ $location.image_alt }}"
+              loading="lazy">
 
-        <div class="visit-location-details">
-          <p class="visit-parish">{{ $parish.name }}</p>
-          <p>{{ $parish.city }}</p>
-        </div>
-      </article>
-    {{ end }}
-  </div>
-</section>
+            <div class="new-here-parish-card-body">
+              <p class="eyebrow">{{ $location.city }}</p>
+              <h3>{{ $location.name }}</h3>
+              <p class="new-here-parish-address">
+                {{ $location.address }}<br>
+                {{ $location.address_line_2 }}
+              </p>
 
-<section class="section" aria-labelledby="plan-your-visit-heading">
-  <div class="section-heading">
-    <p class="eyebrow">Plan Your Visit</p>
-    <h2 id="plan-your-visit-heading">Parking, access, restrooms, and family seating</h2>
-    <p>Families and children are welcome to sit together throughout Mass at all three parishes.</p>
-  </div>
-  <div class="three-column">
-    {{ range slice "mother-of-sorrows" "st-ann" "olph" }}
-      {{ $slug := . }}
-      {{ range where hugo.Data.locations "slug" $slug }}
-        {{ $location := . }}
-        {{ with .visitor_access }}
-          <article class="card parish-detail-card {{ $location.parish_class }}">
-            <p class="eyebrow">{{ $location.city }}</p>
-            <h3>{{ $location.name }}</h3>
-            {{ with .parking_entrance }}<p><strong>Parking & Accessible Entrance</strong><br>{{ . }}</p>{{ end }}
-            {{ with .family_seating }}<p><strong>Families at Mass</strong><br>{{ . }}</p>{{ end }}
-            {{ with .restrooms }}<p><strong>Restrooms</strong><br>{{ . }}</p>{{ end }}
-            {{ with .access_questions }}<p><strong>Building Access Questions</strong><br>{{ . }}</p>{{ end }}
-            <a class="button button-secondary" href="/our-parishes/{{ $location.slug }}/">View {{ $location.name }}</a>
+              {{ range where $weekendMasses "parish" $slug }}
+                <div class="new-here-parish-mass">
+                  <span>Weekend Mass</span>
+                  <strong>{{ .day }} · {{ .time }}</strong>
+                </div>
+              {{ end }}
+
+              {{ with $location.visitor_access }}
+                <dl class="new-here-visit-list">
+                  {{ with .parking_entrance }}
+                    <div class="new-here-visit-detail">
+                      <dt>Parking &amp; accessible entrance</dt>
+                      <dd>{{ . }}</dd>
+                    </div>
+                  {{ end }}
+
+                  {{ with .family_seating }}
+                    <div class="new-here-visit-detail">
+                      <dt>Families at Mass</dt>
+                      <dd>{{ . }}</dd>
+                    </div>
+                  {{ end }}
+
+                  {{ with .restrooms }}
+                    <div class="new-here-visit-detail">
+                      <dt>Restrooms</dt>
+                      <dd>{{ . }}</dd>
+                    </div>
+                  {{ end }}
+
+                  {{ with .access_questions }}
+                    <div class="new-here-visit-detail">
+                      <dt>Questions before your visit</dt>
+                      <dd>{{ . }}</dd>
+                    </div>
+                  {{ end }}
+                </dl>
+              {{ end }}
+
+              <div class="card-actions new-here-parish-actions">
+                <a class="button button-primary" href="{{ $location.map_url }}" target="_blank" rel="noopener noreferrer">
+                  Directions to {{ $location.short_name }}
+                </a>
+                <a class="button button-secondary" href="{{ printf "our-parishes/%s/" $location.slug | relURL }}">
+                  View {{ $location.short_name }}
+                </a>
+              </div>
+            </div>
           </article>
         {{ end }}
       {{ end }}
-    {{ end }}
+    </div>
+
+    <p class="new-here-schedule-note">
+      {{ hugo.Data.schedule.source_note }}
+      <a href="{{ "bulletins/" | relURL }}">View current notices and the bulletin.</a>
+    </p>
   </div>
 </section>
 
-<section class="section new-here-image-card-section">
-  <div class="new-here-image-card-grid">
-    <figure class="new-here-image-card">
-      <img src="/images/devotional/church-pews.jpg" alt="Sunlight falling across wooden church pews">
-    </figure>
+<section class="section new-here-journey-section" aria-labelledby="new-here-journey-heading">
+  <div class="section-heading new-here-centered-heading">
+    <p class="eyebrow">Your Next Step</p>
+    <h2 id="new-here-journey-heading">Wherever you are in your faith journey, we are here for you.</h2>
+  </div>
 
-    <article class="card new-here-guidance-card">
-      <p class="eyebrow">When You Arrive</p>
-      <h2>Come in, find a pew, and pray.</h2>
+  <div class="new-here-journey-grid">
+    <article class="card new-here-journey-card new-here-journey-returning">
+      <p class="eyebrow">Returning Catholic</p>
+      <h3>Coming back to the Church?</h3>
       <p>
-        You do not need to know every response or movement before you come to Mass.
-        You are welcome to sit, listen, pray, and follow along as you are able.
+        Welcome home. A good next step is to come to Mass, contact the parish office, and ask about Confession
+        or any sacramental questions you may have.
       </p>
-      <a class="button button-primary" href="/mass-confession/">View Mass Times</a>
+      <a class="button button-primary" href="{{ "mass-confession/" | relURL }}">View Confession Times</a>
+    </article>
+
+    <article class="card new-here-journey-card new-here-journey-becoming">
+      <p class="eyebrow">Becoming Catholic</p>
+      <h3>Interested in the Catholic faith?</h3>
+      <p>
+        If you are curious about becoming Catholic, we would be glad to help you learn more about Jesus Christ,
+        the Church, the Sacraments, and the path into full communion.
+      </p>
+      <a class="button button-secondary" href="{{ "becoming-catholic/" | relURL }}">Learn About Becoming Catholic</a>
     </article>
   </div>
-</section>
 
-<section class="section two-column">
-  <article class="card">
-    <p class="eyebrow">Returning Catholic</p>
-    <h2>Coming back to the Church?</h2>
-    <p>
-      Welcome home. A good next step is to come to Mass, contact the parish office, and ask about Confession
-      or any sacramental questions you may have.
-    </p>
-    <a class="button button-primary" href="/mass-confession/">View Confession Times</a>
-  </article>
-
-  <article class="card">
-    <p class="eyebrow">Becoming Catholic</p>
-    <h2>Interested in the Catholic faith?</h2>
-    <p>
-      If you are curious about becoming Catholic, we would be glad to help you learn more about Jesus Christ,
-      the Church, the Sacraments, and the path into full communion.
-    </p>
-    <a class="button button-secondary" href="/becoming-catholic/">Learn About Becoming Catholic</a>
-  </article>
+  <p class="new-here-contact-note">
+    Have a question before you come? <a href="{{ "contact/" | relURL }}">Contact the parish office.</a>
+  </p>
 </section>
 
 {{ end }}

@@ -4,13 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ partial "seo-head.html" . }}
-  <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/homepage-system.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/sacraments-system.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/parish-life-system.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/faith-formation-system.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/bulletins-system.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/contact-system.css" | relURL }}">
+  {{ $stylesVersion := substr (crypto.SHA256 (os.ReadFile "static/css/styles.css")) 0 12 }}
+  {{ $homepageVersion := substr (crypto.SHA256 (os.ReadFile "static/css/homepage-system.css")) 0 12 }}
+  {{ $sacramentsVersion := substr (crypto.SHA256 (os.ReadFile "static/css/sacraments-system.css")) 0 12 }}
+  {{ $parishLifeVersion := substr (crypto.SHA256 (os.ReadFile "static/css/parish-life-system.css")) 0 12 }}
+  {{ $faithFormationVersion := substr (crypto.SHA256 (os.ReadFile "static/css/faith-formation-system.css")) 0 12 }}
+  {{ $bulletinsVersion := substr (crypto.SHA256 (os.ReadFile "static/css/bulletins-system.css")) 0 12 }}
+  {{ $contactVersion := substr (crypto.SHA256 (os.ReadFile "static/css/contact-system.css")) 0 12 }}
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/styles.css" | relURL) $stylesVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/homepage-system.css" | relURL) $homepageVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/sacraments-system.css" | relURL) $sacramentsVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/parish-life-system.css" | relURL) $parishLifeVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/faith-formation-system.css" | relURL) $faithFormationVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/bulletins-system.css" | relURL) $bulletinsVersion }}">
+  <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/contact-system.css" | relURL) $contactVersion }}">
 </head>
 
 <body>
