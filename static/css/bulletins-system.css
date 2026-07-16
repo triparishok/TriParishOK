@@ -236,18 +236,18 @@
 
 /* Bulletin page images */
 
-.bulletin-pages-section {
+.current-bulletin-pages-section {
   background: var(--ivory);
 }
 
-.bulletin-page-image-list {
+.bulletin-page-list {
   max-width: 960px;
   margin: 0 auto;
   display: grid;
   gap: 1.25rem;
 }
 
-.bulletin-page-image-card {
+.bulletin-page-frame {
   margin: 0;
   background: var(--white);
   border: 1px solid var(--border);
@@ -256,8 +256,50 @@
   overflow: hidden;
 }
 
-.bulletin-page-image-card img {
+.bulletin-page-image-link {
+  display: block;
+  background: var(--white);
+}
+
+.bulletin-page-image-link img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.bulletin-page-image-link:focus-visible {
+  outline: 4px solid var(--gold);
+  outline-offset: -4px;
+}
+
+.bulletin-page-actions {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem 1.1rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.bulletin-page-actions p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.bulletin-page-actions .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .bulletin-page-actions .card-actions {
+    display: grid;
+  }
+
+  .bulletin-page-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }

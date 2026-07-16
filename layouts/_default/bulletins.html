@@ -91,10 +91,41 @@
   </div>
 
   {{ with hugo.Data.bulletin.current.page_images }}
+    {{ $pageCount := len . }}
     <div class="bulletin-page-list">
-      {{ range . }}
+      {{ range $index, $page := . }}
+        {{ $pageNumber := add $index 1 }}
         <figure class="bulletin-page-frame">
-          <img src="{{ .src }}" alt="{{ .alt }}">
+          <a
+            class="bulletin-page-image-link"
+            href="{{ $page.src }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open bulletin page {{ $pageNumber }} full size"
+          >
+            <img src="{{ $page.src }}" alt="{{ $page.alt }}" loading="lazy">
+          </a>
+
+          <figcaption class="bulletin-page-actions">
+            <p>Page {{ $pageNumber }} of {{ $pageCount }}</p>
+            <div class="card-actions">
+              <a
+                class="button button-primary"
+                href="{{ $page.src }}"
+                target="_blank"
+                rel="noopener"
+              >
+                Open Page {{ $pageNumber }} Full Size
+              </a>
+              <a
+                class="button button-secondary"
+                href="{{ $page.src }}"
+                download
+              >
+                Download Page {{ $pageNumber }} Image
+              </a>
+            </div>
+          </figcaption>
         </figure>
       {{ end }}
     </div>
