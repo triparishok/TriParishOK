@@ -53,13 +53,3 @@ items:
     start_date: 2026-07-12
     affects_schedule: false
     action: email-office
-  - enabled: true
-    label: Office Notice
-    title: CMS TEST — delete me
-    detail: Testing the parish website editor.
-    parishes:
-      - tri-parish
-    start_date: 2026-07-16
-    end_date: 2026-07-17
-    affects_schedule: false
-    action: none
