@@ -25,10 +25,10 @@ devotional:
 
 sacraments:
   baptism:
-    src: "/images/sacraments/baptism.jpg"
-    alt: "A baby being anointed during Baptism"
-    caption: "Baptism"
-    credit: "Photo by Julia Michelle on Unsplash"
+    src: "/images/sacraments/st-ann-baptism-2026.jpg"
+    alt: "An infant receiving the Sacrament of Baptism at St. Ann Catholic Church"
+    caption: "Baptism at St. Ann"
+    credit: "Photo courtesy of the Largent family"
 
   eucharist:
     src: "/images/sacraments/eucharist.jpg"
