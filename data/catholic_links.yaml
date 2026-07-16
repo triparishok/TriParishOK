@@ -92,7 +92,7 @@ groups:
         description: "Catholic family life, liturgical living, feast day ideas, and domestic church resources."
 
       - name: "Virtual Rosary"
-        url: "http://www.virtualrosary.org/"
+        url: "https://www.rosarycenter.org/how-to-pray-the-rosary/"
         description: "A simple online resource for praying the Rosary."
 
       - name: "Catholic Kids"
