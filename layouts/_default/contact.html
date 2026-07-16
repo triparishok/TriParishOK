@@ -176,6 +176,11 @@
     </p>
   </div>
 
+  <div class="source-note contact-safety-order">
+    <strong>{{ hugo.Data.safe_environment.reporting_order.title }}</strong>
+    <p>{{ hugo.Data.safe_environment.reporting_order.description }}</p>
+  </div>
+
   <div class="contact-safety-grid">
     <article class="card contact-safety-card">
       <p class="eyebrow">Emergency</p>
@@ -187,7 +192,7 @@
     </article>
 
     <article class="card contact-safety-card">
-      <p class="eyebrow">Civil Reporting</p>
+      <p class="eyebrow">Required Civil Reporting</p>
       <h3>{{ hugo.Data.safe_environment.state_hotline.title }}</h3>
       <p>{{ hugo.Data.safe_environment.state_hotline.description }}</p>
       <a class="button button-primary" href="{{ hugo.Data.safe_environment.state_hotline.phone_href | safeURL }}">
@@ -196,7 +201,7 @@
     </article>
 
     <article class="card contact-safety-card">
-      <p class="eyebrow">Archdiocese</p>
+      <p class="eyebrow">Then: Archdiocesan Reporting</p>
       <h3>{{ hugo.Data.safe_environment.archdiocesan_hotline.title }}</h3>
       <p>{{ hugo.Data.safe_environment.archdiocesan_hotline.description }}</p>
       <a class="button button-primary" href="{{ hugo.Data.safe_environment.archdiocesan_hotline.phone_href | safeURL }}">

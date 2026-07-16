@@ -1,19 +1,24 @@
 title: "Safe Environment & Reporting Abuse"
+
+reporting_order:
+  title: "Report to civil authorities first"
+  description: "If anyone is in immediate danger, call 911. Otherwise, report known or suspected abuse or neglect to the Oklahoma DHS Statewide Abuse Hotline. If the allegation involves clergy, Archdiocesan personnel, or someone representing the Catholic Church, then also call the Archdiocesan Pastoral Response Hotline."
+
 immediate_danger:
   title: "Immediate danger"
-  description: "If a child or vulnerable adult is in immediate danger, call 911."
+  description: "If a child or vulnerable adult is in immediate danger, call 911 before making other reports."
   phone_display: "911"
   phone_href: "tel:911"
 
 state_hotline:
   title: "Oklahoma DHS Statewide Abuse Hotline"
-  description: "To report known or suspected abuse or neglect of a child or vulnerable adult, call the Oklahoma DHS Statewide Abuse Hotline."
+  description: "Reporting is mandatory when the victim is under age 18. To report known or suspected abuse or neglect of a child or vulnerable adult, call the Oklahoma DHS Statewide Abuse Hotline. It is available 24 hours a day, seven days a week, and callers may remain anonymous."
   phone_display: "1-800-522-3511"
   phone_href: "tel:18005223511"
 
 archdiocesan_hotline:
   title: "Archdiocesan Pastoral Response Hotline"
-  description: "For abuse of a minor or vulnerable adult, past or present, by clergy or other Archdiocesan personnel, contact the Archdiocesan Pastoral Response Hotline."
+  description: "If the allegation involves clergy, Archdiocesan personnel, or someone representing the Catholic Church, call this hotline after reporting to the Oklahoma DHS hotline. It accepts reports of past or present abuse of minors or vulnerable adults and is answered by the Archdiocesan Victims Assistance Coordinator."
   phone_display: "405-720-9878"
   phone_href: "tel:4057209878"
 
