@@ -1,0 +1,66 @@
+{{- $relativePath := strings.TrimPrefix site.Home.RelPermalink .RelPermalink -}}
+{{- $seoPath := "/" -}}
+{{- if $relativePath -}}
+  {{- $seoPath = printf "/%s" $relativePath -}}
+{{- end -}}
+
+{{- $pageSEO := index hugo.Data.seo.pages $seoPath -}}
+
+{{- $title := hugo.Data.seo.default_title | default site.Title -}}
+{{- if and (not .IsHome) .Title -}}
+  {{- $title = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+{{- with $pageSEO -}}
+  {{- with .title -}}
+    {{- $title = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $description := site.Params.description | default hugo.Data.seo.default_description -}}
+{{- with .Params.description -}}
+  {{- $description = . -}}
+{{- end -}}
+{{- with $pageSEO -}}
+  {{- with .description -}}
+    {{- $description = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $image := hugo.Data.seo.default_image -}}
+{{- with $pageSEO -}}
+  {{- with .image -}}
+    {{- $image = . -}}
+  {{- end -}}
+{{- end -}}
+{{- $imagePath := strings.TrimPrefix "/" $image -}}
+{{- $imageURL := $imagePath | absURL -}}
+
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- if site.Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{- else }}
+<meta name="robots" content="index, follow, max-image-preview:large">
+{{- end }}
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $imageURL }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $imageURL }}">
+
+{{ partial "structured-data.html" (dict
+  "page" .
+  "seoPath" $seoPath
+  "description" $description
+  "imageURL" $imageURL
+) }}

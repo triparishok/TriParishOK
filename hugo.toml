@@ -1,6 +1,8 @@
 baseURL = "https://triparishok.org/"
 locale = "en-US"
 title = "Tri-Parish Catholic Community"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 
 [params]
   noindex = true

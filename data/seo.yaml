@@ -1,0 +1,87 @@
+default_title: "Tri-Parish Catholic Community | Southwest Oklahoma"
+default_description: "Mass, Confession, Sacraments, faith formation, bulletins, and parish information for St. Ann in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows in Apache, Oklahoma."
+default_image: "/images/parishes/st-ann.jpg"
+
+pages:
+  "/":
+    title: "Catholic Churches in Elgin, Sterling & Apache, Oklahoma | Tri-Parish"
+    description: "Find Catholic Mass and Confession times, parish bulletins, Sacraments, faith formation, and visitor information for St. Ann in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows in Apache, Oklahoma."
+
+  "/mass-confession/":
+    title: "Mass & Confession Times | Elgin, Sterling & Apache, OK"
+    description: "Find current Catholic Mass, Confession, Rosary, and Adoration times for St. Ann in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows in Apache."
+
+  "/new-here/":
+    title: "Visit a Catholic Church in Southwest Oklahoma | Tri-Parish"
+    description: "Planning your first Catholic Mass or returning to the Church? Learn what to expect when visiting our Catholic parishes in Elgin, Sterling, and Apache, Oklahoma."
+
+  "/sacraments/":
+    title: "Catholic Sacraments | Tri-Parish Catholic Community"
+    description: "Learn about Baptism, Confirmation, Confession, the Eucharist, Holy Orders, Marriage, and Anointing of the Sick in our tri-parish Catholic community."
+
+  "/faith-formation/":
+    title: "Catholic Faith Formation for Children & Families | Tri-Parish"
+    description: "Find Catholic religious education, sacramental preparation, Confirmation, and family faith formation information for the Tri-Parish Catholic Community."
+
+  "/becoming-catholic/":
+    title: "Becoming Catholic in Southwest Oklahoma | OCIA"
+    description: "Learn about becoming Catholic through OCIA and taking the next step toward Baptism, full communion, or returning to the Catholic Church."
+
+  "/our-parishes/":
+    title: "Catholic Churches in Elgin, Sterling & Apache, Oklahoma"
+    description: "Meet St. Ann Catholic Church in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows Catholic Church in Apache, Oklahoma."
+
+  "/our-parishes/st-ann/":
+    title: "St. Ann Catholic Church | Elgin, Oklahoma"
+    description: "Find Mass times, directions, parish history, and Catholic community information for St. Ann Catholic Church in Elgin, Oklahoma."
+    image: "/images/parishes/st-ann.jpg"
+
+  "/our-parishes/olph/":
+    title: "Our Lady of Perpetual Help Catholic Church | Sterling, Oklahoma"
+    description: "Find Mass times, directions, parish history, and Catholic community information for Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma."
+    image: "/images/parishes/olph.jpg"
+
+  "/our-parishes/mother-of-sorrows/":
+    title: "Mother of Sorrows Catholic Church | Apache, Oklahoma"
+    description: "Find Mass times, directions, parish history, and Catholic community information for Mother of Sorrows Catholic Church in Apache, Oklahoma."
+    image: "/images/parishes/mother-of-sorrows.jpg"
+
+  "/bulletins/":
+    title: "Tri-Parish Catholic Bulletin | Southwest Oklahoma"
+    description: "Read the current Catholic parish bulletin for St. Ann in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows in Apache."
+
+  "/parish-life/":
+    title: "Parish Life & Ministries | Tri-Parish Catholic Community"
+    description: "Explore parish activities, service opportunities, ministries, and Catholic community life across our parishes in Elgin, Sterling, and Apache."
+
+  "/events/":
+    title: "Catholic Parish Events | Elgin, Sterling & Apache, OK"
+    description: "Find upcoming Catholic parish events and community activities for St. Ann, Our Lady of Perpetual Help, and Mother of Sorrows."
+
+  "/forms/":
+    title: "Parish & Sacrament Forms | Tri-Parish Catholic Community"
+    description: "Find current parish, faith formation, and Sacrament forms for the Tri-Parish Catholic Community in southwest Oklahoma."
+
+  "/catholic-links/":
+    title: "Catholic Resources | Tri-Parish Catholic Community"
+    description: "Find trusted Catholic resources for prayer, Church teaching, family faith, vocations, service, and the Archdiocese of Oklahoma City."
+
+  "/giving/":
+    title: "Catholic Giving & Stewardship | Tri-Parish Catholic Community"
+    description: "Learn about Catholic stewardship and current giving options for the Tri-Parish Catholic Community."
+
+  "/meal-support/":
+    title: "Meal Support | Tri-Parish Catholic Community"
+    description: "Find information about providing practical meal support within the Tri-Parish Catholic Community."
+
+  "/contact/":
+    title: "Contact the Tri-Parish Catholic Community"
+    description: "Contact the parish office serving St. Ann in Elgin, Our Lady of Perpetual Help in Sterling, and Mother of Sorrows in Apache, Oklahoma."
+
+  "/photo-privacy-notice/":
+    title: "Photo & Privacy Notice | Tri-Parish Catholic Community"
+    description: "Read the Tri-Parish Catholic Community photo and privacy notice."
+
+  "/image-credits/":
+    title: "Image Credits | Tri-Parish Catholic Community"
+    description: "View image sources and photo credits for the Tri-Parish Catholic Community website."

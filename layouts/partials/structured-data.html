@@ -1,0 +1,73 @@
+{{- $page := .page -}}
+{{- $seoPath := .seoPath -}}
+{{- $description := .description -}}
+{{- $imageURL := .imageURL -}}
+
+{{- if $page.IsHome -}}
+  {{- $subOrganizations := slice -}}
+  {{- range hugo.Data.locations -}}
+    {{- $churchURL := printf "our-parishes/%s/" .slug | absURL -}}
+    {{- $subOrganizations = $subOrganizations | append (dict
+      "@type" "CatholicChurch"
+      "name" .name
+      "url" $churchURL
+    ) -}}
+  {{- end -}}
+
+  {{- $organization := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "@id" (printf "%s#organization" site.Home.Permalink)
+    "name" site.Title
+    "url" site.Home.Permalink
+    "description" $description
+    "image" $imageURL
+    "telephone" hugo.Data.contact.office.phone
+    "email" hugo.Data.contact.office.email
+    "areaServed" (slice "Elgin, Oklahoma" "Sterling, Oklahoma" "Apache, Oklahoma" "Southwest Oklahoma")
+    "contactPoint" (dict
+      "@type" "ContactPoint"
+      "contactType" "parish office"
+      "telephone" hugo.Data.contact.office.phone
+      "email" hugo.Data.contact.office.email
+    )
+    "subOrganization" $subOrganizations
+  -}}
+<script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
+{{- end -}}
+
+{{- if hasPrefix $seoPath "/our-parishes/" -}}
+  {{- $slug := path.Base (strings.TrimSuffix "/" $seoPath) -}}
+  {{- range where hugo.Data.locations "slug" $slug -}}
+    {{- $postalCode := replaceRE `^.*, OK ([0-9]{5})$` "$1" .address_line_2 -}}
+    {{- $churchImagePath := strings.TrimPrefix "/" .image -}}
+    {{- $church := dict
+      "@context" "https://schema.org"
+      "@type" "CatholicChurch"
+      "@id" (printf "%s#church" $page.Permalink)
+      "name" .name
+      "url" $page.Permalink
+      "description" .summary
+      "image" ($churchImagePath | absURL)
+      "telephone" hugo.Data.contact.office.phone
+      "email" hugo.Data.contact.office.email
+      "hasMap" .map_url
+      "isAccessibleForFree" true
+      "address" (dict
+        "@type" "PostalAddress"
+        "streetAddress" .address
+        "addressLocality" .city
+        "addressRegion" "OK"
+        "postalCode" $postalCode
+        "addressCountry" "US"
+      )
+      "parentOrganization" (dict
+        "@type" "Organization"
+        "@id" (printf "%s#organization" site.Home.Permalink)
+        "name" site.Title
+        "url" site.Home.Permalink
+      )
+    -}}
+<script type="application/ld+json">{{ $church | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}
