@@ -1,55 +1,55 @@
 items:
   - enabled: true
-    label: "Schedule Change"
-    title: "No weekday Mass Tuesday at Mother of Sorrows"
-    detail: "There will be no 8:30 AM Mass at Mother of Sorrows on Tuesday, July 14."
+    label: Schedule Change
+    title: No weekday Mass Tuesday at Mother of Sorrows
+    detail: There will be no 8:30 AM Mass at Mother of Sorrows on Tuesday, July 14.
     parishes:
-      - "mother-of-sorrows"
-    start_date: "2026-07-12"
-    end_date: "2026-07-14"
+      - mother-of-sorrows
+    start_date: 2026-07-12
+    end_date: 2026-07-14
     affects_schedule: true
-    action: "bulletin"
-
+    action: bulletin
   - enabled: true
-    label: "Schedule Change"
-    title: "No weekday Mass Thursday at OLPH"
-    detail: "There will be no 8:30 AM Mass at Our Lady of Perpetual Help on Thursday, July 16."
+    label: Schedule Change
+    title: No weekday Mass Thursday at OLPH
+    detail: There will be no 8:30 AM Mass at Our Lady of Perpetual Help on Thursday,
+      July 16.
     parishes:
-      - "olph"
-    start_date: "2026-07-12"
-    end_date: "2026-07-16"
+      - olph
+    start_date: 2026-07-12
+    end_date: 2026-07-16
     affects_schedule: true
-    action: "bulletin"
-
+    action: bulletin
   - enabled: true
-    label: "Special Mass"
-    title: "Archbishop Coakley will celebrate Mass at St. Ann"
-    detail: "Please join us on Sunday, August 2 at 10:30 AM as Archbishop Coakley celebrates Holy Mass at St. Ann. There will be only one Mass that day, and there will be no Mass at Our Lady of Perpetual Help. A dinner will follow Mass in the parish hall."
+    label: Special Mass
+    title: Archbishop Coakley will celebrate Mass at St. Ann
+    detail: Please join us on Sunday, August 2 at 10:30 AM as Archbishop Coakley
+      celebrates Holy Mass at St. Ann. There will be only one Mass that day, and
+      there will be no Mass at Our Lady of Perpetual Help. A dinner will follow
+      Mass in the parish hall.
     parishes:
-      - "tri-parish"
-    start_date: "2026-07-12"
-    end_date: "2026-08-02"
+      - tri-parish
+    start_date: 2026-07-12
+    end_date: 2026-08-02
     affects_schedule: true
-    action: "bulletin"
-
+    action: bulletin
   - enabled: true
-    label: "Faith Formation"
-    title: "St. Ann Religious Education needs teachers and aides"
-    detail: "St. Ann Religious Education needs teachers and aides for the upcoming school year. Classes meet Sunday mornings after the 8:30 AM Mass."
+    label: Faith Formation
+    title: St. Ann Religious Education needs teachers and aides
+    detail: St. Ann Religious Education needs teachers and aides for the upcoming
+      school year. Classes meet Sunday mornings after the 8:30 AM Mass.
     parishes:
-      - "st-ann"
-    start_date: "2026-07-12"
-    end_date: ""
+      - st-ann
+    start_date: 2026-07-12
     affects_schedule: false
-    action: "email-office"
-
+    action: email-office
   - enabled: true
-    label: "Current Need"
-    title: "Lawn-care volunteers needed at OLPH"
-    detail: "Our Lady of Perpetual Help needs volunteers to help care for the parish grounds."
+    label: Current Need
+    title: Lawn-care volunteers needed at OLPH!
+    detail: Our Lady of Perpetual Help needs volunteers to help care for the parish
+      grounds.
     parishes:
-      - "olph"
-    start_date: "2026-07-12"
-    end_date: ""
+      - olph
+    start_date: 2026-07-12
     affects_schedule: false
-    action: "email-office"
+    action: email-office
