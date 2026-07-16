@@ -50,8 +50,8 @@
         <p>{{ .description }}</p>
 
         <div class="card-actions">
-          {{ with .file }}
-            <a class="button button-primary" href="{{ . }}">Download PDF</a>
+          {{ if .file }}
+            <a class="button button-primary" href="{{ .file }}">Download {{ .title }} — PDF</a>
           {{ else }}
             <a class="button button-secondary" href="{{ .link }}">{{ or .link_text "Learn More" }}</a>
           {{ end }}

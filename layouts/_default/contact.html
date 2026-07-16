@@ -56,6 +56,18 @@
   </article>
 </section>
 
+<section class="section">
+  <article class="card before-you-go-card contact-urgent-card">
+    <p class="eyebrow">Urgent Sacramental Needs</p>
+    <h2>Need a priest?</h2>
+    <p>
+      For urgent sacramental needs, especially danger of death, please contact the parish office as soon as possible.
+      Staff will route the request appropriately.
+    </p>
+    <a class="button button-primary" href="tel:{{ replaceRE "[^0-9+]" "" hugo.Data.contact.office.phone }}">Call the Parish Office</a>
+  </article>
+</section>
+
 <section class="section section-light">
   <div class="section-heading">
     <p class="eyebrow">Clergy & Staff</p>
@@ -65,7 +77,7 @@
   <div class="contact-card-grid">
     <article class="card contact-person-card">
       <p class="eyebrow">{{ hugo.Data.contact.pastor.title }}</p>
-      <h2>{{ hugo.Data.contact.pastor.name }}</h2>
+      <h3>{{ hugo.Data.contact.pastor.name }}</h3>
       <p>
         <a href="mailto:{{ hugo.Data.contact.pastor.email }}">{{ hugo.Data.contact.pastor.email }}</a>
       </p>
@@ -73,7 +85,7 @@
 
     <article class="card contact-person-card">
       <p class="eyebrow">{{ hugo.Data.contact.deacon.title }}</p>
-      <h2>{{ hugo.Data.contact.deacon.name }}</h2>
+      <h3>{{ hugo.Data.contact.deacon.name }}</h3>
       <p>
         <a href="mailto:{{ hugo.Data.contact.deacon.email }}">{{ hugo.Data.contact.deacon.email }}</a>
       </p>
@@ -81,7 +93,7 @@
 
     <article class="card contact-person-card">
       <p class="eyebrow">{{ hugo.Data.contact.secretary.title }}</p>
-      <h2>{{ hugo.Data.contact.secretary.name }}</h2>
+      <h3>{{ hugo.Data.contact.secretary.name }}</h3>
       <p>
         Please contact the parish office for scheduling, records, bulletin items, and general parish questions.
       </p>
@@ -132,37 +144,6 @@
       </article>
     {{ end }}
 
-    <article class="card contact-ministry-card">
-      <h3>Religious Education, Confirmation & OCIA</h3>
-
-      <div class="contact-ministry-list">
-        {{ range slice "Religious Education" "Confirmation" "OCIA" }}
-          {{ $programName := . }}
-          {{ $programs := where hugo.Data.formation_programs.programs "program" $programName }}
-
-          <div class="contact-ministry-row">
-            <strong>{{ $programName }}</strong>
-
-            <div class="contact-ministry-contact-list">
-              {{ range $programs }}
-                {{ if ne .enabled false }}
-                  {{ $host := partial "location-by-slug.html" .host_parish }}
-
-                  <p class="contact-ministry-contact">
-                    <span class="parish-pill {{ if eq .serves "tri-parish" }}parish-pill-neutral{{ else }}{{ replace $host.parish_class "parish-" "parish-pill-" }}{{ end }}">
-                      {{ if eq .serves "tri-parish" }}Tri-Parish{{ else }}{{ $host.short_name }}{{ end }}
-                    </span>
-                    <span>
-                      {{ .when }}{{ if eq .serves "tri-parish" }} at {{ $host.short_name }}{{ end }} — {{ .contact_name }}
-                    </span>
-                  </p>
-                {{ end }}
-              {{ end }}
-            </div>
-          </div>
-        {{ end }}
-      </div>
-    </article>
   </div>
 </section>
 
@@ -252,18 +233,6 @@
       </article>
     {{ end }}
   </div>
-</section>
-
-<section class="section">
-  <article class="card before-you-go-card contact-urgent-card">
-    <p class="eyebrow">Urgent Sacramental Needs</p>
-    <h2>Need a priest?</h2>
-    <p>
-      For urgent sacramental needs, especially danger of death, please contact the parish office as soon as possible.
-      Staff will route the request appropriately.
-    </p>
-    <a class="button button-primary" href="tel:{{ replaceRE "[^0-9+]" "" hugo.Data.contact.office.phone }}">Call the Parish Office</a>
-  </article>
 </section>
 
 {{ end }}

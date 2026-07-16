@@ -11,6 +11,10 @@
   summary: "Serving the Catholic community in Elgin and the surrounding area."
   image: "/images/parishes/st-ann.jpg"
   image_alt: "St. Ann Catholic Church in Elgin, Oklahoma"
+  visitor_access:
+    parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
+    family_seating: "Families are welcome to sit together anywhere in the church. A cry room is available for families who need it."
+    restrooms: "Restrooms are available in the parish hall and inside the cry room. The cry-room restroom does not have a changing table."
   recurring_events:
     - title: "Sunday Coffee and Donuts"
       when: "First Sunday after the 8:30 AM Mass"
@@ -36,6 +40,10 @@
   summary: "Serving the Catholic community in Sterling and the surrounding area."
   image: "/images/parishes/olph.jpg"
   image_alt: "Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma"
+  visitor_access:
+    parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
+    family_seating: "Families are welcome to sit together throughout Mass. OLPH does not have a separate cry room."
+    restrooms: "Restrooms are available in the parish hall. Changing tables are not currently available."
   history:
     - "The first Mass for the Catholic community that became Our Lady of Perpetual Help was celebrated in a parishioner’s home by Rev. Urban de Hasque on August 21, 1902. Under the direction of Rev. William Huffer of Lawton, a church was established and built in 1904."
     - "The early parish community was made up largely of farm families. A school was established in 1909, and the first rectory was built in 1910 during the residency of Rev. Anthony Van der Grinten."
@@ -55,6 +63,9 @@
   summary: "Serving the Catholic community in Apache and the surrounding area."
   image: "/images/parishes/mother-of-sorrows.jpg"
   image_alt: "Mother of Sorrows Catholic Church in Apache, Oklahoma"
+  visitor_access:
+    family_seating: "Families and children are welcome to sit together throughout Mass."
+    access_questions: "Please contact the parish office with questions about parking, entrances, restrooms, or accessibility at Mother of Sorrows."
   history:
     - "The Catholic history of Mother of Sorrows begins with Rev. Urban de Hasque, a young Belgian priest who first visited Apache on October 9, 1901. The first Catholic service in Apache was held on November 27, 1901, in George Rose’s building."
     - "The congregation organized quickly, and a committee secured land for a church. During the next few years, the community built the church, working through financial challenges and questions about the best location."

@@ -79,26 +79,31 @@
   </div>
 </section>
 
-<section class="section two-column">
-  <article class="card welcome-card">
-    <p class="eyebrow">Start Here</p>
-    <h2>Come to Mass</h2>
-    <p>
-      The center of our parish life is the Holy Sacrifice of the Mass. You do not need to know everything
-      before you come. You are welcome to visit, pray, listen, and learn.
-    </p>
-    <a class="button button-primary" href="/mass-confession/">View Mass Times</a>
-  </article>
-
-  <article class="card welcome-card">
-    <p class="eyebrow">Questions?</p>
-    <h2>Contact the Parish Office</h2>
-    <p>
-      If you are unsure where to start, the parish office can help connect you with Mass times,
-      sacramental preparation, faith formation, or a parish contact.
-    </p>
-    <a class="button button-secondary" href="/contact/">Contact Us</a>
-  </article>
+<section class="section" aria-labelledby="plan-your-visit-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Plan Your Visit</p>
+    <h2 id="plan-your-visit-heading">Parking, access, restrooms, and family seating</h2>
+    <p>Families and children are welcome to sit together throughout Mass at all three parishes.</p>
+  </div>
+  <div class="three-column">
+    {{ range slice "mother-of-sorrows" "st-ann" "olph" }}
+      {{ $slug := . }}
+      {{ range where hugo.Data.locations "slug" $slug }}
+        {{ $location := . }}
+        {{ with .visitor_access }}
+          <article class="card parish-detail-card {{ $location.parish_class }}">
+            <p class="eyebrow">{{ $location.city }}</p>
+            <h3>{{ $location.name }}</h3>
+            {{ with .parking_entrance }}<p><strong>Parking & Accessible Entrance</strong><br>{{ . }}</p>{{ end }}
+            {{ with .family_seating }}<p><strong>Families at Mass</strong><br>{{ . }}</p>{{ end }}
+            {{ with .restrooms }}<p><strong>Restrooms</strong><br>{{ . }}</p>{{ end }}
+            {{ with .access_questions }}<p><strong>Building Access Questions</strong><br>{{ . }}</p>{{ end }}
+            <a class="button button-secondary" href="/our-parishes/{{ $location.slug }}/">View {{ $location.name }}</a>
+          </article>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
 </section>
 
 <section class="section new-here-image-card-section">

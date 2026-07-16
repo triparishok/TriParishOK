@@ -1,10 +1,20 @@
 items:
   - enabled: true
     label: "Schedule Change"
-    title: "No weekday Mass Tuesday at Mother of Sorrows or Thursday at OLPH"
-    detail: "There will be no weekday Mass on Tuesday, July 14 at Mother of Sorrows or Thursday, July 16 at Our Lady of Perpetual Help."
+    title: "No weekday Mass Tuesday at Mother of Sorrows"
+    detail: "There will be no 8:30 AM Mass at Mother of Sorrows on Tuesday, July 14."
     parishes:
       - "mother-of-sorrows"
+    start_date: "2026-07-12"
+    end_date: "2026-07-14"
+    affects_schedule: true
+    action: "bulletin"
+
+  - enabled: true
+    label: "Schedule Change"
+    title: "No weekday Mass Thursday at OLPH"
+    detail: "There will be no 8:30 AM Mass at Our Lady of Perpetual Help on Thursday, July 16."
+    parishes:
       - "olph"
     start_date: "2026-07-12"
     end_date: "2026-07-16"

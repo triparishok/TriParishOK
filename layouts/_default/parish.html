@@ -9,6 +9,14 @@
   {{ end }}
 {{ end }}
 
+{{ $activeNotices := partial "active-notices.html" . }}
+{{ $parishScheduleNotices := slice }}
+{{ range $activeNotices }}
+  {{ if and .affects_schedule (or (in .parishes $currentSlug) (in .parishes "tri-parish")) }}
+    {{ $parishScheduleNotices = $parishScheduleNotices | append . }}
+  {{ end }}
+{{ end }}
+
 <section class="page-header">
   <div>
     <p class="eyebrow">{{ $location.city }}</p>
@@ -46,9 +54,20 @@
     <p class="eyebrow">Mass Schedule</p>
     <h2>Mass at {{ $location.short_name }}</h2>
     <p>
-      Regular Mass times are listed here. Please check the current bulletin for Holy Days,
-      funerals, weather changes, and special parish events.
+      Regular Mass times are listed here. Active changes appear below when they affect this parish.
     </p>
+
+    {{ if gt (len $parishScheduleNotices) 0 }}
+      <div class="parish-schedule-notices" aria-label="Current schedule changes">
+        {{ range $parishScheduleNotices }}
+          <div class="source-note">
+            <strong>{{ .title }}</strong>
+            <p>{{ .detail }}</p>
+            {{ partial "notice-action.html" . }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
 
     <div class="simple-list">
       {{ range where hugo.Data.schedule.mass "parish" $location.slug }}
@@ -65,6 +84,21 @@
     </div>
   </article>
 </section>
+
+{{ with $location.visitor_access }}
+<section class="section section-light" aria-labelledby="parish-visit-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Plan Your Visit</p>
+    <h2 id="parish-visit-heading">Building and family information</h2>
+  </div>
+  <article class="card parish-detail-card {{ $location.parish_class }}">
+    {{ with .parking_entrance }}<h3>Parking & Accessible Entrance</h3><p>{{ . }}</p>{{ end }}
+    {{ with .family_seating }}<h3>Families at Mass</h3><p>{{ . }}</p>{{ end }}
+    {{ with .restrooms }}<h3>Restrooms</h3><p>{{ . }}</p>{{ end }}
+    {{ with .access_questions }}<h3>Building Access Questions</h3><p>{{ . }}</p>{{ end }}
+  </article>
+</section>
+{{ end }}
 
 {{ with $location.recurring_events }}
 <section class="section section-light">
@@ -190,9 +224,6 @@
       <p>{{ . }}</p>
     {{ end }}
 
-    {{ with $location.history_source_note }}
-      <p class="history-source-note">{{ . }}</p>
-    {{ end }}
   </article>
 </section>
 {{ end }}
