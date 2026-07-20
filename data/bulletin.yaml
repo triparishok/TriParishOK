@@ -1,22 +1,48 @@
 current:
-  date: "July 12, 2026"
-  pages: "2 pages"
-  file: "/bulletins/2026-07-12/page-1.png"
+  date: July 12, 2026
+  pages: 2 pages
   page_images:
-    - src: "/bulletins/2026-07-12/page-1.png"
-      alt: "Page 1 of the July 12, 2026 tri-parish bulletin"
-    - src: "/bulletins/2026-07-12/page-2.png"
-      alt: "Page 2 of the July 12, 2026 tri-parish bulletin"
-
+    - src: /bulletins/2026-07-12/page-1.png
+      alt: Page 1 of the July 12, 2026 tri-parish bulletin
+    - src: /bulletins/2026-07-12/page-2.png
+      alt: Page 2 of the July 12, 2026 tri-parish bulletin
   homily:
     enabled: true
-    title: "The Parable of the Sower"
-    intro: "In this Sunday’s Gospel, Jesus tells the familiar Parable of the Sower."
+    title: Seeds of the Kingdom
+    intro: In this Sunday’s Gospel, Jesus tells the parable of the wheat and the
+      weeds.
     paragraphs:
-      - "The seed is the Word of God, generously sown for all people. The different types of soil represent the condition of our hearts. At times, our hearts can become hardened by pride or indifference, shallow through lack of prayer, or crowded with the worries, distractions, and temptations of daily life. Yet God never stops sowing His Word with patience, love, and hope."
-      - "Jesus invites us to become rich soil where His Word can take deep root and bear abundant fruit. This happens as we listen attentively to Scripture, remain faithful in prayer, receive the sacraments, and put our faith into action through charity and service. The Christian life is not simply about hearing God’s Word but allowing it to transform us from within."
-      - "As we celebrate the Eucharist this weekend, let us ask the Holy Spirit to prepare our hearts to receive God’s Word with openness and trust. May His grace remove whatever prevents us from growing in holiness, so that our lives may bear a rich harvest of faith, hope, love, and joyful witness to Christ in our families, our parish, and our community."
+      - text: A farmer sows good seed in his field, but during the night an enemy plants
+          weeds among the wheat. When the servants notice the weeds, they ask if
+          they should pull them up immediately. The master  surprises them by
+          saying, “No,” because uprooting the weeds might also damage the wheat.
+          Instead, both are allowed to grow together until the harvest.
+      - text: This parable reminds us that God’s Kingdom is already present in the
+          world, but it has not yet reached its fullness. Good and evil exist
+          side by side, even within our own hearts. We may be tempted to judge
+          others or become discouraged by the presence of sin and injustice. Yet
+          Jesus calls us to trust in God’s wisdom and timing. He alone sees the
+          whole picture and will bring perfect justice at the final judgment.
+      - text: The remaining parables—the mustard seed and the yeast—offer a message of
+          hope. God’s Kingdom often begins in small, hidden ways. A simple act
+          of kindness, a faithful prayer, a word of encouragement, or a quiet
+          sacrifice may seem insignificant, yet God uses these small acts to
+          accomplish great things. Like a tiny mustard seed that becomes a large
+          tree or yeast that transforms an entire batch of dough, God’s grace
+          quietly changes hearts, families, and communities.
+      - text: >-
+          As Catholics, we are invited to be both patient and   faithful. Rather
+          than focusing on the faults of others, we should allow Christ to
+          cultivate the good within us. Through the Eucharist, prayer, the
+          Sacrament of Reconciliation, and works of charity, we become fruitful
+          disciples who help God’s Kingdom grow.
 
-  accessibility_note: "The bulletin is provided as page images. Tap any page or choose Open Full Size to zoom. Choose Download Page Image to save it; on iPhone, the Share button can also save or print. Key notices and Father’s homily note are also listed as regular web text."
-
-source_note: "Schedules may change for Holy Days, funerals, weather, and special events. Check current parish notices before traveling."
+          This week, ask yourself: What small seed of faith is God asking me to
+          nurture today? When we cooperate with His grace, even the smallest
+          acts of love can bear abundant fruit for His Kingdom.
+  accessibility_note: The bulletin is provided as page images. Tap any page or
+    choose Open Full Size to zoom. Choose Download Page Image to save it; on
+    iPhone, the Share button can also save or print. Key notices and Father’s
+    homily note are also listed as regular web text.
+source_note: Schedules may change for Holy Days, funerals, weather, and special
+  events. Check current parish notices before traveling.
