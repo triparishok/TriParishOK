@@ -1,26 +1,5 @@
 items:
   - enabled: true
-    label: Schedule Change
-    title: No weekday Mass Tuesday at Mother of Sorrows
-    detail: There will be no 8:30 AM Mass at Mother of Sorrows on Tuesday, July 14.
-    parishes:
-      - mother-of-sorrows
-    start_date: 2026-07-12
-    end_date: 2026-07-14
-    affects_schedule: true
-    action: bulletin
-  - enabled: true
-    label: Schedule Change
-    title: No weekday Mass Thursday at OLPH
-    detail: There will be no 8:30 AM Mass at Our Lady of Perpetual Help on Thursday,
-      July 16.
-    parishes:
-      - olph
-    start_date: 2026-07-12
-    end_date: 2026-07-16
-    affects_schedule: true
-    action: bulletin
-  - enabled: true
     label: Special Mass
     title: Archbishop Coakley will celebrate Mass at St. Ann
     detail: Please join us on Sunday, August 2 at 10:30 AM as Archbishop Coakley
