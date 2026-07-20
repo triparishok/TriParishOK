@@ -221,12 +221,44 @@
 
 .important-week-card,
 .home-start-card,
-.home-bulletin-card > div {
+.home-bulletin-card > div,
+.home-giving-card {
   background: var(--white) !important;
   border: 1px solid var(--border) !important;
   border-radius: 1rem !important;
   box-shadow: var(--shadow-soft) !important;
   color: var(--navy) !important;
+}
+
+.home-giving-card {
+  display: grid !important;
+  gap: 1.25rem !important;
+  align-items: center !important;
+  max-width: 72rem !important;
+  margin: 0 auto !important;
+}
+
+.home-giving-card h2,
+.home-giving-card p {
+  margin-top: 0 !important;
+}
+
+.home-giving-card .button {
+  width: fit-content !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 760px) {
+  .home-giving-card {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+  }
+}
+
+@media (max-width: 759px) {
+  .home-giving-card .button {
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
 
 /* ---------- Schedule note: neutral callout ---------- */
