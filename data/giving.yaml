@@ -1,34 +1,31 @@
 intro:
-  title: "Giving Options"
-  summary: "Thank you for supporting the worship, ministry, maintenance, and daily life of our tri-parish Catholic community."
+  title: "Giving & Stewardship"
+  summary: "Thank you for prayerfully supporting the worship, ministry, maintenance, and daily life of our Catholic parishes."
 
-status:
-  eyebrow: "Current Giving"
-  title: "For current giving options, contact the parish office."
-  summary: "The parish office can help with offertory envelopes, parish records, donation questions, and any current giving options approved for parish use."
-  action_text: "Contact the Parish Office"
-  action_url: "/contact/"
+st_ann_online:
+  eyebrow: "St. Ann Online Giving"
+  title: "Give online to St. Ann Catholic Church"
+  summary: "Online giving is currently available through St. Ann Catholic Church. Donations made through this online giving link are deposited directly into St. Ann’s parish accounts and support the ministries and needs of St. Ann."
+  action_text: "Give Online to St. Ann"
+  action_url: "https://onrealm.org/SaintAnnChurch/give/now"
+
+supporting_parishes:
+  eyebrow: "Supporting Our Parishes"
+  title: "Faithful support at OLPH and Mother of Sorrows"
+  summary: "Our Lady of Perpetual Help and Mother of Sorrows parishioners are encouraged to continue their faithful support through the existing parish giving methods."
+
+annual_appeal:
+  eyebrow: "Archdiocese of Oklahoma City"
+  title: "Annual Catholic Appeal"
+  summary: "The Annual Catholic Appeal supports the mission of the Archdiocese of Oklahoma City and ministries that serve Catholics throughout our local Church. Parishioners are invited to prayerfully consider supporting this important effort. Gifts to the Annual Catholic Appeal support Archdiocesan ministries and are separate from parish offertory giving."
+  action_text: "Support the Annual Catholic Appeal"
+  action_url: "https://archokc.org/appeal"
 
 stewardship:
-  eyebrow: "Stewardship"
-  title: "Giving is part of parish life."
-  summary: "Catholic stewardship is a response of gratitude to God. We give back from what He has given us, supporting the Holy Sacrifice of the Mass, the work of the Church, and the needs of our parish family."
-  action_text: "View Current Bulletin"
-  action_url: "/bulletins/"
+  eyebrow: "Catholic Stewardship"
+  title: "Giving is part of parish life"
+  summary: "Catholic stewardship is a response of gratitude to God. We give back from what He has given us, supporting the Holy Sacrifice of the Mass, the work of the Church, and the needs of our parish families."
 
-ways:
-  - title: "Give at Mass"
-    eyebrow: "Offertory"
-    summary: "Offerings may be placed in the collection during Mass."
-
-  - title: "Offertory Envelopes"
-    eyebrow: "Parish Records"
-    summary: "For offertory envelopes, donation records, or parish registration questions, please contact the parish office."
-    action_text: "Contact the Parish Office"
-    action_url: "/contact/"
-
-  - title: "Questions About Giving"
-    eyebrow: "Parish Office"
-    summary: "For questions about gifts, donations, records, or current parish giving options, the parish office will be glad to help."
-    action_text: "Contact the Parish Office"
-    action_url: "/contact/"
+safety_note:
+  title: "Use official giving links"
+  summary: "For your security, use only giving information published on this official parish website, in the current bulletin, or provided directly by the parish office."

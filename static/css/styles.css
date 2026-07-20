@@ -1839,6 +1839,21 @@ img {
   margin-top: 1rem;
 }
 
+.giving-primary-grid .parish-st-ann {
+  border-left-color: var(--maroon);
+  background: linear-gradient(180deg, var(--st-ann-tint), var(--white) 42%);
+}
+
+.giving-appeal-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.giving-appeal-action .button {
+  text-align: center;
+}
+
 @media (min-width: 760px) {
   .giving-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1851,7 +1866,8 @@ img {
   }
 
   .giving-feature-card .button,
-  .giving-card .button {
+  .giving-card .button,
+  .giving-appeal-action .button {
     width: 100%;
     text-align: center;
   }

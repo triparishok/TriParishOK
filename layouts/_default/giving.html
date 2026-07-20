@@ -4,65 +4,59 @@
   <div>
     <p class="eyebrow">Stewardship</p>
     <h1>{{ hugo.Data.giving.intro.title }}</h1>
-    <p class="page-intro">
-      {{ hugo.Data.giving.intro.summary }}
-    </p>
+    <p class="page-intro">{{ hugo.Data.giving.intro.summary }}</p>
   </div>
 </section>
 
-<section class="section two-column">
-  <article class="card giving-feature-card">
-    <p class="eyebrow">{{ hugo.Data.giving.status.eyebrow }}</p>
-    <h2>{{ hugo.Data.giving.status.title }}</h2>
-    <p>{{ hugo.Data.giving.status.summary }}</p>
-    <a class="button button-primary" href="{{ hugo.Data.giving.status.action_url }}">
-      {{ hugo.Data.giving.status.action_text }}
+<section class="section two-column giving-primary-grid">
+  <article class="card giving-feature-card parish-st-ann">
+    <p class="eyebrow">{{ hugo.Data.giving.st_ann_online.eyebrow }}</p>
+    <h2>{{ hugo.Data.giving.st_ann_online.title }}</h2>
+    <p>{{ hugo.Data.giving.st_ann_online.summary }}</p>
+    <a class="button button-primary"
+       href="{{ hugo.Data.giving.st_ann_online.action_url }}"
+       target="_blank"
+       rel="noopener noreferrer">
+      {{ hugo.Data.giving.st_ann_online.action_text }}
     </a>
   </article>
 
   <article class="card giving-feature-card">
-    <p class="eyebrow">{{ hugo.Data.giving.stewardship.eyebrow }}</p>
-    <h2>{{ hugo.Data.giving.stewardship.title }}</h2>
-    <p>{{ hugo.Data.giving.stewardship.summary }}</p>
-    <a class="button button-secondary" href="{{ hugo.Data.giving.stewardship.action_url }}">
-      {{ hugo.Data.giving.stewardship.action_text }}
-    </a>
+    <p class="eyebrow">{{ hugo.Data.giving.supporting_parishes.eyebrow }}</p>
+    <h2>{{ hugo.Data.giving.supporting_parishes.title }}</h2>
+    <p>{{ hugo.Data.giving.supporting_parishes.summary }}</p>
   </article>
 </section>
 
 <section class="section section-light">
   <div class="section-heading">
-    <p class="eyebrow">Ways to Give</p>
-    <h2>Simple ways to support parish life</h2>
-    <p>
-      These options keep the page useful without listing an online platform before
-      the parish has approved an official link.
-    </p>
+    <p class="eyebrow">A Distinct Archdiocesan Appeal</p>
+    <h2>{{ hugo.Data.giving.annual_appeal.title }}</h2>
+    <p>{{ hugo.Data.giving.annual_appeal.summary }}</p>
   </div>
 
-  <div class="giving-grid">
-    {{ range hugo.Data.giving.ways }}
-      <article class="card giving-card">
-        <p class="eyebrow">{{ .eyebrow }}</p>
-        <h2>{{ .title }}</h2>
-        <p>{{ .summary }}</p>
-        {{ if .action_text }}
-          <a class="button button-secondary" href="{{ .action_url }}">{{ .action_text }}</a>
-        {{ end }}
-      </article>
-    {{ end }}
+  <div class="giving-appeal-action">
+    <a class="button button-secondary"
+       href="{{ hugo.Data.giving.annual_appeal.action_url }}"
+       target="_blank"
+       rel="noopener noreferrer">
+      {{ hugo.Data.giving.annual_appeal.action_text }}
+    </a>
   </div>
 </section>
 
-<section class="section">
-  <article class="card before-you-go-card giving-note-card">
+<section class="section two-column">
+  <article class="card giving-feature-card">
+    <p class="eyebrow">{{ hugo.Data.giving.stewardship.eyebrow }}</p>
+    <h2>{{ hugo.Data.giving.stewardship.title }}</h2>
+    <p>{{ hugo.Data.giving.stewardship.summary }}</p>
+  </article>
+
+  <article class="card giving-feature-card giving-note-card">
     <p class="eyebrow">Safety Note</p>
-    <h2>Use only official parish giving information.</h2>
-    <p>
-      For safety, use only giving information provided by the parish office,
-      the current bulletin, or the official parish website.
-    </p>
-    <a class="button button-primary" href="/contact/">Contact the Parish Office</a>
+    <h2>{{ hugo.Data.giving.safety_note.title }}</h2>
+    <p>{{ hugo.Data.giving.safety_note.summary }}</p>
+    <a class="button button-secondary" href="{{ "contact/" | relURL }}">Contact the Parish Office</a>
   </article>
 </section>
 
