@@ -1,11 +1,11 @@
 current:
-  date: July 12, 2026
+  date: July 19, 2026
   pages: 2 pages
   page_images:
-    - src: /bulletins/2026-07-12/page-1.png
-      alt: Page 1 of the July 12, 2026 tri-parish bulletin
-    - src: /bulletins/2026-07-12/page-2.png
-      alt: Page 2 of the July 12, 2026 tri-parish bulletin
+    - src: /bulletins/bulletinjuly192026-1-1583x2048-1.png
+      alt: Page 1 of the July 19, 2026 tri-parish bulletin
+    - src: /bulletins/bulletinjuly192026-2-1583x2048.png
+      alt: Page 2 of the July 19, 2026 tri-parish bulletin
   homily:
     enabled: true
     title: Seeds of the Kingdom
