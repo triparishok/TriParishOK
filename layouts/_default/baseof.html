@@ -1,3 +1,4 @@
+{{- $memberLoginEnabled := hasPrefix .Site.BaseURL "https://triparishok.org/" -}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,9 @@
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/faith-formation-system.css" | relURL) $faithFormationVersion }}">
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/bulletins-system.css" | relURL) $bulletinsVersion }}">
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/contact-system.css" | relURL) $contactVersion }}">
+  {{ if $memberLoginEnabled }}
   <script id="MPWidgets" src="https://mp.archokc.org/widgets/dist/MPWidgets.js" defer></script>
+  {{ end }}
 </head>
 
 <body>
@@ -33,9 +36,11 @@
     </a>
 
     <div class="header-actions-minimal">
-      <div class="member-login-widget" aria-label="Parish member account">
-        <mpp-user-login></mpp-user-login>
-      </div>
+      {{ if $memberLoginEnabled }}
+        <div class="member-login-widget" aria-label="Parish member account">
+          <mpp-user-login></mpp-user-login>
+        </div>
+      {{ end }}
       <a class="header-action header-action-gold" href="/bulletins/">Bulletin</a>
       <a class="header-action header-action-light" href="/our-parishes/">Our Parishes</a>
       <a class="header-action header-action-outline" href="/contact/">Contact</a>
