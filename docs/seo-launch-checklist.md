@@ -122,8 +122,11 @@ Do not list Mass times as ordinary business opening hours.
 
 ## Remaining enhancements
 
-- Create a dedicated 1200 × 630 social-sharing image.
-- Add favicons and an Apple touch icon.
+- Dedicated 1200 × 630 social-sharing artwork is complete.
+- Favicons and an Apple touch icon are complete.
 - Add image width and height attributes where practical.
-- Run PageSpeed Insights after the formal-domain launch.
+- The GitHub Pages review build scored 100 for Performance, Accessibility, and Best Practices on both mobile and desktop. Re-run PageSpeed Insights after the formal-domain launch.
+- Replace temporary church photographs when the approved official photographs arrive.
+- Complete MinistryPlatform widget testing after the provider resolves the permitted-URL/CORS connection problem.
+- Correct and verify Google Business Profiles and request corrections to stale Archdiocesan directory information.
 - Ask the Archdiocese and trusted Catholic directories to link to the specific parish pages.
