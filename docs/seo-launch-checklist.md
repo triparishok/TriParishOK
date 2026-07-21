@@ -69,20 +69,25 @@ This confirms that the future live build:
 
 ## Old URL redirect preparation
 
-Before launch, inventory indexed URLs from the current site and map each useful page to the closest new page.
+The WordPress sitemap was inventoried on July 21, 2026. Useful parish URLs receive Hugo alias pages so old bookmarks and search results reach the closest replacement after cutover.
 
-Known candidates to verify include:
+| Current path | Destination | Disposition |
+| --- | --- | --- |
+| `/bulletin/` | `/bulletins/` | Alias added |
+| `/about/` | `/our-parishes/` | Alias added |
+| `/join-our-parish/` | `/new-here/` | Alias added |
+| `/adult-ed-scripture-study/` | `/faith-formation/` | Alias added |
+| `/prolife/` | `/catholic-links/` | Alias added |
+| `/vocations/` | `/catholic-links/` | Alias added |
+| `/contact/` | `/contact/` | Path preserved |
+| `/events/` | `/events/` | Path preserved; MinistryPlatform integration pending |
+| `/becoming-catholic/` | `/becoming-catholic/` | Path preserved |
+| `/forms/` | `/forms/` | Path preserved |
+| `/catholic-links/` | `/catholic-links/` | Path preserved |
 
-| Current path | Proposed destination |
-| --- | --- |
-| `/bulletin/` | `/bulletins/` |
-| `/contact-us/` | `/contact/` |
-| `/about/` | `/our-parishes/` |
-| `/join-our-parish/` | `/new-here/` |
+The following obsolete WordPress, store, and unrelated template URLs intentionally receive no homepage redirect: `/hello-world/`, `/testimonials/`, `/shop/`, `/checkout/`, `/my-account/`, `/cart/`, `/services/`, `/projects/`, `/map/`, `/category/uncategorized/`, `/author/admin/`, and the `ae_global_templates` query URLs. After cutover they should resolve as not found rather than being misrepresented as equivalent parish content.
 
-Do not redirect unrelated store, account, cart, or checkout pages to the homepage. Decide whether each should return a proper not-found response or receive a specific replacement page.
-
-GitHub Pages does not provide ordinary server-side redirect rules. Choose and test the redirect method before DNS cutover.
+GitHub Pages does not provide ordinary server-side redirect rules. Hugo aliases are client-side compatibility pages, not HTTP 301 responses. Confirm each alias works on the formal domain after cutover.
 
 ## Search setup after launch
 

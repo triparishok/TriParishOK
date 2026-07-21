@@ -17,6 +17,7 @@ class PageInspector(HTMLParser):
         self.in_title = False
         self.title_parts: list[str] = []
         self.meta: dict[str, list[str]] = {}
+        self.refresh_targets: list[str] = []
         self.canonicals: list[str] = []
         self.internal_candidates: list[str] = []
         self.in_json_ld = False
@@ -35,6 +36,13 @@ class PageInspector(HTMLParser):
             content = attrs.get("content", "")
             if key:
                 self.meta.setdefault(key.lower(), []).append(content.strip())
+
+            if attrs.get("http-equiv", "").lower() == "refresh":
+                parts = content.split(";", 1)
+                if len(parts) == 2 and parts[0].strip() == "0":
+                    directive = parts[1].strip()
+                    if directive.lower().startswith("url="):
+                        self.refresh_targets.append(directive[4:].strip())
 
         if tag == "link":
             rel_tokens = {
@@ -133,6 +141,8 @@ def main() -> int:
             inspector = PageInspector()
             inspector.feed(text)
 
+            is_redirect = bool(inspector.refresh_targets)
+
             for candidate in inspector.internal_candidates:
                 if candidate.startswith(("#", "mailto:", "tel:", "data:")):
                     continue
@@ -155,6 +165,54 @@ def main() -> int:
                     errors.append(
                         f"{path}: same-site URL is outside expected base: {candidate}"
                     )
+
+            if is_redirect:
+                if len(inspector.refresh_targets) != 1:
+                    errors.append(
+                        f"{path}: expected one redirect target; "
+                        f"found {len(inspector.refresh_targets)}"
+                    )
+
+                if len(inspector.canonicals) != 1:
+                    errors.append(
+                        f"{path}: expected one canonical URL; "
+                        f"found {len(inspector.canonicals)}"
+                    )
+                else:
+                    canonical = inspector.canonicals[0]
+
+                    if not canonical.startswith(expected_base):
+                        errors.append(
+                            f"{path}: redirect canonical is outside expected base: "
+                            f"{canonical}"
+                        )
+
+                    if (
+                        inspector.refresh_targets
+                        and inspector.refresh_targets[0] != canonical
+                    ):
+                        errors.append(
+                            f"{path}: redirect target does not match canonical"
+                        )
+
+                    target_parts = urlparse(canonical)
+                    target_path = target_parts.path
+                    if expected_path != "/" and target_path.startswith(expected_path):
+                        target_path = "/" + target_path[len(expected_path):].lstrip("/")
+
+                    target_file = (
+                        root / target_path.lstrip("/") / "index.html"
+                        if target_path.endswith("/")
+                        else root / target_path.lstrip("/")
+                    )
+
+                    if not target_file.exists():
+                        errors.append(
+                            f"{path}: redirect destination was not rendered: "
+                            f"{canonical}"
+                        )
+
+                continue
 
             if not inspector.title:
                 errors.append(f"{path}: missing title")
