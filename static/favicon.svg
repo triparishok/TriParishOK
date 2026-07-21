@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
+  <title id="title">Tri-Parish Catholic Community</title>
+  <rect width="180" height="180" rx="34" fill="#0d233a"/>
+  <rect x="8" y="8" width="164" height="164" rx="27" fill="none" stroke="#d0b27a" stroke-width="8"/>
+  <path d="M78 32h24v43h36v24h-36v49H78V99H42V75h36z" fill="#f4f1ea"/>
+</svg>

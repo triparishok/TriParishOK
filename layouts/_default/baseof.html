@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}" sizes="180x180">
   {{ partial "seo-head.html" . }}
   {{ $stylesVersion := substr (crypto.SHA256 (os.ReadFile "static/css/styles.css")) 0 12 }}
   {{ $homepageVersion := substr (crypto.SHA256 (os.ReadFile "static/css/homepage-system.css")) 0 12 }}
