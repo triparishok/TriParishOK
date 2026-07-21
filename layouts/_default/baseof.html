@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/faith-formation-system.css" | relURL) $faithFormationVersion }}">
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/bulletins-system.css" | relURL) $bulletinsVersion }}">
   <link rel="stylesheet" href="{{ printf "%s?v=%s" ("css/contact-system.css" | relURL) $contactVersion }}">
+  <script id="MPWidgets" src="https://mp.archokc.org/widgets/dist/MPWidgets.js"></script>
 </head>
 
 <body>
@@ -30,6 +31,10 @@
       <span class="brand-sub-minimal">Catholic Community</span>
       <small>St. Ann • OLPH • Mother of Sorrows</small>
     </a>
+
+    <div class="header-login-minimal" aria-label="Parish account">
+      <mpp-user-login></mpp-user-login>
+    </div>
 
     <div class="header-actions-minimal">
       <a class="header-action header-action-gold" href="{{ "bulletins/" | relURL }}">Bulletin</a>
