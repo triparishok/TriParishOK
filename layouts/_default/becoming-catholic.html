@@ -114,7 +114,7 @@
   <article class="card before-you-go-card">
     <p class="eyebrow">Current OCIA Information</p>
     <h2>OCIA serves all three parish communities.</h2>
-    <p>{{ .summary }}</p>
+    <div class="cms-rich-text">{{ .summary | markdownify }}</div>
     <p><strong>Regular meeting time:</strong> {{ .when }}</p>
     <p><strong>Host location:</strong> {{ $host.name }} in {{ $host.city }}</p>
     <p><strong>Program contact:</strong> {{ .contact_name }}</p>

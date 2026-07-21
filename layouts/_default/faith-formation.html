@@ -74,7 +74,7 @@
               Serves children and families at {{ $host.name }} in {{ $host.city }}.
             {{ end }}
           </p>
-          <p>{{ .summary }}</p>
+          <div class="cms-rich-text">{{ .summary | markdownify }}</div>
           <p><strong>Program contact:</strong> {{ .contact_name }}</p>
           <div class="card-actions">
             <a class="button button-secondary"

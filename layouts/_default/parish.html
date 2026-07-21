@@ -62,7 +62,7 @@
         {{ range $parishScheduleNotices }}
           <div class="source-note">
             <strong>{{ .title }}</strong>
-            <p>{{ .detail }}</p>
+            <div class="cms-rich-text">{{ .detail | markdownify }}</div>
             {{ partial "notice-action.html" . }}
           </div>
         {{ end }}
@@ -145,7 +145,7 @@
           </p>
           <h3>{{ .program }}</h3>
           <p><strong>{{ .when }}</strong></p>
-          <p>{{ .summary }}</p>
+          <div class="cms-rich-text">{{ .summary | markdownify }}</div>
           <p><strong>Program contact:</strong> {{ .contact_name }}</p>
           {{ if eq .serves "tri-parish" }}
             <p>This program serves all three parishes and is hosted here at {{ $location.short_name }}.</p>

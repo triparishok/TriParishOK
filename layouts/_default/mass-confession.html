@@ -38,7 +38,7 @@
         </header>
 
         <h3>{{ .title }}</h3>
-        <p>{{ .detail }}</p>
+        <div class="cms-rich-text">{{ .detail | markdownify }}</div>
         {{ partial "notice-action.html" . }}
       </article>
     {{ end }}

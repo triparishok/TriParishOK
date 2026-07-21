@@ -1,3 +1,7 @@
+settings:
+  content:
+    merge: true
+
 media:
   - name: bulletin_files
     label: Bulletin Files
@@ -60,9 +64,13 @@ content:
 
               - name: detail
                 label: Notice Details
-                type: text
+                type: rich-text
                 required: true
-                description: "Write one or two clear sentences with the essential information."
+                description: "Write one or two clear sentences. Use the toolbar for italics, bold text, or a helpful link."
+                options:
+                  format: markdown
+                  switcher: false
+                  media: false
 
               - name: parishes
                 label: Who Is This Notice For?
@@ -490,9 +498,13 @@ content:
 
               - name: summary
                 label: Program Description
-                type: text
+                type: rich-text
                 required: true
-                description: "Briefly explain the purpose of the program."
+                description: "Briefly explain the program. Use the toolbar for italics, bold text, or a helpful link."
+                options:
+                  format: markdown
+                  switcher: false
+                  media: false
 
   - name: parish-contacts
     label: Parish Contacts — Rare Changes

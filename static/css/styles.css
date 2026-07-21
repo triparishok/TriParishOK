@@ -5959,3 +5959,10 @@ img {
     padding-bottom: 0.5rem;
   }
 }
+.cms-rich-text > :first-child {
+  margin-top: 0;
+}
+
+.cms-rich-text > :last-child {
+  margin-bottom: 0;
+}
