@@ -22,6 +22,14 @@ archdiocesan_hotline:
   phone_display: "405-720-9878"
   phone_href: "tel:4057209878"
 
+volunteer_training:
+  title: "Safe Environment Training for Volunteers"
+  description: "Every volunteer age 18 or older must meet the Archdiocese of Oklahoma City Safe Environment requirements for children. This includes religious educators, choir members, ushers, lectors, Eucharistic ministers, Boy Scout leaders, and anyone else who may have contact with children."
+  annual_timing: "Training is completed online each year. The annual training cycle begins August 1 and continues through the school year."
+  facilitator: "Sherri Wooldridge"
+  facilitator_role: "Tri-Parish Safe Environment Facilitator"
+  training_url: "https://archokc.safeenvironment.org/login/index.php"
+
 urls:
   safe_environment: "https://archokc.org/safe-environment"
   state_hotline: "https://archokc.org/statewide-child-abuse-reporting-hotline"

@@ -207,6 +207,23 @@
       <a class="button button-secondary" href="{{ hugo.Data.safe_environment.urls.pastoral_response }}" target="_blank" rel="noopener noreferrer">Pastoral Response</a>
     </div>
   </article>
+
+  <article class="card contact-safety-resource-card">
+    <div>
+      <p class="eyebrow">Volunteer Requirements</p>
+      <h3>{{ hugo.Data.safe_environment.volunteer_training.title }}</h3>
+      <p>{{ hugo.Data.safe_environment.volunteer_training.description }}</p>
+      <p>{{ hugo.Data.safe_environment.volunteer_training.annual_timing }}</p>
+      <p>
+        <strong>{{ hugo.Data.safe_environment.volunteer_training.facilitator_role }}:</strong>
+        {{ hugo.Data.safe_environment.volunteer_training.facilitator }}
+      </p>
+    </div>
+
+    <div class="contact-safety-actions">
+      <a class="button button-primary" href="{{ hugo.Data.safe_environment.volunteer_training.training_url }}" target="_blank" rel="noopener noreferrer">Begin or Renew Training</a>
+    </div>
+  </article>
 </section>
 
 <section class="section contact-location-section">
