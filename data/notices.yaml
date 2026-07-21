@@ -32,3 +32,12 @@ items:
     start_date: 2026-07-12
     affects_schedule: false
     action: email-office
+  - enabled: true
+    label: Office Notice
+    title: CMS formatting test — delete me
+    detail: This *is* to ++set++ **formatting**!
+    parishes:
+      - tri-parish
+    start_date: 2026-07-21
+    affects_schedule: false
+    action: none
