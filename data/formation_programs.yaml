@@ -27,7 +27,7 @@ programs:
     program: "Confirmation"
     serves: "tri-parish"
     host_parish: "st-ann"
-    when: "Wednesdays at 7:00 PM"
+    when: "Wednesdays from 6:30 PM–8:30 PM"
     contact_name: "Sarah Sminkey"
     summary: "Confirmation preparation helps young Catholics deepen baptismal faith, grow in discipleship, and prepare to receive the gifts of the Holy Spirit."
 

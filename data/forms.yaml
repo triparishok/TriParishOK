@@ -41,15 +41,17 @@ groups:
         parish: "mother-of-sorrows"
 
   - title: "Religious Education & Youth Forms"
-    description: "Forms for RE/youth registration, consent, and off-site activities."
+    description: "Current forms for regular St. Ann Religious Education classes. Other Archdiocesan forms will be provided directly when they are needed for a particular activity."
     items:
-      - title: "RE / Youth Registration, Consent, and Waiver"
-        description: "For participation in Religious Education and youth activities."
-        file: "/forms/re-youth-registration-consent-waiver.pdf"
+      - title: "St. Ann Religious Education Enrollment Packet — 2026–2027"
+        description: "Includes the St. Ann RE welcome information, Sunday calendar, family information sheet, and annual permission form for regular classes."
+        file: "/forms/st-ann-re-enrollment-packet-2026-2027.pdf"
+        parish: "st-ann"
 
-      - title: "RE / Youth Off-Site Consent and Waiver"
-        description: "For youth field trips, overnight trips, or activities outside the local area."
-        file: "/forms/re-youth-offsite-consent-waiver.pdf"
+      - title: "Archdiocesan Annual Permission Form A-1 — Blank"
+        description: "The current Archdiocesan consent and general release form for a minor participating in regular Religious Formation activities."
+        link: "https://share.google/6yruSglZA5NVpysFm"
+        link_text: "Open Current Form A-1 — PDF"
 
       - title: "Safe Environment & Reporting"
         description: "For abuse reporting and Safe Environment information, use the parish reporting section."
