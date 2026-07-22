@@ -8,8 +8,7 @@ This website uses parish-owned photographs, parish-provided building photographs
 
 These are real photographs from the Tri-Parish Catholic Community—not stock photography or generated artwork.
 
-- **St. Ann sanctuary on the homepage:** Photograph by Amber Largent. Parish-owned and used with permission.
-- **Baptism at St. Ann:** Photograph by Amber Largent. Parish-owned and used with permission.
+{{< homepage-gallery-credits >}}
 
 ## Parish-provided building photographs
 

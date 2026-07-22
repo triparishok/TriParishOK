@@ -955,6 +955,123 @@
 .home-mass-confession strong {
   font-weight: 900 !important;
 }
+
+/* ---------- Homepage parish-life photo gallery ---------- */
+
+.home-parish-life-section {
+  background: var(--white);
+}
+
+.home-parish-life-heading {
+  max-width: 760px;
+}
+
+.home-parish-life-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.home-life-photo {
+  position: relative;
+  min-height: 220px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--navy);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-life-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  display: block;
+  object-fit: cover;
+}
+
+.home-life-photo-featured,
+.home-life-photo-featured .home-life-image {
+  min-height: 300px;
+}
+
+.home-life-photo figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2.5rem 0.9rem 0.8rem;
+  color: var(--white);
+  background: linear-gradient(to top, rgba(9, 31, 51, 0.92), rgba(9, 31, 51, 0));
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.home-parish-life-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  max-width: 1120px;
+  margin: 1.15rem auto 0;
+}
+
+.home-parish-life-actions .button {
+  margin: 0;
+}
+
+@media (min-width: 820px) {
+  .home-parish-life-gallery {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, 190px);
+  }
+
+  .home-life-photo,
+  .home-life-image,
+  .home-life-photo-featured,
+  .home-life-photo-featured .home-life-image {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .home-life-photo-featured {
+    grid-row: 1 / 3;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 819px) {
+  .home-life-photo-featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-parish-life-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .home-life-photo,
+  .home-life-image,
+  .home-life-photo-featured,
+  .home-life-photo-featured .home-life-image {
+    min-height: 240px;
+  }
+
+  .home-parish-life-actions {
+    display: grid;
+  }
+
+  .home-parish-life-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
 /* ---------- Mass page: compact weekend prayer details ---------- */
 
 .mass-card {

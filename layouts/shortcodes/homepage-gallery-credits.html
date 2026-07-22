@@ -1,0 +1,17 @@
+{{- $galleryImages := slice -}}
+<ul>
+  {{- range hugo.Data.homepage_gallery.items }}
+    {{- $galleryImages = $galleryImages | append .image }}
+    <li><strong>{{ .caption }}:</strong> {{ .credit }}.</li>
+  {{- end }}
+
+  {{- $sanctuary := hugo.Data.site_images.home.st_ann_sanctuary -}}
+  {{- if not (in $galleryImages $sanctuary.src) }}
+    <li><strong>{{ $sanctuary.caption }}:</strong> {{ $sanctuary.credit }}.</li>
+  {{- end }}
+
+  {{- $baptism := hugo.Data.site_images.sacraments.baptism -}}
+  {{- if not (in $galleryImages $baptism.src) }}
+    <li><strong>{{ $baptism.caption }}:</strong> {{ $baptism.credit }}.</li>
+  {{- end }}
+</ul>

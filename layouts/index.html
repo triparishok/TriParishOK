@@ -177,6 +177,33 @@
   </article>
 </section>
 
+<section class="section home-parish-life-section" aria-labelledby="home-parish-life-heading">
+  <div class="section-heading home-parish-life-heading">
+    <p class="eyebrow">Life in Our Parishes</p>
+    <h2 id="home-parish-life-heading">Rooted in worship. Growing in community.</h2>
+    <p>
+      See parish life, formation updates, community news, and current announcements
+      through our official parish resources.
+    </p>
+  </div>
+
+  <div class="home-parish-life-gallery">
+    {{ range $index, $photo := hugo.Data.homepage_gallery.items }}
+      <figure class="home-life-photo{{ if eq $index 0 }} home-life-photo-featured{{ end }}">
+        {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
+        <figcaption>{{ $photo.caption }}</figcaption>
+      </figure>
+    {{ end }}
+  </div>
+
+  <div class="home-parish-life-actions">
+    <a class="button button-primary" href="https://www.facebook.com/profile.php?id=61580669036506" target="_blank" rel="noopener noreferrer">
+      Follow St. Ann on Facebook
+    </a>
+    <a class="button button-secondary" href="{{ "parish-life/" | relURL }}">Explore Parish Life</a>
+  </div>
+</section>
+
 <section class="section section-light home-parishes-section" aria-labelledby="home-parishes-heading">
   <div class="section-heading">
     <p class="eyebrow">Our Parishes</p>

@@ -11,7 +11,64 @@ media:
     rename: safe
     categories: [image, document]
 
+  - name: website_images
+    label: Website Images
+    input: static/images
+    output: /images
+    extensions: [png, jpg, jpeg, webp]
+    rename: safe
+    categories: [image]
+
 content:
+  - name: website-photos
+    label: Website Photos — Rare Changes
+    type: group
+    items:
+      - name: homepage-gallery
+        label: Homepage Photo Gallery
+        type: file
+        path: data/homepage_gallery.yaml
+        format: yaml
+        fields:
+          - name: items
+            label: Three Homepage Photos
+            type: object
+            description: "The homepage always shows exactly three photos. Drag them into the order you want. The first photo is the large featured image."
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{caption}"
+            fields:
+              - name: image
+                label: Photo
+                type: file
+                required: true
+                description: "Choose an existing website image or upload a JPG, PNG, or WebP photo."
+                options:
+                  media: website_images
+                  extensions: [png, jpg, jpeg, webp]
+                  rename: safe
+
+              - name: caption
+                label: Caption Shown on the Photo
+                type: string
+                required: true
+                description: "Example: Air-conditioning installation at St. Ann Parish Hall"
+
+              - name: alt
+                label: Photo Description for Screen Readers
+                type: text
+                required: true
+                description: "Describe what is visibly happening in one clear sentence. Do not begin with 'Photo of.'"
+
+              - name: credit
+                label: Photographer or Source Credit
+                type: string
+                required: true
+                description: "Example: Photograph by Amber Largent; parish-owned and used with permission"
+
   - name: weekly-updates
     label: Weekly Updates
     type: group

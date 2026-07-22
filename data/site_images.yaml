@@ -36,6 +36,13 @@ sacraments:
     caption: "The Holy Eucharist"
     credit: "Photo by Thays Orrico on Unsplash"
 
+home:
+  st_ann_sanctuary:
+    src: "/images/home/st-ann-sanctuary-hero.jpg"
+    alt: "The sanctuary and altar at St. Ann Catholic Church"
+    caption: "St. Ann Catholic Church"
+    credit: "Photograph by Amber Largent; parish-owned and used with permission"
+
 new_here:
   church_pews:
     src: "/images/devotional/church-pews.jpg"
