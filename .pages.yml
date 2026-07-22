@@ -94,8 +94,8 @@ content:
                 label: Show This Notice
                 type: boolean
                 required: false
-                default: true
-                description: "Turn this off to hide the notice without deleting it."
+                default: false
+                description: "New notices begin hidden. Turn this on only when the notice is complete and ready for parishioners to see. Turn it off again to hide the notice without deleting it."
 
               - name: label
                 label: Notice Type
