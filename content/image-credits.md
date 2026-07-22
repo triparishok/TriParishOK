@@ -20,7 +20,7 @@ These are real photographs of our three church buildings. The original photograp
 
 ## AI-generated page-header artwork
 
-The header artwork on the New Here, Mass & Confession, Sacraments, Faith Formation, Becoming Catholic, Bulletins, Catholic Resources, Contact, Events, Forms, Giving, and Parish Life pages was created with an AI image-generation tool for this website. These devotional images do not depict a Tri-Parish church building, parishioner, event, form, bulletin, or financial transaction.
+The header artwork on the New Here, Mass & Confession, Sacraments, Becoming Catholic, Bulletins, Catholic Resources, Contact, Events, Forms, Giving, and Parish Life pages was created with an AI image-generation tool for this website. These devotional images do not depict a Tri-Parish church building, parishioner, event, form, bulletin, or financial transaction.
 
 ## Licensed supporting photography
 

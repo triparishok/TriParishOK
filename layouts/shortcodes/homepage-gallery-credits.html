@@ -14,4 +14,7 @@
   {{- if not (in $galleryImages $baptism.src) }}
     <li><strong>{{ $baptism.caption }}:</strong> {{ $baptism.credit }}.</li>
   {{- end }}
+
+  {{- $confirmation := hugo.Data.site_images.faith_formation.st_ann_confirmation_decor -}}
+  <li><strong>{{ $confirmation.caption }}:</strong> {{ $confirmation.credit }}.</li>
 </ul>

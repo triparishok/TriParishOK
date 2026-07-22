@@ -43,6 +43,13 @@ home:
     caption: "St. Ann Catholic Church"
     credit: "Photograph by Amber Largent; parish-owned and used with permission"
 
+faith_formation:
+  st_ann_confirmation_decor:
+    src: "/images/page-headers/st-ann-confirmation-decor-2025.jpg"
+    alt: "White roses and a gold cross arranged for Confirmation at St. Ann Catholic Church"
+    caption: "Confirmation decorations at St. Ann Religious Education, May 10, 2025"
+    credit: "Photograph by Amber Largent; parish-owned and used with permission"
+
 new_here:
   church_pews:
     src: "/images/devotional/church-pews.jpg"
