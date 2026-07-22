@@ -1,0 +1,15 @@
+{{- $src := .src -}}
+{{- $path := printf "static/%s" (strings.TrimPrefix "/" $src) -}}
+{{- $config := dict -}}
+{{- if fileExists $path -}}
+  {{- $config = imageConfig $path -}}
+{{- end -}}
+<img
+  src="{{ $src | relURL }}"
+  alt="{{ .alt }}"
+  {{- with .class }} class="{{ . }}"{{ end }}
+  {{- with $config.Width }} width="{{ . }}"{{ end }}
+  {{- with $config.Height }} height="{{ . }}"{{ end }}
+  loading="{{ .loading | default "lazy" }}"
+  decoding="async"
+  {{- with .fetchpriority }} fetchpriority="{{ . }}"{{ end }}>

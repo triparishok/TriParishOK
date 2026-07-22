@@ -28,7 +28,7 @@ sacraments:
     src: "/images/sacraments/st-ann-baptism-2026.jpg"
     alt: "An infant receiving the Sacrament of Baptism at St. Ann Catholic Church"
     caption: "Baptism at St. Ann"
-    credit: "Photo courtesy of the Largent family"
+    credit: "Photograph by Amber Largent; parish-owned and used with permission"
 
   eucharist:
     src: "/images/sacraments/eucharist.jpg"
@@ -49,9 +49,8 @@ new_here:
     caption: "Hymnals in a church pew"
     credit: "Photo by Geoff Chang on Unsplash"
 
-  woman_in_church:
-    src: "/images/new-here/woman-in-church-thomas-vitali.jpg"
-    alt: "A woman seated in a church facing the altar and crucifix"
-    caption: "A woman seated in prayer inside a church"
-    credit: "Photo by Thomas Vitali on Unsplash"
-    source_url: "https://unsplash.com/photos/woman-in-church-OwHTRWWtpkU"
+  new_here_church_interior:
+    src: "/images/new-here/welcoming-catholic-church-interior.webp"
+    alt: "A quiet Catholic church interior with wooden pews facing the altar and crucifix"
+    caption: "A welcoming Catholic church interior"
+    credit: "AI-generated supporting artwork"

@@ -1,6 +1,17 @@
 # Image Credits
 
-These images are used as Catholic devotional and sacramental accent images. Keep them separate from parish-location photos.
+## Parish-Owned Photographs
+
+- **St. Ann sanctuary homepage header** — Photograph by Amber Largent. Parish-owned and used with permission.
+- **Baptism at St. Ann** — Photograph by Amber Largent. Parish-owned and used with permission.
+
+## Parish-Provided Building Photographs
+
+- **St. Ann Catholic Church, Elgin** — Parish-provided photograph; photographer unknown; temporary pending an updated official photograph.
+- **Our Lady of Perpetual Help Catholic Church, Sterling** — Parish-provided photograph; photographer unknown; temporary pending an updated official photograph.
+- **Mother of Sorrows Catholic Church, Apache** — Parish-provided photograph; photographer unknown; temporary pending an updated official photograph.
+
+The following licensed images are used as general Catholic devotional and sacramental accents. Keep them separate from parish-owned and parish-location photographs.
 
 ## Devotional Images
 
@@ -11,9 +22,8 @@ These images are used as Catholic devotional and sacramental accent images. Keep
 
 ## Sacramental Images
 
-- **Baptism at St. Ann** — Photo courtesy of the Largent family. Used with permission.
 - **The Holy Eucharist** — Photo by Thays Orrico on Unsplash: https://unsplash.com/photos/a-close-up-of-a-person-holding-a-bowl-rYvS1C615rA
 
 ## Usage Note
 
-Unsplash images are used as general Catholic visual accents and do not represent a specific parish location. The Baptism photograph is a parish-approved local image taken at St. Ann Catholic Church.
+Unsplash images are used as general Catholic visual accents and do not represent a specific parish location. Parish-owned and parish-provided photographs are identified separately above.

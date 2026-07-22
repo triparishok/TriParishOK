@@ -1,0 +1,2 @@
+{{- $header := index hugo.Data.page_headers . -}}
+{{- return ($header.src | relURL) -}}

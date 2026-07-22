@@ -11,6 +11,7 @@
   summary: "Serving the Catholic community in Elgin and the surrounding area."
   image: "/images/parishes/st-ann.jpg"
   image_alt: "St. Ann Catholic Church in Elgin, Oklahoma"
+  image_credit: "Parish-provided photograph; photographer unknown"
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together anywhere in the church. A cry room is available for families who need it."
@@ -40,6 +41,7 @@
   summary: "Serving the Catholic community in Sterling and the surrounding area."
   image: "/images/parishes/olph.jpg"
   image_alt: "Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma"
+  image_credit: "Parish-provided photograph; photographer unknown"
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together throughout Mass. OLPH does not have a separate cry room."
@@ -63,6 +65,7 @@
   summary: "Serving the Catholic community in Apache and the surrounding area."
   image: "/images/parishes/mother-of-sorrows.jpg"
   image_alt: "Mother of Sorrows Catholic Church in Apache, Oklahoma"
+  image_credit: "Parish-provided photograph; photographer unknown"
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together throughout Mass. Mother of Sorrows does not have a separate cry room."

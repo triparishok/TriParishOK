@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="faith-formation-hero">
+<section class="faith-formation-hero page-header-with-image" style="{{ printf "--page-header-image: url('%s');" (partial "page-header-image-style.html" "faith-formation") | safeCSS }}">
   <div class="faith-formation-inner">
     <p class="eyebrow">Faith Formation</p>
     <h1>{{ .Title }}</h1>
@@ -14,15 +14,6 @@
       <a class="button button-secondary" href="{{ "sacraments/" | relURL }}">View Sacraments</a>
     </div>
   </div>
-</section>
-
-<section class="section faith-formation-image-section" aria-label="Faith formation image">
-  <figure class="faith-formation-image-card">
-    {{ with hugo.Data.site_images.devotional.rosary_bible }}
-      <img src="{{ .src | relURL }}" alt="{{ .alt }}">
-    {{ end }}
-    <figcaption>Formation begins with prayer, Scripture, the Sacraments, and life in the Church.</figcaption>
-  </figure>
 </section>
 
 <section class="section faith-formation-main-section" aria-labelledby="faith-formation-main-heading">

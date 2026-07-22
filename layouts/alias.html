@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Page.Title }} — Page Moved | Tri-Parish Catholic Community</title>
+    <meta name="description" content="This Tri-Parish Catholic Community page has moved. Continue to {{ .Page.Title }}.">
+    <meta name="robots" content="noindex,follow">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav aria-label="Page moved">
+      <a href="{{ site.Home.RelPermalink }}">Tri-Parish Catholic Community</a>
+    </nav>
+    <main id="main-content">
+      <h1>This page has moved</h1>
+      <p>Please continue to <a href="{{ .Permalink }}">{{ .Page.Title }}</a>.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+becoming-catholic:
+  src: "/images/page-headers/becoming-catholic.webp"
+  description: "AI-generated devotional still life with Bible, rosary, candle, and crucifix"
+
+bulletins:
+  src: "/images/page-headers/bulletins.webp"
+  description: "AI-generated parish bulletin and rosary still life"
+
+contact:
+  src: "/images/page-headers/contact.webp"
+  description: "AI-generated parish office desk with telephone and crucifix"
+
+events:
+  src: "/images/page-headers/events.webp"
+  description: "AI-generated calendar, invitations, pen, and rosary still life"
+
+forms:
+  src: "/images/page-headers/forms.webp"
+  description: "AI-generated blank parish form, pen, and rosary still life"
+
+giving:
+  src: "/images/page-headers/giving.webp"
+  description: "AI-generated offering envelope and basket scene"
+
+parish-life:
+  src: "/images/page-headers/parish-life.webp"
+  description: "AI-generated parish fellowship table preparation scene"
+
+catholic-links:
+  src: "/images/page-headers/catholic-links.webp"
+  description: "AI-generated tablet, Bible, notebook, and rosary still life"
+
+mass-confession:
+  src: "/images/page-headers/mass-confession.webp"
+  description: "AI-generated green Ordinary Time stole, Roman Missal, crucifix, and unlit sanctuary lamp still life"
+
+sacraments:
+  src: "/images/page-headers/sacraments.webp"
+  description: "AI-generated sacramental still life with baptismal water, white garment, rings, sacred oil, rosary, and crucifix"
+
+faith-formation:
+  src: "/images/page-headers/faith-formation.webp"
+  description: "AI-generated Catholic formation table with Bible, catechetical book, rosary, notebook, pencils, and crucifix"

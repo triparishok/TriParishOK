@@ -4,7 +4,12 @@
    ========================================================= */
 
 .sacraments-clean-hero {
-  background: var(--navy);
+  background-color: var(--navy);
+  background-image:
+    linear-gradient(90deg, rgba(10, 31, 52, 0.98) 0%, rgba(10, 31, 52, 0.90) 40%, rgba(10, 31, 52, 0.38) 72%, rgba(10, 31, 52, 0.18) 100%),
+    var(--page-header-image);
+  background-position: center;
+  background-size: cover;
   color: var(--white);
   padding: 3rem 1rem 3.25rem;
 }
@@ -205,6 +210,10 @@
 @media (max-width: 759px) {
   .sacraments-clean-hero {
     padding: 2.35rem 1rem 2.75rem;
+    background-image:
+      linear-gradient(90deg, rgba(10, 31, 52, 0.97) 0%, rgba(10, 31, 52, 0.86) 72%, rgba(10, 31, 52, 0.58) 100%),
+      var(--page-header-image);
+    background-position: 64% center;
   }
 
   .sacraments-clean-hero h1 {

@@ -19,7 +19,7 @@
       {{ range where hugo.Data.locations "slug" $slug }}
         <article class="card parish-page-card parish-page-card-compact {{ .parish_class }}">
           {{ if .image }}
-            <img class="parish-card-photo parish-card-photo-compact" src="{{ .image | relURL }}" alt="{{ .image_alt }}">
+            {{ partial "static-image.html" (dict "src" .image "alt" .image_alt "class" "parish-card-photo parish-card-photo-compact") }}
           {{ end }}
 
           <div class="parish-card-content">

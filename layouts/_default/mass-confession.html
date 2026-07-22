@@ -3,7 +3,7 @@
 {{ $activeNotices := partial "active-notices.html" . }}
 {{ $scheduleNotices := where $activeNotices "affects_schedule" true }}
 
-<section class="page-header">
+<section class="page-header page-header-with-image" style="{{ printf "--page-header-image: url('%s');" (partial "page-header-image-style.html" "mass-confession") | safeCSS }}">
   <div>
     <p class="eyebrow">Worship With Us</p>
     <h1>Mass & Confession</h1>
@@ -11,14 +11,6 @@
       Find Mass, Confession, Adoration, and Rosary times across our tri-parish Catholic community.
     </p>
   </div>
-</section>
-
-<section class="section page-image-feature-section">
-  <figure class="page-image-feature">
-    {{ with hugo.Data.site_images.devotional.monstrance_adoration }}
-      <img src="{{ .src | relURL }}" alt="{{ .alt }}">
-    {{ end }}
-  </figure>
 </section>
 
 {{ if gt (len $scheduleNotices) 0 }}

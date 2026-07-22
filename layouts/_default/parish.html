@@ -28,7 +28,7 @@
 <section class="section two-column">
   <article class="card parish-detail-card {{ $location.parish_class }}">
     {{ if $location.image }}
-      <img class="parish-photo" src="{{ $location.image | relURL }}" alt="{{ $location.image_alt }}">
+      {{ partial "static-image.html" (dict "src" $location.image "alt" $location.image_alt "class" "parish-photo") }}
     {{ else }}
       <div class="parish-image-fallback">
         <p>{{ $location.name }}</p>

@@ -71,11 +71,7 @@
         {{ range where hugo.Data.locations "slug" $slug }}
           {{ $location := . }}
           <article class="new-here-parish-card {{ $location.parish_class }}">
-            <img
-              class="new-here-parish-photo"
-              src="{{ $location.image | relURL }}"
-              alt="{{ $location.image_alt }}"
-              loading="lazy">
+            {{ partial "static-image.html" (dict "src" $location.image "alt" $location.image_alt "class" "new-here-parish-photo") }}
 
             <div class="new-here-parish-card-body">
               <p class="eyebrow">{{ $location.city }}</p>

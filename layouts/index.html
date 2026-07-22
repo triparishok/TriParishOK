@@ -192,7 +192,7 @@
         {{ $parish := . }}
         <article class="card parish-card parish-{{ .slug }} {{ .parish_class }}">
           {{ with .image }}
-            <img class="parish-card-photo-compact" src="{{ . }}" alt="{{ $parish.image_alt }}">
+            {{ partial "static-image.html" (dict "src" . "alt" $parish.image_alt "class" "parish-card-photo-compact") }}
           {{ end }}
           <div class="parish-card-body">
             <p class="eyebrow">{{ .city }}</p>

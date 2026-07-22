@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="sacraments-clean-hero">
+<section class="sacraments-clean-hero page-header-with-image" style="{{ printf "--page-header-image: url('%s');" (partial "page-header-image-style.html" "sacraments") | safeCSS }}">
   <div class="sacraments-clean-inner">
     <p class="eyebrow">The Sacramental Life</p>
     <h1>{{ .Title }}</h1>
@@ -20,21 +20,21 @@
   <div class="sacrament-clean-image-band">
     <figure>
       {{ with hugo.Data.site_images.sacraments.baptism }}
-        <img src="{{ .src | relURL }}" alt="{{ .alt }}">
+        {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
       {{ end }}
       <figcaption>Baptism</figcaption>
     </figure>
 
     <figure>
       {{ with hugo.Data.site_images.devotional.sacred_heart_statue }}
-        <img src="{{ .src | relURL }}" alt="{{ .alt }}">
+        {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
       {{ end }}
       <figcaption>Confession and mercy</figcaption>
     </figure>
 
     <figure>
       {{ with hugo.Data.site_images.sacraments.eucharist }}
-        <img src="{{ .src | relURL }}" alt="{{ .alt }}">
+        {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
       {{ end }}
       <figcaption>The Holy Eucharist</figcaption>
     </figure>

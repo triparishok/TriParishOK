@@ -124,9 +124,9 @@ Do not list Mass times as ordinary business opening hours.
 
 - Dedicated 1200 × 630 social-sharing artwork is complete.
 - Favicons and an Apple touch icon are complete.
-- Add image width and height attributes where practical.
+- Explicit image width and height attributes are complete for rendered content images.
 - The GitHub Pages review build scored 100 for Performance, Accessibility, and Best Practices on both mobile and desktop. Re-run PageSpeed Insights after the formal-domain launch.
-- Replace temporary church photographs when the approved official photographs arrive.
-- Complete MinistryPlatform widget testing after the provider resolves the permitted-URL/CORS connection problem.
+- Replace temporary parish-building photographs when the approved official photographs arrive. The topical AI-generated header artwork is separately identified in `data/page_headers.yaml` and may remain until better approved photography is available.
+- MinistryPlatform user-login widget passed a live whitelist test on the GitHub Pages review origin on July 22, 2026. Giving, event, update, prayer, and support widgets still require their exact approved embed snippets or configuration identifiers before implementation.
 - Correct and verify Google Business Profiles and request corrections to stale Archdiocesan directory information.
 - Ask the Archdiocese and trusted Catholic directories to link to the specific parish pages.

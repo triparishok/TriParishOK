@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="page-header">
+<section class="page-header page-header-with-image" style="{{ printf "--page-header-image: url('%s');" (partial "page-header-image-style.html" "contact") | safeCSS }}">
   <div>
     <p class="eyebrow">Contact</p>
     <h1>Contact the Parish Office</h1>
