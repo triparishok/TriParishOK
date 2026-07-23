@@ -1,2 +1,3 @@
 {{- $header := index hugo.Data.page_headers . -}}
-{{- return ($header.src | relURL) -}}
+{{- $path := strings.TrimPrefix "/" $header.src -}}
+{{- return ($path | absURL) -}}

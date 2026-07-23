@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
@@ -22,6 +23,9 @@ class LinkParser(HTMLParser):
         for name in ("href", "src"):
             if values.get(name):
                 self.links.append((name, values[name] or ""))
+        if values.get("style"):
+            for url in re.findall(r"url\(\s*['\"]?([^)'\"\s]+)", values["style"] or ""):
+                self.links.append(("style", url))
 
 
 def rendered_target(root: Path, web_path: str) -> Path:
