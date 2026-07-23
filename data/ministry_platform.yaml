@@ -4,7 +4,7 @@
 script_url: "https://mp.archokc.org/widgets/dist/MPWidgets.js"
 
 login:
-  enabled: false
+  enabled: true
 
 events:
   enabled: false
