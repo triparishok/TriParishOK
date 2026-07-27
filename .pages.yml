@@ -686,6 +686,12 @@ content:
                 type: string
                 required: true
 
+              - name: physical_directions
+                label: How to Find the Parish Office
+                type: text
+                required: true
+                description: "Plain-language directions for visitors arriving at St. Ann."
+
               - name: office_hours
                 label: Office Hours
                 type: string

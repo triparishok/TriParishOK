@@ -65,9 +65,9 @@ faith-formation:
   mobile_size: "cover"
 
 our-parishes:
-  src: "/images/new-here/welcoming-catholic-church-interior.webp"
-  description: "AI-generated welcoming Catholic church interior"
-  mobile_position: "58% center"
+  src: "/images/parishes/official/olph-eucharistic-window-header.jpg"
+  description: "Eucharistic stained-glass window at Our Lady of Perpetual Help Catholic Church"
+  mobile_position: "center center"
   mobile_size: "cover"
 
 photo-privacy:
