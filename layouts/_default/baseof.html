@@ -45,6 +45,10 @@
   {{ end }}
   {{ $calendarVersion := substr (crypto.SHA256 (os.ReadFile "static/js/calendar-download.js")) 0 12 }}
   <script src="{{ printf "%s?v=%s" ("js/calendar-download.js" | relURL) $calendarVersion }}" defer></script>
+  {{ if .IsHome }}
+    {{ $carouselVersion := substr (crypto.SHA256 (os.ReadFile "static/js/homepage-carousel.js")) 0 12 }}
+    <script src="{{ printf "%s?v=%s" ("js/homepage-carousel.js" | relURL) $carouselVersion }}" defer></script>
+  {{ end }}
 </head>
 
 <body>

@@ -1074,9 +1074,6 @@
 }
 
 .home-parish-life-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -1100,12 +1097,8 @@
   object-fit: cover;
 }
 
-.home-life-photo-featured,
-.home-life-photo-featured .home-life-image {
-  min-height: 300px;
-}
-
-.home-life-photo figcaption {
+.home-life-photo figcaption,
+.home-life-carousel-slide figcaption {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1116,6 +1109,90 @@
   font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.25;
+}
+
+.home-life-carousel {
+  isolation: isolate;
+  width: 100%;
+  height: clamp(24rem, 48vw, 36rem);
+}
+
+.home-life-carousel-slides,
+.home-life-carousel-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.home-life-carousel-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  background: #0b263f;
+}
+
+.home-life-carousel-slide[hidden] {
+  display: none;
+}
+
+.home-life-carousel-slide .home-life-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.home-life-carousel-controls {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 3.35rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.home-life-carousel-button,
+.home-life-carousel-dot {
+  pointer-events: auto;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: var(--white);
+  background: rgba(9, 31, 51, 0.78);
+  box-shadow: 0 2px 8px rgba(9, 31, 51, 0.25);
+  cursor: pointer;
+}
+
+.home-life-carousel-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  font: 700 1.7rem/1 serif;
+}
+
+.home-life-carousel-dots {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(9, 31, 51, 0.68);
+  pointer-events: auto;
+}
+
+.home-life-carousel-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.home-life-carousel-dot.is-active {
+  background: var(--gold);
+}
+
+.home-life-carousel-button:focus-visible,
+.home-life-carousel-dot:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
 }
 
 .home-parish-life-actions {
@@ -1132,41 +1209,20 @@
 }
 
 @media (min-width: 820px) {
-  .home-parish-life-gallery {
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    grid-template-rows: repeat(2, 190px);
-  }
-
-  .home-life-photo,
-  .home-life-image,
-  .home-life-photo-featured,
-  .home-life-photo-featured .home-life-image {
+  .home-life-image {
     min-height: 0;
     height: 100%;
-  }
-
-  .home-life-photo-featured {
-    grid-row: 1 / 3;
-  }
-
-}
-
-@media (min-width: 641px) and (max-width: 819px) {
-  .home-life-photo-featured {
-    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 640px) {
-  .home-parish-life-gallery {
-    grid-template-columns: 1fr;
+  .home-life-photo,
+  .home-life-image {
+    min-height: 0;
   }
 
-  .home-life-photo,
-  .home-life-image,
-  .home-life-photo-featured,
-  .home-life-photo-featured .home-life-image {
-    min-height: 240px;
+  .home-life-carousel {
+    height: 30rem;
   }
 
   .home-parish-life-actions {

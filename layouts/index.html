@@ -174,14 +174,29 @@
     </p>
   </div>
 
-  <div class="home-parish-life-gallery">
-    {{ range $index, $photo := hugo.Data.homepage_gallery.items }}
-      <figure class="home-life-photo{{ if eq $index 0 }} home-life-photo-featured{{ end }}">
-        {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
-        <figcaption>{{ $photo.caption }}</figcaption>
-      </figure>
-    {{ end }}
-  </div>
+  {{ with hugo.Data.homepage_gallery.items }}
+    <div class="home-parish-life-gallery">
+      <div class="home-life-carousel home-life-photo" data-home-carousel aria-roledescription="carousel" aria-label="Life in Our Parishes photo gallery">
+        <div class="home-life-carousel-slides" aria-live="polite">
+          {{ range $index, $photo := . }}
+            <figure class="home-life-carousel-slide{{ if eq $index 0 }} is-active{{ end }}" data-carousel-slide{{ if ne $index 0 }} hidden{{ end }}>
+              {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
+              <figcaption>{{ $photo.caption }}</figcaption>
+            </figure>
+          {{ end }}
+        </div>
+        <div class="home-life-carousel-controls">
+          <button type="button" class="home-life-carousel-button" data-carousel-previous aria-label="Previous photograph">‹</button>
+          <div class="home-life-carousel-dots" aria-label="Choose a photograph">
+            {{ range $index, $photo := . }}
+              <button type="button" class="home-life-carousel-dot{{ if eq $index 0 }} is-active{{ end }}" data-carousel-dot="{{ $index }}" aria-label="Show photograph {{ add $index 1 }}"{{ if eq $index 0 }} aria-current="true"{{ end }}></button>
+            {{ end }}
+          </div>
+          <button type="button" class="home-life-carousel-button" data-carousel-next aria-label="Next photograph">›</button>
+        </div>
+      </div>
+    </div>
+  {{ end }}
 
   <div class="home-parish-life-actions">
     <a class="button button-primary" href="https://www.facebook.com/profile.php?id=61580669036506" target="_blank" rel="noopener noreferrer">

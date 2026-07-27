@@ -31,12 +31,12 @@ content:
         format: yaml
         fields:
           - name: items
-            label: Three Homepage Photos
+            label: Homepage Slideshow Photos
             type: object
-            description: "The homepage always shows exactly three photos. Drag them into the order you want. The first photo is the large featured image."
+            description: "Add, remove, or drag photos into the order you want. Every photo appears in the homepage slideshow."
             list:
-              min: 3
-              max: 3
+              min: 1
+              max: 20
               collapsible:
                 collapsed: true
                 summary: "{caption}"
