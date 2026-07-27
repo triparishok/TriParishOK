@@ -1,10 +1,21 @@
 items:
-  - image: "/images/sacraments/st-ann-baptism-2026.jpg"
-    alt: "An infant receiving the Sacrament of Baptism at St. Ann Catholic Church"
-    caption: "Baptism at St. Ann"
-    credit: "Photograph by Amber Largent; parish-owned and used with permission"
-
-  - image: "/images/home/st-ann-hall-ac-installation.jpg"
-    alt: "A crane lifting new air-conditioning equipment onto the roof of St. Ann Parish Hall"
-    caption: "Air-conditioning installation at St. Ann Parish Hall"
-    credit: "Shared by St. Ann Catholic Church on its official Facebook page; photographer unknown"
+  - image: /images/sacraments/st-ann-baptism-2026.jpg
+    caption: Baptism at St. Ann
+    alt: An infant receiving the Sacrament of Baptism at St. Ann Catholic Church
+    credit: Photograph by Amber Largent; parish-owned and used with permission
+  - image: /images/home/st-ann-hall-ac-installation.jpg
+    caption: Air-conditioning installation at St. Ann Parish Hall
+    alt: A crane lifting new air-conditioning equipment onto the roof of St. Ann
+      Parish Hall
+    credit: Shared by St. Ann Catholic Church on its official Facebook page;
+      photographer unknown
+  - image: /images/6f0b8a82-7b6a-4492-8387-bc008a3d5d401105c.jpeg
+    caption: Father D blessing St. Ann and Mary statue on the Feast of St. Anne
+    alt: "Priest spreading incense before the statue of Saint Anne and Mary in front
+      of the church building. "
+    credit: Ericka Hullet via St. Ann's Facebook page
+  - image: /images/a751a45e-137e-4888-b228-911aad745e351105c.jpeg
+    caption: Father D sprinkling holy water on the parish
+    alt: Father D, in gold and red vestments, sprinkling holy water on parishioners
+      during the blessing at St. Ann.
+    credit: Ericka Hullet via St. Ann's Facebook page
