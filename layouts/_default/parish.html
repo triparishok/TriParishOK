@@ -17,7 +17,7 @@
   {{ end }}
 {{ end }}
 
-<section class="page-header">
+<section class="page-header parish-page-hero">
   <div>
     <p class="eyebrow">{{ $location.city }}</p>
     <h1>{{ $location.name }}</h1>
@@ -25,16 +25,16 @@
   </div>
 </section>
 
-<section class="section two-column">
-  <article class="card parish-detail-card {{ $location.parish_class }}">
-    {{ if $location.image }}
-      {{ partial "static-image.html" (dict "src" $location.image "alt" $location.image_alt "class" "parish-photo") }}
-    {{ else }}
-      <div class="parish-image-fallback">
-        <p>{{ $location.name }}</p>
-      </div>
-    {{ end }}
+{{ with $location.gallery.exterior }}
+<section class="section parish-exterior-section">
+  <figure class="parish-exterior-photo">
+    {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
+  </figure>
+</section>
+{{ end }}
 
+<section class="section two-column parish-overview-grid">
+  <article class="card parish-detail-card {{ $location.parish_class }}">
     <p class="eyebrow">Location</p>
     <h2>{{ $location.name }}</h2>
 
@@ -100,6 +100,31 @@
 </section>
 {{ end }}
 
+{{ with $location.gallery }}
+<section class="section parish-story-section" aria-labelledby="parish-story-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Inside Our Church</p>
+    <h2 id="parish-story-heading">A sacred home for worship and prayer</h2>
+  </div>
+
+  <div class="parish-story-grid">
+    {{ with .interior }}
+      <figure class="parish-story-photo parish-story-photo-wide">
+        {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
+        {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{ end }}
+
+    {{ with .detail }}
+      <figure class="parish-story-photo parish-story-photo-detail">
+        {{ partial "static-image.html" (dict "src" .src "alt" .alt) }}
+        {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 {{ with $location.recurring_events }}
 <section class="section section-light">
   <div class="section-heading">
@@ -126,30 +151,24 @@
 
 {{ $hostedPrograms := where hugo.Data.formation_programs.programs "host_parish" $location.slug }}
 {{ if gt (len $hostedPrograms) 0 }}
-<section class="section">
+<section class="section parish-programs-section">
   <div class="section-heading">
     <p class="eyebrow">Faith Formation</p>
-    <h2>Programs hosted at {{ $location.short_name }}</h2>
-    <p>
-      A host parish is the regular meeting location. Programs marked Tri-Parish serve people
-      from all three parish communities.
-    </p>
+    <h2>Faith formation at {{ $location.short_name }}</h2>
+    <p>These programs meet at {{ $location.short_name }}. Tri-Parish programs welcome people from all three parish communities.</p>
   </div>
 
-  <div class="parish-event-grid">
+  <div class="parish-program-grid{{ if eq (len $hostedPrograms) 1 }} parish-program-grid-single{{ end }}">
     {{ range $hostedPrograms }}
       {{ if ne .enabled false }}
-        <article class="card parish-detail-card parish-event-card {{ $location.parish_class }}">
+        <article class="card parish-detail-card parish-program-card {{ $location.parish_class }}">
           <p class="eyebrow">
             {{ if eq .serves "tri-parish" }}Tri-Parish Program{{ else }}{{ $location.short_name }} Program{{ end }}
           </p>
           <h3>{{ .program }}</h3>
-          <p><strong>{{ .when }}</strong></p>
+          <p class="parish-program-time">{{ .when }}</p>
           <div class="cms-rich-text">{{ .summary | markdownify }}</div>
           <p><strong>Program contact:</strong> {{ .contact_name }}</p>
-          {{ if eq .serves "tri-parish" }}
-            <p>This program serves all three parishes and is hosted here at {{ $location.short_name }}.</p>
-          {{ end }}
           <div class="card-actions">
             <a class="button button-secondary" href="{{ "faith-formation/" | relURL }}">Faith Formation Details</a>
           </div>
@@ -214,17 +233,37 @@
   </div>
 </section>
 
+{{ with $location.patron_prayer }}
+<section class="section section-light parish-prayer-section {{ $location.parish_class }}" aria-labelledby="patron-prayer-heading">
+  <div class="parish-prayer-layout">
+    <div class="parish-prayer-heading">
+      <p class="eyebrow">Patronal Prayer</p>
+      <h2 id="patron-prayer-heading">{{ .title }}</h2>
+      <p class="parish-prayer-invitation">Join us in asking our patron’s intercession and drawing nearer to Christ.</p>
+    </div>
+    <div class="parish-prayer-text">
+      {{ range .paragraphs }}
+        <p>{{ . }}</p>
+      {{ end }}
+      <p class="parish-prayer-amen">Amen.</p>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ with $location.history }}
-<section class="section">
-  <article class="card parish-detail-card {{ $location.parish_class }}">
-    <p class="eyebrow">Parish History</p>
-    <h2>A faithful Catholic presence in {{ $location.city }}</h2>
-
-    {{ range . }}
-      <p>{{ . }}</p>
-    {{ end }}
-
-  </article>
+<section class="section parish-history-section">
+  <div class="parish-history-layout">
+    <div>
+      <p class="eyebrow">Parish History</p>
+      <h2>A faithful Catholic presence in {{ $location.city }}</h2>
+    </div>
+    <div class="parish-history-text">
+      {{ range . }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
 </section>
 {{ end }}
 

@@ -10,13 +10,13 @@ These are real photographs from the Tri-Parish Catholic Community—not stock ph
 
 {{< homepage-gallery-credits >}}
 
-## Parish-provided building photographs
+## Official parish photography
 
-These are real photographs of our three church buildings. The original photographers are not currently known, and the parish provided the files for website use.
+These are real photographs of our churches, interiors, sacred art, and parish life. They are used with parish permission.
 
-- **St. Ann Catholic Church, Elgin:** Parish-provided photograph; photographer unknown.
-- **Our Lady of Perpetual Help Catholic Church, Sterling:** Parish-provided photograph; photographer unknown.
-- **Mother of Sorrows Catholic Church, Apache:** Parish-provided photograph; photographer unknown.
+- **St. Ann Catholic Church, Elgin:** Exterior, nave and baptismal font, stained glass, sacred art, and parish celebration photographs.
+- **Our Lady of Perpetual Help Catholic Church, Sterling:** Exterior, nave and sanctuary, and stained-glass photographs.
+- **Mother of Sorrows Catholic Church, Apache:** Exterior, nave and sanctuary, and interior-detail photographs.
 
 ## AI-generated page-header artwork
 

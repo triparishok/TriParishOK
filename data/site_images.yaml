@@ -37,11 +37,11 @@ sacraments:
     credit: "Photo by Thays Orrico on Unsplash"
 
 home:
-  st_ann_sanctuary:
-    src: "/images/home/st-ann-sanctuary-hero.jpg"
-    alt: "The sanctuary and altar at St. Ann Catholic Church"
-    caption: "St. Ann Catholic Church"
-    credit: "Photograph by Amber Largent; parish-owned and used with permission"
+  olph_sanctuary:
+    src: "/images/home/olph-interior-home-hero.jpg"
+    alt: "The nave, sanctuary, altar, and Crucifix at Our Lady of Perpetual Help Catholic Church"
+    caption: "Our Lady of Perpetual Help Catholic Church"
+    credit: "Parish photograph; used with permission"
 
 faith_formation:
   st_ann_confirmation_decor:

@@ -2017,6 +2017,259 @@ img {
   border-left: 8px solid var(--gold);
 }
 
+/* Individual parish pages */
+.parish-page-hero {
+  min-height: auto;
+  padding: 3.25rem 1rem;
+}
+
+.parish-page-hero > div {
+  max-width: 1180px;
+}
+
+.parish-exterior-section {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.parish-exterior-photo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 70rem;
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--ivory);
+  box-shadow: var(--shadow-soft);
+}
+
+.parish-exterior-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.parish-programs-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.parish-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.parish-program-grid-single {
+  grid-template-columns: 1fr;
+}
+
+.parish-program-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.parish-program-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.parish-program-time {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.parish-program-card .cms-rich-text {
+  flex: 1;
+}
+
+.parish-program-card .card-actions {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.parish-program-card .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.parish-program-grid-single .parish-program-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 18rem);
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.parish-program-grid-single .parish-program-card > :not(.card-actions) {
+  grid-column: 1;
+}
+
+.parish-program-grid-single .parish-program-card .card-actions {
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  align-self: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.parish-overview-grid {
+  align-items: start;
+}
+
+.parish-story-section {
+  padding-top: 2rem;
+}
+
+.parish-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(16rem, 0.7fr);
+  gap: 1.25rem;
+}
+
+.parish-story-photo {
+  margin: 0;
+}
+
+.parish-story-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 35rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.parish-story-photo-wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.parish-story-photo-detail img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.parish-story-photo figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.parish-prayer-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parish-prayer-section::before {
+  content: "";
+  position: absolute;
+  inset: 2.5rem auto 2.5rem max(1rem, calc((100% - 1180px) / 2));
+  width: 0.3rem;
+  border-radius: 999px;
+  background: var(--parish-color);
+}
+
+.parish-prayer-section.parish-mos::before {
+  background: var(--gold);
+}
+
+.parish-prayer-layout,
+.parish-history-layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.35fr);
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.parish-prayer-layout {
+  padding-left: 1.5rem;
+}
+
+.parish-prayer-heading,
+.parish-prayer-text,
+.parish-history-text {
+  min-width: 0;
+}
+
+.parish-prayer-heading h2,
+.parish-history-layout h2 {
+  margin-top: 0.25rem;
+}
+
+.parish-prayer-invitation {
+  max-width: 28rem;
+  color: var(--muted);
+}
+
+.parish-prayer-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+  line-height: 1.8;
+}
+
+.parish-prayer-text p:first-child,
+.parish-history-text p:first-child {
+  margin-top: 0;
+}
+
+.parish-prayer-amen {
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+.parish-history-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.parish-history-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .parish-page-hero {
+    min-height: auto;
+    padding: 2.5rem 1rem;
+  }
+
+  .parish-story-grid,
+  .parish-prayer-layout,
+  .parish-history-layout,
+  .parish-program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parish-program-grid-single .parish-program-card {
+    display: flex;
+  }
+
+  .parish-program-grid-single .parish-program-card .card-actions {
+    margin-top: auto;
+    padding-top: 0.75rem;
+  }
+
+  .parish-story-photo img {
+    max-height: none;
+  }
+
+  .parish-story-photo-detail {
+    max-width: 28rem;
+  }
+
+  .parish-prayer-section::before {
+    inset: 2rem auto 2rem 1rem;
+  }
+}
+
 /* Our Parishes overview photos */
 .parish-card-photo {
   width: 100%;
@@ -2066,9 +2319,10 @@ img {
 
 .parish-card-photo-compact {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 145px;
-  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  max-height: none;
+  object-fit: contain;
+  background: var(--ivory);
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -2126,7 +2380,7 @@ img {
 
 @media (max-width: 759px) {
   .parish-card-photo-compact {
-    max-height: 180px;
+    max-height: none;
   }
 }
 

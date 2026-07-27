@@ -9,9 +9,26 @@
   apple_map_url: "https://maps.apple.com/?daddr=8492+State+HWY+17+Elgin+OK+73538&dirflg=d"
   parish_class: "parish-st-ann"
   summary: "Serving the Catholic community in Elgin and the surrounding area."
-  image: "/images/parishes/st-ann.jpg"
+  image: "/images/parishes/official/st-ann-exterior.jpg"
   image_alt: "St. Ann Catholic Church in Elgin, Oklahoma"
-  image_credit: "Parish-provided photograph; photographer unknown"
+  image_credit: "Parish-owned photograph"
+  gallery:
+    exterior:
+      src: "/images/parishes/official/st-ann-exterior.jpg"
+      alt: "St. Ann Catholic Church and its outdoor shrine in Elgin, Oklahoma"
+    interior:
+      src: "/images/parishes/official/st-ann-interior.jpg"
+      alt: "The nave, baptismal font, and sanctuary inside St. Ann Catholic Church"
+      caption: "Inside St. Ann, the baptismal font stands at the entrance to the nave and the altar draws the eye toward the Crucifix."
+    detail:
+      src: "/images/parishes/official/st-ann-stained-glass.jpg"
+      alt: "Colorful stained-glass window inside St. Ann Catholic Church"
+      caption: "One of St. Ann’s colorful stained-glass windows."
+  patron_prayer:
+    title: "Prayer to St. Anne"
+    paragraphs:
+      - "O glorious St. Anne, you are filled with compassion for those who invoke you and with love for those who suffer. Heavily burdened with the weight of my troubles, I cast myself at your feet and humbly beg of you to take the present intention which I recommend to you in your special care. Please recommend it to your daughter, the Blessed Virgin Mary, and place it before the throne of Jesus, so that He may bring it to a happy issue. Continue to intercede for me until my request is granted."
+      - "But, above all, obtain for me the grace one day to see my God face to face, and with you and Mary and all the saints to praise and bless Him for all eternity."
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together anywhere in the church. A cry room is available for families who need it."
@@ -39,9 +56,27 @@
   apple_map_url: "https://maps.apple.com/?daddr=122+N+A+Ave+Sterling+OK+73567&dirflg=d"
   parish_class: "parish-olph"
   summary: "Serving the Catholic community in Sterling and the surrounding area."
-  image: "/images/parishes/olph.jpg"
+  image: "/images/parishes/official/olph-exterior.jpg"
   image_alt: "Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma"
-  image_credit: "Parish-provided photograph; photographer unknown"
+  image_credit: "Parish-owned photograph"
+  gallery:
+    exterior:
+      src: "/images/parishes/official/olph-exterior.jpg"
+      alt: "Our Lady of Perpetual Help Catholic Church in Sterling, Oklahoma"
+    interior:
+      src: "/images/parishes/official/olph-interior.jpg"
+      alt: "The nave and sanctuary inside Our Lady of Perpetual Help Catholic Church"
+      caption: "The nave of Our Lady of Perpetual Help leads toward the altar, tabernacle, and Crucifix."
+    detail:
+      src: "/images/parishes/official/olph-crucifixion-window.jpg"
+      alt: "Stained-glass window depicting the Crucifixion of Jesus at Our Lady of Perpetual Help"
+      caption: "The Crucifixion depicted in stained glass inside Our Lady of Perpetual Help."
+  patron_prayer:
+    title: "Prayer to Our Lady of Perpetual Help"
+    paragraphs:
+      - "Our Lady of Perpetual Help, you have been blessed and favored by God. You became not only the Mother of the Redeemer but the Mother of the redeemed as well. We come to you today as your loving children. Watch over us and take care of us. As you held the Child Jesus in your loving arms, so take us in your arms. Be a mother ready at every moment to help us."
+      - "For God who is mighty has done great things for you, and His mercy is from age to age on those who love Him. Our greatest fear is that, in time of temptation, we may fail to call out to you and become lost children."
+      - "Intercede for us, dear Mother, in obtaining pardon for our sins, love for Jesus, final perseverance, and the grace always to call upon you, Our Lady of Perpetual Help."
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together throughout Mass. OLPH does not have a separate cry room."
@@ -63,9 +98,28 @@
   apple_map_url: "https://maps.apple.com/?daddr=521+E+Wallace+Apache+OK+73006&dirflg=d"
   parish_class: "parish-mos"
   summary: "Serving the Catholic community in Apache and the surrounding area."
-  image: "/images/parishes/mother-of-sorrows.jpg"
+  image: "/images/parishes/official/mother-of-sorrows-exterior.jpg"
   image_alt: "Mother of Sorrows Catholic Church in Apache, Oklahoma"
-  image_credit: "Parish-provided photograph; photographer unknown"
+  image_credit: "Parish-owned photograph"
+  gallery:
+    exterior:
+      src: "/images/parishes/official/mother-of-sorrows-exterior.jpg"
+      alt: "Mother of Sorrows Catholic Church in Apache, Oklahoma"
+    interior:
+      src: "/images/parishes/official/mother-of-sorrows-interior.jpg"
+      alt: "The nave and sanctuary inside Mother of Sorrows Catholic Church"
+      caption: "The historic nave of Mother of Sorrows, looking toward the altar and Crucifix."
+    detail:
+      src: "/images/parishes/official/mother-of-sorrows-window.jpg"
+      alt: "Red and white church window between Stations of the Cross at Mother of Sorrows"
+      caption: "A window framed by Stations of the Cross inside Mother of Sorrows."
+  patron_prayer:
+    title: "Prayer to Our Lady of Sorrows"
+    paragraphs:
+      - "Our Mother of Sorrows, with strength from above you stood by the Cross, sharing in the sufferings of Jesus, and with tender care you bore Him in your arms, mourning and weeping."
+      - "We praise you for your faith, which accepted the life God planned for you. We praise you for your hope, which trusted that God would do great things in you. We praise you for your love in bearing with Jesus the sorrows of His Passion."
+      - "Holy Mary, may we follow your example and stand by all your children who need comfort and love."
+      - "Mother of God, stand by us in our trials and care for us in our many needs. Pray for us now and at the hour of our death."
   visitor_access:
     parking_entrance: "Parking is available near the church. The main entrance has a ramp with railings, and there are no steps that prevent access to worship."
     family_seating: "Families are welcome to sit together throughout Mass. Mother of Sorrows does not have a separate cry room."
