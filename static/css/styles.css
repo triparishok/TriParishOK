@@ -6248,6 +6248,31 @@ img {
   font-weight: 700;
 }
 
+.new-here-giving-note {
+  display: grid;
+  gap: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.new-here-giving-note h3,
+.new-here-giving-note p {
+  margin: 0;
+}
+
+.new-here-giving-note a {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-weight: 700;
+}
+
+.contact-ministry-description {
+  max-width: 72ch;
+  margin: 0.45rem 0 0.75rem;
+}
+
 @media (min-width: 640px) {
   .new-here-expect-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6259,6 +6284,11 @@ img {
 
   .new-here-journey-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .new-here-giving-note {
+    grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
+    align-items: start;
   }
 }
 

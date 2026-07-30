@@ -7,13 +7,13 @@ login:
   enabled: true
 
 events:
-  enabled: false
+  enabled: true
 
 event_details:
-  enabled: false
+  enabled: true
 
 event_checkout:
-  enabled: false
+  enabled: true
 
 prayer_support:
   enabled: false

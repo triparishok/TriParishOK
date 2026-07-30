@@ -26,14 +26,17 @@ Results:
 
 The temporary public test page was removed, and the cleanup GitHub Pages deployment completed successfully.
 
-## Still required
+## Approved production widget set
 
-Do not invent widget markup or identifiers. Obtain and test the exact approved embed code or configuration for:
+The Archdiocese supplied the complete approved widget set:
 
-- giving;
-- events;
-- parish updates;
-- prayer requests;
-- support requests.
+- user login;
+- event finder;
+- event details;
+- event checkout.
 
-Test each widget first on the GitHub Pages review origin, then again on `https://triparishok.org/` before launch exposure.
+The event pages use the current site base URL automatically, so their return links work on the GitHub Pages review site and will change to `https://triparishok.org/` with the approved formal-domain build.
+
+Giving remains linked to St. Ann's Realm giving page. Prayer/support requests use the parish contact path, and parish updates use the bulletin and official social-media paths. No additional MinistryPlatform widgets are pending.
+
+Test the event flow on the GitHub Pages review origin after deployment, then test it again on `https://triparishok.org/` during formal launch verification.

@@ -125,6 +125,9 @@
           {{ range .items }}
             <div class="contact-ministry-row">
               <strong>{{ .label }}</strong>
+              {{ with .description }}
+                <p class="contact-ministry-description">{{ . }}</p>
+              {{ end }}
 
               <div class="contact-ministry-contact-list">
                 {{ range .contacts }}

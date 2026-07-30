@@ -19,7 +19,12 @@
 
   {{ if hugo.Data.ministry_platform.events.enabled }}
     <div class="ministry-platform-widget ministry-platform-events">
-      <!-- Angela's approved Event Finder widget configuration belongs here. -->
+      <mpp-event-finder
+        targeturl="{{ "event-details/" | absURL }}"
+        congregationid="60"
+        isfeatured="false"
+        reduceseriesto="1"
+      ></mpp-event-finder>
     </div>
   {{ else }}
     <article class="card events-fallback-card">

@@ -739,6 +739,12 @@ content:
                     type: string
                     required: true
 
+                  - name: description
+                    label: Mission Statement or Description
+                    type: text
+                    required: false
+                    description: "Optional. Add the approved mission statement or a short explanation of what this ministry does."
+
                   - name: contacts
                     label: Contacts
                     type: object

@@ -13,11 +13,15 @@ groups:
             name: "Dennis Porter"
             note: ""
 
-      - label: "Ladies Organizations"
+      - label: "Daughters of St. Ann"
+        description: "The purpose of this organization is to bring the Daughters of St. Ann together for mutual strengthening, encouragement, and equipping. This unity empowers us to develop our Christian lives, to provide services, contribute to the growth of parish life, and to form a community with like-minded individuals."
         contacts:
           - parish: "st-ann"
             name: "Leslie Durham"
             note: ""
+
+      - label: "Our Lady of Perpetual Help Ladies Organization"
+        contacts:
           - parish: "olph"
             name: "Anita Huitt"
             note: ""

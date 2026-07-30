@@ -17,7 +17,10 @@
           class="ministry-platform-widget ministry-platform-event-details"
           aria-label="Event details and registration"
         >
-          <!-- Angela's approved Event Details widget configuration belongs here. -->
+          <mpp-event-details
+            returnurl="{{ "events/" | absURL }}"
+            checkouturl="{{ "event-checkout/" | absURL }}"
+          ></mpp-event-details>
         </div>
       {{ else }}
         <article class="card before-you-go-card">
@@ -34,7 +37,10 @@
           class="ministry-platform-widget ministry-platform-event-checkout"
           aria-label="Event registration checkout"
         >
-          <!-- Angela's approved Event Checkout widget configuration belongs here. -->
+          <mpp-checkout
+            paymentprocessortargeturl="https://onrealm.org/SaintAnnChurch/pay"
+            backtoeventtargeturl="{{ "event-details/" | absURL }}"
+          ></mpp-checkout>
         </div>
       {{ else }}
         <article class="card before-you-go-card">
