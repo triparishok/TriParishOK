@@ -55,6 +55,16 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header-minimal">
+  {{ if hugo.Data.ministry_platform.login.enabled }}
+    <div class="header-account-bar">
+      <div class="header-account-inner">
+        <span class="header-account-label">Parish Account</span>
+        <div class="ministry-platform-login" aria-label="Parish account login">
+          <mpp-user-login></mpp-user-login>
+        </div>
+      </div>
+    </div>
+  {{ end }}
   <div class="header-shell-minimal">
     <a class="brand-minimal" href="{{ "" | relURL }}" aria-label="Tri-Parish Catholic Community home">
       <span class="brand-main-minimal">Tri-Parish</span>
@@ -106,11 +116,6 @@
             </div>
           </nav>
       </details>
-      {{ if hugo.Data.ministry_platform.login.enabled }}
-        <div class="ministry-platform-login" aria-label="Parish account login">
-          <mpp-user-login></mpp-user-login>
-        </div>
-      {{ end }}
     </div>
   </div>
 </header>

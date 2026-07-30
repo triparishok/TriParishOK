@@ -70,3 +70,40 @@
     margin-top: 1.15rem !important;
   }
 }
+
+/* Parish account access belongs to a quiet utility row, separate from navigation. */
+.header-account-bar {
+  background: #081d33;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header-account-inner {
+  width: min(100% - 2rem, 1200px);
+  min-height: 34px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.header-account-label {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.ministry-platform-login {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+
+@media (max-width: 760px) {
+  .header-account-label {
+    display: none;
+  }
+}
