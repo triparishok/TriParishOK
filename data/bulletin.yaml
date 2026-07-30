@@ -2,9 +2,9 @@ current:
   date: Aug 2, 2026
   pages: 2 pages
   page_images:
-    - src: /bulletins/bulletinaug22026.jpg
+    - src: /bulletins/bulletinaug22026.png
       alt: Page 1 of the Aug 1, 2026 tri-parish bulletin
-    - src: /bulletins/bulletinaug220262.jpg
+    - src: /bulletins/bulletinaug220262.png
       alt: Page 2 of the Aug 2, 2026 tri-parish bulletin
   homily:
     enabled: true
@@ -13,6 +13,8 @@ current:
       only five loaves and two fish.
     paragraphs:
       - text: >-
+          
+
           Faced with a hungry crowd, the disciples see only what they lack.
           Jesus, however, takes their small offering, blesses it, breaks it, and
           gives it to the disciples to distribute. Not only does everyone eat
