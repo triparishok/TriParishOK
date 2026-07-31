@@ -46,40 +46,20 @@
 </section>
 {{ end }}
 
-{{ with hugo.Data.bulletin.current.homily }}
-  {{ if ne .enabled false }}
-    {{ if or .title .intro .paragraphs }}
-<section id="fathers-reflection" class="section bulletin-homily-section" aria-labelledby="bulletin-homily-heading">
-  <article class="bulletin-homily-card">
-    <p class="eyebrow">Father's Homily Note</p>
-
-    {{ with .title }}
-      <h2 id="bulletin-homily-heading">{{ . }}</h2>
-    {{ else }}
-      <h2 id="bulletin-homily-heading">Father's Homily Note</h2>
-    {{ end }}
-
-    {{ with .intro }}
-      <div class="bulletin-homily-intro">{{ . | markdownify }}</div>
-    {{ end }}
-
-    {{ with .paragraphs }}
-      <div class="bulletin-homily-body">
-        {{ range . }}
-          {{ if reflect.IsMap . }}
-            {{ with index . "text" }}
-              {{ . | markdownify }}
-            {{ end }}
-          {{ else }}
-            {{ . | markdownify }}
-          {{ end }}
-        {{ end }}
-      </div>
-    {{ end }}
+{{ $reflections := where site.RegularPages "Section" "reflections" }}
+{{ range first 1 ($reflections.ByDate.Reverse) }}
+<section id="fathers-reflection" class="section bulletin-reflection-section" aria-labelledby="bulletin-reflection-heading">
+  <article class="bulletin-reflection-card">
+    <p class="eyebrow">Father’s Reflection</p>
+    <p class="reflection-date">{{ .Date.Format "January 2, 2006" }}</p>
+    <h2 id="bulletin-reflection-heading">{{ .Title }}</h2>
+    {{ with .Description }}<p class="bulletin-reflection-intro">{{ . }}</p>{{ end }}
+    <div class="bulletin-reflection-body">{{ .Content }}</div>
+    <div class="reflection-actions">
+      <a class="button button-secondary" href="{{ "reflections/" | relURL }}">View All Reflections</a>
+    </div>
   </article>
 </section>
-    {{ end }}
-  {{ end }}
 {{ end }}
 
 <section class="section current-bulletin-pages-section" id="current-bulletin-pages" aria-labelledby="current-bulletin-pages-heading">

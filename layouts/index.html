@@ -137,32 +137,23 @@
   </div>
 </section>
 
-{{ with hugo.Data.bulletin.current.homily }}
-  {{ if and (ne .enabled false) (or .title .intro .paragraphs) }}
-    <section class="section home-gospel-section" aria-labelledby="home-gospel-heading">
-      <article class="home-gospel-card">
-        <div class="home-gospel-copy">
-          <p class="eyebrow">This Week in the Gospel</p>
-          <h2 id="home-gospel-heading">{{ .title | default "Father’s Reflection" }}</h2>
-          {{ with .intro }}<div class="home-gospel-intro">{{ . | markdownify }}</div>{{ end }}
-          {{ with .paragraphs }}
-            {{ if gt (len .) 0 }}
-              {{ with index . 0 }}
-                {{ if reflect.IsMap . }}
-                  {{ with index . "text" }}<div class="home-gospel-excerpt">{{ . | markdownify }}</div>{{ end }}
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        </div>
-        <div class="home-gospel-actions" aria-label="Gospel reflection and worship links">
-          <a class="button button-primary" href="{{ "bulletins/#fathers-reflection" | relURL }}">Read Father’s Full Reflection</a>
-          <a class="button button-secondary" href="https://bible.usccb.org/daily-bible-reading">Read the Mass Readings</a>
-          <a class="button button-secondary" href="{{ "mass-confession/" | relURL }}">Join Us for Mass</a>
-        </div>
-      </article>
-    </section>
-  {{ end }}
+{{ $reflections := where site.RegularPages "Section" "reflections" }}
+{{ range first 1 ($reflections.ByDate.Reverse) }}
+  <section class="section home-gospel-section" aria-labelledby="home-gospel-heading">
+    <article class="home-gospel-card">
+      <div class="home-gospel-copy">
+        <p class="eyebrow">Father’s Reflection</p>
+        <h2 id="home-gospel-heading">{{ .Title }}</h2>
+        <p class="reflection-date">{{ .Date.Format "January 2, 2006" }}</p>
+        {{ with .Description }}<p class="home-gospel-intro">{{ . }}</p>{{ end }}
+      </div>
+      <div class="home-gospel-actions" aria-label="Father’s reflections and daily Scripture">
+        <a class="button button-primary" href="{{ .RelPermalink }}">Read Father’s Full Reflection</a>
+        <a class="button button-secondary" href="{{ "reflections/" | relURL }}">View All Reflections</a>
+        <a class="button button-secondary" href="https://bible.usccb.org/daily-bible-reading">Read the Mass Readings</a>
+      </div>
+    </article>
+  </section>
 {{ end }}
 
 <section class="section home-parish-life-section" aria-labelledby="home-parish-life-heading">
