@@ -25,8 +25,7 @@ concurrency:
 env:
   HUGO_VERSION: 0.164.0
   HUGO_DEB_SHA256: 8325f3653032d0fc536503691f4833dc4eb6c6be02ee62466758f3f37a7f2fcd
-  HUGO_BASEURL: https://triparishok.github.io/TriParishOK/
-  GITHUB_PAGES_PREFIX: /TriParishOK
+  HUGO_BASEURL: https://triparishok.org/
 
 jobs:
   build:
@@ -47,13 +46,13 @@ jobs:
 
       - name: Build with Hugo
         run: |
-          HUGO_PARAMS_NOINDEX=true hugo --gc --config hugo.toml --baseURL "${HUGO_BASEURL}"
+          HUGO_PARAMS_NOINDEX=false hugo --gc --config hugo.toml --baseURL "${HUGO_BASEURL}"
 
-      - name: Validate review SEO metadata
+      - name: Validate production SEO metadata
         run: |
           python3 scripts/audit-seo.py public \
             --expected-base "${HUGO_BASEURL}" \
-            --expect-noindex yes
+            --expect-noindex no
 
       - name: Validate internal links, assets, and path casing
         run: |

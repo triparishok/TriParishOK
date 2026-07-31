@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="page-header reflections-header">
+  <div class="container">
+    <p class="eyebrow">Father’s Reflection</p>
+    <h1>{{ .Title }}</h1>
+    <p class="reflection-date">{{ .Date.Format "January 2, 2006" }}</p>
+  </div>
+</header>
+
+<article class="section reflection-article">
+  <div class="container reflection-article-inner">
+    {{ with .Description }}<p class="reflection-intro">{{ . }}</p>{{ end }}
+    <div class="reflection-body">
+      {{ .Content }}
+    </div>
+    <div class="reflection-actions">
+      <a class="button button-primary" href="{{ "reflections/" | relURL }}">View All Reflections</a>
+      <a class="button button-secondary" href="https://bible.usccb.org/daily-bible-reading">Read the Mass Readings</a>
+    </div>
+  </div>
+</article>
+{{ end }}

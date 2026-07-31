@@ -233,6 +233,58 @@ content:
                     - name: bulletin
                       label: Open the Current Bulletin
 
+      - name: reflections
+        label: Father's Reflections
+        type: collection
+        path: content/reflections
+        exclude:
+          - _index.md
+        format: yaml-frontmatter
+        filename: "{year}-{month}-{day}-{primary}.md"
+        view:
+          fields: [title, date, draft]
+          primary: title
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Reflection Title
+            type: string
+            required: true
+
+          - name: date
+            label: Reflection Date
+            type: date
+            required: true
+            description: "Use the Sunday or bulletin date connected with this reflection."
+            options:
+              format: yyyy-MM-dd
+
+          - name: description
+            label: Short Introduction
+            type: text
+            required: true
+            description: "Write one or two sentences. This appears on the homepage, bulletin page, and reflection archive."
+
+          - name: draft
+            label: Keep This Reflection Hidden
+            type: boolean
+            required: false
+            default: true
+            description: "New reflections begin hidden. Turn this off only when the reflection is complete and ready for parishioners."
+
+          - name: body
+            label: Reflection
+            type: rich-text
+            required: true
+            description: "Use the toolbar for paragraphs, italics, bold text, and links."
+            options:
+              format: markdown
+              switcher: false
+              media: false
+
       - name: bulletin
         label: Weekly Bulletin
         type: file
@@ -280,54 +332,6 @@ content:
                     type: string
                     required: true
                     description: "Example: Page 1 of the July 12, 2026 tri-parish bulletin"
-
-              - name: homily
-                label: Father's Homily Note
-                type: object
-                fields:
-                  - name: enabled
-                    label: Show Homily Note This Week
-                    type: boolean
-                    required: false
-                    default: true
-                    description: "Turn this off if there is no homily note for the current bulletin. When on, this reflection also appears on the homepage."
-
-                  - name: title
-                    label: Title
-                    type: string
-                    required: false
-                    description: "This title appears on both the Bulletin page and the homepage. Leave blank if there is no homily note this week."
-
-                  - name: intro
-                    label: Intro
-                    type: rich-text
-                    required: false
-                    description: "Use the toolbar for italics, bold text, and links."
-                    options:
-                      format: markdown
-                      switcher: false
-                      media: false
-
-                  - name: paragraphs
-                    label: Paragraphs
-                    type: object
-                    required: false
-                    list:
-                      min: 0
-                      max: 8
-                      collapsible:
-                        collapsed: false
-                        summary: "{text}"
-                    fields:
-                      - name: text
-                        label: Paragraph Text
-                        type: rich-text
-                        required: false
-                        description: "Use the toolbar for italics, bold text, and links."
-                        options:
-                          format: markdown
-                          switcher: false
-                          media: false
 
               - name: accessibility_note
                 label: Reading Note

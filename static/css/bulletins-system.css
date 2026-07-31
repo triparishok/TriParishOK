@@ -207,13 +207,13 @@
   }
 }
 
-/* Bulletin homily note */
+/* Father’s reflections */
 
-.bulletin-homily-section {
+.bulletin-reflection-section {
   background: var(--white);
 }
 
-.bulletin-homily-card {
+.bulletin-reflection-card {
   max-width: 900px;
   margin: 0 auto;
   background: var(--white);
@@ -224,14 +224,98 @@
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-.bulletin-homily-card h2 {
+.bulletin-reflection-card h2 {
   margin-top: 0;
   color: var(--navy);
 }
 
-.bulletin-homily-intro {
+.bulletin-reflection-intro,
+.reflection-intro {
   font-weight: 800;
   color: var(--navy);
+}
+
+.reflection-date {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.bulletin-reflection-body,
+.reflection-body {
+  line-height: 1.75;
+}
+
+.bulletin-reflection-body > *:first-child,
+.reflection-body > *:first-child {
+  margin-top: 0;
+}
+
+.bulletin-reflection-body > *:last-child,
+.reflection-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.reflection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.reflections-header {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.reflections-header h1,
+.reflections-header p {
+  color: inherit;
+}
+
+.reflections-archive,
+.reflection-article {
+  background: var(--ivory);
+}
+
+.reflections-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.reflection-list-card,
+.reflection-article-inner {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--gold);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.reflection-list-card h3 {
+  margin: 0 0 0.75rem;
+}
+
+.reflection-list-card h3 a {
+  color: var(--navy);
+}
+
+.reflection-article-inner {
+  max-width: 820px;
+}
+
+@media (max-width: 700px) {
+  .reflection-actions {
+    display: grid;
+  }
+
+  .reflection-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* Bulletin page images */
@@ -241,10 +325,12 @@
 }
 
 .bulletin-page-list {
-  max-width: 960px;
+  max-width: 1320px;
   margin: 0 auto;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
+  align-items: start;
 }
 
 .bulletin-page-frame {
@@ -293,6 +379,11 @@
 }
 
 @media (max-width: 640px) {
+  .bulletin-page-list {
+    grid-template-columns: 1fr;
+    max-width: 44rem;
+  }
+
   .bulletin-page-actions .card-actions {
     display: grid;
   }

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<header class="page-header reflections-header">
+  <div class="container">
+    <p class="eyebrow">From Father</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+
+<section class="section reflections-archive" aria-labelledby="reflections-archive-heading">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Reflection Archive</p>
+      <h2 id="reflections-archive-heading">Read and revisit Father’s reflections.</h2>
+    </div>
+
+    <div class="reflections-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="reflection-list-card">
+          <p class="reflection-date">{{ .Date.Format "January 2, 2006" }}</p>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with .Description }}<p>{{ . }}</p>{{ end }}
+          <a class="button button-secondary" href="{{ .RelPermalink }}">Read This Reflection</a>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
