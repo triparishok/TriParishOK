@@ -69,6 +69,16 @@ content:
                 required: true
                 description: "Example: Photograph by Amber Largent; parish-owned and used with permission"
 
+              - name: link
+                label: Link This Photo To
+                type: string
+                description: "Optional. Leave blank for a photo-only slide. Example: /stories/archbishop-coakley-visit/"
+
+              - name: link_text
+                label: Link Text
+                type: string
+                description: "Optional. Short invitation shown with the caption. Example: View the Story & Photos"
+
   - name: weekly-updates
     label: Weekly Updates
     type: group
@@ -284,6 +294,82 @@ content:
               format: markdown
               switcher: false
               media: false
+
+      - name: stories
+        label: Parish Stories & Photo Galleries
+        type: collection
+        path: content/stories
+        exclude:
+          - _index.md
+        format: yaml-frontmatter
+        filename: "{year}-{month}-{day}-{primary}.md"
+        view:
+          fields: [title, date, draft]
+          primary: title
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Story Title
+            type: string
+            required: true
+          - name: date
+            label: Story Date
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: description
+            label: Short Introduction
+            type: text
+            required: true
+            description: "Write one or two sentences for the homepage and story archive."
+          - name: draft
+            label: Keep This Story Hidden
+            type: boolean
+            required: false
+            default: true
+            description: "New stories begin hidden. Turn this off when the story is ready for parishioners."
+          - name: body
+            label: Story
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: false
+              media: false
+          - name: gallery
+            label: Photo Gallery
+            type: object
+            required: true
+            list:
+              min: 1
+              max: 20
+              collapsible:
+                collapsed: true
+                summary: "{caption}"
+            fields:
+              - name: image
+                label: Photo
+                type: file
+                required: true
+                options:
+                  media: website_images
+              - name: alt
+                label: Photo Description
+                type: string
+                required: true
+                description: "Briefly describe what is visible for people who cannot see the photo."
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: credit
+                label: Photo Credit
+                type: string
+                required: false
 
       - name: bulletin
         label: Weekly Bulletin

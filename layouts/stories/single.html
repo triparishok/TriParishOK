@@ -1,0 +1,33 @@
+{{ define "main" }}
+<header class="page-header stories-header">
+  <div class="container">
+    <p class="eyebrow">Parish Story</p>
+    <h1>{{ .Title }}</h1>
+    <p class="story-date">{{ .Date.Format "January 2, 2006" }}</p>
+  </div>
+</header>
+
+<article class="section story-article">
+  <div class="container story-article-inner">
+    {{ with .Description }}<p class="story-intro">{{ . }}</p>{{ end }}
+    <div class="story-body">{{ .Content }}</div>
+    {{ with .Params.gallery }}
+      <div class="story-gallery" aria-label="Photo gallery">
+        {{ range . }}
+          <figure class="story-gallery-item">
+            {{ partial "static-image.html" (dict "src" .image "alt" .alt "class" "story-gallery-image") }}
+            <figcaption>
+              <span>{{ .caption }}</span>
+              {{ with .credit }}<small>{{ . }}</small>{{ end }}
+            </figcaption>
+          </figure>
+        {{ end }}
+      </div>
+    {{ end }}
+    <div class="story-actions">
+      <a class="button button-primary" href="{{ "stories/" | relURL }}">View All Parish Stories</a>
+      <a class="button button-secondary" href="{{ "parish-life/" | relURL }}">Explore Parish Life</a>
+    </div>
+  </div>
+</article>
+{{ end }}

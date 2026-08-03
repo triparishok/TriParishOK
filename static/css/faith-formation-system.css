@@ -117,6 +117,30 @@
   letter-spacing: 0.055em;
 }
 
+.faith-formation-label-st-ann {
+  background: #fbf0f1;
+  border-color: #d8a4aa;
+  color: var(--maroon);
+}
+
+.faith-formation-label-olph {
+  background: #edf3f8;
+  border-color: #9eafc0;
+  color: var(--navy);
+}
+
+.faith-formation-label-mother-of-sorrows {
+  background: #fbf5e8;
+  border-color: var(--gold);
+  color: #665024;
+}
+
+.faith-formation-label-tri-parish {
+  background: #edf4ec;
+  border-color: #a5b99f;
+  color: #36533b;
+}
+
 .faith-formation-card h3,
 .faith-formation-detail-card h3 {
   margin: 0;

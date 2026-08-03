@@ -171,8 +171,19 @@
         <div class="home-life-carousel-slides" aria-live="polite">
           {{ range $index, $photo := . }}
             <figure class="home-life-carousel-slide{{ if eq $index 0 }} is-active{{ end }}" data-carousel-slide{{ if ne $index 0 }} hidden{{ end }}>
-              {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
-              <figcaption>{{ $photo.caption }}</figcaption>
+              {{ with $photo.link }}
+                {{ $photoLink := strings.TrimPrefix "/" . }}
+                <a class="home-life-carousel-link" href="{{ $photoLink | relURL }}">
+                  {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
+                  <figcaption>
+                    <span>{{ $photo.caption }}</span>
+                    {{ with $photo.link_text }}<span class="home-life-carousel-link-text">{{ . }} →</span>{{ end }}
+                  </figcaption>
+                </a>
+              {{ else }}
+                {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
+                <figcaption>{{ $photo.caption }}</figcaption>
+              {{ end }}
             </figure>
           {{ end }}
         </div>
@@ -195,6 +206,7 @@
     </a>
     <a class="button button-secondary" href="{{ "parish-life/" | relURL }}">Explore Parish Life</a>
   </div>
+  <p class="home-parish-stories-link"><a href="{{ "stories/" | relURL }}">View All Parish Stories →</a></p>
 </section>
 
 <section class="section section-light home-connect-section" aria-labelledby="home-connect-heading">

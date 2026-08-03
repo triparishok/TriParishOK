@@ -5943,7 +5943,7 @@ img {
 .faith-learning-layout {
   display: grid;
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .faith-learning-video-card {
@@ -5955,11 +5955,13 @@ img {
 .faith-resource-list {
   display: grid;
   gap: 0.85rem;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .faith-resource-link {
   display: grid;
   gap: 0.35rem;
+  align-content: center;
   padding: 1.1rem 1.2rem;
   color: var(--text);
   text-decoration: none;
@@ -6373,4 +6375,106 @@ img {
 
 .cms-rich-text > :last-child {
   margin-bottom: 0;
+}
+
+/* Parish stories and photo galleries */
+.stories-header {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.stories-header h1,
+.stories-header p {
+  color: inherit;
+}
+
+.stories-list,
+.story-gallery {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.story-list-card,
+.story-gallery-item {
+  overflow: hidden;
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(13, 35, 58, 0.08);
+}
+
+.story-list-image-link {
+  display: block;
+}
+
+.story-list-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.story-list-copy {
+  padding: 1.25rem;
+}
+
+.story-list-copy h3 a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.story-date {
+  margin: 0 0 0.45rem;
+  color: var(--maroon);
+  font-weight: 800;
+}
+
+.story-article-inner {
+  max-width: 75rem;
+}
+
+.story-intro {
+  max-width: 60rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+
+.story-body {
+  max-width: 60rem;
+}
+
+.story-gallery {
+  margin-top: 2rem;
+}
+
+.story-gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story-gallery-item figcaption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.story-gallery-item figcaption small {
+  color: var(--muted);
+}
+
+.story-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 820px) {
+  .stories-list,
+  .story-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
 }

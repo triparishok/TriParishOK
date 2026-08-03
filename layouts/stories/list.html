@@ -1,0 +1,35 @@
+{{ define "main" }}
+<header class="page-header stories-header">
+  <div class="container">
+    <p class="eyebrow">Parish Life</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+
+<section class="section stories-archive" aria-labelledby="stories-archive-heading">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Life in Our Parishes</p>
+      <h2 id="stories-archive-heading">Worship, service, and community.</h2>
+    </div>
+    <div class="stories-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="story-list-card">
+          {{ with index .Params.gallery 0 }}
+            <a class="story-list-image-link" href="{{ $.RelPermalink }}">
+              {{ partial "static-image.html" (dict "src" .image "alt" .alt "class" "story-list-image") }}
+            </a>
+          {{ end }}
+          <div class="story-list-copy">
+            <p class="story-date">{{ .Date.Format "January 2, 2006" }}</p>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            <a class="button button-secondary" href="{{ .RelPermalink }}">Read the Story &amp; View Photos</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

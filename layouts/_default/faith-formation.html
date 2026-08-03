@@ -43,8 +43,9 @@
     {{ range hugo.Data.formation_programs.programs }}
       {{ if ne .enabled false }}
         {{ $host := partial "location-by-slug.html" .host_parish }}
+        {{ $hostLabelClass := cond (eq .serves "tri-parish") "faith-formation-label-tri-parish" (printf "faith-formation-label-%s" .host_parish) }}
         <article class="faith-formation-card">
-          <p class="faith-formation-label">
+          <p class="faith-formation-label {{ $hostLabelClass }}">
             {{ if eq .serves "tri-parish" }}All Three Parishes{{ else }}{{ $host.short_name }}{{ end }}
           </p>
           <h3>{{ .program }}</h3>

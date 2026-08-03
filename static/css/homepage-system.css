@@ -1130,6 +1130,26 @@
   background: #0b263f;
 }
 
+.home-life-carousel-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-life-carousel-link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -6px;
+}
+
+.home-life-carousel-link-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--gold);
+  font-size: 0.84rem;
+}
+
 .home-life-carousel-slide[hidden] {
   display: none;
 }
@@ -1206,6 +1226,17 @@
 
 .home-parish-life-actions .button {
   margin: 0;
+}
+
+.home-parish-stories-link {
+  margin: 0.9rem auto 0;
+  text-align: center;
+}
+
+.home-parish-stories-link a {
+  color: var(--navy);
+  font-weight: 800;
+  text-underline-offset: 0.2em;
 }
 
 @media (min-width: 820px) {
