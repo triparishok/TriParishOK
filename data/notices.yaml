@@ -15,27 +15,15 @@ items:
       start: 2026-08-16T21:45:00Z
       end: 2026-08-16T23:30:00Z
     action: none
-  - enabled: false
+  - enabled: true
     label: Office Notice
     title: Volunteer Training
-    detail: >-
-      **Attention Parish Volunteers**: Safe environment training begins August
-      1, 2026, and must be completed by August 30, 2026.
+    detail: |-
+      **Attention Parish Volunteers**: Safe environment training begins August 1, 2026, and must be completed by August 30, 2026.
 
+      **Current volunteers** will receive an email from the Archdiocese prompting them to update records and complete the next training session. If you have routine technical questions, please use the following email to contact the tech support staff at the arch diocese: [safeguarding@archokc.org](mailto:safeguarding@archokc.org).
 
-      **Current volunteers** will receive an email from the Archdiocese
-      prompting them to update records and complete the next training session.
-      If you have routine technical questions, please use the following email to
-      contact the tech support staff at the arch diocese:
-      [safeguarding@archokc.org](mailto:safeguarding@archokc.org).
-
-
-      **New volunteers** can access the training on the Archdiocese safe
-      environment training site at
-      https://archokc.safeenvironment.org/login/index.php. New volunteers will
-      need to submit a background check, provide three references for us to
-      contact and take the first training session. 
-
+      **New volunteers** can access the training on the Archdiocese safe environment training site at [https://archokc.safeenvironment.org/login/index.php](https://archokc.safeenvironment.org/login/index.php). New volunteers will need to submit a background check, provide three references for us to contact and take the first training session. 
 
       Parish contact is Sherri Woolridge.
     parishes:
