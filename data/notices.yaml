@@ -1,39 +1,48 @@
 items:
   - enabled: true
-    label: Special Mass
-    title: Archbishop Coakley will celebrate Mass at St. Ann
-    detail: Please join us on Sunday, August 2 at 10:30 AM as Archbishop Coakley
-      celebrates Holy Mass at St. Ann. There will be only one Mass that day, and
-      there will be no Mass at Our Lady of Perpetual Help. A dinner will follow
-      Mass in the parish hall.
-    parishes:
-      - tri-parish
-    start_date: 2026-07-12
-    end_date: 2026-08-02
-    affects_schedule: true
-    calendar:
-      enabled: true
-      start: 2026-08-02T10:30:00-05:00
-      end: ""
-      location: St. Ann Catholic Church, 8492 State HWY 17, Elgin, OK 73538
-    action: bulletin
-  - enabled: true
     label: Faith Formation
-    title: St. Ann Religious Education needs teachers and aides
-    detail: St. Ann Religious Education needs teachers and aides for the upcoming
-      school year. Classes meet Sunday mornings after the 8:30 AM Mass.
+    title: St. Ann's Religious Education Enrollment Day
+    detail: Enrollment day is Sunday, August 16th. Enrollment packets are available
+      online and in the back of the church and in the Parish Hall. If you are
+      interested in volunteering as a teacher or aide, please see Sarah Sminkey.
     parishes:
       - st-ann
-    start_date: 2026-07-12
+    start_date: 2026-08-05
+    end_date: 2026-08-16
     affects_schedule: false
-    action: email-office
-  - enabled: true
-    label: Current Need
-    title: Lawn-care volunteers needed at OLPH!
-    detail: Our Lady of Perpetual Help needs volunteers to help care for the parish
-      grounds.
+    calendar:
+      enabled: true
+      start: 2026-08-16T21:45:00Z
+      end: 2026-08-16T23:30:00Z
+    action: none
+  - enabled: false
+    label: Office Notice
+    title: Volunteer Training
+    detail: >-
+      **Attention Parish Volunteers**: Safe environment training begins August
+      1, 2026, and must be completed by August 30, 2026.
+
+
+      **Current volunteers** will receive an email from the Archdiocese
+      prompting them to update records and complete the next training session.
+      If you have routine technical questions, please use the following email to
+      contact the tech support staff at the arch diocese:
+      [safeguarding@archokc.org](mailto:safeguarding@archokc.org).
+
+
+      **New volunteers** can access the training on the Archdiocese safe
+      environment training site at
+      https://archokc.safeenvironment.org/login/index.php. New volunteers will
+      need to submit a background check, provide three references for us to
+      contact and take the first training session. 
+
+
+      Parish contact is Sherri Woolridge.
     parishes:
-      - olph
-    start_date: 2026-07-12
+      - st-ann
+    start_date: 2026-08-05
+    end_date: 2026-08-30
     affects_schedule: false
-    action: email-office
+    calendar:
+      enabled: false
+    action: contact-page
