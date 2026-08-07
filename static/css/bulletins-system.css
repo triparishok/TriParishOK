@@ -86,7 +86,17 @@
   border: 1px solid var(--border);
   border-radius: 1rem;
   box-shadow: var(--shadow-soft);
+  min-width: 0;
   padding: 1.2rem;
+}
+
+.bulletins-summary-card .cms-rich-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bulletins-summary-card .cms-rich-text a {
+  word-break: break-word;
 }
 
 .bulletins-summary-header {

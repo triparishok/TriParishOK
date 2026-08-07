@@ -1,6 +1,7 @@
 ---
 title: Gospel Reflection – Matthew 14:22–33
 date: 2026-08-09
+publishDate: 2026-08-07
 description: "In today's Gospel, the disciples struggle againststrong winds and
   rough waters as Jesus comes tothem walking on the sea. Fear grips them until
   they hear His reassuring words: \"Take courage, it is do not be afraid.\""

@@ -252,7 +252,7 @@ content:
         format: yaml-frontmatter
         filename: "{year}-{month}-{day}-{primary}.md"
         view:
-          fields: [title, date, draft]
+          fields: [title, date, publishDate, draft]
           primary: title
           sort: [date, title]
           default:
@@ -272,6 +272,14 @@ content:
             options:
               format: yyyy-MM-dd
 
+          - name: publishDate
+            label: Publish Now / Website Date
+            type: date
+            required: true
+            description: "Choose today's date to publish immediately. This may be earlier than the Sunday Reflection Date."
+            options:
+              format: yyyy-MM-dd
+
           - name: description
             label: Short Introduction
             type: text
@@ -283,7 +291,7 @@ content:
             type: boolean
             required: false
             default: true
-            description: "New reflections begin hidden. Turn this off only when the reflection is complete and ready for parishioners."
+            description: "Leave this off to publish on the Publish Now / Website Date. Turn it on only while the reflection is unfinished."
 
           - name: body
             label: Reflection
