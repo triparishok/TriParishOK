@@ -4,7 +4,7 @@ date: 2026-08-09
 description: "In today's Gospel, the disciples struggle againststrong winds and
   rough waters as Jesus comes tothem walking on the sea. Fear grips them until
   they hear His reassuring words: \"Take courage, it is do not be afraid.\""
-draft: true
+draft: false
 ---
 Peter boldly steps out of the boat and walks toward Jesus, but when he focuses on the wind instead of the Lord, he begins to sink. Crying out, *"Lord, save me!"* Jesus immediately reaches out His hand and lifts him up.
 
