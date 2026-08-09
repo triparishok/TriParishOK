@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-hero page-hero-compact">
+  <div class="container page-hero-content">
+    <p class="eyebrow">MinistryPlatform Test</p>
+    <h1>Events Widget Test</h1>
+    <p>This unlisted page is for verifying the St. Ann MinistryPlatform event feed before it replaces the public Events page.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="ministry-platform-widget ministry-platform-events">
+      <mpp-event-finder
+        targeturl="{{ "event-details/" | absURL }}"
+        congregationid="60"
+      ></mpp-event-finder>
+    </div>
+  </div>
+</section>
+{{ end }}

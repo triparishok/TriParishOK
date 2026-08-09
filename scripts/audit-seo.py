@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 LIVE_NOINDEX_PATHS = {
     "/event-details/",
     "/event-checkout/",
+    "/events-widget-test/",
 }
 
 
