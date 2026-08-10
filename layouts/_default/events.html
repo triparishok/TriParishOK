@@ -19,13 +19,23 @@
 
   {{ if hugo.Data.ministry_platform.events.enabled }}
     <div class="ministry-platform-widget ministry-platform-events">
-      <mpp-event-finder
-        targeturl="{{ "event-details/" | absURL }}"
-        congregationid="60"
-        isfeatured="false"
-        reduceseriesto="1"
-      ></mpp-event-finder>
-    </div>
+    <mpp-event-finder
+      targeturl="https://triparishok.github.io/TriParishOK/event-details/"
+      congregationid="60"
+      isfeatured="false"
+      reduceseriesto="1"
+    ></mpp-event-finder>
+
+    <mpp-group-finder
+      targeturl="https://triparishok.org/events-widget-test/"
+      countgroupinquiries="false"
+      showfullgroups="true"
+      showfuturegroups="true"
+      congregationid="60"
+      meetsonline="false"
+      showsuggestagroupbutton="false"
+    ></mpp-group-finder>
+  </div>
   {{ else }}
     <article class="card events-fallback-card">
       <h3>See what is happening now</h3>
