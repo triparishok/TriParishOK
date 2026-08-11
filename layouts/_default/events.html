@@ -19,22 +19,9 @@
 
   {{ if hugo.Data.ministry_platform.events.enabled }}
     <div class="ministry-platform-widget ministry-platform-events">
-    <mpp-event-finder
-      targeturl="https://triparishok.github.io/TriParishOK/event-details/"
-      congregationid="60"
-      isfeatured="false"
-      reduceseriesto="1"
-    ></mpp-event-finder>
+    <mpp-event-finder targeturl="https://triparishok.org/event-details/" congregationid="60" reduceseriesto="1"></mpp-event-finder>
 
-    <mpp-group-finder
-      targeturl="https://triparishok.org/events-widget-test/"
-      countgroupinquiries="false"
-      showfullgroups="true"
-      showfuturegroups="true"
-      congregationid="60"
-      meetsonline="false"
-      showsuggestagroupbutton="false"
-    ></mpp-group-finder>
+    <mpp-group-finder targeturl="https://triparishok.org/events-widget-test/" countgroupinquiries="false" showfullgroups="true" showfuturegroups="true" congregationid="60" meetsonline="false" showsuggestagroupbutton="false"></mpp-group-finder>
   </div>
   {{ else }}
     <article class="card events-fallback-card">
