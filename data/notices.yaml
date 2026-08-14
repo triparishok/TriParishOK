@@ -51,7 +51,7 @@ items:
       end: 2026-08-27T11:35:00Z
       location: St. Ann Church
     action: none
-  - enabled: false
+  - enabled: true
     label: Parish Event
     title: "“American Martyr: The Stanley Rother Story”"
     detail: >-
