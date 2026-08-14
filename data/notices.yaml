@@ -34,3 +34,42 @@ items:
     calendar:
       enabled: false
     action: contact-page
+  - enabled: true
+    label: Parish Event
+    title: Daughters of St. Ann Meeting
+    detail: All women of the parish are invited to attend the next DOSA meeting on
+      August 27th at 6:00 p.m. in the Parish Hall. We encourage all women of the
+      church to join us!
+    parishes:
+      - st-ann
+    start_date: 2026-08-14
+    end_date: 2026-08-27
+    affects_schedule: false
+    calendar:
+      enabled: true
+      start: 2026-08-27T18:00:00Z
+      end: 2026-08-27T11:35:00Z
+      location: St. Ann Church
+    action: none
+  - enabled: false
+    label: Parish Event
+    title: "“American Martyr: The Stanley Rother Story”"
+    detail: >-
+      *In Theaters Aug. 25-27*
+
+
+      This feature-length documentary narrated by acclaimed actor Martin Sheen,
+      tells the extraordinary true story of an American priest who was murdered
+      for refusing to abandon his people.
+
+
+      Visit [fathomentertainment.co](http://fathomentertainment.co) for more
+      details.
+    parishes:
+      - tri-parish
+    start_date: 2026-08-14
+    end_date: 2026-08-27
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
