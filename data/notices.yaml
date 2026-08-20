@@ -1,21 +1,5 @@
 items:
   - enabled: true
-    label: Faith Formation
-    title: St. Ann's Religious Education Enrollment Day
-    detail: Enrollment day is Sunday, August 16th. Enrollment packets are available
-      online and in the back of the church and in the Parish Hall. If you are
-      interested in volunteering as a teacher or aide, please see Sarah Sminkey.
-    parishes:
-      - st-ann
-    start_date: 2026-08-05
-    end_date: 2026-08-16
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-08-16T21:45:00Z
-      end: 2026-08-16T23:30:00Z
-    action: none
-  - enabled: true
     label: Office Notice
     title: Volunteer Training
     detail: |-
@@ -70,6 +54,18 @@ items:
     start_date: 2026-08-14
     end_date: 2026-08-27
     affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
+  - enabled: true
+    label: Office Notice
+    title: No Daily Mass on Tuesday
+    detail: There is no daily Mass on Tuesday, August 25, 2026.
+    parishes:
+      - mother-of-sorrows
+    start_date: 2026-08-20
+    end_date: 2026-08-26
+    affects_schedule: true
     calendar:
       enabled: false
     action: none
