@@ -18,3 +18,21 @@ items:
     calendar:
       enabled: false
     action: contact-page
+  - enabled: true
+    label: Faith Formation
+    title: Parent information meeting for Confirmation Class
+    detail: |-
+      September 2nd at 7:00pm in St. Ann's Parish Hall.
+
+      Classes start September 9th. Class is open to students in 6th-12th grades.
+    parishes:
+      - st-ann
+    start_date: 2026-08-28
+    end_date: 2026-09-02
+    affects_schedule: false
+    calendar:
+      enabled: true
+      start: 2026-09-02T19:00:00Z
+      end: 2026-09-02T20:00:00Z
+      location: 8492 OK-17, Elgin, OK 73538
+    action: contact-page
