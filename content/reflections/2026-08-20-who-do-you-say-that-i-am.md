@@ -7,7 +7,7 @@ description: >-
   am?” 
 
   Peter answers with faith: “You are the Christ, the Son of the living God.”
-draft: true
+draft: false
 ---
 Jesus asks the same question of each of us. It is easy to know about Jesus, but he invites us to truly know him, love him, and follow him. Our faith is not simply something we profess with our lips; it should be reflected in how we live, forgive, serve, and love others.
 
