@@ -36,3 +36,20 @@ items:
       end: 2026-09-02T20:00:00Z
       location: 8492 OK-17, Elgin, OK 73538
     action: contact-page
+  - enabled: true
+    label: Schedule Change
+    title: Nativity of the Blessed Virgin Mary
+    detail: September 8th, is the Birthday of the Blessed Virgin Mary. We will have
+      Mass at 8:30am, at St. Ann's. You are invited to join for the Feast Day
+      Mass. Followed by refreshments in the Parish Hall.
+    parishes:
+      - st-ann
+    start_date: 2026-08-28
+    end_date: 2026-09-08
+    affects_schedule: true
+    calendar:
+      enabled: true
+      start: 2026-09-08T08:30:00Z
+      end: 2026-09-08T09:30:00Z
+      location: 8492 OK-17, Elgin, OK 73538
+    action: bulletin
