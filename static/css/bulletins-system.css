@@ -139,6 +139,36 @@
   margin: 0;
 }
 
+/* Religious Education newsletter */
+
+.bulletins-re-newsletter-section {
+  background: var(--white);
+}
+
+.bulletins-re-newsletter-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: linear-gradient(90deg, var(--st-ann-tint), var(--white) 52%);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--maroon);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.bulletins-re-newsletter-card h2,
+.bulletins-re-newsletter-card p {
+  margin-top: 0;
+}
+
+.bulletins-re-newsletter-card .button {
+  width: fit-content;
+  margin: 0;
+}
+
 /* Source note */
 
 .bulletins-source-section {
@@ -188,6 +218,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .bulletins-re-newsletter-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .bulletins-source-card {
     grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
   }
@@ -213,6 +247,11 @@
   .bulletins-hero-actions .button {
     width: 100%;
     justify-content: center;
+    text-align: center;
+  }
+
+  .bulletins-re-newsletter-card .button {
+    width: 100%;
     text-align: center;
   }
 }

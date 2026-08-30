@@ -248,14 +248,44 @@
   margin: 0 !important;
 }
 
+.home-religious-education-section {
+  background: var(--st-ann-tint);
+}
+
+.home-religious-education-card {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: linear-gradient(90deg, var(--st-ann-tint), var(--white) 52%);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--maroon);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.home-religious-education-card h2,
+.home-religious-education-card p {
+  margin-top: 0;
+}
+
+.home-religious-education-card .button {
+  width: fit-content;
+  margin: 0;
+}
+
 @media (min-width: 760px) {
-  .home-giving-card {
+  .home-giving-card,
+  .home-religious-education-card {
     grid-template-columns: minmax(0, 1fr) auto !important;
   }
 }
 
 @media (max-width: 759px) {
-  .home-giving-card .button {
+  .home-giving-card .button,
+  .home-religious-education-card .button {
     width: 100% !important;
     text-align: center !important;
   }

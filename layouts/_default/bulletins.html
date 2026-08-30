@@ -46,6 +46,20 @@
 </section>
 {{ end }}
 
+<section class="section bulletins-re-newsletter-section" aria-labelledby="bulletins-re-newsletter-heading">
+  <article class="bulletins-re-newsletter-card">
+    <div>
+      <p class="eyebrow">St. Ann Families</p>
+      <h2 id="bulletins-re-newsletter-heading">Religious Education Newsletter</h2>
+      <p>
+        Read the current St. Ann Religious Education newsletter for class dates,
+        parent reminders, and upcoming activities.
+      </p>
+    </div>
+    <a class="button button-primary" href="{{ "st-ann-religious-education/#re-newsletter" | relURL }}">Open RE Newsletter</a>
+  </article>
+</section>
+
 {{ $reflections := where site.RegularPages "Section" "reflections" }}
 {{ range first 1 ($reflections.ByDate.Reverse) }}
 <section id="fathers-reflection" class="section bulletin-reflection-section" aria-labelledby="bulletin-reflection-heading">
