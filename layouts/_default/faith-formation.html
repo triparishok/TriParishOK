@@ -60,6 +60,9 @@
           <div class="cms-rich-text">{{ .summary | markdownify }}</div>
           <p><strong>Program contact:</strong> {{ .contact_name }}</p>
           <div class="card-actions">
+            {{ if eq .host_parish "st-ann" }}
+              <a class="button button-primary" href="{{ "st-ann-religious-education/" | relURL }}">St. Ann RE Details</a>
+            {{ end }}
             <a class="button button-secondary"
                href="mailto:{{ hugo.Data.contact.office.email }}?subject={{ printf "%s information" .program | urlquery }}">
               Ask the Parish Office
@@ -68,6 +71,36 @@
         </article>
       {{ end }}
     {{ end }}
+  </div>
+</section>
+
+<section class="section section-light faith-formation-family-section" aria-labelledby="faith-formation-family-heading">
+  <div class="section-heading">
+    <p class="eyebrow">At Home</p>
+    <h2 id="faith-formation-family-heading">Prepare for Sunday Mass Together.</h2>
+    <p>
+      These family-friendly Catholic resources can help children listen to the Sunday readings,
+      ask good questions, and arrive at Mass ready to pray.
+    </p>
+  </div>
+
+  <div class="faith-formation-family-grid">
+    <article class="faith-formation-family-card">
+      <p class="faith-formation-label">Weekly Listening</p>
+      <h3>Family Mass Prep with Katie McGrady</h3>
+      <p>Short weekly reflections on the Sunday Mass readings for families to hear on the way to church or while getting ready at home. Hallow is an app-based resource and may require a subscription.</p>
+      <div class="card-actions">
+        <a class="button button-secondary" href="https://hallow.com/collections/538/family-mass-prep-katie-mcgrady/" target="_blank" rel="noopener noreferrer">Visit Hallow</a>
+      </div>
+    </article>
+    <article class="faith-formation-family-card">
+      <p class="faith-formation-label">Sunday Activities</p>
+      <h3>Holy Heroes Sunday Mass Prep</h3>
+      <p>Free Catholic activities and preparation for children and families to use before Sunday Mass.</p>
+      <div class="card-actions">
+        <a class="button button-secondary" href="https://holyheroes.com/pages/sunday-mass-prep" target="_blank" rel="noopener noreferrer">Visit Holy Heroes</a>
+      </div>
+    </article>
   </div>
 </section>
 

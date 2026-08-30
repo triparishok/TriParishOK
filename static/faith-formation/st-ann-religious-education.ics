@@ -1,0 +1,269 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tri-Parish Catholic Community//St. Ann Religious Education//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:St. Ann Religious Education 2026-2027
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:stann-re-20260816@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260816T164500
+DTEND;TZID=America/Chicago:20260816T183000
+SUMMARY:St. Ann Religious Education: Enrollment Day
+DESCRIPTION:St. Ann Religious Education enrollment day. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20260823@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260823T093000
+DTEND;TZID=America/Chicago:20260823T103000
+SUMMARY:St. Ann Religious Education: First Day of Classes
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20260830@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260830T093000
+DTEND;TZID=America/Chicago:20260830T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20260913@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260913T093000
+DTEND;TZID=America/Chicago:20260913T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20260920@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260920T093000
+DTEND;TZID=America/Chicago:20260920T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20260927@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20260927T093000
+DTEND;TZID=America/Chicago:20260927T103000
+SUMMARY:St. Ann Religious Education: Sit Together at Mass / Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for details and any earlier Mass activity.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261004@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261004T093000
+DTEND;TZID=America/Chicago:20261004T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261025@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261025T093000
+DTEND;TZID=America/Chicago:20261025T103000
+SUMMARY:St. Ann Religious Education: Group Rosary Before Mass / Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for Group Rosary timing.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261101@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261101T093000
+DTEND;TZID=America/Chicago:20261101T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261108@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261108T093000
+DTEND;TZID=America/Chicago:20261108T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261115@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261115T093000
+DTEND;TZID=America/Chicago:20261115T103000
+SUMMARY:St. Ann Religious Education: Thanksgiving Potluck
+DESCRIPTION:Sit Together at Mass / Regular Class / Thanksgiving Potluck. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261206@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261206T093000
+DTEND;TZID=America/Chicago:20261206T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20261213@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20261213T093000
+DTEND;TZID=America/Chicago:20261213T103000
+SUMMARY:St. Ann Religious Education: Nativity Play and Party
+DESCRIPTION:St. Ann Religious Education Nativity Play and Party. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270110@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270110T093000
+DTEND;TZID=America/Chicago:20270110T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270117@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270117T093000
+DTEND;TZID=America/Chicago:20270117T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270124@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270124T093000
+DTEND;TZID=America/Chicago:20270124T103000
+SUMMARY:St. Ann Religious Education: Sit Together at Mass / Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for details and any earlier Mass activity.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270131@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270131T093000
+DTEND;TZID=America/Chicago:20270131T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270207@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270207T093000
+DTEND;TZID=America/Chicago:20270207T103000
+SUMMARY:St. Ann Religious Education: Valentine Potluck
+DESCRIPTION:Regular Class / Valentine Potluck. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270221@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270221T093000
+DTEND;TZID=America/Chicago:20270221T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270228@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270228T093000
+DTEND;TZID=America/Chicago:20270228T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270307@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270307T093000
+DTEND;TZID=America/Chicago:20270307T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270404@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270404T093000
+DTEND;TZID=America/Chicago:20270404T103000
+SUMMARY:St. Ann Religious Education: Easter Egg Hunt
+DESCRIPTION:Regular Class / Easter Egg Hunt. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270411@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270411T093000
+DTEND;TZID=America/Chicago:20270411T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270418@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270418T093000
+DTEND;TZID=America/Chicago:20270418T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270425@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270425T093000
+DTEND;TZID=America/Chicago:20270425T103000
+SUMMARY:St. Ann Religious Education: Regular Class
+DESCRIPTION:St. Ann Religious Education. Check the current Religious Education newsletter for updates.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270502@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270502T093000
+DTEND;TZID=America/Chicago:20270502T103000
+SUMMARY:St. Ann Religious Education: May Crowning / Last Day of Regular Class
+DESCRIPTION:May Crowning / Sit Together at Mass / Last Day of Regular Class. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+BEGIN:VEVENT
+UID:stann-re-20270516@triparishok.org
+DTSTAMP:20260830T000000Z
+DTSTART;TZID=America/Chicago:20270516T093000
+DTEND;TZID=America/Chicago:20270516T103000
+SUMMARY:St. Ann Religious Education: End of Year Party
+DESCRIPTION:St. Ann Religious Education End of Year Party. Check the current Religious Education newsletter for details.
+LOCATION:St. Ann Catholic Church\, 8492 State Hwy 17\, Elgin\, OK 73538
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,124 @@
+title: "St. Ann Religious Education 2026–2027 Sunday Schedule"
+summary: "Regular Sunday Religious Education begins at 9:30 AM at St. Ann. The calendar subscription includes class meetings and special activities; it does not add no-class days."
+subscription_url: "https://triparishok.org/faith-formation/st-ann-religious-education.ics"
+items:
+  - date: "2026-08-16"
+    title: "Enrollment Day"
+    type: event
+  - date: "2026-08-23"
+    title: "First Day of Classes"
+    type: event
+  - date: "2026-08-30"
+    title: "Regular Class"
+    type: event
+  - date: "2026-09-06"
+    title: "Labor Day"
+    type: no-class
+  - date: "2026-09-13"
+    title: "Regular Class"
+    type: event
+  - date: "2026-09-20"
+    title: "Regular Class"
+    type: event
+  - date: "2026-09-27"
+    title: "Sit Together at Mass / Regular Class"
+    type: event
+  - date: "2026-10-04"
+    title: "Regular Class"
+    type: event
+  - date: "2026-10-11"
+    title: "Fall Break"
+    type: no-class
+  - date: "2026-10-18"
+    title: "Fall Break"
+    type: no-class
+  - date: "2026-10-25"
+    title: "Group Rosary Before Mass / Regular Class"
+    type: event
+  - date: "2026-11-01"
+    title: "Regular Class"
+    type: event
+  - date: "2026-11-08"
+    title: "Regular Class"
+    type: event
+  - date: "2026-11-15"
+    title: "Sit Together at Mass / Regular Class / Thanksgiving Potluck"
+    type: event
+  - date: "2026-11-22"
+    title: "Thanksgiving Break"
+    type: no-class
+  - date: "2026-11-29"
+    title: "Thanksgiving Break"
+    type: no-class
+  - date: "2026-12-06"
+    title: "Regular Class"
+    type: event
+  - date: "2026-12-13"
+    title: "Nativity Play and Party"
+    type: event
+  - date: "2026-12-20"
+    title: "Christmas Break"
+    type: no-class
+  - date: "2026-12-27"
+    title: "Winter Break"
+    type: no-class
+  - date: "2027-01-03"
+    title: "Winter Break"
+    type: no-class
+  - date: "2027-01-10"
+    title: "Regular Class"
+    type: event
+  - date: "2027-01-17"
+    title: "Regular Class"
+    type: event
+  - date: "2027-01-24"
+    title: "Sit Together at Mass / Regular Class"
+    type: event
+  - date: "2027-01-31"
+    title: "Regular Class"
+    type: event
+  - date: "2027-02-07"
+    title: "Regular Class / Valentine Potluck"
+    type: event
+  - date: "2027-02-14"
+    title: "EPS 4-Day Weekend"
+    type: no-class
+  - date: "2027-02-21"
+    title: "Regular Class"
+    type: event
+  - date: "2027-02-28"
+    title: "Regular Class"
+    type: event
+  - date: "2027-03-07"
+    title: "Regular Class"
+    type: event
+  - date: "2027-03-14"
+    title: "Spring Break"
+    type: no-class
+  - date: "2027-03-21"
+    title: "Spring Break"
+    type: no-class
+  - date: "2027-03-28"
+    title: "Easter Sunday"
+    type: no-class
+  - date: "2027-04-04"
+    title: "Regular Class / Easter Egg Hunt"
+    type: event
+  - date: "2027-04-11"
+    title: "Regular Class"
+    type: event
+  - date: "2027-04-18"
+    title: "Regular Class"
+    type: event
+  - date: "2027-04-25"
+    title: "Regular Class"
+    type: event
+  - date: "2027-05-02"
+    title: "May Crowning / Sit Together at Mass / Last Day of Regular Class"
+    type: event
+  - date: "2027-05-09"
+    title: "First Communion / Mother’s Day"
+    type: no-class
+  - date: "2027-05-16"
+    title: "End of Year Party"
+    type: event

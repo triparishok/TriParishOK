@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+<section class="faith-formation-hero page-header-with-image" style="{{ partial "page-header-style.html" "faith-formation" | safeCSS }}">
+  <div class="faith-formation-inner">
+    <p class="eyebrow">St. Ann · Elgin</p>
+    <h1>{{ .Title }}</h1>
+    <p>
+      Find the current school-year schedule, Religious Education newsletters,
+      family resources, and answers for St. Ann families.
+    </p>
+
+    <div class="button-row faith-formation-actions">
+      <a class="button button-primary" href="#re-calendar">View the Schedule</a>
+      <a class="button button-secondary" href="{{ "faith-formation/" | relURL }}">All Faith Formation</a>
+      <a class="button button-secondary" href="https://www.facebook.com/share/g/1BkTngRotb/" target="_blank" rel="noopener noreferrer">Join St. Ann’s RE Facebook Group</a>
+    </div>
+  </div>
+</section>
+
+{{ with hugo.Data.faith_formation_calendar }}
+<section class="section faith-formation-calendar-section" id="re-calendar" aria-labelledby="re-calendar-heading">
+  <div class="section-heading">
+    <p class="eyebrow">School-Year Schedule</p>
+    <h2 id="re-calendar-heading">{{ .title }}</h2>
+    <p>{{ .summary }}</p>
+    <div class="card-actions faith-formation-calendar-actions">
+      <a class="button button-primary" href="https://calendar.google.com/calendar/u/0/r?cid={{ .subscription_url | urlquery }}" target="_blank" rel="noopener noreferrer">Subscribe in Google Calendar</a>
+      <a class="button button-secondary" href="webcal://triparishok.org/faith-formation/st-ann-religious-education.ics">Subscribe in Apple Calendar</a>
+      <a class="button button-secondary" href="{{ .subscription_url }}" download>Download Calendar File</a>
+    </div>
+  </div>
+  <details class="faith-formation-calendar-details">
+    <summary>View the Full 2026–2027 Schedule</summary>
+    <div class="faith-formation-calendar-list">
+      {{ range .items }}
+        {{ $date := time.AsTime .date }}
+        <article class="faith-formation-calendar-item faith-formation-calendar-item-{{ .type }}">
+          <time datetime="{{ .date }}">{{ $date.Format "January 2" }}</time>
+          <p>{{ .title }}{{ if eq .type "no-class" }} <span>No Class</span>{{ end }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </details>
+</section>
+{{ end }}
+
+{{ $newsletters := where hugo.Data.faith_formation_newsletters.items "enabled" true }}
+{{ range first 1 $newsletters }}
+<section class="section faith-formation-newsletter-section" id="re-newsletter" aria-labelledby="re-newsletter-heading">
+  <div class="faith-formation-newsletter-card">
+    <div>
+      <p class="eyebrow">{{ .parish }} · Current Update</p>
+      <h2 id="re-newsletter-heading">{{ .title }}</h2>
+      <p>
+        Class dates, parent reminders, and upcoming activities are shared in the current
+        Religious Education newsletter.
+      </p>
+      <p class="faith-formation-newsletter-date">{{ .date }}</p>
+      <div class="card-actions">
+        <a class="button button-primary" href="{{ .image | relURL }}" target="_blank" rel="noopener">Open Newsletter Full Size</a>
+        <a class="button button-secondary" href="{{ .image | relURL }}" download>Download Newsletter Image</a>
+      </div>
+    </div>
+    <a class="faith-formation-newsletter-preview" href="{{ .image | relURL }}" target="_blank" rel="noopener" aria-label="Open the {{ .title }} full size">
+      {{ partial "static-image.html" (dict "src" .image "alt" .alt) }}
+    </a>
+  </div>
+</section>
+{{ end }}
+
+{{ if gt (len $newsletters) 1 }}
+<section class="section faith-formation-newsletter-archive-section" aria-labelledby="re-newsletter-archive-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Previous Updates</p>
+    <h2 id="re-newsletter-archive-heading">Earlier Religious Education Newsletters</h2>
+  </div>
+  <div class="faith-formation-newsletter-archive-list">
+    {{ range after 1 $newsletters }}
+      <article class="faith-formation-newsletter-archive-item">
+        <div>
+          <p class="faith-formation-newsletter-date">{{ .parish }} · {{ .date }}</p>
+          <h3>{{ .title }}</h3>
+        </div>
+        <a class="button button-secondary" href="{{ .image | relURL }}" target="_blank" rel="noopener">Open Newsletter</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="section section-light faith-formation-family-section" aria-labelledby="faith-formation-family-heading">
+  <div class="section-heading">
+    <p class="eyebrow">At Home</p>
+    <h2 id="faith-formation-family-heading">Prepare for Sunday Mass Together.</h2>
+    <p>
+      These family-friendly Catholic resources can help children listen to the Sunday readings,
+      ask good questions, and arrive at Mass ready to pray.
+    </p>
+  </div>
+
+  <div class="faith-formation-family-grid">
+    <article class="faith-formation-family-card">
+      <p class="faith-formation-label">Weekly Listening</p>
+      <h3>Family Mass Prep with Katie McGrady</h3>
+      <p>Short weekly reflections on the Sunday Mass readings for families to hear on the way to church or while getting ready at home. Hallow is an app-based resource and may require a subscription.</p>
+      <div class="card-actions">
+        <a class="button button-secondary" href="https://hallow.com/collections/538/family-mass-prep-katie-mcgrady/" target="_blank" rel="noopener noreferrer">Visit Hallow</a>
+      </div>
+    </article>
+    <article class="faith-formation-family-card">
+      <p class="faith-formation-label">Sunday Activities</p>
+      <h3>Holy Heroes Sunday Mass Prep</h3>
+      <p>Free Catholic activities and preparation for children and families to use before Sunday Mass.</p>
+      <div class="card-actions">
+        <a class="button button-secondary" href="https://holyheroes.com/pages/sunday-mass-prep" target="_blank" rel="noopener noreferrer">Visit Holy Heroes</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section faith-formation-details-section" aria-labelledby="st-ann-re-details-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Practical Details</p>
+    <h2 id="st-ann-re-details-heading">Questions for St. Ann Families</h2>
+  </div>
+  <div class="faith-formation-detail-list">
+    {{ range hugo.Data.st_ann_religious_education.faqs }}
+      <article class="faith-formation-detail-card">
+        <h3>{{ .question }}</h3>
+        <p>{{ .answer }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section faith-formation-contact-section" aria-labelledby="st-ann-re-contact-heading">
+  <div class="faith-formation-contact-card">
+    <div>
+      <p class="eyebrow">Need Help?</p>
+      <h2 id="st-ann-re-contact-heading">Contact the Parish Office.</h2>
+      <p>The office can help with registration, sacramental preparation, volunteer needs, and current schedules.</p>
+    </div>
+    <div class="faith-formation-contact-actions">
+      <a class="button button-primary" href="{{ "contact/" | relURL }}">Contact the Parish Office</a>
+      <a class="button button-secondary" href="{{ "forms/#religious-education-youth-forms" | relURL }}">View Religious Education Forms</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

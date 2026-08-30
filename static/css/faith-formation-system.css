@@ -279,3 +279,220 @@
 .faith-formation-card .button {
   margin: 0;
 }
+
+/* Religious Education newsletter and family resources */
+
+.faith-formation-newsletter-section {
+  background: var(--white);
+}
+
+.faith-formation-calendar-section {
+  background: var(--white);
+}
+
+.faith-formation-calendar-actions {
+  margin-top: 1.25rem;
+}
+
+.faith-formation-calendar-list {
+  max-width: 1040px;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7rem;
+}
+
+.faith-formation-calendar-details {
+  max-width: 1040px;
+  margin: 1.5rem auto 0;
+}
+
+.faith-formation-calendar-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1.1rem;
+  color: var(--navy);
+  font-weight: 800;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+}
+
+.faith-formation-calendar-details summary::after {
+  content: "+";
+  color: var(--maroon);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.faith-formation-calendar-details[open] summary::after {
+  content: "−";
+}
+
+.faith-formation-calendar-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faith-formation-calendar-item {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.faith-formation-calendar-item time {
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.faith-formation-calendar-item p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.faith-formation-calendar-item-no-class {
+  background: var(--gold-tint);
+}
+
+.faith-formation-calendar-item-no-class span {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.faith-formation-newsletter-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--gold-tint);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.faith-formation-newsletter-card h2 {
+  margin-top: 0;
+}
+
+.faith-formation-newsletter-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.faith-formation-newsletter-preview {
+  display: block;
+  max-width: 300px;
+  justify-self: center;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.faith-formation-newsletter-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.faith-formation-newsletter-archive-section {
+  background: var(--ivory);
+}
+
+.faith-formation-newsletter-archive-list {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faith-formation-newsletter-archive-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.faith-formation-newsletter-archive-item h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.faith-formation-family-section {
+  background: var(--ivory);
+}
+
+.faith-formation-family-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.faith-formation-family-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.faith-formation-family-card h3,
+.faith-formation-family-card p {
+  margin: 0;
+}
+
+.faith-formation-family-card h3 {
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.faith-formation-family-card .card-actions {
+  margin-top: auto;
+}
+
+@media (min-width: 760px) {
+  .faith-formation-newsletter-card {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  }
+
+  .faith-formation-family-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .faith-formation-newsletter-archive-item {
+    display: grid;
+  }
+}

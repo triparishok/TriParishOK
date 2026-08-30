@@ -19,6 +19,14 @@ media:
     rename: safe
     categories: [image]
 
+  - name: faith_formation_newsletters
+    label: Religious Education Newsletters
+    input: static/images/faith-formation/newsletters
+    output: /images/faith-formation/newsletters
+    extensions: [png, jpg, jpeg]
+    rename: safe
+    categories: [image]
+
 content:
   - name: website-photos
     label: Website Photos — Rare Changes
@@ -439,10 +447,95 @@ content:
             required: true
             readonly: true
 
+      - name: faith-formation-newsletters
+        label: St. Ann Religious Education Newsletters
+        type: file
+        path: data/faith_formation_newsletters.yaml
+        format: yaml
+        fields:
+          - name: items
+            label: Newsletters
+            type: object
+            description: "Add the newest newsletter first. It appears as the large current newsletter on the Faith Formation page; older newsletters remain below it."
+            list:
+              min: 0
+              max: 30
+              collapsible:
+                collapsed: true
+                summary: "{date} — {title}"
+            fields:
+              - name: enabled
+                label: Show This Newsletter
+                type: boolean
+                required: false
+                default: true
+                description: "Turn this off to hide a newsletter without deleting it."
+
+              - name: title
+                label: Newsletter Title
+                type: string
+                required: true
+                default: "Religious Education Newsletter"
+
+              - name: date
+                label: Newsletter Date
+                type: string
+                required: true
+                description: "Example: August 30, 2026"
+
+              - name: parish
+                label: Parish
+                type: string
+                required: true
+                default: "St. Ann"
+
+              - name: image
+                label: Newsletter Image
+                type: file
+                required: true
+                description: "Upload the finished newsletter as a PNG or JPG."
+                options:
+                  media: faith_formation_newsletters
+                  extensions: [png, jpg, jpeg]
+                  rename: safe
+
+              - name: alt
+                label: Image Description
+                type: string
+                required: true
+                description: "Example: St. Ann Religious Education newsletter for August 30, 2026"
+
   - name: regular-schedules
     label: Regular Schedules — Rare Changes
     type: group
     items:
+      - name: st-ann-religious-education
+        label: St. Ann Religious Education FAQs
+        type: file
+        path: data/st_ann_religious_education.yaml
+        format: yaml
+        fields:
+          - name: faqs
+            label: Questions and Answers
+            type: object
+            description: "These appear only on the St. Ann Religious Education page."
+            list:
+              min: 1
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{question}"
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+
+              - name: answer
+                label: Answer
+                type: text
+                required: true
+
       - name: schedule
         label: Regular Mass & Prayer Schedule
         type: file
