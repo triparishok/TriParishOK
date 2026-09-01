@@ -107,3 +107,51 @@
     display: none;
   }
 }
+
+/* Tri-Parish mark: used in the shared identity areas, not as a replacement for parish-specific imagery. */
+.brand-minimal {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-minimal-mark {
+  display: block;
+  width: 54px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brand-minimal-copy {
+  display: grid;
+  gap: 0.02rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-brand img {
+  display: block;
+  width: 64px;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
+.footer-brand h2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .brand-minimal-mark {
+    width: 46px;
+    height: 29px;
+  }
+
+  .footer-brand img {
+    width: 56px;
+    height: 35px;
+  }
+}
