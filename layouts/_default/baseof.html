@@ -67,9 +67,12 @@
   {{ end }}
   <div class="header-shell-minimal">
     <a class="brand-minimal" href="{{ "" | relURL }}" aria-label="Tri-Parish Catholic Community home">
-      <span class="brand-main-minimal">Tri-Parish</span>
-      <span class="brand-sub-minimal">Catholic Community</span>
-      <small>St. Ann • OLPH • Mother of Sorrows</small>
+      <img class="brand-minimal-mark" src="{{ "images/brand/triparish-header-oval.png" | relURL }}" alt="" width="640" height="400">
+      <span class="brand-minimal-copy">
+        <span class="brand-main-minimal">Tri-Parish</span>
+        <span class="brand-sub-minimal">Catholic Community</span>
+        <small>St. Ann • OLPH • Mother of Sorrows</small>
+      </span>
     </a>
 
     <div class="header-actions-minimal">
@@ -129,7 +132,10 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <section>
-        <h2>Tri-Parish Catholic Community</h2>
+        <div class="footer-brand">
+          <img src="{{ "images/brand/triparish-header-oval.png" | relURL }}" alt="Tri-Parish Catholic Community" width="640" height="400">
+          <h2>Tri-Parish Catholic Community</h2>
+        </div>
         <p>St. Ann • Our Lady of Perpetual Help • Mother of Sorrows</p>
         <p class="footer-note">One Catholic community serving Elgin, Sterling, Apache, and the surrounding area.</p>
       </section>
