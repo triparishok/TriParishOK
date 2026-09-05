@@ -43,3 +43,19 @@ items:
     calendar:
       enabled: false
     action: none
+  - enabled: true
+    label: Office Notice
+    title: St. Ann's now offers online giving!
+    detail: If you would like to enroll, please visit [Giving &
+      Stewardship](https://triparishok.org/giving/). To go directly to our
+      secure online giving website, click [Give Online to St
+      Ann](https://onrealm.org/SaintAnnChurch/give/now). Thank you for your
+      generous support of St. Ann's. It is greatly appreciated!
+    parishes:
+      - st-ann
+    start_date: 2026-09-05
+    end_date: 2026-09-27
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
