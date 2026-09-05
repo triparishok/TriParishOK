@@ -1,7 +1,7 @@
 items:
   - enabled: true
-    title: "Religious Education Newsletter"
-    date: "August 30, 2026"
-    parish: "St. Ann"
-    image: "/images/faith-formation/newsletters/re-newsletter-2026-08-30.png"
-    alt: "St. Ann Religious Education newsletter for August 30, 2026"
+    title: Religious Education Newsletter
+    date: September 6, 2026
+    parish: St. Ann
+    image: /images/faith-formation/newsletters/re-newsletter-9-6-2026.png
+    alt: St. Ann Religious Education newsletter for September 6, 2026
