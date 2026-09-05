@@ -17,43 +17,6 @@ items:
       location: 8492 OK-17, Elgin, OK 73538
     action: bulletin
   - enabled: true
-    label: Faith Formation
-    title: Parent information meeting for Confirmation Class
-    detail: |-
-      September 2nd at 7:00pm in St. Ann's Parish Hall.
-
-      Classes start September 9th. Class is open to students in 6th-12th grades.
-    parishes:
-      - st-ann
-    start_date: 2026-08-28
-    end_date: 2026-09-02
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-09-02T19:00:00Z
-      end: 2026-09-02T20:00:00Z
-      location: 8492 OK-17, Elgin, OK 73538
-    action: contact-page
-  - enabled: true
-    label: Office Notice
-    title: Volunteer Training
-    detail: |-
-      **Attention Parish Volunteers**: Safe environment training begins August 1, 2026, and must be completed by August 30, 2026.
-
-      **Current volunteers** will receive an email from the Archdiocese prompting them to update records and complete the next training session. If you have routine technical questions, please use the following email to contact the tech support staff at the arch diocese: [safeguarding@archokc.org](mailto:safeguarding@archokc.org).
-
-      **New volunteers** can access the training on the Archdiocese safe environment training site at [https://archokc.safeenvironment.org/login/index.php](https://archokc.safeenvironment.org/login/index.php). New volunteers will need to submit a background check, provide three references for us to contact and take the first training session. 
-
-      Parish contact is Sherri Woolridge.
-    parishes:
-      - st-ann
-    start_date: 2026-08-05
-    end_date: 2026-08-30
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: contact-page
-  - enabled: true
     label: Office Notice
     title: Parish Office Closed Labor Day
     detail: Monday, September 7th, in observance of Labor Day.
