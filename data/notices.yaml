@@ -53,3 +53,15 @@ items:
     calendar:
       enabled: false
     action: contact-page
+  - enabled: true
+    label: Office Notice
+    title: Parish Office Closed Labor Day
+    detail: Monday, September 7th, in observance of Labor Day.
+    parishes:
+      - tri-parish
+    start_date: 2026-09-05
+    end_date: 2026-09-07
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
