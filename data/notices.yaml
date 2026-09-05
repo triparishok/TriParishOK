@@ -28,3 +28,18 @@ items:
     calendar:
       enabled: false
     action: none
+  - enabled: true
+    label: Community Meal
+    title: Coffee and Donuts at St. Ann's
+    detail: Daughters of St. Ann will be hosting coffee and donuts Sunday, September
+      6th, immediately after Mass. Everyone is invited to come and fellowship
+      with us! The Gift Shop will also be opened. Please see Leslie Durham or
+      Janie Morrison.
+    parishes:
+      - st-ann
+    start_date: 2026-09-05
+    end_date: 2026-09-06
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
