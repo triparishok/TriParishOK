@@ -1,21 +1,5 @@
 items:
   - enabled: true
-    label: Office Notice
-    title: St. Ann's now offers online giving!
-    detail: If you would like to enroll, please visit [Giving &
-      Stewardship](https://triparishok.org/giving/). To go directly to our
-      secure online giving website, click [Give Online to St
-      Ann](https://onrealm.org/SaintAnnChurch/give/now). Thank you for your
-      generous support of St. Ann's. It is greatly appreciated!
-    parishes:
-      - st-ann
-    start_date: 2026-09-05
-    end_date: 2026-09-27
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
-  - enabled: true
     label: Special Mass
     title: Anniversary Memorial Masses Remembering Father Linh - September 19th and
       20th
@@ -34,6 +18,50 @@ items:
 
       Eternal rest grant unto him, O Lord, and let perpetual light shine upon
       him. May he rest in peace. Amen.
+    parishes:
+      - tri-parish
+    start_date: 2026-09-12
+    end_date: 2026-09-20
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
+  - enabled: true
+    label: Office Notice
+    title: St. Ann's now offers online giving!
+    detail: If you would like to enroll, please visit [Giving &
+      Stewardship](https://triparishok.org/giving/). To go directly to our
+      secure online giving website, click [Give Online to St
+      Ann](https://onrealm.org/SaintAnnChurch/give/now). Thank you for your
+      generous support of St. Ann's. It is greatly appreciated!
+    parishes:
+      - st-ann
+    start_date: 2026-09-05
+    end_date: 2026-09-27
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
+  - enabled: true
+    label: Current Need
+    title: 2026 Catholic Charities Campaign
+    detail: >-
+      The 2026 Catholic Charities Campaign will take place next weekend in our
+      parish.
+
+
+      Your generous support will transform the lives of others to offer dignity,
+      hope, and healing to those most in need.
+
+
+      As in the past, an in-pew commitment process will take place next weekend,
+      September 19-20. All who have not received the mailing, or have not had a
+      chance to respond to it, will be asked to consider making a generous gift
+      to support the ministries and services provided by Catholic Charities.
+
+
+      We invite you to view stories of inspiration and more information at:
+      catholiccharitiesok.org/IMPACT-STORIES
     parishes:
       - tri-parish
     start_date: 2026-09-12
