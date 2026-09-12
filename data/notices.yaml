@@ -1,49 +1,5 @@
 items:
   - enabled: true
-    label: Schedule Change
-    title: Nativity of the Blessed Virgin Mary
-    detail: September 8th, is the Birthday of the Blessed Virgin Mary. We will have
-      Mass at 8:30am, at St. Ann's. You are invited to join for the Feast Day
-      Mass. Followed by refreshments in the Parish Hall.
-    parishes:
-      - st-ann
-    start_date: 2026-08-28
-    end_date: 2026-09-08
-    affects_schedule: true
-    calendar:
-      enabled: true
-      start: 2026-09-08T08:30:00Z
-      end: 2026-09-08T09:30:00Z
-      location: 8492 OK-17, Elgin, OK 73538
-    action: bulletin
-  - enabled: true
-    label: Office Notice
-    title: Parish Office Closed Labor Day
-    detail: Monday, September 7th, in observance of Labor Day.
-    parishes:
-      - tri-parish
-    start_date: 2026-09-05
-    end_date: 2026-09-07
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
-  - enabled: true
-    label: Community Meal
-    title: Coffee and Donuts at St. Ann's
-    detail: Daughters of St. Ann will be hosting coffee and donuts Sunday, September
-      6th, immediately after Mass. Everyone is invited to come and fellowship
-      with us! The Gift Shop will also be opened. Please see Leslie Durham or
-      Janie Morrison.
-    parishes:
-      - st-ann
-    start_date: 2026-09-05
-    end_date: 2026-09-06
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
-  - enabled: true
     label: Office Notice
     title: St. Ann's now offers online giving!
     detail: If you would like to enroll, please visit [Giving &
@@ -55,6 +11,33 @@ items:
       - st-ann
     start_date: 2026-09-05
     end_date: 2026-09-27
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
+  - enabled: true
+    label: Special Mass
+    title: Anniversary Memorial Masses Remembering Father Linh - September 19th and
+      20th
+    detail: >-
+      As we mark the first anniversary of the death of our beloved Father Linh,
+      we pause with grateful hearts to remember his life and priestly ministry.
+      His gentle spirit, humility, kindness, and love for God's people touched
+      the lives of many.
+
+
+      On this anniversary, let us give thanks for the gift of Father Linh's life
+      and continue to pray for the repose of his soul, and for his Mom and Dad &
+      Family. May his example of faith, humility, and love inspire us to draw
+      closer to Christ.
+
+
+      Eternal rest grant unto him, O Lord, and let perpetual light shine upon
+      him. May he rest in peace. Amen.
+    parishes:
+      - tri-parish
+    start_date: 2026-09-12
+    end_date: 2026-09-20
     affects_schedule: false
     calendar:
       enabled: false
