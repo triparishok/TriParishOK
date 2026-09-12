@@ -1127,8 +1127,7 @@
   object-fit: cover;
 }
 
-.home-life-photo figcaption,
-.home-life-carousel-slide figcaption {
+.home-life-photo figcaption {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1144,18 +1143,16 @@
 .home-life-carousel {
   isolation: isolate;
   width: 100%;
-  height: clamp(24rem, 48vw, 36rem);
+  --carousel-image-height: clamp(24rem, 48vw, 36rem);
 }
 
 .home-life-carousel-slides,
 .home-life-carousel-slide {
   width: 100%;
-  height: 100%;
 }
 
 .home-life-carousel-slide {
-  position: absolute;
-  inset: 0;
+  position: relative;
   margin: 0;
   background: #0b263f;
 }
@@ -1163,7 +1160,6 @@
 .home-life-carousel-link {
   display: block;
   width: 100%;
-  height: 100%;
   color: inherit;
   text-decoration: none;
 }
@@ -1184,17 +1180,23 @@
   display: none;
 }
 
+.home-life-carousel-slide figcaption {
+  position: static;
+  padding: 1rem 1.25rem;
+  background: var(--navy);
+  overflow-wrap: anywhere;
+}
+
 .home-life-carousel-slide .home-life-image {
+  height: var(--carousel-image-height);
+  min-height: 0;
   object-fit: contain;
   object-position: center;
 }
 
 .home-life-carousel-controls {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 3.35rem;
-  left: 0.75rem;
-  z-index: 2;
+  position: relative;
+  padding: 0.25rem 0.75rem 0.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1283,7 +1285,7 @@
   }
 
   .home-life-carousel {
-    height: 30rem;
+    --carousel-image-height: 30rem;
   }
 
   .home-parish-life-actions {

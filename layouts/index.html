@@ -189,11 +189,11 @@
                 {{ $photoLink := strings.TrimPrefix "/" . }}
                 <a class="home-life-carousel-link" href="{{ $photoLink | relURL }}">
                   {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
-                  <figcaption>
-                    <span>{{ $photo.caption }}</span>
-                    {{ with $photo.link_text }}<span class="home-life-carousel-link-text">{{ . }} →</span>{{ end }}
-                  </figcaption>
                 </a>
+                <figcaption>
+                    <span>{{ $photo.caption }}</span>
+                    {{ with $photo.link_text }}<a class="home-life-carousel-link home-life-carousel-link-text" href="{{ $photoLink | relURL }}">{{ . }} →</a>{{ end }}
+                </figcaption>
               {{ else }}
                 {{ partial "static-image.html" (dict "src" $photo.image "alt" $photo.alt "class" "home-life-image") }}
                 <figcaption>{{ $photo.caption }}</figcaption>
