@@ -7,7 +7,7 @@ description: In today’s Gospel, Peter asks Jesus how many times he must forgiv
   seventy-seven times.” Through the parable of the unforgiving servant, Jesus
   reminds us that God’s mercy is far greater than anything we could ever earn or
   repay.
-draft: true
+draft: false
 ---
 We all need forgiveness, and we all know what it means to be hurt by others. Forgiving does not mean pretending that the hurt did not happen or ignoring the need for justice. Rather, forgiveness frees our hearts from resentment and allows God's healing grace to work within us.
 
