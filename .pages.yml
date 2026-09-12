@@ -237,7 +237,7 @@ content:
                 type: select
                 required: true
                 default: none
-                description: "Choose the safest next step for the visitor."
+                description: "Choose a preset button, Custom Link, or No Button. Custom Link requires both fields below."
                 options:
                   values:
                     - name: none
@@ -250,6 +250,23 @@ content:
                       label: Open the Contact Page
                     - name: bulletin
                       label: Open the Current Bulletin
+                    - name: custom
+                      label: Custom Link
+
+              - name: action_text
+                label: Custom Button Text
+                type: string
+                required: false
+                description: "Only used with Custom Link. Enter a short label, such as Read Catholic Charities Stories."
+
+              - name: action_url
+                label: Custom Button Link
+                type: string
+                required: false
+                description: "Only used with Custom Link. Paste the full https:// address, or a site path such as /giving/. Leave both custom fields blank for preset buttons or No Button."
+                pattern:
+                  regex: '^(https?://[^/\s?#]+[^\s]*|/[^/\s][^\s]*|/)?$'
+                  message: "Use a full https:// address or a site path beginning with one slash, such as /giving/."
 
       - name: reflections
         label: Father's Reflections
