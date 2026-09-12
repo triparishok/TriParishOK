@@ -1,6 +1,14 @@
 {{- $action := .action | default "none" -}}
 
-{{- if eq $action "email-office" -}}
+{{- if eq $action "custom" -}}
+  {{- $text := strings.TrimSpace (.action_text | default "") -}}
+  {{- $url := strings.TrimSpace (.action_url | default "") -}}
+  {{- if and $text (findRE `^(https?://[^/\s?#]+[^\s]*|/[^/\s][^\s]*|/)$` $url) -}}
+    <a class="button button-secondary important-week-button" href="{{ partial "safe-url.html" $url }}">
+      {{ $text }}
+    </a>
+  {{- end -}}
+{{- else if eq $action "email-office" -}}
   <a class="button button-secondary important-week-button"
      href="mailto:{{ hugo.Data.contact.office.email }}?subject={{ .title | urlquery }}">
     Email the Parish Office
