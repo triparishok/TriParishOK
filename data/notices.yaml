@@ -58,10 +58,6 @@ items:
       September 19-20. All who have not received the mailing, or have not had a
       chance to respond to it, will be asked to consider making a generous gift
       to support the ministries and services provided by Catholic Charities.
-
-
-      We invite you to view stories of inspiration and more information at:
-      catholiccharitiesok.org/IMPACT-STORIES
     parishes:
       - tri-parish
     start_date: 2026-09-12
@@ -69,4 +65,7 @@ items:
     affects_schedule: false
     calendar:
       enabled: false
-    action: none
+    action: custom
+    action_text: We invite you to view stories of inspiration and more information
+      from Catholic Charities.
+    action_url: https://catholiccharitiesok.org/IMPACT-STORIES
