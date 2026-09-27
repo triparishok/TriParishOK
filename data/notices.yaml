@@ -1,59 +1,5 @@
 items:
   - enabled: true
-    label: Special Mass
-    title: Anniversary Memorial Masses Remembering Father Linh - September 19th and
-      20th
-    detail: >-
-      As we mark the first anniversary of the death of our beloved Father Linh,
-      we pause with grateful hearts to remember his life and priestly ministry.
-      His gentle spirit, humility, kindness, and love for God's people touched
-      the lives of many.
-
-
-      On this anniversary, let us give thanks for the gift of Father Linh's life
-      and continue to pray for the repose of his soul, and for his Mom and Dad &
-      Family. May his example of faith, humility, and love inspire us to draw
-      closer to Christ.
-
-
-      Eternal rest grant unto him, O Lord, and let perpetual light shine upon
-      him. May he rest in peace. Amen.
-    parishes:
-      - tri-parish
-    start_date: 2026-09-12
-    end_date: 2026-09-20
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
-  - enabled: true
-    label: Current Need
-    title: 2026 Catholic Charities Campaign
-    detail: >-
-      The 2026 Catholic Charities Campaign will take place next weekend in our
-      parish.
-
-
-      Your generous support will transform the lives of others to offer dignity,
-      hope, and healing to those most in need.
-
-
-      As in the past, an in-pew commitment process will take place next weekend,
-      September 19-20. All who have not received the mailing, or have not had a
-      chance to respond to it, will be asked to consider making a generous gift
-      to support the ministries and services provided by Catholic Charities.
-    parishes:
-      - tri-parish
-    start_date: 2026-09-12
-    end_date: 2026-09-20
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: custom
-    action_text: We invite you to view stories of inspiration and more information
-      from Catholic Charities.
-    action_url: https://catholiccharitiesok.org/IMPACT-STORIES
-  - enabled: true
     label: Parish Event
     title: Fr. Deva is celebrating his 57th Birthday
     detail: Our Pastor, Fr. Deva is celebrating his 57th Birthday October 7th on the
@@ -85,19 +31,19 @@ items:
       Qualifications of Candidates:
 
 
-      1. ﻿﻿﻿Candidates must be mature, practicing Catholics who, ordinarily, are
-      at least eighteen years of age
+      1. Candidates must be mature, practicing Catholics who, ordinarily, are at
+      least eighteen years of age
 
-      2. ﻿﻿﻿Candidates should have received the Sacrament of Confirmation.
+      2. Candidates should have received the Sacrament of Confirmation.
 
-      3. ﻿﻿﻿Candidates who are converts should be active members of the Church
-      for at least three years.
+      3. Candidates who are converts should be active members of the Church for
+      at least three years.
 
-      4. ﻿﻿﻿Candidates who are married must be in a valid marriage.
+      4. Candidates who are married must be in a valid marriage.
 
-      5. ﻿﻿﻿Candidates must not be under any censure.
+      5. Candidates must not be under any censure.
 
-      6. ﻿﻿﻿The public life of the candidate must reflect the teachings of the
+      6. The public life of the candidate must reflect the teachings of the
       Church.
 
     parishes:
@@ -108,3 +54,19 @@ items:
     calendar:
       enabled: false
     action: email-office
+  - enabled: true
+    label: Parish Event
+    title: Blessing of the Animals
+    detail: In honor of St. Francis of Assisi we will have the blessing of animals,
+      Saturday October 3, 10:00am at St. Ann’s church yard.
+    parishes:
+      - tri-parish
+    start_date: 2026-09-27
+    end_date: 2026-10-03
+    affects_schedule: false
+    calendar:
+      enabled: true
+      start: 2026-10-03T10:00:00Z
+      end: 2026-10-03T11:00:00Z
+      location: St. Ann
+    action: none
