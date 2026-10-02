@@ -1,6 +1,29 @@
 items:
   - enabled: true
     label: Parish Event
+    title: Reception Celebrating Fr. Devas’ 57th Birthday!
+    detail: >-
+      Please join us in the St. Ann Parish Hall, October 4th after Mass, to
+      celebrate the **57th birthday of Fr. Deva!** We are grateful for his
+      faithful service, spiritual guidance, and the many ways he blesses our
+      parish community. 
+
+
+      Everyone is invited to come together, share in fellowship, and wish Fr.
+      Deva a very happy and blessed birthday.
+    parishes:
+      - tri-parish
+    start_date: 2026-10-02
+    end_date: 2026-10-04
+    affects_schedule: false
+    calendar:
+      enabled: true
+      start: 2026-10-04T09:45:00Z
+      end: 2026-10-04T10:45:00Z
+      location: St. Ann's Catholic Church 8492 State HWY 17 Elgin, OK 73538
+    action: none
+  - enabled: true
+    label: Parish Event
     title: Fr. Deva is celebrating his 57th Birthday
     detail: Our Pastor, Fr. Deva is celebrating his 57th Birthday October 7th on the
       feast of the Holy Rosary, there will be a Thanksgiving Mass Wednesday
@@ -17,43 +40,6 @@ items:
       start: 2026-10-07T09:00:00Z
       end: 2026-10-07T09:54:00Z
     action: none
-  - enabled: true
-    label: Current Need
-    title: Extraordinary Ministers of Holy Communion
-    detail: >+
-      If anyone is interested in becoming an Extraordinary Minister of Holy
-      Communion (a shortened title is Communion Minister) or those whose terms
-      are being renewed after completing a three year term, please contact the
-      Parish Office by October 26. These names will be submitted by Fr. Deva to
-      Archbishop Coakley.
-
-
-      Qualifications of Candidates:
-
-
-      1. Candidates must be mature, practicing Catholics who, ordinarily, are at
-      least eighteen years of age
-
-      2. Candidates should have received the Sacrament of Confirmation.
-
-      3. Candidates who are converts should be active members of the Church for
-      at least three years.
-
-      4. Candidates who are married must be in a valid marriage.
-
-      5. Candidates must not be under any censure.
-
-      6. The public life of the candidate must reflect the teachings of the
-      Church.
-
-    parishes:
-      - tri-parish
-    start_date: 2026-09-19
-    end_date: 2026-10-26
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: email-office
   - enabled: true
     label: Parish Event
     title: Blessing of the Animals
@@ -86,25 +72,38 @@ items:
       enabled: false
     action: bulletin
   - enabled: true
-    label: Parish Event
-    title: Reception Celebrating Fr. Devas’ 57th Birthday!
+    label: Current Need
+    title: Extraordinary Ministers of Holy Communion
     detail: >-
-      Please join us in the St. Ann Parish Hall, October 4th after Mass, to
-      celebrate the **57th birthday of Fr. Deva!** We are grateful for his
-      faithful service, spiritual guidance, and the many ways he blesses our
-      parish community. 
+      If anyone is interested in becoming an Extraordinary Minister of Holy
+      Communion (a shortened title is Communion Minister) or those whose terms
+      are being renewed after completing a three year term, please contact the
+      Parish Office by October 26. These names will be submitted by Fr. Deva to
+      Archbishop Coakley.
 
 
-      Everyone is invited to come together, share in fellowship, and wish Fr.
-      Deva a very happy and blessed birthday.
+      Qualifications of Candidates:
+
+
+      1. Candidates must be mature, practicing Catholics who, ordinarily, are at
+      least eighteen years of age
+
+      2. Candidates should have received the Sacrament of Confirmation.
+
+      3. Candidates who are converts should be active members of the Church for
+      at least three years.
+
+      4. Candidates who are married must be in a valid marriage.
+
+      5. Candidates must not be under any censure.
+
+      6. The public life of the candidate must reflect the teachings of the
+      Church.
     parishes:
       - tri-parish
-    start_date: 2026-10-02
-    end_date: 2026-10-04
+    start_date: 2026-09-19
+    end_date: 2026-10-26
     affects_schedule: false
     calendar:
-      enabled: true
-      start: 2026-10-04T09:45:00Z
-      end: 2026-10-04T10:45:00Z
-      location: St. Ann's Catholic Church 8492 State HWY 17 Elgin, OK 73538
-    action: none
+      enabled: false
+    action: email-office
