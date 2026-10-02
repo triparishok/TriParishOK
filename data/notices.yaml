@@ -70,3 +70,18 @@ items:
       end: 2026-10-03T11:00:00Z
       location: St. Ann
     action: none
+  - enabled: false
+    label: Current Need
+    title: Respect Life Service Project Collection
+    detail: "**In honor of Respect Life Month,** St. Ann's youth will be collecting
+      donations for the **Charis Center** - a pregnancy care center in Duncan-
+      throughout the month of October. Donation boxes will be in the Hall and
+      church entry starting next week."
+    parishes:
+      - st-ann
+    start_date: 2026-10-02
+    end_date: 2026-10-31
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: bulletin
