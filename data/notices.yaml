@@ -1,62 +1,5 @@
 items:
   - enabled: true
-    label: Parish Event
-    title: Reception Celebrating Fr. Devas’ 57th Birthday!
-    detail: >-
-      Please join us in the St. Ann Parish Hall, October 4th after Mass, to
-      celebrate the **57th birthday of Fr. Deva!** We are grateful for his
-      faithful service, spiritual guidance, and the many ways he blesses our
-      parish community. 
-
-
-      Everyone is invited to come together, share in fellowship, and wish Fr.
-      Deva a very happy and blessed birthday.
-    parishes:
-      - tri-parish
-    start_date: 2026-10-02
-    end_date: 2026-10-04
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-10-04T09:45:00Z
-      end: 2026-10-04T10:45:00Z
-      location: St. Ann's Catholic Church 8492 State HWY 17 Elgin, OK 73538
-    action: none
-  - enabled: true
-    label: Parish Event
-    title: Fr. Deva is celebrating his 57th Birthday
-    detail: Our Pastor, Fr. Deva is celebrating his 57th Birthday October 7th on the
-      feast of the Holy Rosary, there will be a Thanksgiving Mass Wednesday
-      morning at St. Ann's. Please mark your calendar to pray for him and his
-      intentions. We will have cake and punch after Mass, in the Parish Hall.
-      All are welcome!
-    parishes:
-      - st-ann
-    start_date: 2026-09-19
-    end_date: 2026-10-07
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-10-07T09:00:00Z
-      end: 2026-10-07T09:54:00Z
-    action: none
-  - enabled: true
-    label: Parish Event
-    title: Blessing of the Animals
-    detail: In honor of St. Francis of Assisi we will have the blessing of animals,
-      Saturday October 3, 10:00am at St. Ann’s church yard.
-    parishes:
-      - tri-parish
-    start_date: 2026-09-27
-    end_date: 2026-10-03
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-10-03T10:00:00Z
-      end: 2026-10-03T11:00:00Z
-      location: St. Ann
-    action: none
-  - enabled: true
     label: Current Need
     title: Respect Life Service Project Collection
     detail: "**In honor of Respect Life Month,** St. Ann's youth will be collecting
@@ -74,7 +17,7 @@ items:
   - enabled: true
     label: Current Need
     title: Extraordinary Ministers of Holy Communion
-    detail: >-
+    detail: >+
       If anyone is interested in becoming an Extraordinary Minister of Holy
       Communion (a shortened title is Communion Minister) or those whose terms
       are being renewed after completing a three year term, please contact the
@@ -99,6 +42,7 @@ items:
 
       6. The public life of the candidate must reflect the teachings of the
       Church.
+
     parishes:
       - tri-parish
     start_date: 2026-09-19
@@ -107,3 +51,17 @@ items:
     calendar:
       enabled: false
     action: email-office
+  - enabled: false
+    label: Office Notice
+    title: Daughter’s of St. Ann Gift Closet
+    detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
+      Sacramental gifts, etc. Cash/check only at this time. Please see Leslie
+      Durham or Janie Morrison.
+    parishes:
+      - st-ann
+    start_date: 2026-10-10
+    end_date: 2026-10-18
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: contact-page
