@@ -1,4 +1,18 @@
 items:
+  - enabled: false
+    label: Office Notice
+    title: Daughter’s of St. Ann Gift Closet
+    detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
+      Sacramental gifts, etc. Cash/check only at this time. Please see Leslie
+      Durham or Janie Morrison.
+    parishes:
+      - st-ann
+    start_date: 2026-10-10
+    end_date: 2026-10-18
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: contact-page
   - enabled: true
     label: Current Need
     title: Respect Life Service Project Collection
@@ -51,17 +65,3 @@ items:
     calendar:
       enabled: false
     action: email-office
-  - enabled: false
-    label: Office Notice
-    title: Daughter’s of St. Ann Gift Closet
-    detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
-      Sacramental gifts, etc. Cash/check only at this time. Please see Leslie
-      Durham or Janie Morrison.
-    parishes:
-      - st-ann
-    start_date: 2026-10-10
-    end_date: 2026-10-18
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: contact-page
