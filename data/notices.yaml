@@ -27,6 +27,18 @@ items:
       enabled: false
     action: bulletin
   - enabled: true
+    label: Schedule Change
+    title: No Mass October 27-30
+    detail: Our Priests are making their Retreat. Let us pray for them.
+    parishes:
+      - tri-parish
+    start_date: 2026-10-25
+    end_date: 2026-10-31
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: bulletin
+  - enabled: true
     label: Current Need
     title: Respect Life Service Project Collection
     detail: "**In honor of Respect Life Month,** St. Ann's youth will be collecting
@@ -42,53 +54,29 @@ items:
       enabled: false
     action: bulletin
   - enabled: true
-    label: Current Need
-    title: Extraordinary Ministers of Holy Communion
+    label: Parish Event
+    title: Daughter’s of St. Ann will be hosting Bingo and a Silent Auction for Gift
+      Baskets
     detail: >-
-      If anyone is interested in becoming an Extraordinary Minister of Holy
-      Communion (a shortened title is Communion Minister) or those whose terms
-      are being renewed after completing a three year term, please contact the
-      Parish Office by October 26. These names will be submitted by Fr. Deva to
-      Archbishop Coakley.
+      November 1st, 4:00pm-6:30pm. 
 
 
-      Qualifications of Candidates:
-
-
-      1. Candidates must be mature, practicing Catholics who, ordinarily, are at
-      least eighteen years of age
-
-      2. Candidates should have received the Sacrament of Confirmation.
-
-      3. Candidates who are converts should be active members of the Church for
-      at least three years.
-
-      4. Candidates who are married must be in a valid marriage.
-
-      5. Candidates must not be under any censure.
-
-      6. The public life of the candidate must reflect the teachings of the
-      Church.
+      If you have something that can be used as a Bingo prize, or can be put in
+      a Basket, we would appreciate it. You can leave them in the Parish Hall.
+      Baskets will be themed such as: sports, outdoor, kitchen, teen, game
+      night, etc. If you want to do a complete basket, please include an
+      itemized list.
     parishes:
-      - tri-parish
-    start_date: 2026-09-19
-    end_date: 2026-10-26
+      - st-ann
+    start_date: 2026-10-17
+    end_date: 2026-11-01
     affects_schedule: false
     calendar:
-      enabled: false
-    action: email-office
-  - enabled: true
-    label: Schedule Change
-    title: No Mass October 27-30
-    detail: Our Priests are making their Retreat. Let us pray for them.
-    parishes:
-      - tri-parish
-    start_date: 2026-10-25
-    end_date: 2026-10-31
-    affects_schedule: true
-    calendar:
-      enabled: false
-    action: bulletin
+      enabled: true
+      start: 2026-11-01T16:00:00Z
+      end: 2026-11-01T18:30:00Z
+      location: St Ann Parish Hall
+    action: none
   - enabled: true
     label: Office Notice
     title: Book of the Names of the Dead
@@ -129,26 +117,38 @@ items:
       enabled: false
     action: contact-page
   - enabled: true
-    label: Parish Event
-    title: Daughter’s of St. Ann will be hosting Bingo and a Silent Auction for Gift
-      Baskets
+    label: Current Need
+    title: Extraordinary Ministers of Holy Communion
     detail: >-
-      November 1st, 4:00pm-6:30pm. 
+      If anyone is interested in becoming an Extraordinary Minister of Holy
+      Communion (a shortened title is Communion Minister) or those whose terms
+      are being renewed after completing a three year term, please contact the
+      Parish Office by October 26. These names will be submitted by Fr. Deva to
+      Archbishop Coakley.
 
 
-      If you have something that can be used as a Bingo prize, or can be put in
-      a Basket, we would appreciate it. You can leave them in the Parish Hall.
-      Baskets will be themed such as: sports, outdoor, kitchen, teen, game
-      night, etc. If you want to do a complete basket, please include an
-      itemized list.
+      Qualifications of Candidates:
+
+
+      1. Candidates must be mature, practicing Catholics who, ordinarily, are at
+      least eighteen years of age
+
+      2. Candidates should have received the Sacrament of Confirmation.
+
+      3. Candidates who are converts should be active members of the Church for
+      at least three years.
+
+      4. Candidates who are married must be in a valid marriage.
+
+      5. Candidates must not be under any censure.
+
+      6. The public life of the candidate must reflect the teachings of the
+      Church.
     parishes:
-      - st-ann
-    start_date: 2026-10-17
-    end_date: 2026-11-01
+      - tri-parish
+    start_date: 2026-09-19
+    end_date: 2026-10-26
     affects_schedule: false
     calendar:
-      enabled: true
-      start: 2026-11-01T16:00:00Z
-      end: 2026-11-01T18:30:00Z
-      location: St Ann Parish Hall
-    action: none
+      enabled: false
+    action: email-office
