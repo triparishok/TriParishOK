@@ -66,7 +66,7 @@ items:
       enabled: false
     action: email-office
   - enabled: true
-    label: Office Notice
+    label: Schedule Change
     title: No Mass October 27-30
     detail: Our Priests are making their Retreat. Let us pray for them.
     parishes:
@@ -78,7 +78,7 @@ items:
       enabled: false
     action: bulletin
   - enabled: true
-    label: Special Mass
+    label: Schedule Change
     title: No Mass on Tuesday, October 20
     detail: No Mass on Tuesday, October 20
     parishes:
@@ -113,4 +113,28 @@ items:
     affects_schedule: false
     calendar:
       enabled: false
+    action: none
+  - enabled: true
+    label: Parish Event
+    title: Daughter’s of St. Ann will be hosting Bingo and a Silent Auction for Gift
+      Baskets
+    detail: >-
+      November 1st, 4:00pm-6:30pm. 
+
+
+      If you have something that can be used as a Bingo prize, or can be put in
+      a Basket, we would appreciate it. You can leave them in the Parish Hall.
+      Baskets will be themed such as: sports, outdoor, kitchen, teen, game
+      night, etc. If you want to do a complete basket, please include an
+      itemized list.
+    parishes:
+      - st-ann
+    start_date: 2026-10-17
+    end_date: 2026-11-01
+    affects_schedule: false
+    calendar:
+      enabled: true
+      start: 2026-11-01T16:00:00Z
+      end: 2026-11-01T18:30:00Z
+      location: St Ann Parish Hall
     action: none
