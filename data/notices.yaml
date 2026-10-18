@@ -1,5 +1,5 @@
 items:
-  - enabled: false
+  - enabled: true
     label: Office Notice
     title: Daughter’s of St. Ann Gift Closet
     detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
@@ -65,3 +65,52 @@ items:
     calendar:
       enabled: false
     action: email-office
+  - enabled: true
+    label: Office Notice
+    title: No Mass October 27-30
+    detail: Our Priests are making their Retreat. Let us pray for them.
+    parishes:
+      - tri-parish
+    start_date: 2026-10-25
+    end_date: 2026-10-31
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: bulletin
+  - enabled: true
+    label: Special Mass
+    title: No Mass on Tuesday, October 20
+    detail: No Mass on Tuesday, October 20
+    parishes:
+      - tri-parish
+    start_date: 2026-10-18
+    end_date: 2026-10-20
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: bulletin
+  - enabled: true
+    label: Office Notice
+    title: Book of the Names of the Dead
+    detail: >-
+      Christian communities remember the names of their dead, in prayers of
+      intercession, and on anniversaries.
+
+
+      The names of those who are called saints are chanted in litany as we
+      approach Baptism and other central moments in the life of the Church.
+      Especially in November, from All Saints Day until Thanksgiving, many
+      parishes give a place of special honor in their church to the book
+      containing the names of the dead.
+
+
+      At our Parishes you may write the names of those you wish to remember in
+      this special book at the back of each church.
+    parishes:
+      - tri-parish
+    start_date: 2026-10-17
+    end_date: 2026-11-26
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
