@@ -1,18 +1,31 @@
 items:
   - enabled: true
-    label: Office Notice
-    title: Daughter’s of St. Ann Gift Closet
-    detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
-      Sacramental gifts, etc. Cash/check only at this time. Please see Leslie
-      Durham or Janie Morrison.
+    label: Parish Event
+    title: Thank You David Hemming
+    detail: "**Mother of Sorrows parishioners** are grateful to David Hemming for
+      once again making it possible for our parish to have a wonderful fish fry.
+      As always, he caught, cleaned and cooked an enormous amount of fish. A
+      good time and full stomachs were had by all."
     parishes:
-      - st-ann
-    start_date: 2026-10-10
-    end_date: 2026-10-18
+      - mother-of-sorrows
+    start_date: 2026-10-17
+    end_date: 2026-10-24
     affects_schedule: false
     calendar:
       enabled: false
-    action: contact-page
+    action: none
+  - enabled: true
+    label: Schedule Change
+    title: No Mass on Tuesday, October 20
+    detail: No Mass on Tuesday, October 20
+    parishes:
+      - mother-of-sorrows
+    start_date: 2026-10-18
+    end_date: 2026-10-20
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: bulletin
   - enabled: true
     label: Current Need
     title: Respect Life Service Project Collection
@@ -31,7 +44,7 @@ items:
   - enabled: true
     label: Current Need
     title: Extraordinary Ministers of Holy Communion
-    detail: >+
+    detail: >-
       If anyone is interested in becoming an Extraordinary Minister of Holy
       Communion (a shortened title is Communion Minister) or those whose terms
       are being renewed after completing a three year term, please contact the
@@ -56,7 +69,6 @@ items:
 
       6. The public life of the candidate must reflect the teachings of the
       Church.
-
     parishes:
       - tri-parish
     start_date: 2026-09-19
@@ -73,18 +85,6 @@ items:
       - tri-parish
     start_date: 2026-10-25
     end_date: 2026-10-31
-    affects_schedule: true
-    calendar:
-      enabled: false
-    action: bulletin
-  - enabled: true
-    label: Schedule Change
-    title: No Mass on Tuesday, October 20
-    detail: No Mass on Tuesday, October 20
-    parishes:
-      - mother-of-sorrows
-    start_date: 2026-10-18
-    end_date: 2026-10-20
     affects_schedule: true
     calendar:
       enabled: false
@@ -114,6 +114,20 @@ items:
     calendar:
       enabled: false
     action: none
+  - enabled: true
+    label: Office Notice
+    title: Daughter’s of St. Ann Gift Closet
+    detail: Daughter’s of St. Ann now have a gift shop in the Parish Hall. We have
+      Sacramental gifts, etc. Cash/check only at this time. Please see Leslie
+      Durham or Janie Morrison.
+    parishes:
+      - st-ann
+    start_date: 2026-10-10
+    end_date: 2026-10-18
+    affects_schedule: false
+    calendar:
+      enabled: false
+    action: contact-page
   - enabled: true
     label: Parish Event
     title: Daughter’s of St. Ann will be hosting Bingo and a Silent Auction for Gift
