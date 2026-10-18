@@ -32,7 +32,7 @@ items:
     detail: Our Priests are making their Retreat. Let us pray for them.
     parishes:
       - tri-parish
-    start_date: 2026-10-25
+    start_date: 2026-10-18
     end_date: 2026-10-31
     affects_schedule: true
     calendar:
@@ -119,7 +119,7 @@ items:
   - enabled: true
     label: Current Need
     title: Extraordinary Ministers of Holy Communion
-    detail: >-
+    detail: >+
       If anyone is interested in becoming an Extraordinary Minister of Holy
       Communion (a shortened title is Communion Minister) or those whose terms
       are being renewed after completing a three year term, please contact the
@@ -144,6 +144,7 @@ items:
 
       6. The public life of the candidate must reflect the teachings of the
       Church.
+
     parishes:
       - tri-parish
     start_date: 2026-09-19
