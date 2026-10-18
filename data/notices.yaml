@@ -82,7 +82,7 @@ items:
     title: No Mass on Tuesday, October 20
     detail: No Mass on Tuesday, October 20
     parishes:
-      - tri-parish
+      - mother-of-sorrows
     start_date: 2026-10-18
     end_date: 2026-10-20
     affects_schedule: true
