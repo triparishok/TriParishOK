@@ -14,6 +14,26 @@ items:
       end: 2026-10-30T10:00:00Z
     action: bulletin
   - enabled: true
+    label: Special Mass
+    title: All Souls Mass Schedule
+    detail: >-
+      Monday, November 2nd at 9:00am, at St. Ann's Cemetery followed by blessing
+      of Cemetery.
+
+
+      7:00pm, at St. Ann Church
+    parishes:
+      - st-ann
+    start_date: 2026-10-24
+    end_date: 2026-11-02
+    affects_schedule: true
+    calendar:
+      enabled: true
+      start: 2026-11-02T09:00:00Z
+      end: 2026-11-02T10:30:00Z
+      location: St. Ann's Cemetery
+    action: bulletin
+  - enabled: true
     label: Current Need
     title: Respect Life Service Project Collection
     detail: "**In honor of Respect Life Month,** St. Ann's youth will be collecting
@@ -114,23 +134,3 @@ items:
     calendar:
       enabled: false
     action: email-office
-  - enabled: true
-    label: Special Mass
-    title: All Souls Mass Schedule
-    detail: >-
-      Monday, November 2nd at 9:00am, at St. Ann's Cemetery followed by blessing
-      of Cemetery.
-
-
-      7:00pm, at St. Ann Church
-    parishes:
-      - st-ann
-    start_date: 2026-10-24
-    end_date: 2026-11-02
-    affects_schedule: true
-    calendar:
-      enabled: true
-      start: 2026-11-02T09:00:00Z
-      end: 2026-11-02T10:30:00Z
-      location: St. Ann's Cemetery
-    action: bulletin
