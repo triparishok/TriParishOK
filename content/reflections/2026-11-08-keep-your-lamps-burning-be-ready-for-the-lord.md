@@ -7,7 +7,7 @@ description: In this Sunday's Gospel, Jesus reminds us of the importance of
   ten virgins, we learn that faith is not something we should put off until
   tomorrow. Just as the wise virgins kept their lamps filled with oil, we must
   keep our faith alive through prayer, love, kindness, and good works.
-draft: true
+draft: false
 ---
 Life can bring unexpected challenges, distractions, and moments when we may feel distant from God. Yet Jesus calls us to remain watchful, faithful, and ready to welcome Him into our lives each day. We cannot depend on yesterday's prayers or someone else's faith; we must nurture our own relationship with the Lord.
 
