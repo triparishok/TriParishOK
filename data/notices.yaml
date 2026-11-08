@@ -1,67 +1,24 @@
 items:
   - enabled: true
-    label: Parish Event
-    title: Coffee and Donuts at St. Ann's
-    detail: Daughter of St. Ann will be serving coffee and donuts today after Mass
-      in the Parish Hall. All are welcome!
+    label: Current Need
+    title: OLPH Thanksgiving Baskets
+    detail: >-
+      OLPH will be preparing and delivering Thanksgiving baskets on November 15.
+      We kindly ask parishioners to bring their donated items to the Parish Hall
+      that morning before Mass. Suggested donations include baked goods, nuts,
+      fresh fruit, fruit cups, lotions, and other thoughtful items. Please note
+      that canned vegetables are not needed.
+
+
+      Thank you for your generosity and continued support in helping us bring
+      joy to others this Thanksgiving!
     parishes:
-      - st-ann
-    start_date: 2026-10-31
-    end_date: 2026-11-01
+      - olph
+    start_date: 2026-11-08
+    end_date: 2026-11-15
     affects_schedule: false
     calendar:
       enabled: false
-    action: none
-  - enabled: true
-    label: Special Mass
-    title: All Souls Mass Schedule
-    detail: >-
-      Monday, November 2nd at 9:00am, at St. Ann's Cemetery followed by blessing
-      of Cemetery.
-
-
-      7:00pm, at St. Ann Church
-    parishes:
-      - st-ann
-    start_date: 2026-10-24
-    end_date: 2026-11-02
-    affects_schedule: true
-    calendar:
-      enabled: true
-      start: 2026-11-02T09:00:00Z
-      end: 2026-11-02T10:30:00Z
-      location: St. Ann's Cemetery
-    action: bulletin
-  - enabled: true
-    label: Parish Event
-    title: Daughters of St. Ann Bingo & Silent Auction
-    detail: >-
-      The Daughters of St. Ann invite you to join us for an afternoon of fun and
-      fellowship at our Bingo and Silent Auction Gift Basket Event on November
-      1st from 4:00-6:30 p.m.
-
-
-      Enjoy a delicious meal of soup and cornbread while playing Bingo and
-      bidding on beautiful gift baskets!
-
-
-      Meal and Bingo Admission:
-
-
-      Adults: $20 | Children: $5 | Family Rate: $40
-
-
-      Silent Auction bidding on the gift baskets will begin after 8:30am Mass.
-    parishes:
-      - st-ann
-    start_date: 2026-10-17
-    end_date: 2026-11-01
-    affects_schedule: false
-    calendar:
-      enabled: true
-      start: 2026-11-01T16:00:00Z
-      end: 2026-11-01T18:30:00Z
-      location: St Ann Parish Hall
     action: none
   - enabled: true
     label: Office Notice
@@ -89,18 +46,13 @@ items:
       enabled: false
     action: none
   - enabled: true
-    label: Special Mass
-    title: First of the Month Masses
-    detail: >-
-      First Thursday Adoration - November 5th, 6:00pm at OLPH
-
-
-      First Friday Mass and Adoration - November 6th, Mass at 8:30am, followed
-      by Adoration.
+    label: Schedule Change
+    title: No Mass - Tuesday, November 10
+    detail: No Mass - Tuesday, November 10
     parishes:
       - tri-parish
-    start_date: 2026-10-31
-    end_date: 2026-11-06
+    start_date: 2026-11-08
+    end_date: 2026-11-10
     affects_schedule: true
     calendar:
       enabled: false
