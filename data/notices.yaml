@@ -20,6 +20,23 @@ items:
     calendar:
       enabled: false
     action: none
+  - enabled: false
+    label: Special Mass
+    title: Christ the King Sunday - November 22
+    detail: As we celebrate the Solemnity of Christ the King and bring Liturgical
+      Year A to a close, we will also celebrate our Extraordinary Ministers of
+      Holy Communion. A special blessing will be offered to all Extraordinary
+      Ministers of Holy Communion during the weekend Masses at each of our three
+      parishes.
+    parishes:
+      - tri-parish
+    start_date: 2026-11-13
+    end_date: 2026-11-22
+    affects_schedule: false
+    calendar:
+      enabled: false
+      start: 2026-11-22T20:30:00Z
+    action: none
   - enabled: true
     label: Office Notice
     title: Book of the Names of the Dead
@@ -42,18 +59,6 @@ items:
     start_date: 2026-10-17
     end_date: 2026-11-26
     affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
-  - enabled: true
-    label: Schedule Change
-    title: No Mass - Tuesday, November 10
-    detail: No Mass - Tuesday, November 10
-    parishes:
-      - tri-parish
-    start_date: 2026-11-08
-    end_date: 2026-11-10
-    affects_schedule: true
     calendar:
       enabled: false
     action: none
