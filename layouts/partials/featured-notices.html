@@ -1,6 +1,6 @@
 {{ $page := .page }}
 {{ range $index, $notice := where .notices "featured" true }}
-<section class="advent-feature" aria-labelledby="featured-notice-{{ $index }}"{{ if $page.IsHome }} data-advent-invitation data-season-key="{{ printf "%s-%s" .title .end_date | urlize }}"{{ end }}>
+<section class="advent-feature" aria-labelledby="featured-notice-{{ $index }}"{{ if $page.IsHome }} data-advent-invitation{{ end }}>
   {{ if $page.IsHome }}
     <div class="advent-compact" hidden>
       <div>
@@ -28,11 +28,11 @@
       <p class="advent-invitation-text">In the quiet of His presence,<br>prepare your heart for Christmas.</p>
       <a class="advent-link" href="#advent-schedule-{{ $index }}">Come, let us adore Him <span aria-hidden="true">↓</span></a>
     </div>
-    {{ with resources.Get (.feature_image | default "images/advent-adoration.jpg") }}
+    {{ with resources.Get (.feature_image | default "images/st-ann-adoration-fr-undralla.jpeg") }}
       {{ $photo := .Fit "1400x1800 webp q85" }}
       <figure class="advent-photo">
-        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="A golden monstrance holding the Blessed Sacrament in a softly lit church" fetchpriority="high" decoding="async">
-        <figcaption>Photo by <a href="https://unsplash.com/@batzi0998">Fernanda Batzibal</a> on <a href="https://unsplash.com/photos/D6ESt_Qr23E">Unsplash</a></figcaption>
+        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Eucharistic Adoration at St. Ann in Elgin, with the monstrance on the candlelit altar beneath the crucifix" fetchpriority="high" decoding="async">
+        <figcaption>St. Ann, Elgin · Photo by Fr. Devasahayam Undralla</figcaption>
       </figure>
     {{ end }}
   </div>

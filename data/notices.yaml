@@ -2,20 +2,20 @@ items:
   - enabled: true
     featured: true
     feature_heading: Make room for Our Lord this Advent.
-    feature_image: images/advent-adoration.jpg
+    feature_image: images/st-ann-adoration-fr-undralla.jpeg
     label: Schedule Change
     title: Advent Eucharistic Adoration
     detail: |-
       **Beginning November 30, 2026 · For Advent only**
 
-      Prepare your heart for Christmas. Come spend time with Our Lord in the Blessed Sacrament. During Advent, Mass is at **8:30 AM Monday through Saturday**, followed by Adoration.
+      Prepare your heart for Christmas. Come and spend time with Our Lord in the Blessed Sacrament. During Advent, Mass is at **8:30 AM Monday through Saturday**, followed by Adoration.
 
       - **Monday, Tuesday, Wednesday, Friday & Saturday:** St. Ann, Elgin.
       - **Thursday:** Our Lady of Perpetual Help, Sterling.
 
       **Advent dates to remember**
 
-      - **Tuesday, December 8:** Feast of the Immaculate Conception of the Blessed Virgin Mary — **Holy Day of Obligation**. Mass at 8:30 AM at St. Ann.
+      - **Immaculate Conception of the Blessed Virgin Mary — Holy Day of Obligation:** Monday, December 7 vigil at **6:30 PM in Sterling**. Tuesday, December 8: **8:30 AM & 7:00 PM in Elgin; 4:30 PM in Sterling**.
       - **Wednesday, December 9:** Advent Penance Rite at **6:30 PM at St. Ann**.
 
       This Advent morning schedule takes precedence over the regular weekday schedule. Check current notices for Holy Day and Christmas schedules.
@@ -85,18 +85,19 @@ items:
   - enabled: true
     label: Special Mass
     title: Immaculate Conception — Holy Day of Obligation
-    detail: Mass will be offered for the Feast of the Immaculate Conception of the
-      Blessed Virgin Mary, a Holy Day of Obligation, on Tuesday, December 8 at
-      8:30 AM at St. Ann in Elgin.
+    detail: |-
+      **Feast of the Immaculate Conception of the Blessed Virgin Mary — Holy Day of Obligation, Tuesday, December 8.**
+
+      - **Monday, December 7 — Vigil Mass:** 6:30 PM at Our Lady of Perpetual Help, Sterling.
+      - **Tuesday, December 8 — St. Ann, Elgin:** 8:30 AM and 7:00 PM.
+      - **Tuesday, December 8 — Our Lady of Perpetual Help, Sterling:** 4:30 PM.
     parishes:
       - tri-parish
     start_date: 2026-11-20
     end_date: 2026-12-08
     affects_schedule: true
     calendar:
-      enabled: true
-      start: 2026-12-08T08:30:00-06:00
-      location: St. Ann's Parish
+      enabled: false
     action: none
   - enabled: true
     label: Special Mass

@@ -10,6 +10,8 @@ These are real photographs from the Tri-Parish Catholic Community—not stock ph
 
 {{< homepage-gallery-credits >}}
 
+- **Advent Adoration at St. Ann, Elgin:** Photograph by Fr. Devasahayam Undralla.
+
 ## Official parish photography
 
 These are real photographs of our churches, interiors, sacred art, and parish life. They are used with parish permission.
@@ -32,4 +34,4 @@ The following images are general Catholic visual accents and do not depict a Tri
 - Eucharistic Adoration: Photo by Thays Orrico on Unsplash.
 - Sacred Heart statue: Photo by Saint John's Seminary on Unsplash.
 
-- Advent Adoration: Photo by [Fernanda Batzibal](https://unsplash.com/@batzi0998) on [Unsplash](https://unsplash.com/photos/D6ESt_Qr23E).
+
