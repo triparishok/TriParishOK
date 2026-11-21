@@ -12,7 +12,7 @@ items:
     calendar:
       enabled: false
     action: none
-  - enabled: false
+  - enabled: true
     label: Special Mass
     title: Christ the King Sunday - November 22
     detail: As we celebrate the Solemnity of Christ the King and bring Liturgical
