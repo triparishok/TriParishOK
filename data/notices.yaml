@@ -41,7 +41,7 @@ items:
     calendar:
       enabled: false
     action: none
-  - enabled: false
+  - enabled: true
     label: Special Mass
     title: Thanksgiving Mass
     detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's
