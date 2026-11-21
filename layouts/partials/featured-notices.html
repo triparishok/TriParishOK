@@ -1,0 +1,60 @@
+{{ $page := .page }}
+{{ range $index, $notice := where .notices "featured" true }}
+<section class="advent-feature" aria-labelledby="featured-notice-{{ $index }}"{{ if $page.IsHome }} data-advent-invitation data-season-key="{{ printf "%s-%s" .title .end_date | urlize }}"{{ end }}>
+  {{ if $page.IsHome }}
+    <div class="advent-compact" hidden>
+      <div>
+        <p class="eyebrow">{{ .title }}</p>
+        <h2 id="advent-compact-heading-{{ $index }}">Make room for Our Lord.</h2>
+      </div>
+      <button type="button" class="button button-primary" data-advent-expand aria-expanded="false" aria-controls="advent-full-{{ $index }}">View invitation & schedule</button>
+    </div>
+  {{ end }}
+  <div id="advent-full-{{ $index }}" data-advent-full>
+  {{ if $page.IsHome }}
+    <div class="advent-controls" hidden>
+      <button type="button" data-advent-minimize aria-expanded="true" aria-controls="advent-full-{{ $index }}">Minimize invitation</button>
+    </div>
+  {{ end }}
+  <div class="advent-invitation">
+    <div class="advent-invitation-copy">
+      <p class="eyebrow">{{ .title }}</p>
+      <span class="advent-rule" aria-hidden="true"></span>
+      {{ if and $page.IsHome (eq $index 0) }}
+        <h1 id="featured-notice-{{ $index }}">{{ .feature_heading | default .title }}</h1>
+      {{ else }}
+        <h2 id="featured-notice-{{ $index }}">{{ .feature_heading | default .title }}</h2>
+      {{ end }}
+      <p class="advent-invitation-text">In the quiet of His presence,<br>prepare your heart for Christmas.</p>
+      <a class="advent-link" href="#advent-schedule-{{ $index }}">Come, let us adore Him <span aria-hidden="true">↓</span></a>
+    </div>
+    {{ with resources.Get (.feature_image | default "images/advent-adoration.jpg") }}
+      {{ $photo := .Fit "1400x1800 webp q85" }}
+      <figure class="advent-photo">
+        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="A golden monstrance holding the Blessed Sacrament in a softly lit church" fetchpriority="high" decoding="async">
+        <figcaption>Photo by <a href="https://unsplash.com/@batzi0998">Fernanda Batzibal</a> on <a href="https://unsplash.com/photos/D6ESt_Qr23E">Unsplash</a></figcaption>
+      </figure>
+    {{ end }}
+  </div>
+  <div class="advent-schedule" id="advent-schedule-{{ $index }}">
+    <div class="advent-schedule-heading">
+      <p class="eyebrow">A season of waiting.<br>A daily invitation.</p>
+      <h3>Be with Him.</h3>
+    </div>
+    <div class="advent-schedule-copy">
+      <div class="cms-rich-text">{{ .detail | markdownify }}</div>
+      <div class="card-actions">
+        {{ if $page.IsHome }}
+          <a class="button button-primary" href="{{ "mass-confession/" | relURL }}">Mass & Adoration Information</a>
+        {{ end }}
+        {{ partial "notice-action.html" . }}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{{ end }}
+{{ if $page.IsHome }}
+  {{ $script := resources.Get "js/advent-invitation.js" | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}

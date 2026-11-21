@@ -1,5 +1,9 @@
 {{ define "main" }}
 
+{{ $featured := where (partial "active-notices.html" .) "featured" true }}
+{{ if $featured }}
+  {{ partial "featured-notices.html" (dict "page" . "notices" $featured) }}
+{{ else }}
 <section class="hero home-hero">
   <div class="hero-inner">
     <p class="eyebrow">Welcome</p>
@@ -18,6 +22,8 @@
     </div>
   </div>
 </section>
+
+{{ end }}
 
 <section id="new-here" class="section home-start-section" aria-labelledby="start-here-heading">
   <div class="section-heading">

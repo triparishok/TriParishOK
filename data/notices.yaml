@@ -1,5 +1,29 @@
 items:
   - enabled: true
+    featured: true
+    feature_heading: Make room for Our Lord this Advent.
+    feature_image: images/advent-adoration.jpg
+    label: Schedule Change
+    title: Advent Eucharistic Adoration
+    detail: |-
+      **Beginning November 30, 2026 · For Advent only**
+
+      Prepare your heart for Christmas. Come spend time with Our Lord in the Blessed Sacrament. Special Adoration is planned Monday through Saturday during Advent.
+
+      - **Monday, Tuesday, Wednesday & Friday — St. Ann, Elgin:** Mass at **8:30 AM**, followed by Adoration.
+      - **Thursday — Our Lady of Perpetual Help, Sterling:** Starting time to be confirmed.
+      - **Saturday:** Time and location to be confirmed.
+
+      Please contact the parish office for the unconfirmed details before traveling. Check current notices for Holy Day and Christmas schedules.
+    parishes:
+      - tri-parish
+    start_date: 2026-11-20
+    end_date: 2026-12-24
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: contact-page
+  - enabled: true
     label: Special Mass
     title: Thanksgiving Mass
     detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's

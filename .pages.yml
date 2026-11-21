@@ -115,6 +115,24 @@ content:
                 default: false
                 description: "New notices begin hidden. Turn this on only when the notice is complete and ready for parishioners to see. Turn it off again to hide the notice without deleting it."
 
+              - name: featured
+                label: Feature Above the Homepage Content
+                type: boolean
+                required: false
+                default: false
+                description: "Give this notice a prominent centerpiece on the homepage. Schedule notices also appear prominently on Mass & Confession. The same first and last display dates apply."
+
+              - name: feature_heading
+                label: Featured Invitation Heading
+                type: string
+                required: false
+
+              - name: feature_image
+                label: Featured Image Asset Path
+                type: string
+                required: false
+                description: "Prepared image in the assets folder, for example images/advent-adoration.jpg."
+
               - name: label
                 label: Notice Type
                 type: select

@@ -13,6 +13,9 @@
   </div>
 </section>
 
+{{ partial "featured-notices.html" (dict "page" . "notices" $scheduleNotices) }}
+{{ $scheduleNotices = where $scheduleNotices "featured" "ne" true }}
+
 {{ if gt (len $scheduleNotices) 0 }}
 <section class="section important-week-section" aria-labelledby="current-schedule-changes-heading">
   <div class="section-heading">
@@ -102,7 +105,7 @@
 <section class="section section-light">
   <div class="section-heading">
     <p class="eyebrow">Weekday Mass</p>
-    <h2>Daily Mass Schedule</h2>
+    <h2>Regular Daily Mass Schedule</h2>
   </div>
 
   <div class="daily-schedule">

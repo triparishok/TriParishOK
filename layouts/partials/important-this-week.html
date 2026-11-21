@@ -1,4 +1,4 @@
-{{ $activeNotices := partial "active-notices.html" . }}
+{{ $activeNotices := where (partial "active-notices.html" .) "featured" "ne" true }}
 
 {{ if gt (len $activeNotices) 0 }}
   <section class="section important-week-section" aria-labelledby="important-week-heading">
