@@ -1,25 +1,4 @@
 items:
-  - enabled: true
-    label: Current Need
-    title: OLPH Thanksgiving Baskets
-    detail: >-
-      OLPH will be preparing and delivering Thanksgiving baskets on November 15.
-      We kindly ask parishioners to bring their donated items to the Parish Hall
-      that morning before Mass. Suggested donations include baked goods, nuts,
-      fresh fruit, fruit cups, lotions, and other thoughtful items. Please note
-      that canned vegetables are not needed.
-
-
-      Thank you for your generosity and continued support in helping us bring
-      joy to others this Thanksgiving!
-    parishes:
-      - olph
-    start_date: 2026-11-08
-    end_date: 2026-11-15
-    affects_schedule: false
-    calendar:
-      enabled: false
-    action: none
   - enabled: false
     label: Special Mass
     title: Christ the King Sunday - November 22
@@ -59,6 +38,19 @@ items:
     start_date: 2026-10-17
     end_date: 2026-11-26
     affects_schedule: false
+    calendar:
+      enabled: false
+    action: none
+  - enabled: false
+    label: Special Mass
+    title: Thanksgiving Mass
+    detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's
+      in Elgin. "
+    parishes:
+      - tri-parish
+    start_date: 2026-11-20
+    end_date: 2026-11-25
+    affects_schedule: true
     calendar:
       enabled: false
     action: none
