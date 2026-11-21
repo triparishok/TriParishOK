@@ -10,12 +10,13 @@ items:
 
       Prepare your heart for Christmas. Come spend time with Our Lord in the Blessed Sacrament. During Advent, Mass is at **8:30 AM Monday through Saturday**, followed by Adoration.
 
-      - **Monday — St. Ann, Elgin:** 8:30 AM Mass, followed by Adoration.
-      - **Tuesday — St. Ann, Elgin:** 8:30 AM Mass, followed by Adoration.
-      - **Wednesday — St. Ann, Elgin:** 8:30 AM Mass, followed by Adoration.
-      - **Thursday — Our Lady of Perpetual Help, Sterling:** 8:30 AM Mass, followed by Adoration.
-      - **Friday — St. Ann, Elgin:** 8:30 AM Mass, followed by Adoration.
-      - **Saturday — St. Ann, Elgin:** 8:30 AM Mass, followed by Adoration.
+      - **Monday, Tuesday, Wednesday, Friday & Saturday:** St. Ann, Elgin.
+      - **Thursday:** Our Lady of Perpetual Help, Sterling.
+
+      **Advent dates to remember**
+
+      - **Tuesday, December 8:** Feast of the Immaculate Conception of the Blessed Virgin Mary — **Holy Day of Obligation**. Mass at 8:30 AM at St. Ann.
+      - **Wednesday, December 9:** Advent Penance Rite at **6:30 PM at St. Ann**.
 
       This Advent morning schedule takes precedence over the regular weekday schedule. Check current notices for Holy Day and Christmas schedules.
     parishes:
@@ -83,10 +84,10 @@ items:
     action: none
   - enabled: true
     label: Special Mass
-    title: Holy Day of Obligation
+    title: Immaculate Conception — Holy Day of Obligation
     detail: Mass will be offered for the Feast of the Immaculate Conception of the
-      Blessed Virgin Mary, a Holy Day of Obligation, on Tuesday, December 8th at
-      St. Ann's.
+      Blessed Virgin Mary, a Holy Day of Obligation, on Tuesday, December 8 at
+      8:30 AM at St. Ann in Elgin.
     parishes:
       - tri-parish
     start_date: 2026-11-20
@@ -94,13 +95,13 @@ items:
     affects_schedule: true
     calendar:
       enabled: true
-      start: 2026-12-08T08:30:00Z
+      start: 2026-12-08T08:30:00-06:00
       location: St. Ann's Parish
     action: none
   - enabled: true
     label: Special Mass
     title: Advent Penance Rite
-    detail: Advent Penance Rite will be December 9th at 6:30pm at St. Ann's.
+    detail: Advent Penance Rite will be Wednesday, December 9 at 6:30 PM at St. Ann in Elgin.
     parishes:
       - tri-parish
     start_date: 2026-11-20
@@ -108,6 +109,6 @@ items:
     affects_schedule: true
     calendar:
       enabled: true
-      start: 2026-12-09T18:30:00Z
+      start: 2026-12-09T18:30:00-06:00
       location: St. Ann's
     action: none
