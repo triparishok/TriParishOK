@@ -1,4 +1,17 @@
 items:
+  - enabled: true
+    label: Special Mass
+    title: Thanksgiving Mass
+    detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's
+      in Elgin. "
+    parishes:
+      - tri-parish
+    start_date: 2026-11-20
+    end_date: 2026-11-25
+    affects_schedule: true
+    calendar:
+      enabled: false
+    action: none
   - enabled: false
     label: Special Mass
     title: Christ the King Sunday - November 22
@@ -43,14 +56,31 @@ items:
     action: none
   - enabled: true
     label: Special Mass
-    title: Thanksgiving Mass
-    detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's
-      in Elgin. "
+    title: Holy Day of Obligation
+    detail: Mass will be offered for the Feast of the Immaculate Conception of the
+      Blessed Virgin Mary, a Holy Day of Obligation, on Tuesday, December 8th at
+      St. Ann's.
     parishes:
       - tri-parish
     start_date: 2026-11-20
-    end_date: 2026-11-25
+    end_date: 2026-12-08
     affects_schedule: true
     calendar:
-      enabled: false
+      enabled: true
+      start: 2026-12-08T08:30:00Z
+      location: St. Ann's Parish
+    action: none
+  - enabled: true
+    label: Special Mass
+    title: Advent Penance Rite
+    detail: Advent Penance Rite will be December 9th at 6:30pm at St. Ann's.
+    parishes:
+      - tri-parish
+    start_date: 2026-11-20
+    end_date: 2026-12-09
+    affects_schedule: true
+    calendar:
+      enabled: true
+      start: 2026-12-09T18:30:00Z
+      location: St. Ann's
     action: none
