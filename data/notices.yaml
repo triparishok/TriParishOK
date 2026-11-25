@@ -5,20 +5,33 @@ items:
     feature_image: images/st-ann-adoration-fr-undralla.jpeg
     label: Schedule Change
     title: Advent Eucharistic Adoration
-    detail: |-
+    detail: >-
       **Beginning November 30, 2026 · For Advent only**
 
-      Prepare your heart for Christmas. Come and spend time with Our Lord in the Blessed Sacrament. During Advent, Mass is at **8:30 AM Monday through Saturday**, followed by Adoration.
+
+      Prepare your heart for Christmas. Come and spend time with Our Lord in the
+      Blessed Sacrament. During Advent, Mass is at **8:30 AM Monday through
+      Saturday**, followed by Adoration.
+
 
       - **Monday, Tuesday, Wednesday, Friday & Saturday:** St. Ann, Elgin.
+
       - **Thursday:** Our Lady of Perpetual Help, Sterling.
+
 
       **Advent dates to remember**
 
-      - **Immaculate Conception of the Blessed Virgin Mary — Holy Day of Obligation:** Monday, December 7 vigil at **6:30 PM in Sterling**. Tuesday, December 8: **8:30 AM & 7:00 PM in Elgin; 4:30 PM in Sterling**.
-      - **Wednesday, December 9:** Advent Penance Rite at **6:30 PM at St. Ann**.
 
-      This Advent morning schedule takes precedence over the regular weekday schedule. Check current notices for Holy Day and Christmas schedules.
+      - **Immaculate Conception of the Blessed Virgin Mary — Holy Day of
+      Obligation:** Monday, December 7 vigil at **6:30 PM in Sterling**.
+      Tuesday, December 8: **8:30 AM & 7:00 PM in Elgin; 4:30 PM in Sterling**.
+
+      - **Wednesday, December 9:** Advent Penance Rite at **6:30 PM at St.
+      Ann**.
+
+
+      This Advent morning schedule takes precedence over the regular weekday
+      schedule. Check current notices for Holy Day and Christmas schedules.
     parishes:
       - tri-parish
     start_date: 2026-11-20
@@ -28,6 +41,7 @@ items:
       enabled: false
     action: contact-page
   - enabled: true
+    featured: false
     label: Special Mass
     title: Thanksgiving Mass
     detail: "Thanksgiving Mass will be Wednesday November 25th, 6:30pm, at St. Ann's
@@ -41,23 +55,32 @@ items:
       enabled: false
     action: none
   - enabled: true
-    label: Special Mass
-    title: Christ the King Sunday - November 22
-    detail: As we celebrate the Solemnity of Christ the King and bring Liturgical
-      Year A to a close, we will also celebrate our Extraordinary Ministers of
-      Holy Communion. A special blessing will be offered to all Extraordinary
-      Ministers of Holy Communion during the weekend Masses at each of our three
-      parishes.
+    featured: false
+    label: Faith Formation
+    title: "American Martyr: Watch at Home"
+    detail: >-
+      **American Martyr: Watch at Home**
+
+
+      Discover the inspiring story of Blessed Stanley Rother, the Oklahoma
+      priest and martyr who faithfully served his people in Guatemala.
+
+
+      *American Martyr: The Stanley Rother Story* is available for at-home
+      rental **November 23–29 only**, during Thanksgiving week. Gather your
+      family and experience this powerful witness to faith and courage.
     parishes:
       - tri-parish
-    start_date: 2026-11-13
-    end_date: 2026-11-22
+    start_date: 2026-11-24
+    end_date: 2026-11-29
     affects_schedule: false
     calendar:
       enabled: false
-      start: 2026-11-22T20:30:00Z
-    action: none
+    action: custom
+    action_text: Rent & Watch the Film
+    action_url: https://app.emberstreaming.com/films/rother
   - enabled: true
+    featured: false
     label: Office Notice
     title: Book of the Names of the Dead
     detail: >-
@@ -83,14 +106,21 @@ items:
       enabled: false
     action: none
   - enabled: true
+    featured: false
     label: Special Mass
     title: Immaculate Conception — Holy Day of Obligation
-    detail: |-
-      **Feast of the Immaculate Conception of the Blessed Virgin Mary — Holy Day of Obligation, Tuesday, December 8.**
+    detail: >+
+      **Feast of the Immaculate Conception of the Blessed Virgin Mary — Holy Day
+      of Obligation, Tuesday, December 8.**
 
-      - **Monday, December 7 — Vigil Mass:** 6:30 PM at Our Lady of Perpetual Help, Sterling.
+
+      - **Monday, December 7 — Vigil Mass:** 6:30 PM at Our Lady of Perpetual
+      Help, Sterling.
+
       - **Tuesday, December 8 — St. Ann, Elgin:** 8:30 AM and 7:00 PM.
+
       - **Tuesday, December 8 — Our Lady of Perpetual Help, Sterling:** 4:30 PM.
+
     parishes:
       - tri-parish
     start_date: 2026-11-20
@@ -100,9 +130,11 @@ items:
       enabled: false
     action: none
   - enabled: true
+    featured: false
     label: Special Mass
     title: Advent Penance Rite
-    detail: Advent Penance Rite will be Wednesday, December 9 at 6:30 PM at St. Ann in Elgin.
+    detail: Advent Penance Rite will be Wednesday, December 9 at 6:30 PM at St. Ann
+      in Elgin.
     parishes:
       - tri-parish
     start_date: 2026-11-20
@@ -110,6 +142,6 @@ items:
     affects_schedule: true
     calendar:
       enabled: true
-      start: 2026-12-09T18:30:00-06:00
+      start: 2026-12-10T00:30:00Z
       location: St. Ann's
     action: none
